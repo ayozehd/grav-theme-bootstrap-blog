@@ -1,0 +1,49 @@
+{% set header_image_width  = page.header.header_image_width|defined(900) %}
+{% set header_image_height = page.header.header_image_height|defined(300) %}
+{% set header_image_file = page.header.header_image_file %}
+{% if header_image_file %}
+  {% set header_image_media = page.media.images[header_image_file] %}
+{% else %}
+  {% set header_image_media = page.media.images|first %}
+{% endif %}
+<div class="card blog-item {{ bsTools.style(page.header.style) }}">
+  {% if header_image_media %}
+    <a href="{{ page.url }}">{{ header_image_media.cropResize(header_image_width,header_image_height).html('', '', 'card-img-top') }}</a>
+  {% endif %}
+  <div class="card-body">
+    <a class="{{ bsTools.textStyle(page.header.style) }}" href="{{ page.url }}">
+      <h3 class="card-title">{{ page.title }}</h3>
+    </a>
+    {% for category in page.taxonomy.category %}
+      <div class="categories">
+        <a class="badge badge-pill badge-{{ bsTools.processStyle(page.header.style, true, 'secondary')|trim }} text-uppercase font-weight-normal" href="{{ page.parent.url|rtrim('/') }}/category{{ config.system.param_sep }}{{ category }}">{{ category }}</a>
+      </div>
+    {% endfor %}
+    <p class="card-text summary">{{ page.summary }}</p>
+    {% if page.taxonomy.tag|length > 0 %}
+      <p class="tags"><i class="fas fa-sm fa-tags"></i>
+      {% for tag in page.taxonomy.tag %}
+        <a class="{{ bsTools.textStyle(page.header.style, 'dark') }}" href="{{ page.parent.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>{{ not loop.last ? ',' }}
+      {% endfor %}
+      </p>
+    {% endif %}
+    <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Item Toolbar">
+      <div class="btn-group" role="group" aria-label="Links">
+        <a href="{{ page.url }}" alt="{{ page.title }}" class="btn {{ page.header.style ? bsTools.buttonStyle(page.header.style, true, true) : 'btn-outline-primary' }}">{{ 'ITEM.CONTINUE_READING'|t}}</a>
+        {% if page.header.link %}
+          <a class="btn {{ page.header.style ? bsTools.buttonStyle(page.header.style, true, true) : 'btn-outline-secondary' }}" href="{{ page.header.link }}" target="_blank"><i class="fas fa-link"></i></a>
+        {% endif %}
+      </div>
+      <div class="btn-group" role="group" aria-label="Extra Links">
+      {% for button in page.header.buttons %}
+        <a href="{{ button.url starts with 'http' ? button.url : url(button.url) }}" class="btn {{ bsTools.buttonStyle(page.header.style|default('light'), true, true) }} {{ button.classes }}">
+          {% if button.icon %}
+            <i class="fas fa-{{ button.icon }}"></i>
+          {% endif %}
+          {{ button.text }}
+        </a>
+      {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>

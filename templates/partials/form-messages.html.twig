@@ -1,0 +1,11 @@
+{% if form.message %}
+    {% set inline_errors = form.inline_errors is not null ? form.inline_errors : config.plugins.form.inline_errors(false) %}
+    {% set status_mapping = {'success':'succcess', 'error': 'danger', 'warning': 'warning'} %}
+    {% set message = inline_errors and form.messages ? "FORM.VALIDATION_FAIL"|t : form.message %}
+    <div class="alert {{ form.status }} alert-{{ status_mapping[form.status] ?: 'info' }} alert-dismissible fade show">
+        {{ message|raw }}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+{% endif %}

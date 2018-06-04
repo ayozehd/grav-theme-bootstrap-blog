@@ -1,0 +1,122 @@
+'@extends':
+  type: default
+  context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        bootstrap-blog:
+          type: tab
+          title: ADMIN.THEME_OPTIONS
+          fields:
+            is_sidebar_enabled:
+              type: conditional
+              condition: "config.themes['bootstrap-blog'].sidebar.enabled"
+              fields:
+                header.sidebar.enabled:
+                  type: toggle
+                  label: ADMIN.THEME.SIDEBAR
+                  help: ADMIN.ITEM.ITEM_SIDEBAR_HELP
+                  highlight: 1
+                  default: 1
+                  options:
+                    1: PLUGIN_ADMIN.ENABLED
+                    0: PLUGIN_ADMIN.DISABLED
+                  validate:
+                    type: bool
+            is_comments_enabled:
+              type: conditional
+              condition: "config.themes['bootstrap-blog'].comments.enabled"
+              fields:
+                header.comments.enabled:
+                  type: toggle
+                  label: ADMIN.ITEM.COMMENTS
+                  help: ADMIN.ITEM.ITEM_COMMENTS_HELP
+                  highlight: 1
+                  default: 1
+                  options:
+                    1: PLUGIN_ADMIN.ENABLED
+                    0: PLUGIN_ADMIN.DISABLED
+                  validate:
+                    type: bool
+            header.style:
+              type: select
+              label: ADMIN.ITEM.ITEM_STYLE
+              help: ADMIN.ITEM.ITEM_STYLE_HELP
+              description: ADMIN.WE_USE_BOOTSTRAP_COLORS
+              size: medium
+              toggleable: true
+              options:
+                dark: Dark
+                light: Light
+                primary: Primary
+                secondary: Secondary
+                success: Success
+                warning: Warning
+                danger: Danger
+              validate:
+                pattern: (dark|light|primary|secondary|success|warning|danger)
+            header.buttons:
+              name: buttons
+              type: list
+              style: vertical
+              label: ADMIN.ITEM.ADD_BUTTONS
+              help: ADMIN.ITEM.ADD_BUTTONS_HELP
+              collapsed: true
+              fields:
+                .text:
+                  type: text
+                  label: ADMIN.TEXT
+                .url:
+                  type: text
+                  label: ADMIN.URL
+                .icon:
+                  type: text
+                  label: ADMIN.ICON
+                  help: ADMIN.ICON_HELP
+                  description: ADMIN.FONTAWESOME_5_ICONS
+                .classes:
+                  type: text
+                  label: ADMIN.ITEM.BUTTON_ADD_CSS
+                  help: ADMIN.ITEM.BUTTON_ADD_CSS_HELP
+              validate:
+                type: array
+            header_image:
+              type: section
+              title: ADMIN.ITEM.HEADER_IMAGE
+              underline: true
+              fields:
+                header.header_image_file:
+                  type: pagemediaselect
+                  label: ADMIN.ITEM.CHOOSE_HEADER_IMAGE
+                  help: ADMIN.ITEM.CHOOSE_HEADER_IMAGE_HELP
+                  toggleable: true
+                  multiple: false
+                header_image_sizes:
+                  type: columns
+                  fields:
+                    col_header_image_width:
+                      type: column
+                      fields:
+                        header.header_image_width:
+                          type: text
+                          label: ADMIN.WIDTH
+                          placeholder: 900
+                          toggleable: true
+                          validate:
+                            type: number
+                            min: 0
+                    col_header_image_height:
+                      type: column
+                      fields:
+                        header.header_image_height:
+                          type: text
+                          label: ADMIN.HEIGHT
+                          placeholder: 300
+                          toggleable: true
+                          validate:
+                            type: number
+                            min: 0

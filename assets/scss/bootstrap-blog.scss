@@ -1,0 +1,25 @@
+@import "configuration/bootstrap/colors";
+
+// DEPENDENCIES
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+@import "bootstrap/reboot";
+@import "bootstrap/type";
+@import "bootstrap/images";
+@import "bootstrap/code";
+@import "bootstrap/tables";
+@import "bootstrap/grid";
+
+// Bootstrap-Blog Configuration
+@import "configuration/bootstrap/base";
+
+// Template Components
+@import "template/breadcrumbs";
+@import "template/item";
+@import "template/blog";
+@import "template/portfolio";
+@import "template/sidebar";
+@import "template/footer";
+
+@import "template/modular/base";

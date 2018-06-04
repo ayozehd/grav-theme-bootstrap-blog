@@ -1,0 +1,12 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+    <div class="lead text-center">
+        <i class="fas fa-exclamation-triangle fa-3x py-4"></i>
+        <h1>{{ 'ERROR.TITLE'|t }} {{ header.http_response_code }}</h1>
+        {% if header.http_response_code == 404 %}
+        <p>{{ 'ERROR.CONTENT'|t }}</p>
+        {% endif %}
+        {{ page.content|raw }}
+    </div>
+{% endblock %}

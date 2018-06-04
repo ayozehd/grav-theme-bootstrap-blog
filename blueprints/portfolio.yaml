@@ -1,0 +1,41 @@
+'@extends':
+  type: default
+  context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        bootstrap-blog:
+          type: tab
+          title: ADMIN.THEME_OPTIONS
+          fields:
+            is_sidebar_enabled:
+              type: conditional
+              condition: "config.themes['bootstrap-blog'].sidebar.enabled"
+              fields:
+                header.sidebar.enabled:
+                  type: toggle
+                  label: ADMIN.THEME.SIDEBAR
+                  help: ADMIN.ITEM.ITEM_SIDEBAR_HELP
+                  highlight: 1
+                  default: 1
+                  options:
+                    1: PLUGIN_ADMIN.ENABLED
+                    0: PLUGIN_ADMIN.DISABLED
+                  validate:
+                    type: bool
+            header.layout:
+              type: select
+              label: ADMIN.MODULAR.CHOOSE_LAYOUT
+              help: ADMIN.MODULAR.CHOOSE_LAYOUT_HELP
+              classes: fancy
+              default: boxed
+              options:
+                boxed: Boxed
+                masonry: Masonry
+                cards: Cards
+              validate:
+                pattern: (boxed|masonry|cards)

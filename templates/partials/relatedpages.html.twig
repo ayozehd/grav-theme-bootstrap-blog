@@ -1,0 +1,13 @@
+<div class="d-flex flex-row">
+    {% for related_path, score in related_pages %}
+        {% set related = grav['pages'].get(related_path) %}
+        {% if related %}
+            <a class="btn btn-outline-primary" href="{{ related.url }}" title="{{ related.title }}">
+                {% if config.plugins.relatedpages.show_score %}
+                    <span class="badge badge-danger badge-pill">{{ score }}</span>
+                {% endif %}
+                {{ related.title }}
+            </a>
+        {% endif %}
+    {% endfor %}
+</div>

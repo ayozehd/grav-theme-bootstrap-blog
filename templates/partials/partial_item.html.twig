@@ -1,0 +1,133 @@
+{% set header_image_width  = page.header.header_image_width|defined(1024) %}
+{% set header_image_height = page.header.header_image_height|defined(512) %}  {# Default aspect ratio 2:1 #}
+{% set header_image_file = page.header.header_image_file %}
+{% if header_image_file %}
+  {% set header_image_media = page.media.images[header_image_file] %}
+{% else %}
+  {% set header_image_media = page.media.images|first %}
+{% endif %}
+
+{% if truncate is sameas(true) %}
+  {# Listing View Item #}
+  <div class="card item-list">
+      {% if header_image_media %}
+        <a href="{{ page.url }}">{{ header_image_media.cropZoom(header_image_width, header_image_height).html(null, null, 'card-img-top') }}</a>
+      {% endif %}
+    <div class="card-body">
+        <div class="card-title">
+          <h3 class="title">{{ page.title }}</h3>
+          <div class="categories">
+          {% for category in page.taxonomy.category %}
+            <a class="badge badge-pill badge-{{ page.header.style|defined('secondary') }} text-uppercase font-weight-normal" href="{{ parent.url|rtrim('/') }}/category{{ config.system.param_sep }}{{ category }}">{{ category }}</a>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="card-text summary">
+        {% if page.summary != page.content %}
+          {{ page.summary }}
+        {% else %}
+          {{ page.content }}
+        {% endif %}
+      </div>
+      <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Item buttons">
+        <div class="btn-group" role="group" aria-label="Links">
+          <a href="{{ page.url }}" alt="{{ page.title }}" class="btn btn-outline-{{ page.header.style|defined('primary') }}">{{ 'ITEM.CONTINUE_READING'|t}}</a>
+          {% if page.header.link %}
+            <a class="btn btn-outline-secondary" alt="{{ page.title }}" href="{{ page.header.link }}" target="_blank"><i class="fas fa-link"></i></a>
+          {% endif %}
+        </div>
+        <div class="btn-group" role="group" aria-label="Extra Links">
+        {% for button in page.header.buttons %}
+          <a href="{{ button.url starts with 'http' ? button.url : url(button.url) }}" class="btn {{ bsTools.buttonStyle(page.header.style|default('dark'), true, false) }} {{ button.class }}">
+            {% if button.icon %}
+              <i class="fas fa-{{ button.icon }}"></i>
+            {% endif %}
+            {{ button.text }}
+          </a>
+        {% endfor %}
+        </div>
+      </div>
+    </div>
+    <div class="card-footer">
+      {% if page.taxonomy.tag %}
+        <span data-toggle="tooltip" data-placement="top" title="{{ 'TAXONOMY.TAGS'|t }}" class="text-{{ page.header.style|defined('primary') }}">
+          <i class="fas fa-tags"></i>
+        </span>
+        {% for tag in page.taxonomy.tag %}
+          <a class="text-{{ page.header.style|defined('primary') }}" href="{{ parent.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}{{ not loop.last ? ',' }}</a>
+        {% endfor %}
+      {% endif %}
+        <div class="float-right">
+          <i class="fas fa-clock text-{{ page.header.style|defined('primary') }}"></i>
+          <small data-toggle="tooltip" title="{{ page.date|date(theme_config.item.longdateformat) }}" class="text-secondary">
+            {{ page.date|date(theme_config.item.dateformat) }}
+          </small>
+        </div>
+    </div>
+  </div>
+
+{% else %}
+
+  {# Full View Item #}
+  <div class="item-heading">
+    <time data-toggle="tooltip" title="{{ page.date|date(theme_config.item.longdateformat) }}" class="text-secondary" datetime="{{ page.date|date("c") }}">
+      <small><i class="far fa-clock"></i>&nbsp;{{ page.date|date(theme_config.item.dateformat) }}</small>
+    </time>
+    <h2 class="item-title">
+      {% if page.header.link %}
+        <a class="btn btn-outline-secondary" href="{{ page.header.link}}" target="_blank"><i class="fas fa-link fa-md"></i></a>
+      {% endif %}
+      {{ page.title }}
+    </h2>
+    <div class="item-categories">
+      {% for category in page.taxonomy.category %}
+        <a data-toggle="tooltip" title="{{ 'TAXONOMY.SEE_OTHER_PAGES_OF'|t(category|capitalize) }}" class="badge badge-pill badge-{{ page.header.style|defined('secondary') }} text-uppercase font-weight-normal" href="{{ parent.url|rtrim('/') }}/category{{ config.system.param_sep }}{{ category }}">{{ category }}</a>
+      {% endfor %}
+    </div>
+  </div>
+  {% if header_image_media %}
+    <div class="featured-image text-{{ page.header.header_image_align|defined('center')}}">
+    {{ header_image_media.cropResize(header_image_width, header_image_height).html }}
+    </div>
+  {% endif %}
+  <div class="item-content text-justify">
+    {{ page.content }}
+  </div>
+  <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Item toolbar buttons">
+    {% if page.taxonomy.tag %}
+      <div class="item-tags d-inline-block">
+        <i class="fas fa-tags text-{{ page.header.style|defined('primary') }}"></i> {{ 'TAXONOMY.TAGS'|t }}:
+        {% for tag in page.taxonomy.tag %}
+          <a class="btn btn-sm {{ bsTools.buttonStyle(page.header.style|defined('dark'), true) }}" href="{{ parent.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>
+        {% endfor %}
+      </div>
+    {% endif %}
+    <div class="btn-group">
+    {% for button in page.header.buttons %}
+      <a href="{{ button.url starts with 'http' ? button.url : url(button.url) }}" class="btn {{ bsTools.buttonStyle(page.header.style|default('dark'), true) }} {{ button.class }}">
+        {% if button.icon %}
+          <i class="fas fa-{{ button.icon }}"></i>
+        {% endif %}
+        {{ button.text }}
+      </a>
+    {% endfor %}
+    </div>
+  </div>
+
+  {% if theme_config.item.show_prev_next %}
+    <div class="d-flex flex-row py-3 mt-3">
+        {% if not page.isLast %}
+          <a class="btn {{ bsTools.buttonStyle(page.header.style|defined('primary'), true) }}" href="{{ page.prevSibling.url }}"><i class="fas fa-chevron-left"></i> {{ 'ITEM.PREVIOUS'|t }}</a>
+        {% endif %}
+        {% if not page.isFirst %}
+          <a class="ml-auto btn {{ bsTools.buttonStyle(page.header.style|defined('primary'), true) }}" href="{{ page.nextSibling.url }}">{{ 'ITEM.NEXT'|t }} <i class="fas fa-chevron-right"></i></a>
+        {% endif %}
+    </div>
+  {% endif %}
+
+  {% set comments = array_merge(theme_config.comments, page.header.comments|default({})) %}
+  {% if comments.enabled %}
+    {% include 'partials/comments.html.twig' with {'page':page, 'config': comments} %}
+  {% endif %}
+
+{% endif %}

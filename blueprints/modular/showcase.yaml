@@ -1,0 +1,93 @@
+'@extends':
+  type: default
+  context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        bootstrap-blog:
+          type: tab
+          title: ADMIN.THEME_OPTIONS
+          fields:
+            header.style:
+              type: select
+              label: ADMIN.STYLE
+              description: ADMIN.MODULAR.SHOWCASE_STYLE_HELP
+              size: medium
+              toggleable: true
+              options:
+                dark: Dark
+                light: Light
+                primary: Primary
+                secondary: Secondary
+                success: Success
+                warning: Warning
+                danger: Danger
+              validate:
+                pattern: (dark|light|primary|secondary|success|warning|danger)
+            header.image_file:
+              type: pagemediaselect
+              label: ADMIN.ITEM.CHOOSE_HEADER_IMAGE
+              help: ADMIN.ITEM.CHOOSE_HEADER_IMAGE_HELP
+              toggleable: true
+              multiple: false
+            image_sizes:
+              type: columns
+              fields:
+                col_image_width:
+                  type: column
+                  fields:
+                    header.image_width:
+                      type: text
+                      label: ADMIN.WIDTH
+                      placeholder: 1200
+                      toggleable: true
+                      validate:
+                        type: number
+                        min: 0
+                col_image_height:
+                  type: column
+                  fields:
+                    header.image_height:
+                      type: text
+                      label: ADMIN.HEIGHT
+                      placeholder: 800
+                      toggleable: true
+                      validate:
+                        type: number
+                        min: 0
+            header.image_actions:
+              type: array
+              label: ADMIN.MODULAR.SHOWCASE_IMAGE_ACTIONS
+              help: ADMIN.MODULAR.SHOWCASE_IMAGE_ACTIONS_HELP
+              description: ADMIN.MODULAR.SHOWCASE_IMAGE_ACTIONS_DESCRIPTION
+              placeholder_key: ADMIN.MODULAR.SHOWCASE_IMAGE_ACTION
+              placeholder_value: ADMIN.MODULAR.SHOWCASE_IMAGE_ARGUMENTS
+              toggleable: true
+            header.buttons:
+              name: buttons
+              type: list
+              style: vertical
+              label: ADMIN.ITEM.ADD_BUTTONS
+              collapsed: true
+              fields:
+                .text:
+                  type: text
+                  label: ADMIN.TEXT
+                .url:
+                  type: text
+                  label: ADMIN.URL
+                .icon:
+                  type: text
+                  label: ADMIN.ICON
+                  help: ADMIN.ICON_HELP
+                  description: ADMIN.FONTAWESOME_5_ICONS
+                .classes:
+                  type: text
+                  label: ADMIN.ITEM.BUTTON_ADD_CSS
+                  help: ADMIN.ITEM.BUTTON_ADD_CSS_HELP
+              validate:
+                type: array

@@ -1,0 +1,100 @@
+{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+{% import "macros/bootstrap_tools.html.twig" as bsTools %}
+
+<!DOCTYPE html>
+<html lang="{{ grav.language.getActive ?: theme_config.default_lang }}">
+<head>
+{% block head %}
+    <meta charset="utf-8" />
+    <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include 'partials/metadata.html.twig' %}
+    {% set favicon = theme_config.favicon ? theme_config.favicon|first : { type:'image/png', path: url('theme://images/logo.png') } %}
+    <link rel="icon" type="{{ favicon.type }}" href="{{ url( favicon.path ) }}" />
+    <link rel="canonical" href="{{ page.url(true, true) }}" />
+
+    {% block stylesheets %}
+    {% if theme_config.cdn.enabled %}
+        {% do assets.addCss('https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css', 102) %}
+        {% do assets.addCss('https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap-reboot.min.css', 100) %}
+        {% do assets.addCss('https://use.fontawesome.com/releases/v5.0.9/css/all.css', 10) %}
+        {% do assets.addCss('https://use.fontawesome.com/releases/v5.0.9/css/brands.css', 10) %}
+    {% else %}
+        {% do assets.addCss('theme://assets/css-compiled/bootstrap/bootstrap.css', 102) %}
+        {% do assets.addCss('theme://assets/css-compiled/bootstrap/bootstrap-reboot.css', 100) %}
+        {% do assets.addCss('theme://assets/css/fontawesome-all.min.css', 10) %}
+        {% do assets.addCss('theme://assets/css/fa-brands.min.css', 10) %}
+    {% endif %}
+    {% do assets.addCss('theme://assets/css-compiled/bootstrap-blog.css', 99) %}
+    {% endblock %}
+    {{ assets.css() }}
+
+    {% block javascripts %}
+    {% if theme_config.cdn.enabled %}
+        {% do assets.addJs('https://code.jquery.com/jquery-3.2.1.slim.min.js', 100) %}
+        {% do assets.addJs('https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js', 98) %}
+        {% do assets.addJs('https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', 99) %}
+    {% else %}
+        {% do assets.addJs('jquery', 102) %}
+        {% do assets.addJs('theme://assets/js/popper.min.js', 101) %}
+        {% do assets.addJs('theme://assets/js/bootstrap.min.js', 100) %}
+    {% endif %}
+    {% do assets.addJs('theme://assets/js/bootstrap_blog.js', 99) %}
+    {% endblock %}
+    {{ assets.js() }}
+{% endblock head %}
+</head>
+<body id="top" class="{{ page.header.body_classes }}">
+{% block header %}
+    <nav class="navbar navbar-expand-md {{ bsTools.navbarStyle(theme_config.navbar.style) }} {% if theme_config.navbar.sticky %}fixed-top{% endif %}" role="navigation" {% if theme_config.navbar.background_color %}style="background-color:{{ theme_config.navbar.background_color }}"{% endif %}>
+        <a class="navbar-brand" href="{{ base_url == '' ? '/' : base_url }}">
+            {% if theme_config.navbar.image %}
+                <img class="d-inline-block align-center" src="{{ theme_config.navbar.image.path }}" alt=""/>
+            {% endif %}
+            {% if theme_config.navbar.icon %}
+            <i class="fas fa-{{ theme_config.navbar.icon }}"></i>
+            {% endif %}
+            {% if theme_config.navbar.display_site_name %}
+            {{ config.site.title }}
+            {% endif %}
+        </a>
+        {% if config.plugins.langswitcher.enabled %}
+            {% include 'partials/langswitcher.html.twig' %}
+        {% endif %}
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            {% block header_navigation %}
+                {% include 'partials/navigation.html.twig' %}
+            {% endblock %}
+        </div>
+    </nav>
+{% endblock %}
+
+{% block body %}
+    {{ theme_config.favicon.name }}
+    {% block showcase %}{% endblock %}
+    {% block content %}{% endblock %}
+{% endblock %}
+
+{% block footer %}
+    <footer class="footer {{ bsTools.style(theme_config.footer.style) }}">
+        <div class="container">
+            <div class="d-flex flex-row justify-content-center">
+                {% if theme_config.footer.legal %}
+                    <div class="footer-legal mr-auto">{{ theme_config.footer.legal|raw}}</div>
+                {% endif %}
+                <div class="footer-text">{{ theme_config.footer.text|raw }}</div>
+            </div>
+        </div>
+    </footer>
+{% endblock %}
+
+{% block bottom %}
+    {{ assets.js('bottom') }}
+{% endblock %}
+
+</body>
+</html>

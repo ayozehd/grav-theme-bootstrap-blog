@@ -1,0 +1,37 @@
+enabled: true
+cdn_enabled: false
+
+navbar:
+  image:
+  icon:
+  style: light
+  dropdown: true
+  sticky: false
+
+sidebar:
+  enabled: true
+  align: left
+  twitter:
+    enabled: true
+    user: twitter
+    height: 600
+    theme: light
+  about:
+    enabled: true
+    title: About me
+    content: Some text about you...
+    page:
+
+item:
+  show_prev_next: true
+  dateformat: 'd-m-y G:i'
+  longdateformat: 'F jS \\a\\t g:ia'
+
+comments:
+  enabled: false
+  disqus_shortname:
+
+footer:
+  style: light
+  text: 'Bootstrap Blog is <i class="fas fa-code"></i> with <i class="fas fa-heart"></i> by <a href="http://ayozehd.com">Ayoze Hernández Díaz</a>'
+  legal:

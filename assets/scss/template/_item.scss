@@ -1,0 +1,35 @@
+.item-content {
+  padding-bottom: $spacer;
+
+  .item-heading {
+    padding-top: $spacer;
+    padding-bottom: $spacer * .25;
+  }
+
+  h2.item-title {
+    margin-bottom: 0;
+  }
+
+  img {
+    @extend .img-fluid;
+    margin-bottom: $spacer *.5;
+  }
+
+  table {
+    @extend .table;
+  }
+
+  blockquote {
+    @extend .blockquote;
+  }
+
+  pre {
+    color: $gray-100;
+    padding: $spacer;
+    margin: $spacer 0;
+    background: $dark;
+    border: 0;
+    border-radius: 2px;
+    line-height: 1.2;
+  }
+}

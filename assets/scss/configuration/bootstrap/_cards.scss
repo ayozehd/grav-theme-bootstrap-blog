@@ -1,0 +1,25 @@
+.card-raised {
+  box-shadow: 0 16px 38px -12px 
+      rgba(0,0,0,.56),0 4px 25px 0 
+      rgba(0,0,0,.12),0 8px 10px -5px 
+      rgba(0,0,0,.2)
+  ;
+}
+
+.card-columns {
+  @include media-breakpoint-only(xs) {
+    column-count: 1;
+  }
+  @include media-breakpoint-only(sm) {
+    column-count: 2;
+  }
+  @include media-breakpoint-only(md) {
+    column-count: 2;
+  }
+  @include media-breakpoint-only(lg) {
+    column-count: 3;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 3;
+  }
+}

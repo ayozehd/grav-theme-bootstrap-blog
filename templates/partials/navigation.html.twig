@@ -1,0 +1,50 @@
+{% macro loop(page) %}
+    {% for p in page.children.visible %}
+        {% set current_page = (p.active or p.activeChild) ? 'active' : '' %}
+        {% if p.children.visible.count > 0 %}
+            <li class="nav-item dropdown {{ current_page }}">
+                <a id="dropdown-{{ p.id }}" class="nav-link dropdown-toggle" href="{{ p.url }}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {% if p.header.icon %}<i class="fas fa-{{ p.header.icon }}"></i>{% endif %}
+                    {{ p.menu }}
+                </a>
+                <div class="dropdown-menu" arial-labelledby="dropdown-{{ p.id }}"> {# Translation? #}
+                    {% for c in p.children.visible %}
+                        <a class="dropdown-item" href="{{ c.url }}">{{ c.menu }}</a>
+                    {% endfor %}
+                </div>
+            </li>
+        {% else %}
+            <li class="nav-item {{ current_page }}">
+                <a class="nav-link" href="{{ p.url }}">
+                    {% if p.header.icon %}<i class="fas fa-{{ p.header.icon }}"></i>{% endif %}
+                    {{ p.menu }}
+                </a>
+            </li>
+        {% endif %}
+    {% endfor %}
+{% endmacro %}
+
+<ul class="navbar-nav ml-auto">
+    {% if theme_config.navbar.dropdown == true %}
+        {{ _self.loop(pages) }}
+    {% else %}
+        {% for page in pages.children.visible %}
+            {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
+            <li class="nav-item {{ current_page }}">
+                <a class="nav-link" href="{{ page.url }}">
+                    {% if page.header.icon %}<i class="fas fa-{{ page.header.icon }}"></i>{% endif %}
+                    {{ page.menu }}
+                </a>
+            </li>
+        {% endfor %}
+    {% endif %}
+    {% for mitem in site.menu %}
+        <li class="nav-item">
+            <a class="nav-link" href="{{ mitem.url }}">
+                {% if mitem.icon %}<i class="fas fa-{{ mitem.icon }}"></i>{% endif %}
+                {{ mitem.text }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>
+

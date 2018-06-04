@@ -1,0 +1,41 @@
+{% embed 'partials/base.html.twig' %}
+
+  {% block content %}
+    <div class="modular-row box-inset-shadow showcase-text bg-primary text-light">
+      <div class="container">
+        <div class="row">
+          <div class="col text-left">
+            <h1>
+              {{ 'SIMPLESEARCH.SEARCH_RESULTS'|t }}
+            </h1>
+            <h4 class="font-weight-light">
+            {% if query %}
+              {% set count = search_results ? search_results.count : 0 %}
+              {% if count == 1 %}
+                  {{ "PLUGIN_SIMPLESEARCH.SEARCH_RESULTS_SUMMARY_SINGULAR"|t(query|e)|raw }}
+              {% else %}
+                  {{ "PLUGIN_SIMPLESEARCH.SEARCH_RESULTS_SUMMARY_PLURAL"|t(query|e, count)|raw }}
+              {% endif %}
+            {% endif %}
+            <h4>
+          </div>
+          <div class="col-12 col-md-4 mt-auto">
+            {% include 'partials/simplesearch_searchbox.html.twig' with { classes: 'searchbox-faded' } %}   {# TODO apply faded css ;) #}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container search-results">
+      <div class="row">
+        <div class="col-12 py-4">
+          <div class="card-columns">
+          {% for result in search_results %}
+              {% include 'partials/partial_mini_item.html.twig' with { 'page':result } %}
+          {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endblock %}
+
+{% endembed %}

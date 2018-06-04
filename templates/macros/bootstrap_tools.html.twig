@@ -1,0 +1,40 @@
+{# Alias to backgroundStyle() #}
+{% macro style(style, noTextClass) %}
+  {{ _self.backgroundStyle(style, noTextClass)|trim }}
+{% endmacro %}
+
+{% macro backgroundStyle(style, noTextClass) %}
+  {{ (style ? 'bg-' ~ style) ~ ( noTextClass ?: ' ' ~ _self.textStyle(style)|trim ) }}
+{% endmacro %}
+
+{% macro textStyle(style, default) %}
+  {% set output = _self.processStyle(style, true, default)|trim %}
+  {{ 'text-' ~ output }}
+{% endmacro %}
+
+{% macro navbarStyle(style) %}
+  {% set output = 'navbar-' %}
+  {% if style in ['dark', 'primary', 'danger', 'secondary', 'info', 'success', 'faded'] %}
+    {% set output = output ~ 'dark' %}
+  {% else %}
+    {% set output = output ~ 'light' %}
+  {% endif %}
+  {{ output ~ ' ' ~ _self.backgroundStyle(style, false)|trim }}
+{% endmacro %}
+
+{% macro buttonStyle(style, isOutline, darkOrLight, default) %}
+  {{ 'btn-' ~ (isOutline ? 'outline-') ~ _self.processStyle(style, darkOrLight, default|defined('dark'))|trim }}
+{% endmacro %}
+
+{% macro processStyle(style, inversed, default) %}
+  {% if inversed %}
+    {% if style in ['primary', 'success', 'danger', 'info', 'dark', 'faded'] %}
+      {% set output = 'light' %}
+    {% else %}
+      {% set output = default|defined('dark') %}
+    {% endif %}
+  {% else %}
+    {% set output = output|defined(style) %}
+  {% endif %}
+  {{ output|defined(default) }}
+{% endmacro %}

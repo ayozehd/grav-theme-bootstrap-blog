@@ -1,0 +1,21 @@
+#sidebar {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box
+}
+.sidebar-content {
+  padding: .5em 1em;
+  margin-bottom: 5px;
+}
+.sidebar-content:after {
+  font-family: 'Font Awesome 5 Free';
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  margin: 0 auto;
+  padding: .3em 0;
+}

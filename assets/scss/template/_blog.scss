@@ -1,0 +1,19 @@
+.container.blog {
+  padding-top: $spacer;
+
+  .item-list {
+    margin-bottom: $spacer;
+
+    .card-title {
+      margin-bottom: $spacer * .25;
+
+      .title {
+        margin-bottom: 0;
+      }
+    }
+
+    .categories {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{% import "macros/bootstrap_tools.html.twig" as bsTools %}
+
+{% set showcase_image_width  = page.header.image_width|defined(1200) %}
+{% set showcase_image_height = page.header.image_height|defined(800) %}
+{% set showcase_image_file = page.header.image_file %}
+{% set showcase_image_filters = page.header.image_filters %}
+
+{% if showcase_image_file %}
+    {% set showcase_image = page.media.images[showcase_image_file] %}
+{% else %}
+    {% set showcase_image = page.media.images|first %}
+{% endif %}
+
+{% if showcase_image %}
+    {% if showcase_image_filters %}
+        {% for key, arg in showcase_image_filters %}
+            {% set showcase_image = attribute( showcase_image, key, arg|split(',')|default([]) ) %}
+        {% endfor %}
+    {% else %}
+        {% set showcase_image = showcase_image.cropResize(showcase_image_width,showcase_image_height).grayscale().contrast(20).brightness(-125).colorize(-35,81,122) %}
+    {% endif %}
+	<div class="modular-row showcase text-{{ page.header.style|defined('light') }}" style="background-image: url({{ showcase_image.url }});">
+{% else %}
+    <div class="modular-row box-inset-shadow showcase-text {{ bsTools.style(page.header.style|defined('primary')) }}">
+{% endif %}
+    <div class="container">
+        <div class="row">
+            <div class="col text-{{ page.header.align|defined('center')}} {{ page.header.class}}">
+                {{ content }}
+                {% for button in page.header.buttons %}
+                    <a class="btn btn-{% if button.no_outline != true %}outline-{% endif %}{{ button.style|defined('light') }} btn-{{ button.size|defined('lg') }}" href="{{ button.url }}">{{ button.text }}</a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{# condicionar mediante una funcion o algo similar el color del texto dependiendo de los 
+estilos principales de bootstrap que entren. Añadir ademas una opcion css o class para 
+añadir clases personalizadas en la cabecera #}

@@ -1,0 +1,15 @@
+.blog-item {
+  .card-title {
+    margin-bottom: $spacer * .1;
+  }
+  .categories {
+    margin-bottom: 0;
+  }
+  .summary {
+    margin-bottom: 0;
+  }
+  .tags {
+    font-size: 90%;
+    margin-bottom: $spacer * .75;
+  }
+}

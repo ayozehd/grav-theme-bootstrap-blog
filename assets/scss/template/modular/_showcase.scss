@@ -1,0 +1,35 @@
+ .showcase {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 100%;
+    width: 100%;
+    height: auto;
+    padding-top: $spacer * 7 !important;
+    padding-bottom: $spacer * 7 !important;
+}
+
+.showcase-text {
+  padding-top: $spacer * 5 !important;
+  padding-bottom: $spacer * 5 !important;
+}
+
+.showcase-text, .showcase {
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  .btn {
+    margin-bottom: $spacer *.2;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .showcase {
+    h1 {
+      font-size: 3.5rem;
+    }
+
+  }
+}

@@ -1421,12 +1421,14 @@ pre {
   margin-bottom: 0.25rem; }
 .portfolio .portfolio-boxed .tags {
   font-size: 90%; }
+
 .portfolio .portfolio-card .card-title {
   margin-bottom: 0; }
 .portfolio .portfolio-card .categories {
   margin-bottom: 0.25rem; }
 .portfolio .portfolio-card .tags {
   font-size: 90%; }
+
 .portfolio .portfolio-masonry {
   padding-bottom: 1rem; }
   .portfolio .portfolio-masonry .masonry-overlay {
@@ -1527,9 +1529,14 @@ pre {
     padding: 1rem; }
 
 .modular-row.jumbotron {
-  padding: 5rem; }
+  padding: 5rem;
+  border-radius: 0; }
 
-div.modular-row.jumbotron.bg-primary a {
+.modular-row.jumbotron.bg-primary a,
+.modular-row.jumbotron.bg-info a,
+.modular-row.jumbotron.bg-dark a,
+.modular-row.jumbotron.bg-warning a,
+.modular-row.jumbotron.bg-danger a {
   color: #fff; }
 
 .modular-row {

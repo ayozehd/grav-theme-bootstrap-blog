@@ -2,7 +2,7 @@
 
 ![](screenshot.jpg)
 
-**Bootstrap Blog** is a theme for [Grav CMS](http://github.com/getgrav/grav) built in with [Bootstrap v4.1](https://picturepan2.github.io/spectre/) framework and provides a powerful base to develope your own themes using SCSS. Also we use latest [FontAwesome 5](https://fontawesome.com/).
+**Bootstrap Blog** is a theme for [Grav CMS](http://github.com/getgrav/grav) built with [Bootstrap v4.1](https://picturepan2.github.io/spectre/) framework and provides a powerful base to develope your own theme using SCSS. Also we use latest [FontAwesome 5](https://fontawesome.com/).
 
 ## Features
 
@@ -38,7 +38,7 @@ The simplest way to install this theme is via the [Grav Package Manager (GPM)](h
 
     bin/gpm install bootstrap-blog
 
-This will install the Quark theme into your `/user/themes` directory within Grav. Its files can be found under `/your/site/grav/user/themes/bootstrap-blog`.
+This will install the Bootstrap Blog theme into your `/user/themes` directory within Grav. Its files can be found under `/your/site/grav/user/themes/bootstrap-blog`.
 
 ## Manual Installation
 
@@ -74,8 +74,8 @@ Feel free to use them anywhere following [official usage](https://fontawesome.co
 Bootstrap Blog comes with a few default theme options that can be set site-wide. These options are:
 
 ```yaml
-enabled: true                   # Enable the theme
-cdn_enabled: false              # Get CSS and JS files from CDN servers
+enabled: true
+cdn_enabled: false
 navbar:
   image:
   icon:
@@ -127,11 +127,11 @@ style: light|dark|primary|info|success|warning|danger
 text_align: center|left|right
 image_actions:
     brightness: -100
-    colorize: -35,81,122
+    colorize: '-35,81,122'
     negate: null
 buttons:
     -
-        text: 'Blog'
+        text: Blog
         url: /blog
         icon: rss
     -
@@ -223,6 +223,6 @@ Feel free to extend `sidebar.html.twig` to add your own widgets!
 
 ### TODO
 * Skills/animated bars modular template
-* Carrousel modular template
+* Carousel modular template
 * Go to top button
-* Merge portfolio and blog items layouts
+* Merge portfolio and blog item layouts

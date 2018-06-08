@@ -1,11 +1,17 @@
 .modular-row.jumbotron {
   padding: $spacer * 5;
+  border-radius: 0;
 
   img {
     @extend .img-fluid;
   }
 }
 
-div.modular-row.jumbotron.bg-primary a {
+.modular-row.jumbotron.bg-primary a,
+.modular-row.jumbotron.bg-info a,
+.modular-row.jumbotron.bg-dark a,
+.modular-row.jumbotron.bg-warning a,
+.modular-row.jumbotron.bg-danger a,
+{
   color: $white;
 }

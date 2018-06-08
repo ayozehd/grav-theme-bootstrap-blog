@@ -1,6 +1,4 @@
 {% import "macros/bootstrap_tools.html.twig" as bsTools %}
-{% set header_image_width  = page.header.header_image_width|defined(900) %}
-{% set header_image_height = page.header.header_image_height|defined(300) %}
 {% set header_image_file = page.header.header_image_file %}
 {% set default_text_align = 'left' %}
 <div class="modular-row jumbotron {{ bsTools.style(page.header.style) }}">
@@ -14,7 +12,7 @@
                 {% if header_image_media %}
                   {% set default_text_align = 'center' %}
                   <div class="col-12 text-center col-md-{{ page.header.header_image_size|defined(6) }} {% if page.header.header_image_align == 'right' %}order-last{% endif %}">
-                      {{ header_image_media.cropResize(header_image_width, header_image_height).html }}
+                      {{ header_image_media.html }}
                   </div>
                 {% endif %}
             <div class="col text-{{ page.header.text_align|defined(default_text_align) }}">

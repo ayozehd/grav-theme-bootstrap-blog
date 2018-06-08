@@ -145,9 +145,9 @@ form:
           size: medium
           label: ADMIN.THEME.LONG_DATE_FORMAT
           help: ADMIN.THEME.LONG_DATE_FORMAT_HELP
-          default: "F jS \a\t g:ia"
+          default: "F jS \\a\\t g:i A"
           options:
-              "F jS \\a\\t g:ia": Date1
+              "F jS \\a\\t g:i A": Date1
               "l j \of F g:i A": Date2
               "D, j M Y G:i:s": Date3
               "jS F, Y g:ia": Date4

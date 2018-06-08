@@ -24,8 +24,8 @@ sidebar:
 
 item:
   show_prev_next: true
-  dateformat: 'd-m-y G:i'
-  longdateformat: 'F jS \\a\\t g:ia'
+  dateformat: "j M, Y"
+  longdateformat: "F jS \\a\\t g:i A"
 
 comments:
   enabled: false

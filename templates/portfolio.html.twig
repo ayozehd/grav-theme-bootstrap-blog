@@ -21,9 +21,9 @@
 			{% endif %}
 			<div class="row">
 				<div class="col">
-					<div class="row portfolio">
+					<div class="row items">
 						{% for portfolio in collection %}
-							{% include 'partials/portfolio/item_' ~ page.header.layout|defined('boxed') ~ '.html.twig' with {'portfolio': page, 'page': portfolio } %}
+							{% include 'partials/layouts/' ~ page.header.layout|defined('boxed') ~ '.html.twig' with {'parent': page, 'page': portfolio } %}
 						{% endfor %}
 					</div>
 					{% if config.plugins.pagination.enabled and collection.params.pagination %}

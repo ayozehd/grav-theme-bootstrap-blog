@@ -23,11 +23,12 @@ form:
                 light: Light
                 primary: Primary
                 secondary: Secondary
+                info: Info
                 success: Success
                 warning: Warning
                 danger: Danger
               validate:
-                pattern: (null|dark|light|primary|secondary|success|warning|danger)
+                pattern: (null|dark|light|primary|secondary|info|success|warning|danger)
             header.text_align:
               type: select
               size: medium
@@ -66,11 +67,12 @@ form:
                     dark: Dark
                     light: Light
                     secondary: Secondary
+                    info: Info
                     success: Success
                     warning: Warning
                     danger: Danger
                   validate:
-                    pattern: (dark|light|primary|secondary|success|warning|danger)
+                    pattern: (dark|light|primary|secondary|info|success|warning|danger)
                 .color:
                   type: colorpicker
                   label: ADMIN.MODULAR.CHOOSE_ICON_COLOR

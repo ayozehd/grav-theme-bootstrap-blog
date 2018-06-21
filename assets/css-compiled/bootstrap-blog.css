@@ -353,7 +353,7 @@ mark,
   .blockquote-footer::before {
     content: "\2014 \00A0"; }
 
-.img-fluid, .item-content img, .modular-row.jumbotron img {
+.img-fluid, .item-content img, .item-boxed img, .modular-row.jumbotron img {
   max-width: 100%;
   height: auto; }
 
@@ -1415,23 +1415,34 @@ pre {
     .container.blog .item-list .categories {
       margin-bottom: 0; }
 
-.portfolio .portfolio-boxed h2.title {
+.item-boxed {
+  margin-bottom: 1rem; }
+  .item-boxed img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
+  .item-boxed .card-title {
+    margin-bottom: 0.2rem; }
+  .item-boxed .title {
+    margin-bottom: 0; }
+  .item-boxed .categories {
+    margin-bottom: 0; }
+  .item-boxed .summary {
+    margin-bottom: 0; }
+  .item-boxed .tags {
+    font-size: 90%;
+    margin-bottom: 0.75rem; }
+
+.item-card .card-title {
   margin-bottom: 0; }
-.portfolio .portfolio-boxed .categories {
+.item-card .categories {
   margin-bottom: 0.25rem; }
-.portfolio .portfolio-boxed .tags {
+.item-card .tags {
   font-size: 90%; }
 
-.portfolio .portfolio-card .card-title {
-  margin-bottom: 0; }
-.portfolio .portfolio-card .categories {
-  margin-bottom: 0.25rem; }
-.portfolio .portfolio-card .tags {
-  font-size: 90%; }
-
-.portfolio .portfolio-masonry {
+.item-masonry {
   padding-bottom: 1rem; }
-  .portfolio .portfolio-masonry .masonry-overlay {
+  .item-masonry .masonry-overlay {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -1442,25 +1453,25 @@ pre {
     width: 100%;
     opacity: 0;
     transition: .5s ease-in-out; }
-  .portfolio .portfolio-masonry :hover {
+  .item-masonry :hover {
     opacity: 1; }
-  .portfolio .portfolio-masonry .card-title {
+  .item-masonry .card-title {
     margin-bottom: 0.5rem; }
-  .portfolio .portfolio-masonry .masonry-no-overlay {
+  .item-masonry .masonry-no-overlay {
     position: relative;
     display: block;
     padding: 1.25rem; }
-  .portfolio .portfolio-masonry .categories {
+  .item-masonry .categories {
     margin-bottom: 0.5rem; }
-  .portfolio .portfolio-masonry .tags {
+  .item-masonry .tags {
     font-size: 90%;
     margin-bottom: 0.75rem; }
-  .portfolio .portfolio-masonry .btn-toolbar {
+  .item-masonry .btn-toolbar {
     display: inline-block;
     width: auto;
     margin-left: auto;
     margin-right: auto; }
-    .portfolio .portfolio-masonry .btn-toolbar .btn-group:last-child {
+    .item-masonry .btn-toolbar .btn-group:last-child {
       margin-left: 0.2rem; }
 
 #sidebar {
@@ -1489,16 +1500,6 @@ pre {
   padding-bottom: 1rem; }
   .footer .footer-legal {
     color: #adb5bd; }
-
-.blog-item .card-title {
-  margin-bottom: 0.1rem; }
-.blog-item .categories {
-  margin-bottom: 0; }
-.blog-item .summary {
-  margin-bottom: 0; }
-.blog-item .tags {
-  font-size: 90%;
-  margin-bottom: 0.75rem; }
 
 .showcase {
   background-size: cover;

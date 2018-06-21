@@ -1,18 +1,24 @@
 {% import "macros/bootstrap_tools.html.twig" as bsTools %}
 
+{% if page.collection()|length > 0  %}
+  {% set collection = page.collection() %}
+{% elseif page.header.show_more is defined %}
+  {# Fallback collection from show_more page #}
+  {% set collection = page.collection({ items: {'@page.children': page.header.show_more }, order: {'by': 'date', 'dir': 'desc'}, limit: 6 }) %}
+{% else %}
+  {% set collection = null %} {# Satinizing #}
+{% endif %}
+
 <div class="modular-row blog-modular {{ bsTools.style(page.header.style) }} {{ page.header.classes}}">
-  <div class="container">
-    <div class="row">
-      <div class="col-12 text-{{ page.header.text_align|defined('center') }}">
-        {{ content }}
-      </div>
-      <div class="col-12">
-        <div class="card-columns">
-        {% for page in page.collection() %}
-          {% include '/partials/partial_blog_item.html.twig' with { 'page':page } %}
-        {% endfor %}
-        </div>
-      </div>
+  <div class="container text-{{ page.header.text_align|defined('center') }}">
+    {{ content }}
+  </div>
+  <div class="container-fluid">
+    <div class="row items">
+      {% for child in collection %}
+        {% include 'partials/layouts/' ~ page.header.layout|defined('boxed') ~ '.html.twig' with {'parent': page, 'page': child } %}
+      {% endfor %}
+
       {% if page.header.show_more %}
         {% set show_more_page = page.find(page.header.show_more) %}
         <div class="col-sm-12 text-center">
@@ -20,7 +26,7 @@
             {{ 'MODULAR.SEE_MORE_IN'|t(show_more_page.title) }}
           </a>
         </div>
-      </div>
       {% endif %}
+    </div>
   </div>
 </div>

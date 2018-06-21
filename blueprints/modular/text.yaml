@@ -24,11 +24,12 @@ form:
                 light: Light
                 primary: Primary
                 secondary: Secondary
+                info: Info
                 success: Success
                 warning: Warning
                 danger: Danger
               validate:
-                pattern: (null|dark|light|primary|secondary|success|warning|danger)
+                pattern: (null|dark|light|primary|secondary|info|success|warning|danger)
             header.text_align:
               type: select
               label: ADMIN.TEXT_ALIGN

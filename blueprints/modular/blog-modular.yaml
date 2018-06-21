@@ -24,11 +24,12 @@ form:
                 light: Light
                 primary: Primary
                 secondary: Secondary
+                info: Info
                 success: Success
                 warning: Warning
                 danger: Danger
               validate:
-                pattern: (dark|light|primary|secondary|success|warning|danger)
+                pattern: (dark|light|primary|secondary|info|success|warning|danger)
             header.show_more:
               type: pages
               label: ADMIN.MODULAR.SHOW_MORE_BUTTON

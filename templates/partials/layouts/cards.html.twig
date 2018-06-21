@@ -1,13 +1,13 @@
-{% set header_image_width  = page.header.header_image_width|defined(900) %}
-{% set header_image_height = page.header.header_image_height|defined(300) %}
-{% set header_image_file = page.header.header_image_file %}
+{% set header_image_width  = page.header.image_width|defined(640) %}
+{% set header_image_height = page.header.image_height|defined(480) %}
+{% set header_image_file = page.header.image_file %}
 {% if header_image_file %}
   {% set header_image_media = page.media.images[header_image_file] %}
 {% else %}
   {% set header_image_media = page.media.images|first %}
 {% endif %}
 
-<div class="portfolio-card col-12 col-md-4 mb-3">
+<div class="item-card col-12 col-md-4 mb-3">
   <div class="card card-raised {{ bsTools.style( page.header.style|defined('light') ) }}">
     {% if header_image_media %}
     <a href="{{ page.url}}">{{ header_image_media.cropResize(header_image_width,header_image_height).html('', '', 'card-img-top') }}</a>

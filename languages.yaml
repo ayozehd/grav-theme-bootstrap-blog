@@ -31,10 +31,6 @@ en:
       ITEMS: Items
       SHOW_PREV_NEXT_BUTTONS: Show Previous/Next buttons
       SHOW_PREV_NEXT_BUTTONS_HELP: At the end of the content, 2 buttons let us navigate between pages
-      SHORT_DATE_FORMAT: Short dateformat
-      SHORT_DATE_FORMAT_HELP: It will be used in listings and items view
-      LONG_DATE_FORMAT: Long dateformat
-      LONG_DATE_FORMAT_HELP: A tooltip will be showen above short date
       ENABLE_COMMENTS: Enable comments
       ENABLE_COMMENTS_HELP: Add a comments forum at the end of each page
       DISQUS_SHORTNAME: Disqus shortname
@@ -190,10 +186,6 @@ es:
       ITEMS: Elementos
       SHOW_PREV_NEXT_BUTTONS: Mostrar botones anterior/siguiente
       SHOW_PREV_NEXT_BUTTONS_HELP: Al final del contenido, 2 botones nos permitirán navegar entre las páginas
-      SHORT_DATE_FORMAT: Formato de fecha corto
-      SHORT_DATE_FORMAT_HELP: Se utilizará en los listados y en las publicaciones
-      LONG_DATE_FORMAT: Formato de fecha largo
-      LONG_DATE_FORMAT_HELP: Se mostrará en un tooltip sobre la fecha corta
       ENABLE_COMMENTS: Activar comentarios
       ENABLE_COMMENTS_HELP: Incluye un foro de comentarios al final de cada página
       DISQUS_SHORTNAME: 'Disqus <em>shortname</em>'

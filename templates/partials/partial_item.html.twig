@@ -8,8 +8,8 @@
 {% endif %}
 
 <div class="item-heading">
-  <time data-toggle="tooltip" title="{{ page.date|date(theme_config.item.longdateformat) }}" class="text-secondary" datetime="{{ page.date|date("c") }}">
-    <small><i class="far fa-clock"></i>&nbsp;{{ page.date|date(theme_config.item.dateformat) }}</small>
+  <time data-toggle="tooltip" title="{{ page.date|date(config.system.pages.dateformat.long) }}" class="text-secondary" datetime="{{ page.date|date("c") }}">
+    <small><i class="far fa-clock"></i>&nbsp;{{ page.date|date(config.system.pages.dateformat.short) }}</small>
   </time>
   <h2 class="item-title">
     {% if page.header.link %}

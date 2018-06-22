@@ -129,28 +129,6 @@ form:
             0: PLUGIN_ADMIN.DISABLED
           validate:
             type: bool
-        item.dateformat:
-          type: dateformat
-          size: medium
-          label: ADMIN.THEME.SHORT_DATE_FORMAT
-          help: ADMIN.THEME.SHORT_DATE_FORMAT_HELP
-          default: "j M, Y"
-          options:
-              "j M, Y": Date1
-              "d/m/Y": Date2
-              "m-d-Y": Date3
-              "jS M Y": Date4
-        item.longdateformat:
-          type: dateformat
-          size: medium
-          label: ADMIN.THEME.LONG_DATE_FORMAT
-          help: ADMIN.THEME.LONG_DATE_FORMAT_HELP
-          default: "F jS \\a\\t g:i A"
-          options:
-              "F jS \\a\\t g:i A": Date1
-              "l j \of F g:i A": Date2
-              "D, j M Y G:i:s": Date3
-              "jS F, Y g:ia": Date4
         comments.enabled:
           type: toggle
           label: ADMIN.THEME.ENABLE_COMMENTS

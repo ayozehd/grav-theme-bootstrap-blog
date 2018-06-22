@@ -60,8 +60,8 @@
       {% endif %}
         <div class="float-right">
           <i class="far fa-clock text-{{ page.header.style|defined('primary') }}"></i>
-          <small data-toggle="tooltip" title="{{ page.date|date(theme_config.item.longdateformat) }}" class="text-secondary">
-            {{ page.date|date(theme_config.item.dateformat) }}
+          <small data-toggle="tooltip" title="{{ page.date|date(config.system.pages.dateformat.long) }}" class="text-secondary">
+            {{ page.date|date(config.system.pages.dateformat.short) }}
           </small>
         </div>
     </div>

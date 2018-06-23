@@ -50,7 +50,8 @@
     <nav class="navbar navbar-expand-md {{ bsTools.navbarStyle(theme_config.navbar.style) }} {% if theme_config.navbar.sticky %}fixed-top{% endif %}" role="navigation" {% if theme_config.navbar.background_color %}style="background-color:{{ theme_config.navbar.background_color }}"{% endif %}>
         <a class="navbar-brand" href="{{ base_url == '' ? '/' : base_url }}">
             {% if theme_config.navbar.image %}
-                <img class="d-inline-block align-center" src="{{ theme_config.navbar.image.path }}" alt=""/>
+                {% set navbar_image = theme_config.navbar.image|first %}
+                <img class="d-inline-block align-center" src="{{ url(navbar_image.path) }}" alt=""/>
             {% endif %}
             {% if theme_config.navbar.icon %}
             <i class="fas fa-{{ theme_config.navbar.icon }}"></i>

@@ -26,6 +26,17 @@ form:
         0: PLUGIN_ADMIN.DISABLED
       validate:
         type: bool
+    back_to_top_button:
+      type: toggle
+      label: ADMIN.THEME.BACK_TO_TOP_BUTTON
+      help: ADMIN.THEME.BACK_TO_TOP_BUTTON_HELP
+      highlight: 1
+      default: 1
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
     favicon:
       type: file
       label: ADMIN.THEME.FAVICON
@@ -140,7 +151,7 @@ form:
             0: PLUGIN_ADMIN.DISABLED
           validate:
             type: bool
-        comments.shortname:
+        comments.disqus_shortname:
           type: text
           size: medium
           label: ADMIN.THEME.DISQUS_SHORTNAME

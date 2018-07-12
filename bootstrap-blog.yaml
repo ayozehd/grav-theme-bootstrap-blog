@@ -1,6 +1,6 @@
 enabled: true
 cdn_enabled: false
-
+back_to_top_button: true
 navbar:
   image:
   icon:
@@ -24,8 +24,6 @@ sidebar:
 
 item:
   show_prev_next: true
-  dateformat: "j M, Y"
-  longdateformat: "F jS \\a\\t g:i A"
 
 comments:
   enabled: false

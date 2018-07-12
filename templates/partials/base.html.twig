@@ -15,7 +15,7 @@
     <link rel="canonical" href="{{ page.url(true, true) }}" />
 
     {% block stylesheets %}
-    {% if theme_config.cdn.enabled %}
+    {% if theme_config.cdn_enabled %}
         {% do assets.addCss('https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css', 102) %}
         {% do assets.addCss('https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap-reboot.min.css', 100) %}
         {% do assets.addCss('https://use.fontawesome.com/releases/v5.1.0/css/all.css', 10) %}
@@ -33,7 +33,7 @@
     {{ assets.css() }}
 
     {% block javascripts %}
-    {% if theme_config.cdn.enabled %}
+    {% if theme_config.cdn_enabled %}
         {% do assets.addJs('https://code.jquery.com/jquery-3.2.1.slim.min.js', 100) %}
         {% do assets.addJs('https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js', 98) %}
         {% do assets.addJs('https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', 99) %}
@@ -94,10 +94,11 @@
         </div>
     </footer>
 {% endblock %}
-
+{% if theme_config.back_to_top_button %}
+<a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="{{ 'RETURN_TOP_PAGE'|t }}" data-toggle="tooltip" data-placement="left"><span class="fas fa-chevron-up"></span></a>
+{% endif %}
 {% block bottom %}
     {{ assets.js('bottom') }}
 {% endblock %}
-
 </body>
 </html>

@@ -1,5 +1,5 @@
 {% set header_image_width  = page.header.image_width|defined(1024) %}
-{% set header_image_height = page.header.image_height|defined(512) %}  {# Default aspect ratio 2:1 #}
+{% set header_image_height = page.header.image_height|defined(600) %}  {# Default aspect ratio 2:1 #}
 {% set header_image_file = page.header.image_file %}
 {% if header_image_file %}
   {% set header_image_media = page.media.images[header_image_file] %}
@@ -65,5 +65,7 @@
 
 {% set comments = array_merge(theme_config.comments, page.header.comments|default({})) %}
 {% if comments.enabled %}
+<div class="comments">
   {% include 'partials/comments.html.twig' with {'page':page, 'config': comments} %}
+</div>
 {% endif %}

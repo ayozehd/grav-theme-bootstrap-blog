@@ -47,13 +47,13 @@ form:
               title: ADMIN.ITEM.HEADER_IMAGE
               underline: true
               fields:
-                header.header_image_file:
+                header.image_file:
                   type: pagemediaselect
                   label: ADMIN.ITEM.CHOOSE_HEADER_IMAGE
                   help: ADMIN.ITEM.CHOOSE_HEADER_IMAGE_HELP
                   toggleable: true
                   multiple: false
-                header.header_image_align:
+                header.image_align:
                   type: select
                   label: ADMIN.ITEM.IMAGE_ALIGN
                   help: ADMIN.ITEM.IMAGE_ALIGN_HELP
@@ -64,7 +64,7 @@ form:
                     right: ADMIN.RIGHT
                   validate:
                     pattern: (left|right|center)
-                header.header_image_size:
+                header.image_size:
                   type: text
                   size: x-small
                   label: ADMIN.MODULAR.TEXT_IMAGE_SIZE

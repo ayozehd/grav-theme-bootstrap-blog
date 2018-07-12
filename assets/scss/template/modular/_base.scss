@@ -1,4 +1,3 @@
-@import "blog";
 @import "showcase";
 @import "features";
 @import "callout";
@@ -9,4 +8,8 @@
 
   padding-top: $spacer * 3;
   padding-bottom: $spacer * 3;
+
+  .show-more {
+    margin-top: $spacer;
+  }
 }

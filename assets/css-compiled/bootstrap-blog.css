@@ -1386,6 +1386,9 @@ pre {
   #breadcrumbs span {
     padding-left: 1rem !important; }
 
+.items {
+  margin-top: 1rem; }
+
 .item-content {
   padding-bottom: 1rem; }
   .item-content .item-heading {
@@ -1393,27 +1396,10 @@ pre {
     padding-bottom: 0.25rem; }
   .item-content h2.item-title {
     margin-bottom: 0; }
+  .item-content .comments {
+    margin-top: 0.5rem; }
   .item-content img {
     margin-bottom: 0.5rem; }
-  .item-content pre {
-    color: #f8f9fa;
-    padding: 1rem;
-    margin: 1rem 0;
-    background: #343a40;
-    border: 0;
-    border-radius: 2px;
-    line-height: 1.2; }
-
-.container.blog {
-  padding-top: 1rem; }
-  .container.blog .item-list {
-    margin-bottom: 1rem; }
-    .container.blog .item-list .card-title {
-      margin-bottom: 0.25rem; }
-      .container.blog .item-list .card-title .title {
-        margin-bottom: 0; }
-    .container.blog .item-list .categories {
-      margin-bottom: 0; }
 
 .item-boxed {
   margin-bottom: 1rem; }
@@ -1423,22 +1409,30 @@ pre {
     margin-right: auto; }
   .item-boxed .card-title {
     margin-bottom: 0.2rem; }
-  .item-boxed .title {
-    margin-bottom: 0; }
+    .item-boxed .card-title .title {
+      margin-bottom: 0; }
+      .item-boxed .card-title .title a {
+        color: #343a40; }
   .item-boxed .categories {
     margin-bottom: 0; }
   .item-boxed .summary {
     margin-bottom: 0; }
   .item-boxed .tags {
+    font-size: 90%; }
+
+.item-card {
+  margin-bottom: 1rem; }
+  .item-card .card-body {
+    padding-top: 0.5rem; }
+  .item-card .card-title {
+    margin-bottom: 0; }
+  .item-card .categories {
+    margin-bottom: 0.25rem; }
+  .item-card .summary p {
+    margin-bottom: 0.75rem; }
+  .item-card .tags {
     font-size: 90%;
     margin-bottom: 0.75rem; }
-
-.item-card .card-title {
-  margin-bottom: 0; }
-.item-card .categories {
-  margin-bottom: 0.25rem; }
-.item-card .tags {
-  font-size: 90%; }
 
 .item-masonry {
   padding-bottom: 1rem; }
@@ -1501,6 +1495,13 @@ pre {
   .footer .footer-legal {
     color: #adb5bd; }
 
+.back-to-top {
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none; }
+
 .showcase {
   background-size: cover;
   background-repeat: no-repeat;
@@ -1545,5 +1546,7 @@ pre {
   margin-top: 0;
   padding-top: 3rem;
   padding-bottom: 3rem; }
+  .modular-row .show-more {
+    margin-top: 1rem; }
 
 /*# sourceMappingURL=bootstrap-blog.css.map */

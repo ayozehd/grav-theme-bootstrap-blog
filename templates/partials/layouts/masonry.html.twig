@@ -28,19 +28,13 @@
           {% endif %}
           <div class="btn-toolbar" role="toolbar" aria-label="Item toolbar buttons">
             <div class="btn-group">
-              <a href="{{ page.url }}" class="btn {{ page.header.style ? bsTools.buttonStyle(page.header.style, true, true) : 'btn-outline-primary' }}">
-                {{ page.header.button_text ? page.header.button_text : 'MODULAR.READ_MORE'|t }}
-              </a>
+              {{ bsTools.button(page.url, page.header.button_text|default('MODULAR.READ_MORE'|t), null, (page.header.style ? bsTools.processStyle(page.header.style, true) : null), true, false, 'primary') }}
+              {% if page.header.link %}
+                {{ bsTools.button(page.header.link, null, 'link', (page.header.style ? bsTools.processStyle(page.header.style, true) : null), true, false, 'secondary') }}
+              {% endif %}
             </div>
             <div class="btn-group">
-            {% for button in page.header.buttons %}
-              <a href="{{ button.url starts with 'http' ? button.url : url(button.url) }}" class="btn {{ bsTools.buttonStyle(page.header.style|default('light'), true, true) }} {{ button.class }}">
-                {% if button.icon %}
-                  <i class="fas fa-{{ button.icon }}"></i>
-                {% endif %}
-                {{ button.text }}
-              </a>
-            {% endfor %}
+            {{ bsTools.buttons(page.header.buttons, page.header.style, true, true, 'dark') }}
             </div>
           </div>
         </div>

@@ -28,14 +28,7 @@
         <dov class="row">
             <div class="col text-{{ page.header.text_align|defined('center') }}">
                 {{ content }}
-                {% for button in page.header.buttons %}
-                <a class="btn {{ bsTools.buttonStyle(button.style|defined(page.header.style), button.is_outline|defined(true), false, 'light') }} btn-{{ button.size|defined('lg') }}" href="{{ button.url }}">
-                    {% if button.icon %}
-                        <i class="fas fa-{{ button.icon}}"></i>
-                    {% endif %}
-                    {{ button.text }}
-                </a>
-                {% endfor %}
+                {{ bsTools.buttons(page.header.buttons, page.header.style, true, false, 'light') }}
             </div>
         </div>
     </div>

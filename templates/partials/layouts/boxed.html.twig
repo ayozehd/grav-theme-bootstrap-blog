@@ -14,7 +14,7 @@
       {% endif %}
     <div class="card-body">
         <div class="card-title">
-          <h3 class="title">{{ page.title }}</h3>
+          <h3 class="title"><a href="{{ page.url }}">{{ page.title }}</a></h3>
           <div class="categories">
           {% for category in page.taxonomy.category %}
             <a class="badge badge-pill badge-{{ page.header.style|defined('secondary') }} text-uppercase font-weight-normal" href="{{ parent.url|rtrim('/') }}/category{{ config.system.param_sep }}{{ category }}">{{ category }}</a>
@@ -22,28 +22,17 @@
         </div>
       </div>
       <div class="card-text summary">
-        {% if page.summary != page.content %}
-          {{ page.summary }}
-        {% else %}
-          {{ page.content }}
-        {% endif %}
+        {{ page.summary }}
       </div>
-      <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Item buttons">
+      <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Item Links">
         <div class="btn-group" role="group" aria-label="Links">
-          <a href="{{ page.url }}" alt="{{ page.title }}" class="btn btn-outline-{{ page.header.style|defined('primary') }}">{{ 'ITEM.CONTINUE_READING'|t}}</a>
+          {{ bsTools.button(page.url, page.header.button_text|default('ITEM.CONTINUE_READING'|t), null, page.header.style, true, false, 'primary') }}
           {% if page.header.link %}
-            <a class="btn btn-outline-secondary" alt="{{ page.title }}" href="{{ page.header.link }}" target="_blank"><i class="fas fa-link"></i></a>
+            {{ bsTools.button(page.header.link, null, 'link', 'secondary', true, false) }}
           {% endif %}
         </div>
         <div class="btn-group" role="group" aria-label="Extra Links">
-        {% for button in page.header.buttons %}
-          <a href="{{ button.url starts with 'http' ? button.url : url(button.url) }}" class="btn {{ bsTools.buttonStyle(page.header.style|default('dark'), true, false) }} {{ button.class }}">
-            {% if button.icon %}
-              <i class="fas fa-{{ button.icon }}"></i>
-            {% endif %}
-            {{ button.text }}
-          </a>
-        {% endfor %}
+          {{ bsTools.buttons(page.header.buttons, page.header.style, true, true, 'dark') }}
         </div>
       </div>
     </div>

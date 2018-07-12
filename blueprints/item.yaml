@@ -105,7 +105,7 @@ form:
                         header.image_width:
                           type: text
                           label: ADMIN.WIDTH
-                          placeholder: 900
+                          placeholder: 1024
                           toggleable: true
                           validate:
                             type: number
@@ -116,7 +116,7 @@ form:
                         header.image_height:
                           type: text
                           label: ADMIN.HEIGHT
-                          placeholder: 300
+                          placeholder: 600
                           toggleable: true
                           validate:
                             type: number

@@ -1,24 +1,27 @@
-{% set header_image_width  = page.header.header_image_width|defined(900) %}
-{% set header_image_height = page.header.header_image_height|defined(300) %}
-{% set header_image_file = page.header.header_image_file %}
+{% set header_image_width  = page.header.image_width|defined(640) %}
+{% set header_image_height = page.header.image_height|defined(480) %}
+{% set header_image_file = page.header.image_file %}
 {% if header_image_file %}
   {% set header_image_media = page.media.images[header_image_file] %}
 {% else %}
   {% set header_image_media = page.media.images|first %}
 {% endif %}
 
-<div class="portfolio-card col-12 col-md-4 mb-3">
+<div class="item-card col-12 col-md-4">
   <div class="card card-raised {{ bsTools.style( page.header.style|defined('light') ) }}">
     {% if header_image_media %}
     <a href="{{ page.url}}">{{ header_image_media.cropResize(header_image_width,header_image_height).html('', '', 'card-img-top') }}</a>
     {% endif %}
     <div class="card-body">
-      <h2 class="card-title">{{ page.title }}</h2>
-      <p class="categories">
+      <time data-toggle="tooltip" title="{{ page.date|date(config.system.pages.dateformat.long) }}" class="{{ bsTools.textStyle(page.header.style, 'secondary') }}" datetime="{{ page.date|date("c") }}">
+        <small><i class="far fa-clock"></i>&nbsp;{{ page.date|date(config.system.pages.dateformat.short) }}</small>
+      </time>
+      <h2 class="card-title"><a class="{{ bsTools.textStyle(page.header.style, 'dark') }}" href="{{ page.url }}">{{ page.title }}</a></h2>
+      <div class="categories">
       {% for category in page.taxonomy.category %}
         <a class="badge badge-pill badge-{{ bsTools.processStyle(page.header.style, true, 'secondary')|trim }} text-uppercase font-weight-normal" href="{{ page.parent.url|rtrim('/') }}/category{{ config.system.param_sep }}{{ category }}">{{ category }}</a>
       {% endfor %}
-      </p>
+      </div>
       <div class="summary">{{ page.summary }}</div>
       {% if page.taxonomy.tag|length > 0 %}
         <p class="tags"><i class="fas fa-sm fa-tags"></i>
@@ -28,18 +31,14 @@
         </p>
       {% endif %}
       <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Item toolbar buttons">
-        <a href="{{ page.url }}" class="btn {{ page.header.style ? bsTools.buttonStyle(page.header.style, true, true) : 'btn-outline-primary' }}">
-          {{ page.header.button_text ? page.header.button_text : 'MODULAR.READ_MORE'|t }}
-        </a>
+        <div class="btn-group" role="group" aria-label="Links">
+          {{ bsTools.button(page.url, page.header.button_text|default('MODULAR.READ_MORE'|t), null, (page.header.style ? bsTools.processStyle(page.header.style, true) : null), true, false, 'primary') }}
+          {% if page.header.link %}
+            {{ bsTools.button(page.header.link, null, 'link', (page.header.style ? bsTools.processStyle(page.header.style, true) : null), true, false, 'secondary') }}
+          {% endif %}
+        </div>
         <div class="btn-group">
-        {% for button in page.header.buttons %}
-          <a href="{{ button.url starts with 'http' ? button.url : url(button.url) }}" class="btn {{ bsTools.buttonStyle(page.header.style|default('light'), true, true) }} {{ button.class }}">
-            {% if button.icon %}
-              <i class="fas fa-{{ button.icon }}"></i>
-            {% endif %}
-            {{ button.text }}
-          </a>
-        {% endfor %}
+        {{ bsTools.buttons(page.header.buttons, page.header.style, true, true, 'dark') }}
         </div>
       </div>
     </div>

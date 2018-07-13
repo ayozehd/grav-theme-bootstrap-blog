@@ -10,6 +10,10 @@
     margin-bottom: 0;
   }
 
+  .comments {
+    margin-top: $spacer * .5;
+  }
+
   img {
     @extend .img-fluid;
     margin-bottom: $spacer *.5;
@@ -23,13 +27,4 @@
     @extend .blockquote;
   }
 
-  pre {
-    color: $gray-100;
-    padding: $spacer;
-    margin: $spacer 0;
-    background: $dark;
-    border: 0;
-    border-radius: 2px;
-    line-height: 1.2;
-  }
 }

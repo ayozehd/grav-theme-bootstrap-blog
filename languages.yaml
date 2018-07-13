@@ -15,6 +15,8 @@ en:
     THEME:
       CDN: CDN
       CDN_HELP: Get needed CSS and JS files from Content Distribution Networks to decrease load times
+      BACK_TO_TOP_BUTTON: Back to top button
+      BACK_TO_TOP_BUTTON_HELP: Show a button to return the top page
       FAVICON: Favicon
       FAVICON_HELP: Upload an image as page icon or favicon (stored in user/themes/bootstrap-blog/images)
       NAVBAR: Navbar
@@ -31,15 +33,12 @@ en:
       ITEMS: Items
       SHOW_PREV_NEXT_BUTTONS: Show Previous/Next buttons
       SHOW_PREV_NEXT_BUTTONS_HELP: At the end of the content, 2 buttons let us navigate between pages
-      SHORT_DATE_FORMAT: Short dateformat
-      SHORT_DATE_FORMAT_HELP: It will be used in listings and items view
-      LONG_DATE_FORMAT: Long dateformat
-      LONG_DATE_FORMAT_HELP: A tooltip will be showen above short date
       ENABLE_COMMENTS: Enable comments
       ENABLE_COMMENTS_HELP: Add a comments forum at the end of each page
       DISQUS_SHORTNAME: Disqus shortname
       DISQUS_SHORTNAME_HELP: Identifier of your site forum in Disqus. This value is needed to comments get work
       DISQUS_SHORTNAME_DESCRIPTION: 'Manage your comments on <a href="https://disqus.com/admin/" target="_blank">Disqus</a>'
+      SEARCH: Search
       SIDEBAR: Sidebar
       ENABLE_SIDEBAR: Enable sidebar
       ENABLE_SIDEBAR_HELP: Show/Hide a sidebar in templates
@@ -67,8 +66,8 @@ en:
       ICON_STYLE: Icon style
       CHOOSE_ICON_COLOR: Choose icon color
       CHOOSE_ICON_COLOR_HELP: Overrides style parameter
-      CHOOSE_LAYOUT: Choose layout
-      CHOOSE_LAYOUT_HELP: 'Pick between 3 designs to list portfolio items: "boxed", "masonry" or "cards"'
+      ITEMS_LAYOUT: Items layout
+      ITEMS_LAYOUT_HELP: 'Choose between 3 designs to list items: "boxed", "masonry" or "cards"'
       TEXT_IMAGE_SIZE: Image size
       TEXT_IMAGE_SIZE_HELP: 'Uses Bootstrap columns. Min value is 1, default 6 and maximum 12 (full width)'
       SHOWCASE_STYLE_HELP: Only works if there is no background image
@@ -92,7 +91,6 @@ en:
       ADD_BUTTONS_HELP: Add some buttons at the end. They are visible on listings too.
       BUTTON_ADD_CSS: Add CSS classes
       BUTTON_ADD_CSS_HELP: Type custom CSS classes clases to button. Remember to separate them by spaces (" ")
-
     ICON: Icon
     ICON_HELP: We are using FontAwesome 5, remember to add "fab" or "far" to corresponding icon, "fas" is selected by default
     FONTAWESOME_5_ICONS: '<a href="https://fontawesome.com/icons" target="_blank">Fontawesome 5 Icons</a>'
@@ -156,6 +154,7 @@ en:
   ERROR:
     TITLE: Error
     CONTENT: Woops. Looks like this page doesn't exist.
+  RETURN_TOP_PAGE: Return to the top page
 
 es:
   ADMIN:
@@ -174,6 +173,8 @@ es:
     THEME:
       CDN: CDN
       CDN_HELP: Recupera los ficheros CSS y JS necesarios desde servidores CDN para reducir los tiempos de carga
+      BACK_TO_TOP_BUTTON: Botón volver a arriba
+      BACK_TO_TOP_BUTTON_HELP: Muestra un botón para volver a la parte superior de la página
       FAVICON: Favicon
       FAVICON_HELP: Sube una imagen como icono de página o favicon (almacenada en user/themes/bootstrap-blog/images)
       NAVBAR: Barra de navegación
@@ -190,15 +191,12 @@ es:
       ITEMS: Elementos
       SHOW_PREV_NEXT_BUTTONS: Mostrar botones anterior/siguiente
       SHOW_PREV_NEXT_BUTTONS_HELP: Al final del contenido, 2 botones nos permitirán navegar entre las páginas
-      SHORT_DATE_FORMAT: Formato de fecha corto
-      SHORT_DATE_FORMAT_HELP: Se utilizará en los listados y en las publicaciones
-      LONG_DATE_FORMAT: Formato de fecha largo
-      LONG_DATE_FORMAT_HELP: Se mostrará en un tooltip sobre la fecha corta
       ENABLE_COMMENTS: Activar comentarios
       ENABLE_COMMENTS_HELP: Incluye un foro de comentarios al final de cada página
       DISQUS_SHORTNAME: 'Disqus <em>shortname</em>'
       DISQUS_SHORTNAME_HELP: Identificador de tu sitio en Disqus. Este valor es necesario para que los comentarios funcionen
       DISQUS_SHORTNAME_DESCRIPTION: 'Gestiona tus comentarios desde <a href="https://disqus.com/admin/" target="_blank">Disqus</a>'
+      SEARCH: Search
       SIDEBAR: Barra lateral
       ENABLE_SIDEBAR: Activar barra lateral
       ENABLE_SIDEBAR_HELP: Muestra/Oculta la barra lateral en la plantilla
@@ -228,8 +226,8 @@ es:
       ICON_STYLE: Estilo de icono
       CHOOSE_ICON_COLOR: Escoge el color del icono
       CHOOSE_ICON_COLOR_HELP: Sobrescribirá el parámetro de estilo
-      CHOOSE_LAYOUT: Escoge un diseño
-      CHOOSE_LAYOUT_HELP: 'Elija entre estos 3 diseños para listar los elementos del portafolio: "boxed", "masonry" y "cards"'
+      ITEMS_LAYOUT: Escoge un diseño
+      ITEMS_LAYOUT_HELP: 'Escoge entre estos 3 diseños para listar los elementos del portafolio: "boxed", "masonry" y "cards"'
       TEXT_IMAGE_SIZE: Tamaño de imagen
       TEXT_IMAGE_SIZE_HELP: 'Utiliza las columnas de Bootstrap. El valor mínimo es 1, por defecto es 6 y el máximo 12 (ancho completo)'
       SHOWCASE_STYLE_HELP: Sólo funciona si no hay una imagen de fondo
@@ -315,3 +313,4 @@ es:
   ERROR:
     TITLE: Error
     CONTENT: Ups. Parece que esta página no existe.
+  RETURN_TOP_PAGE: Volver a arriba

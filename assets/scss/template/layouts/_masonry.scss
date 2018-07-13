@@ -1,0 +1,48 @@
+.item-masonry {
+  padding-bottom: $spacer;
+
+  .masonry-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin-left:auto;
+    margin-right:auto;
+    height: auto;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease-in-out;
+  }:hover {
+      opacity: 1;
+  }
+
+  .card-title {
+    margin-bottom: $spacer * .5;
+  }
+
+  .masonry-no-overlay {
+    position: relative;
+    display: block;
+    padding: 1.25rem;
+  }
+
+  .categories {
+    margin-bottom: $spacer * .5;
+  }
+
+  .tags {
+    font-size: 90%;
+    margin-bottom: $spacer * .75;
+  }
+
+  .btn-toolbar {
+    display: inline-block;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+
+    .btn-group:last-child {
+      margin-left: $spacer * .2;
+    }
+  }
+}

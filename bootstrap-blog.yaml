@@ -1,13 +1,13 @@
 enabled: true
 cdn_enabled: false
-
+back_to_top_button: true
+favicon:
 navbar:
   image:
   icon:
   style: light
   dropdown: true
   sticky: false
-
 sidebar:
   enabled: true
   align: left
@@ -21,16 +21,11 @@ sidebar:
     title: About me
     content: Some text about you...
     page:
-
 item:
   show_prev_next: true
-  dateformat: "j M, Y"
-  longdateformat: "F jS \\a\\t g:i A"
-
 comments:
   enabled: false
   disqus_shortname:
-
 footer:
   style: light
   text: 'Bootstrap Blog is <i class="fas fa-code"></i> with <i class="fas fa-heart"></i> by <a href="http://ayozehd.com">Ayoze Hernández Díaz</a>'

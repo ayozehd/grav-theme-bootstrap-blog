@@ -54,11 +54,12 @@ form:
                 light: Light
                 primary: Primary
                 secondary: Secondary
+                info: Info
                 success: Success
                 warning: Warning
                 danger: Danger
               validate:
-                pattern: (dark|light|primary|secondary|success|warning|danger)
+                pattern: (dark|light|primary|secondary|info|success|warning|danger)
             header.buttons:
               name: buttons
               type: list
@@ -89,33 +90,33 @@ form:
               title: ADMIN.ITEM.HEADER_IMAGE
               underline: true
               fields:
-                header.header_image_file:
+                header.image_file:
                   type: pagemediaselect
                   label: ADMIN.ITEM.CHOOSE_HEADER_IMAGE
                   help: ADMIN.ITEM.CHOOSE_HEADER_IMAGE_HELP
                   toggleable: true
                   multiple: false
-                header_image_sizes:
+                image_sizes:
                   type: columns
                   fields:
-                    col_header_image_width:
+                    col_image_width:
                       type: column
                       fields:
-                        header.header_image_width:
+                        header.image_width:
                           type: text
                           label: ADMIN.WIDTH
-                          placeholder: 900
+                          placeholder: 1024
                           toggleable: true
                           validate:
                             type: number
                             min: 0
-                    col_header_image_height:
+                    col_image_height:
                       type: column
                       fields:
-                        header.header_image_height:
+                        header.image_height:
                           type: text
                           label: ADMIN.HEIGHT
-                          placeholder: 300
+                          placeholder: 600
                           toggleable: true
                           validate:
                             type: number

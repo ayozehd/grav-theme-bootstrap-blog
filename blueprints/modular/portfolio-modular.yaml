@@ -31,8 +31,8 @@ form:
                 pattern: (dark|light|primary|secondary|success|warning|danger)
             header.layout:
               type: select
-              label: ADMIN.MODULAR.CHOOSE_LAYOUT
-              help: ADMIN.MODULAR.CHOOSE_LAYOUT_HELP
+              label: ADMIN.MODULAR.ITEMS_LAYOUT
+              help: ADMIN.MODULAR.ITEMS_LAYOUT_HELP
               default: boxed
               options:
                 boxed: Boxed

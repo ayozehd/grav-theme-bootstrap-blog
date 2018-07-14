@@ -10,7 +10,7 @@ form:
       fields:
         bootstrap-blog:
           type: tab
-          title: ADMIN.THEME_OPTIONS
+          title: ADMIN.MODULAR.SHOWCASE
           fields:
             header.style:
               type: select
@@ -72,7 +72,7 @@ form:
               name: buttons
               type: list
               style: vertical
-              label: ADMIN.ITEM.ADD_BUTTONS
+              label: ADMIN.ITEM.BUTTONS
               collapsed: true
               fields:
                 .text:

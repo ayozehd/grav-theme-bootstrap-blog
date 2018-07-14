@@ -10,7 +10,7 @@ form:
       fields:
         bootstrap-blog:
           type: tab
-          title: ADMIN.THEME_OPTIONS
+          title: ADMIN.ITEM.TAB
           fields:
             is_sidebar_enabled:
               type: conditional
@@ -64,8 +64,8 @@ form:
               name: buttons
               type: list
               style: vertical
-              label: ADMIN.ITEM.ADD_BUTTONS
-              help: ADMIN.ITEM.ADD_BUTTONS_HELP
+              label: ADMIN.ITEM.BUTTONS
+              help: ADMIN.ITEM.BUTTONS_HELP
               collapsed: true
               fields:
                 .text:

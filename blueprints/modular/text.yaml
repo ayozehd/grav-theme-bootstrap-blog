@@ -10,12 +10,12 @@ form:
       fields:
         bootstrap-blog:
           type: tab
-          title: ADMIN.THEME_OPTIONS
+          title: ADMIN.MODULAR.CALLOUT
           fields:
             header.style:
               type: select
-              label: ADMIN.BACKGROUND_STYLE
-              help: ADMIN.BACKGROUND_STYLE_HELP
+              label: ADMIN.STYLE
+              help: ADMIN.STYLE_HELP
               description: ADMIN.WE_USE_BOOTSTRAP_COLORS
               size: medium
               toggleable: true

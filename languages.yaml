@@ -151,9 +151,7 @@ en:
       HEADLINE: Feed
   FORM_DATA:
     SUMMARY: "Here is the summary of what you wrote to us:"
-  ERROR:
-    TITLE: Error
-    CONTENT: Woops. Looks like this page doesn't exist.
+  ERROR: Error
   RETURN_TOP_PAGE: Return to the top page
 
 es:
@@ -310,7 +308,5 @@ es:
       HEADLINE: Feed
   FORM_DATA:
     SUMMARY: "Este es un resumen de lo escrito:"
-  ERROR:
-    TITLE: Error
-    CONTENT: Ups. Parece que esta página no existe.
+  ERROR: Error
   RETURN_TOP_PAGE: Volver a arriba

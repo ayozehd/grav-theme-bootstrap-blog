@@ -1,5 +1,5 @@
 # v1.1
-### 25-06-2018
+### 15-07-2018
 
 1. [](#new)
   * Added go to top button
@@ -7,6 +7,7 @@
   * Merge portfolio and blog layouts
   * Added info style
   * Now dateformat comes from Grav System Config
+  * Removed portfolio templates. Use blog instead
 3. [](#bugfix)
   * Fixed navbar image
 

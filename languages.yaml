@@ -62,14 +62,17 @@ en:
       SHOW_MORE_BUTTON: Show more button
       SHOW_MORE_BUTTON_HELP: Will appear a button which links to the selected page
       SHOW_MORE_FALLBACK: This page is used as fallback to get children when cannot find a collection
+      FEATURES: Features
       FEATURES_SETUP: Setup features
       ICON_STYLE: Icon style
       CHOOSE_ICON_COLOR: Choose icon color
       CHOOSE_ICON_COLOR_HELP: Overrides style parameter
       ITEMS_LAYOUT: Items layout
       ITEMS_LAYOUT_HELP: 'Choose between 3 designs to list items: "boxed", "masonry" or "cards"'
+      CALLOUT: Callout
       TEXT_IMAGE_SIZE: Image size
       TEXT_IMAGE_SIZE_HELP: 'Uses Bootstrap columns. Min value is 1, default 6 and maximum 12 (full width)'
+      SHOWCASE: Showcase
       SHOWCASE_STYLE_HELP: Only works if there is no background image
       SHOWCASE_IMAGE_ACTIONS: Image filters
       SHOWCASE_IMAGE_ACTIONS_HELP: Use your own Grav Media Actions instead of default behaviour. Remember to use Twig way and separate arguments by comma.
@@ -77,6 +80,7 @@ en:
       SHOWCASE_IMAGE_ACTION: Action
       SHOWCASE_IMAGE_ARGUMENTS: Arguments (null or comma separated)
     ITEM:
+      TAB: Item
       ITEM_STYLE: Item style
       ITEM_STYLE_HELP: Change some links colors and items view on listings
       ITEM_SIDEBAR_HELP: Turn off to hide sidebar in this element
@@ -87,10 +91,11 @@ en:
       IMAGE_ALIGN_HELP: Set image to left or right side. Warning! With image size 12 it will appear at the end of content when you select "right"
       COMMENTS: Comments
       ITEM_COMMENTS_HELP: Turn off to do not let publish comments in this item
-      ADD_BUTTONS: Add buttons
-      ADD_BUTTONS_HELP: Add some buttons at the end. They are visible on listings too.
+      BUTTONS: Buttons
+      BUTTONS_HELP: Add some buttons at the end. They are visible on listings too.
       BUTTON_ADD_CSS: Add CSS classes
       BUTTON_ADD_CSS_HELP: Type custom CSS classes clases to button. Remember to separate them by spaces (" ")
+    BLOG: Blog
     ICON: Icon
     ICON_HELP: We are using FontAwesome 5, remember to add "fab" or "far" to corresponding icon, "fas" is selected by default
     FONTAWESOME_5_ICONS: '<a href="https://fontawesome.com/icons" target="_blank">Fontawesome 5 Icons</a>'
@@ -99,7 +104,7 @@ en:
     STYLE: Style
     STYLE_HELP: Change background and text color from Bootstrap Patterns
     STYLE_DESCRIPTION: '<em>Choose a color scheme from <a href="https://getbootstrap.com/docs/4.0/components/navbar/#color-schemes" target="_blank">Bootstrap</a></em>'
-    WE_USE_BOOTSTRAP_COLORS: 'We use scheme colors from <a href="https://getbootstrap.com/docs/4.0/utilities/colors/" target="_blank">Bootstrap</a>'
+    WE_USE_BOOTSTRAP_COLORS: 'We use <a href="https://getbootstrap.com/docs/4.0/utilities/colors/" target="_blank">Bootstrap</a> scheme colors'
     TAKE_A_LOOK_TO_BOOTSTRAP_STYLES: '<em>Take a look to <a href="https://getbootstrap.com/docs/4.0/utilities/colors/#background-color" target="_blank">Bootstrap colors</a></em>'
     BOOTSTRAP_STYLES:
       LIGHT: Light
@@ -156,7 +161,6 @@ en:
 
 es:
   ADMIN:
-    THEME_OPTIONS: Opciones del tema
     ENABLE: Activar
     TITLE: Título
     TEXT: Texto
@@ -220,14 +224,17 @@ es:
       SHOW_MORE_BUTTON: Botón "Ver más"
       SHOW_MORE_BUTTON_HELP: Aparecerá un botón que redirecciona a la página seleccionada
       SHOW_MORE_FALLBACK: Esta página se utiliza como alternativa para obtener hijos cuando no se pueda encontrar una colección
+      FEATURES: Destacados
       FEATURES_SETUP: Configura los destacados
       ICON_STYLE: Estilo de icono
       CHOOSE_ICON_COLOR: Escoge el color del icono
       CHOOSE_ICON_COLOR_HELP: Sobrescribirá el parámetro de estilo
       ITEMS_LAYOUT: Escoge un diseño
       ITEMS_LAYOUT_HELP: 'Escoge entre estos 3 diseños para listar los elementos del portafolio: "boxed", "masonry" y "cards"'
+      CALLOUT: Callout
       TEXT_IMAGE_SIZE: Tamaño de imagen
       TEXT_IMAGE_SIZE_HELP: 'Utiliza las columnas de Bootstrap. El valor mínimo es 1, por defecto es 6 y el máximo 12 (ancho completo)'
+      SHOWCASE: Showcase
       SHOWCASE_STYLE_HELP: Sólo funciona si no hay una imagen de fondo
       SHOWCASE_IMAGE_ACTIONS: Filtros de imágen
       SHOWCASE_IMAGE_ACTIONS_HELP: Utiliza tus propios filtros de imágenes Grav en lugar de los usados por defecto en el tema. Recuerda seguir el formato Twig separando los argumentos por coma.
@@ -235,6 +242,7 @@ es:
       SHOWCASE_IMAGE_ACTION: Filtro
       SHOWCASE_IMAGE_ARGUMENTS: Argumentos (null o separados por coma)
     ITEM:
+      TAB: Elemento
       ITEM_STYLE: Estilo de elemento
       ITEM_STYLE_HELP: Cambia los colores de los enlaces y la vista en los listados
       ITEM_SIDEBAR_HELP: Deshabilita esta opción para ocultar la barra lateral en este elemento
@@ -245,11 +253,11 @@ es:
       IMAGE_ALIGN: Alineación de imagen
       IMAGE_ALIGN_HELP: Escoge mostrar la imagen a la izquierda o derecha del contenido. ¡Aviso! Con el tamaño 12 la imagen se muestra al final (derecha)
       ITEM_COMMENTS_HELP: Si lo deshabilitas no permite publicar comentarios en este elemento
-      ADD_BUTTONS: Añadir botones
-      ADD_BUTTONS_HELP: Añade algunos enlaces al final del elemento. Estos serán visibles también en los listados.
+      BUTTONS: Botones
+      BUTTONS_HELP: Añade algunos enlaces al final del elemento. Estos serán visibles también en los listados.
       BUTTON_ADD_CSS: Añade clases css
       BUTTON_ADD_CSS_HELP: Incluye clases CSS personalizadas. Recuerda separarlas por espacios (" ")
-
+    BLOG: Blog
     ICON: Icono
     ICON_HELP: Utilizamos FontAwesome 5, recuerda añadir "fab" o "far" al icono correspondiente, "fas" está seleccionado por defecto
     FONTAWESOME_5_ICONS: '<a href="https://fontawesome.com/icons" target="_blank">Iconos Fontawesome 5</a>'
@@ -258,7 +266,7 @@ es:
     STYLE: Estilo
     STYLE_HELP: Cambia el color del texto y fondo desde los patrones de estilos Bootstrap
     STYLE_DESCRIPTION: '<em>Escoge entre los distintos patrones de colores de <a href="https://getbootstrap.com/docs/4.0/components/navbar/#color-schemes" target="_blank">Bootstrap</a></em>'
-    WE_USE_BOOTSTRAP_COLORS: 'Utilizamos los colores de <a href="https://getbootstrap.com/docs/4.0/utilities/colors/">Bootstrap</a>'
+    WE_USE_BOOTSTRAP_COLORS: 'Utilizamos el patrón de colores de <a href="https://getbootstrap.com/docs/4.0/utilities/colors/">Bootstrap</a>'
     TAKE_A_LOOK_TO_BOOTSTRAP_STYLES: '<em>Echa un vistazo a los colores de <a href="https://getbootstrap.com/docs/4.0/utilities/colors/#background-color" target="_blank">Bootstrap</a></em>'
     BOOTSTRAP_STYLES:
       LIGHT: Claro

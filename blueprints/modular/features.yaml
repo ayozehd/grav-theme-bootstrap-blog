@@ -10,7 +10,7 @@ form:
       fields:
         bootstrap-blog:
           type: tab
-          title: ADMIN.THEME_OPTIONS
+          title: ADMIN.MODULAR.FEATURES
           fields:
             header.style:
               type: select
@@ -50,7 +50,6 @@ form:
                 .icon:
                   type: text
                   label: ADMIN.ICON
-                  help: ADMIN.ICON_HELP
                 .title:
                   type: text
                   label: ADMIN.TITLE

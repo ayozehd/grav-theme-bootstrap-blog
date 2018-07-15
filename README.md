@@ -9,7 +9,7 @@
 * Lightweight and minimal for optimal performance
 * Bootstrap 4.1 Stable
 * SCSS based CSS source files to ease customization
-* 3 Blog and Portfolio Layouts
+* 3 Blog Item Layouts
 * Twitter Timeline Sidebar Widget
 * Fill of color your site with Bootstrap styles
 * Fontawesome 5
@@ -19,13 +19,11 @@
 * Default view template `default.md`
 * Error view template `error.md`
 * Blog view template `blog.md`
-* Portfolio view template `portfolio.md`
 * Blog and Portfolio item view template `item.md`
 * Modular view templates: `modular.md`
   * Features Modular view template `features.md`
   * Showcase Modular view template `showcase.md`
-  * Blog Modular view template `blog-modular.md`
-  * Portfolio Modular view template `portfolio-modular.md`
+  * Blog Modular view template `blog.md`
   * Text Modular view template `text.md`
 
 # Installation
@@ -50,20 +48,19 @@ You should now have all the theme files under
 
 ## Styles
 
-Almost templates support a style parameter in headers. That means depending on the case some buttons, text colors and background change from [Bootstrap Theme Colors](https://getbootstrap.com/docs/4.0/getting-started/theming/#theme-colors). Don't be afraid to fill of color your site!
+Almost templates support a style parameter in headers. That means depending on the case some buttons, text colors and background change from [Bootstrap Scheme Colors](https://getbootstrap.com/docs/4.0/getting-started/theming/#theme-colors). Don't be afraid to fill of color your site!
 
 Templates supporting `style`:
 * `item`
 * `features`
 * `showcase`
-* `blog-modular`
-* `portfolio-modular`
+* `blog`
 * `text`
 
 
 ## FontAwesome 5
 
-Bootstrap Blog is builded with lastest [FontAwesome Icons 5](https://fontawesome.com/). This version has some [important changes from previous version 4](https://fontawesome.com/how-to-use/upgrading-from-4), now icons are divided in three groups: Solid, Brand and Regular (Light is only for _Pro_).
+Bootstrap Blog is built with lastest [FontAwesome Icons 5](https://fontawesome.com/). This version has some [important changes from previous version 4](https://fontawesome.com/how-to-use/upgrading-from-4), now icons are divided in three groups: Solid, Brand and Regular (Light is only for _Pro_).
 
 In this theme `fas` or Font Awesome Solid is selected by default. If you need to use Regular or Brand icons you just have to add `far` or `fab` respectively at the end.
 
@@ -158,9 +155,27 @@ features:
 
 This is the default modular template. It supports `style` parameter to change background and font color following [Bootstrap Theme Colors](https://getbootstrap.com/docs/4.1/getting-started/theming/#theme-colors). Also you are able to use `text_align`, and set image width by columns with `image_size` taking values from 1 to 12 (default 6). Image will be retrieved automatically from first media founded in folder, or you can pick one on `image_file`.
 
-## Blog & Portfolio
+### Blog Modular
 
-Blog and Porfolio content must be setting up with [Page Collections](https://learn.getgrav.org/content/collections), except in modular templates where `show_more` route parameter is used as fallback to get children. In addition, the showcase is included to customize Blog and Porfolio headers following the same structure mentioned above. It's possible to choose between 3 layouts (boxed, cards and masonry) to both Blog and Portfolio items, also in modular.
+Blog Modular content should be setting up with [Page Collections](https://learn.getgrav.org/content/collections), or using `show_more` route parameter as to get children. Also it's possible to choose between 3 layouts to display items; boxed, cards or masonry.
+
+```yaml
+title: Blog Modular
+layout: boxed|cards|masonry
+show_more: /blog
+content:
+    items:
+      '@page': '/blog'
+    order:
+        by: date
+        dir: desc
+    limit: 6
+    pagination: false
+```
+
+## Blog
+
+As in Blog Modular you're able to choose between 3 layouts. In addition, showcase is included to customize Blog header following the same structure mentioned above.
 
 ```yaml
 title: Blog
@@ -174,23 +189,9 @@ content:
     pagination: true
 ```
 
-```yaml
-title: Portfolio Modular
-layout: boxed|cards|masonry
-show_more: /projects
-content:
-    items:
-      '@page': '/projects'
-    order:
-        by: date
-        dir: desc
-    limit: 6
-    pagination: false
-```
-
 ## Item
 
-Descendants of Blog and Portfolio are items. It get first folder image as header or you can pick it via `image_file` as in [Text Modular](#text-modular). In addition, `style` parameter is supported and `buttons` array to show some links at bottom.
+Descendants of Blog are items. Get first folder image as header or you can pick it via `image_file` as in [Text Modular](#text-modular). In addition, `style` parameter is supported and `buttons` array to show some links at bottom.
 
 Also you are able to disable sidebar and comments in each item, overriding theme settings.
 

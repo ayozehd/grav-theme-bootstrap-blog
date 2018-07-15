@@ -10,7 +10,7 @@ form:
       fields:
         bootstrap-blog:
           type: tab
-          title: ADMIN.THEME_OPTIONS
+          title: ADMIN.BLOG
           fields:
             is_sidebar_enabled:
               type: conditional
@@ -27,3 +27,15 @@ form:
                     0: PLUGIN_ADMIN.DISABLED
                   validate:
                     type: bool
+            header.layout:
+              type: select
+              label: ADMIN.MODULAR.ITEMS_LAYOUT
+              help: ADMIN.MODULAR.ITEMS_LAYOUT_HELP
+              size: medium
+              default: boxed
+              options:
+                boxed: Boxed
+                masonry: Masonry
+                cards: Cards
+              validate:
+                pattern: (boxed|masonry|cards)

@@ -46,5 +46,7 @@
             </a>
         </li>
     {% endfor %}
+    {% if config.plugins.login.enabled and grav.user.username %}
+        <li class="nav-item"><i class="fas fa-lock"></i> {% include 'partials/login-status.html.twig' %}</li>
+    {% endif %}
 </ul>
-

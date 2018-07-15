@@ -10,7 +10,7 @@ form:
       fields:
         bootstrap-blog:
           type: tab
-          title: ADMIN.THEME_OPTIONS
+          title: ADMIN.MODULAR.SHOWCASE
           fields:
             header.style:
               type: select
@@ -23,11 +23,12 @@ form:
                 light: Light
                 primary: Primary
                 secondary: Secondary
+                info: Info
                 success: Success
                 warning: Warning
                 danger: Danger
               validate:
-                pattern: (dark|light|primary|secondary|success|warning|danger)
+                pattern: (dark|light|primary|secondary|info|success|warning|danger)
             header.image_file:
               type: pagemediaselect
               label: ADMIN.ITEM.CHOOSE_HEADER_IMAGE
@@ -71,7 +72,7 @@ form:
               name: buttons
               type: list
               style: vertical
-              label: ADMIN.ITEM.ADD_BUTTONS
+              label: ADMIN.ITEM.BUTTONS
               collapsed: true
               fields:
                 .text:

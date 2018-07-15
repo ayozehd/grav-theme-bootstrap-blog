@@ -25,7 +25,7 @@
 {% endif %}
     <div class="container">
         <div class="row">
-            <div class="col text-{{ page.header.align|defined('center')}} {{ page.header.class}}">
+            <div class="col text-{{ page.header.align|defined('center')}}">
                 {{ content }}
                 {% for button in page.header.buttons %}
                     <a class="btn btn-{% if button.no_outline != true %}outline-{% endif %}{{ button.style|defined('light') }} btn-{{ button.size|defined('lg') }}" href="{{ button.url }}">{{ button.text }}</a>
@@ -34,7 +34,3 @@
         </div>
     </div>
 </div>
-
-{# condicionar mediante una funcion o algo similar el color del texto dependiendo de los 
-estilos principales de bootstrap que entren. Añadir ademas una opcion css o class para 
-añadir clases personalizadas en la cabecera #}

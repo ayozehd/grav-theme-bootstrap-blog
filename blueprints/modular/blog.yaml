@@ -10,7 +10,7 @@ form:
       fields:
         bootstrap-blog:
           type: tab
-          title: ADMIN.THEME_OPTIONS
+          title: ADMIN.BLOG
           fields:
             header.style:
               type: select
@@ -24,11 +24,24 @@ form:
                 light: Light
                 primary: Primary
                 secondary: Secondary
+                info: Info
                 success: Success
                 warning: Warning
                 danger: Danger
               validate:
-                pattern: (dark|light|primary|secondary|success|warning|danger)
+                pattern: (dark|light|primary|secondary|info|success|warning|danger)
+            header.layout:
+              type: select
+              label: ADMIN.MODULAR.ITEMS_LAYOUT
+              help: ADMIN.MODULAR.ITEMS_LAYOUT_HELP
+              size: medium
+              default: boxed
+              options:
+                boxed: Boxed
+                masonry: Masonry
+                cards: Cards
+              validate:
+                pattern: (boxed|masonry|cards)
             header.show_more:
               type: pages
               label: ADMIN.MODULAR.SHOW_MORE_BUTTON

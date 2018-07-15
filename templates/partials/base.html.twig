@@ -15,23 +15,25 @@
     <link rel="canonical" href="{{ page.url(true, true) }}" />
 
     {% block stylesheets %}
-    {% if theme_config.cdn.enabled %}
+    {% if theme_config.cdn_enabled %}
         {% do assets.addCss('https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css', 102) %}
         {% do assets.addCss('https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap-reboot.min.css', 100) %}
-        {% do assets.addCss('https://use.fontawesome.com/releases/v5.0.9/css/all.css', 10) %}
-        {% do assets.addCss('https://use.fontawesome.com/releases/v5.0.9/css/brands.css', 10) %}
+        {% do assets.addCss('https://use.fontawesome.com/releases/v5.1.0/css/all.css', 10) %}
+        {% do assets.addCss('https://use.fontawesome.com/releases/v5.1.0/css/brands.css', 10) %}
     {% else %}
         {% do assets.addCss('theme://assets/css-compiled/bootstrap/bootstrap.css', 102) %}
         {% do assets.addCss('theme://assets/css-compiled/bootstrap/bootstrap-reboot.css', 100) %}
-        {% do assets.addCss('theme://assets/css/fontawesome-all.min.css', 10) %}
-        {% do assets.addCss('theme://assets/css/fa-brands.min.css', 10) %}
+        {% do assets.addCss('theme://assets/css/fontawesome.css', 10) %}
+        {% do assets.addCss('theme://assets/css/solid.css', 10) %}
+        {% do assets.addCss('theme://assets/css/regular.css', 10) %}
+        {% do assets.addCss('theme://assets/css/brands.css', 10) %}
     {% endif %}
     {% do assets.addCss('theme://assets/css-compiled/bootstrap-blog.css', 99) %}
     {% endblock %}
     {{ assets.css() }}
 
     {% block javascripts %}
-    {% if theme_config.cdn.enabled %}
+    {% if theme_config.cdn_enabled %}
         {% do assets.addJs('https://code.jquery.com/jquery-3.2.1.slim.min.js', 100) %}
         {% do assets.addJs('https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js', 98) %}
         {% do assets.addJs('https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', 99) %}
@@ -50,7 +52,8 @@
     <nav class="navbar navbar-expand-md {{ bsTools.navbarStyle(theme_config.navbar.style) }} {% if theme_config.navbar.sticky %}fixed-top{% endif %}" role="navigation" {% if theme_config.navbar.background_color %}style="background-color:{{ theme_config.navbar.background_color }}"{% endif %}>
         <a class="navbar-brand" href="{{ base_url == '' ? '/' : base_url }}">
             {% if theme_config.navbar.image %}
-                <img class="d-inline-block align-center" src="{{ theme_config.navbar.image.path }}" alt=""/>
+                {% set navbar_image = theme_config.navbar.image|first %}
+                <img class="d-inline-block align-center" src="{{ url(navbar_image.path) }}" alt=""/>
             {% endif %}
             {% if theme_config.navbar.icon %}
             <i class="fas fa-{{ theme_config.navbar.icon }}"></i>
@@ -91,10 +94,11 @@
         </div>
     </footer>
 {% endblock %}
-
+{% if theme_config.back_to_top_button %}
+<a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="{{ 'RETURN_TOP_PAGE'|t }}" data-toggle="tooltip" data-placement="left"><span class="fas fa-chevron-up"></span></a>
+{% endif %}
 {% block bottom %}
     {{ assets.js('bottom') }}
 {% endblock %}
-
 </body>
 </html>

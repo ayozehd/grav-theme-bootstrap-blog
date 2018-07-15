@@ -1,0 +1,24 @@
+.item-card {
+  margin-bottom: $spacer;
+  
+  .card-body {
+    padding-top: $spacer * .5;
+  }
+
+  .card-title {
+    margin-bottom: 0;
+  }
+
+  .categories {
+    margin-bottom: $spacer * .25;
+  }
+
+  .summary p {
+    margin-bottom: $spacer * .75;
+  }
+
+  .tags {
+    font-size: 90%;
+    margin-bottom: $spacer * .75;
+  }
+}

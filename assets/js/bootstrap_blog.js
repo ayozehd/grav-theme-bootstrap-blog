@@ -1,13 +1,20 @@
 (function() {
   $(document).ready(function() {
-    // Bootstrap utilities init
     $('[data-toggle="tooltip"]').tooltip();
-    //($('.collapse').collapse();
+
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 50) {
+            $('#back-to-top').fadeIn();
+        } else {
+            $('#back-to-top').fadeOut();
+        }
+    });
+    $('#back-to-top').click(function () {
+        $('#back-to-top').tooltip('hide');
+        $('body,html').animate({
+            scrollTop: 0
+        }, 800);
+        return false;
+      });
   });
 })(jQuery)
-
-/**
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-})
- */

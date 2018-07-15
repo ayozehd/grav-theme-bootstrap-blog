@@ -9,21 +9,22 @@
   {% set collection = null %} {# Satinizing #}
 {% endif %}
 
-<div class="modular-row {{ bsTools.style( page.header.style ) }} {{ page.header.classes}}">
+<div class="modular-row blog-modular {{ bsTools.style(page.header.style) }} {{ page.header.classes}}">
   <div class="container text-{{ page.header.text_align|defined('center') }}">
     {{ content }}
   </div>
   <div class="container-fluid">
-    <div class="row portfolio">
-        {% for portfolio in collection %}
-          {% include 'partials/portfolio/item_' ~ page.header.layout|defined('boxed') ~ '.html.twig' with {'portfolio': page, 'page': portfolio } %}
-        {% endfor %}
+    <div class="row items">
+      {% for child in collection %}
+        {% include 'partials/layouts/' ~ page.header.layout|defined('boxed') ~ '.html.twig' with {'parent': page, 'page': child } %}
+      {% endfor %}
     </div>
+
     {% if page.header.show_more %}
       {% set show_more_page = page.find(page.header.show_more) %}
-      <div class="row">
+      <div class="row show-more">
         <div class="col-sm-12 text-center">
-          <a href="{{ show_more_page.url(true) }}" class="btn btn-lg {{ bsTools.buttonStyle(page.header.style, true, true) }}">
+          <a href="{{ show_more_page.url(true) }}" class="btn btn-lg {{ bsTools.buttonStyle(page.header.style|defined('light'), true, true) }}">
             {{ 'MODULAR.SEE_MORE_IN'|t(show_more_page.title) }}
           </a>
         </div>

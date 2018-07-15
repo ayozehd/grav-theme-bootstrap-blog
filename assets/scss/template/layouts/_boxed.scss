@@ -1,0 +1,32 @@
+.item-boxed {
+  margin-bottom: $spacer;
+
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    @extend .img-fluid;
+  }
+
+  .card-title {
+    margin-bottom: $spacer * .2;
+    .title {
+      margin-bottom: 0;
+      a {
+        color: $dark;
+      }
+    }
+  }
+
+  .categories {
+    margin-bottom: 0;
+  }
+
+  .summary {
+    margin-bottom: 0;
+  }
+
+  .tags {
+    font-size: 90%;
+  }
+}

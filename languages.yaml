@@ -33,6 +33,10 @@ en:
       ITEMS: Items
       SHOW_PREV_NEXT_BUTTONS: Show Previous/Next buttons
       SHOW_PREV_NEXT_BUTTONS_HELP: At the end of the content, 2 buttons let us navigate between pages
+      CATEGORY: Category Taxonomy
+      CATEGORY_HELP: Select main taxonomy from site options
+      TAG: Tag Taxonomy
+      TAG_HELP: Select secondary taxonomy
       ENABLE_COMMENTS: Enable comments
       ENABLE_COMMENTS_HELP: Add a comments forum at the end of each page
       DISQUS_SHORTNAME: Disqus shortname
@@ -132,7 +136,7 @@ en:
     CATEGORY: Category
     SEE_OTHER_PAGES_OF: See other pages of %s
   MODULAR:
-    SEE_MORE_IN: See more in %s
+    WATCH_OUT_MORE_IN: Watch out more in %s
     READ_MORE: Read more
   SIMPLESEARCH:
     SEARCH_RESULTS: Search Results
@@ -292,7 +296,7 @@ es:
     CATEGORY: Categoría
     SEE_OTHER_PAGES_OF: Ver otras páginas de %s
   MODULAR:
-    SEE_MORE_IN: Ver más en %s
+    WATCH_OUT_MORE_IN: Descubre más en %s
     READ_MORE: Leer más
   SIMPLESEARCH:
     SEARCH_RESULTS: Resultados de búsqueda

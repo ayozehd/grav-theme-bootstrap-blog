@@ -7,6 +7,9 @@
   {% set header_image_media = page.media.images|first %}
 {% endif %}
 
+{% set category_param = config.theme.item.category %}
+{% set tag_param = config.theme.item.tag %}
+
 <div class="item-masonry col-12 col-md-{{ page.header.size|defined('4') }}">
   <div class="card card-raised text-{{ page.header.page_text_align|default('center') }}">
     {{ header_image_media.cropResize(header_image_width,header_image_height).html('', '', 'card-img card-raised') }}
@@ -15,13 +18,13 @@
         <div class="my-auto">
           <h2 class="card-title">{{ page.title }}</h2>
           <p class="categories">
-            {% for category in page.taxonomy.category %}
+            {% for category in page.taxonomy[category_param] %}
               <a class="{{ bsTools.textStyle(page.header.style, 'dark') }}" href="{{ page.parent.url|rtrim('/') }}/category{{ config.system.param_sep }}{{ category }}">{{ category|upper }}</a>{{ not loop.last ? ',' }}
             {% endfor %}
           </p>
-          {% if page.taxonomy.tag|length > 0 %}
+          {% if page.taxonomy[tag_param] %}
             <p class="tags"><i class="fas fa-tags"></i>
-            {% for tag in page.taxonomy.tag %}
+            {% for tag in page.taxonomy[tag_param] %}
               <a class="{{ bsTools.textStyle(page.header.style, 'dark') }}" href="{{ page.parent.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>{{ not loop.last ? ',' }}
             {% endfor %}
             </p>

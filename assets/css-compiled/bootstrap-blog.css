@@ -1382,7 +1382,8 @@ pre {
     column-count: 3; } }
 
 #breadcrumbs {
-  padding-left: 0 !important; }
+  padding-left: 0 !important;
+  height: auto !important; }
   #breadcrumbs span {
     padding-left: 1rem !important; }
 
@@ -1394,6 +1395,8 @@ pre {
   .item-content .item-heading {
     padding-top: 1rem;
     padding-bottom: 0.25rem; }
+    .item-content .item-heading time {
+      cursor: default; }
   .item-content h2.item-title {
     margin-bottom: 0; }
   .item-content .comments {
@@ -1417,13 +1420,17 @@ pre {
     margin-bottom: 0; }
   .item-boxed .summary {
     margin-bottom: 0; }
-  .item-boxed .tags {
+  .item-boxed .card-footer .tags {
     font-size: 90%; }
+  .item-boxed .card-footer small {
+    cursor: default; }
 
 .item-card {
-  margin-bottom: 1rem; }
+  margin-bottom: 1.5rem; }
   .item-card .card-body {
     padding-top: 0.5rem; }
+    .item-card .card-body time {
+      cursor: default; }
   .item-card .card-title {
     margin-bottom: 0; }
   .item-card .categories {

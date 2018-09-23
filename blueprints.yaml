@@ -1,5 +1,5 @@
 name: Bootstrap Blog
-version: 1.1.0
+version: 1.1.1
 description: Multipurpose template built in default Bootstrap 4 framework
 icon: bold
 author:
@@ -140,6 +140,18 @@ form:
             0: PLUGIN_ADMIN.DISABLED
           validate:
             type: bool
+        item.category:
+          type: select
+          label: ADMIN.THEME.CATEGORY
+          help: ADMIN.THEME.CATEGORY_HELP
+          size: medium
+          data-options@: '\Grav\Theme\BootstrapBlog::getTaxonomies'
+        item.tag:
+          type: select
+          label: ADMIN.THEME.TAG
+          help: ADMIN.THEME.TAG_HELP
+          size: medium
+          data-options@: '\Grav\Theme\BootstrapBlog::getTaxonomies'
         comments.enabled:
           type: toggle
           label: ADMIN.THEME.ENABLE_COMMENTS

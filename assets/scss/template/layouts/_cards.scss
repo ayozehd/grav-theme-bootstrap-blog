@@ -1,8 +1,12 @@
 .item-card {
-  margin-bottom: $spacer;
-  
+  margin-bottom: $spacer * 1.5;
+
   .card-body {
     padding-top: $spacer * .5;
+    
+    time {
+        cursor: default;
+    }
   }
 
   .card-title {

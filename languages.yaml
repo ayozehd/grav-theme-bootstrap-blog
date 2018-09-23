@@ -18,7 +18,7 @@ en:
       BACK_TO_TOP_BUTTON: Back to top button
       BACK_TO_TOP_BUTTON_HELP: Show a button to return the top page
       FAVICON: Favicon
-      FAVICON_HELP: Upload an image as page icon or favicon (stored in user/themes/bootstrap-blog/images)
+      FAVICON_HELP: Upload an image as page icon or favicon (stored under user/themes/bootstrap-blog/images)
       NAVBAR: Navbar
       DROPDOWN: Dropdown
       DROPDOWN_HELP: Displays a dropdown menu with visible descendant pages
@@ -27,16 +27,20 @@ en:
       DISPLAY_SITE_NAME: Display site name
       DISPLAY_SITE_NAME_HELP: Show your site name from Grav options
       BRAND_LOGO_IMAGE: Brand/Logo Image
-      BRAND_LOGO_IMAGE_HELP: Upload an image into navbar
+      BRAND_LOGO_IMAGE_HELP: Upload an image to navbar
       BRAND_ICON: Brand icon
       NAVBAR_STYLE: Navbar style
       ITEMS: Items
       SHOW_PREV_NEXT_BUTTONS: Show Previous/Next buttons
       SHOW_PREV_NEXT_BUTTONS_HELP: At the end of the content, 2 buttons let us navigate between pages
+      CATEGORY: Category Taxonomy
+      CATEGORY_HELP: Select main taxonomy from site options
+      TAG: Tag Taxonomy
+      TAG_HELP: Select secondary taxonomy
       ENABLE_COMMENTS: Enable comments
       ENABLE_COMMENTS_HELP: Add a comments forum at the end of each page
       DISQUS_SHORTNAME: Disqus shortname
-      DISQUS_SHORTNAME_HELP: Identifier of your site forum in Disqus. This value is needed to comments get work
+      DISQUS_SHORTNAME_HELP: Identifier of your site forum in Disqus. This value is needed to get work comments
       DISQUS_SHORTNAME_DESCRIPTION: 'Manage your comments on <a href="https://disqus.com/admin/" target="_blank">Disqus</a>'
       SEARCH: Search
       SIDEBAR: Sidebar
@@ -132,7 +136,7 @@ en:
     CATEGORY: Category
     SEE_OTHER_PAGES_OF: See other pages of %s
   MODULAR:
-    SEE_MORE_IN: See more in %s
+    WATCH_OUT_MORE_IN: Watch out more in %s
     READ_MORE: Read more
   SIMPLESEARCH:
     SEARCH_RESULTS: Search Results
@@ -292,7 +296,7 @@ es:
     CATEGORY: Categoría
     SEE_OTHER_PAGES_OF: Ver otras páginas de %s
   MODULAR:
-    SEE_MORE_IN: Ver más en %s
+    WATCH_OUT_MORE_IN: Descubre más en %s
     READ_MORE: Leer más
   SIMPLESEARCH:
     SEARCH_RESULTS: Resultados de búsqueda

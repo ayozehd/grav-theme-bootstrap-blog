@@ -25,8 +25,14 @@
   .summary {
     margin-bottom: 0;
   }
+  .card-footer {
+    .tags {
+      font-size: 90%;
+    }
 
-  .tags {
-    font-size: 90%;
+    small {
+        cursor: default;
+    }
   }
+
 }

@@ -7,6 +7,9 @@
   {% set header_image_media = page.media.images|first %}
 {% endif %}
 
+{% set category_param = theme_config.item.category %}
+{% set tag_param = theme_config.item.tag %}
+
 <div class="item-heading">
   <time data-toggle="tooltip" title="{{ page.date|date(config.system.pages.dateformat.long) }}" class="text-secondary" datetime="{{ page.date|date("c") }}">
     <small><i class="far fa-clock"></i>&nbsp;{{ page.date|date(config.system.pages.dateformat.short) }}</small>
@@ -18,8 +21,8 @@
     {{ page.title }}
   </h2>
   <div class="item-categories">
-    {% for category in page.taxonomy.category %}
-      <a data-toggle="tooltip" title="{{ 'TAXONOMY.SEE_OTHER_PAGES_OF'|t(category|capitalize) }}" class="badge badge-pill badge-{{ page.header.style|defined('secondary') }} text-uppercase font-weight-normal" href="{{ parent.url|rtrim('/') }}/category{{ config.system.param_sep }}{{ category }}">{{ category }}</a>
+    {% for category in page.taxonomy[category_param] %}
+      <a data-toggle="tooltip" title="{{ 'TAXONOMY.SEE_OTHER_PAGES_OF'|t(category|capitalize) }}" class="badge badge-pill badge-{{ page.header.style|defined('secondary') }} text-uppercase font-weight-normal" href="{{ parent.url|rtrim('/') }}/{{ category_param }}{{ config.system.param_sep }}{{ category }}">{{ category }}</a>
     {% endfor %}
   </div>
 </div>
@@ -32,11 +35,11 @@
   {{ page.content }}
 </div>
 <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Item toolbar buttons">
-  {% if page.taxonomy.tag %}
+  {% if page.taxonomy[tag_param] %}
     <div class="item-tags d-inline-block">
       <i class="fas fa-tags text-{{ page.header.style|defined('primary') }}"></i> {{ 'TAXONOMY.TAGS'|t }}:
-      {% for tag in page.taxonomy.tag %}
-        <a class="btn btn-sm {{ bsTools.buttonStyle(page.header.style|defined('dark'), true) }}" href="{{ parent.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>
+      {% for tag in page.taxonomy[tag_param] %}
+        <a class="btn btn-sm {{ bsTools.buttonStyle(page.header.style|defined('dark'), true) }}" href="{{ parent.url|rtrim('/') }}/{{ tag_param }}{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>
       {% endfor %}
     </div>
   {% endif %}

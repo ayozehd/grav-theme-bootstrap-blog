@@ -4,7 +4,7 @@
   {% set collection = page.collection() %}
 {% elseif page.header.show_more is defined %}
   {# Fallback collection from show_more page #}
-  {% set collection = page.collection({ items: {'@page.children': page.header.show_more }, order: {'by': 'date', 'dir': 'desc'}, limit: 6 }) %}
+  {% set collection = page.collection({ items: {'@page.children': page.header.show_more }, order: {'by': 'date', 'dir': 'desc'}, visible: true }) %}
 {% else %}
   {% set collection = null %} {# Satinizing #}
 {% endif %}
@@ -23,9 +23,9 @@
     {% if page.header.show_more %}
       {% set show_more_page = page.find(page.header.show_more) %}
       <div class="row show-more">
-        <div class="col-sm-12 text-center">
+        <div class="col-12 text-center">
           <a href="{{ show_more_page.url(true) }}" class="btn btn-lg {{ bsTools.buttonStyle(page.header.style|defined('light'), true, true) }}">
-            {{ 'MODULAR.SEE_MORE_IN'|t(show_more_page.title) }}
+            {{ 'MODULAR.WATCH_OUT_MORE_IN'|t(show_more_page.title) }}
           </a>
         </div>
       </div>

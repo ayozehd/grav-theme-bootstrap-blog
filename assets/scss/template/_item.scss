@@ -4,6 +4,10 @@
   .item-heading {
     padding-top: $spacer;
     padding-bottom: $spacer * .25;
+
+    time {
+        cursor: default;
+    }
   }
 
   h2.item-title {

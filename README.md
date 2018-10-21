@@ -64,6 +64,7 @@ Templates supporting `style`:
 * warning
 * secondary
 * info
+
 Only in expert mode:
 * blue
 * indigo

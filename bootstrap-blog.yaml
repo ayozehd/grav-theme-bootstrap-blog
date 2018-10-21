@@ -28,9 +28,7 @@ item:
 comments:
   enabled: false
   disqus_shortname:
-simplesearch:
-  layout: boxed
 footer:
   style: light
-  text: 'Bootstrap Blog is <i class="fas fa-code"></i> with <i class="fas fa-heart"></i> by <a href="https://ayozehd.com">Ayoze Hernández Díaz</a>'
+  text: 'Bootstrap Blog is <i class="fas fa-code"></i> with <i class="fas fa-heart"></i> by <a href="http://ayozehd.com">Ayoze Hernández Díaz</a>'
   legal:

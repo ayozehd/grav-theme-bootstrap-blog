@@ -1,3 +1,11 @@
+# v1.1.2
+## 21-10-2018
+
+1. [](#new)
+  * New bootstrap colors
+2. [](#bugfix)
+  * Fixed pagination
+
 # v1.1.1
 ## 23-09-2018
 

@@ -7,9 +7,6 @@
   {% set header_image_media = page.media.images|first %}
 {% endif %}
 
-{% set category_param = config.theme.item.category %}
-{% set tag_param = config.theme.item.tag %}
-
 <div class="col-12">
   <div class="card item-boxed">
       {% if header_image_media %}
@@ -19,7 +16,7 @@
         <div class="card-title">
           <h3 class="title"><a href="{{ page.url }}">{{ page.title }}</a></h3>
           <div class="categories">
-          {% for category in page.taxonomy[category_param] %}
+          {% for category in page.taxonomy.category %}
             <a class="badge badge-pill badge-{{ page.header.style|defined('secondary') }} text-uppercase font-weight-normal" href="{{ parent.url|rtrim('/') }}/category{{ config.system.param_sep }}{{ category }}">{{ category }}</a>
           {% endfor %}
         </div>
@@ -40,12 +37,12 @@
       </div>
     </div>
     <div class="card-footer">
-      {% if page.taxonomy[tag_param] %}
+      {% if page.taxonomy.tag %}
         <div class="d-inline tags">
           <span data-toggle="tooltip" data-placement="top" title="{{ 'TAXONOMY.TAGS'|t }}" class="text-{{ page.header.style|defined('primary') }}">
             <i class="fas fa-tags"></i>
           </span>
-          {% for tag in page.taxonomy[tag_param] %}
+          {% for tag in page.taxonomy.tag %}
             <a class="text-{{ page.header.style|defined('primary') }}" href="{{ parent.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}{{ not loop.last ? ',' }}</a>
           {% endfor %}
         </div>

@@ -7,9 +7,6 @@
   {% set header_image_media = page.media.images|first %}
 {% endif %}
 
-{% set category_param = theme_config.item.category %}
-{% set tag_param = theme_config.item.tag %}
-
 <div class="item-heading">
   <time data-toggle="tooltip" title="{{ page.date|date(config.system.pages.dateformat.long) }}" class="text-secondary" datetime="{{ page.date|date("c") }}">
     <small><i class="far fa-clock"></i>&nbsp;{{ page.date|date(config.system.pages.dateformat.short) }}</small>
@@ -21,8 +18,8 @@
     {{ page.title }}
   </h2>
   <div class="item-categories">
-    {% for category in page.taxonomy[category_param] %}
-      <a data-toggle="tooltip" title="{{ 'TAXONOMY.SEE_OTHER_PAGES_OF'|t(category|capitalize) }}" class="badge badge-pill badge-{{ page.header.style|defined('secondary') }} text-uppercase font-weight-normal" href="{{ parent.url|rtrim('/') }}/{{ category_param }}{{ config.system.param_sep }}{{ category }}">{{ category }}</a>
+    {% for category in page.taxonomy.category %}
+      <a data-toggle="tooltip" title="{{ 'TAXONOMY.SEE_OTHER_PAGES_OF'|t(category|capitalize) }}" class="badge badge-pill badge-{{ page.header.style|defined('secondary') }} text-uppercase font-weight-normal" href="{{ parent.url|rtrim('/') }}/category{{ config.system.param_sep }}{{ category }}">{{ category }}</a>
     {% endfor %}
   </div>
 </div>
@@ -35,17 +32,17 @@
   {{ page.content }}
 </div>
 <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Item toolbar buttons">
-  {% if page.taxonomy[tag_param] %}
+  {% if page.taxonomy.tag %}
     <div class="item-tags d-inline-block">
       <i class="fas fa-tags text-{{ page.header.style|defined('primary') }}"></i> {{ 'TAXONOMY.TAGS'|t }}:
-      {% for tag in page.taxonomy[tag_param] %}
-        <a class="btn btn-sm {{ bsTools.buttonStyle(page.header.style|defined('dark'), true) }}" href="{{ parent.url|rtrim('/') }}/{{ tag_param }}{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>
+      {% for tag in page.taxonomy.tag %}
+        <a class="btn btn-sm {{ bsTools.buttonStyle(page.header.style, true, false, 'dark') }}" href="{{ parent.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>
       {% endfor %}
     </div>
   {% endif %}
   <div class="btn-group">
   {% for button in page.header.buttons %}
-    <a href="{{ button.url starts with 'http' ? button.url : url(button.url) }}" class="btn {{ bsTools.buttonStyle(page.header.style|default('dark'), true) }} {{ button.class }}">
+    <a href="{{ button.url starts with 'http' ? button.url : url(button.url) }}" class="btn {{ bsTools.buttonStyle(page.header.style, true, false, 'dark') }} {{ button.class }}">
       {% if button.icon %}
         <i class="fas fa-{{ button.icon }}"></i>
       {% endif %}
@@ -58,10 +55,10 @@
 {% if theme_config.item.show_prev_next %}
   <div class="d-flex flex-row py-3 mt-3">
       {% if not page.isLast %}
-        <a class="btn {{ bsTools.buttonStyle(page.header.style|defined('primary'), true) }}" href="{{ page.prevSibling.url }}"><i class="fas fa-chevron-left"></i> {{ 'ITEM.PREVIOUS'|t }}</a>
+        <a class="btn {{ bsTools.buttonStyle(page.header.style, true, false, 'primary') }}" href="{{ page.prevSibling.url }}"><i class="fas fa-chevron-left"></i> {{ 'ITEM.PREVIOUS'|t }}</a>
       {% endif %}
       {% if not page.isFirst %}
-        <a class="ml-auto btn {{ bsTools.buttonStyle(page.header.style|defined('primary'), true) }}" href="{{ page.nextSibling.url }}">{{ 'ITEM.NEXT'|t }} <i class="fas fa-chevron-right"></i></a>
+        <a class="ml-auto btn {{ bsTools.buttonStyle(page.header.style, true, false, 'primary') }}" href="{{ page.nextSibling.url }}">{{ 'ITEM.NEXT'|t }} <i class="fas fa-chevron-right"></i></a>
       {% endif %}
   </div>
 {% endif %}

@@ -1,3 +1,0 @@
-'@extends':
-  type: item
-  context: blueprints://pages

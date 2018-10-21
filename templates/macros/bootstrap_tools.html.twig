@@ -23,20 +23,19 @@
 {% endmacro %}
 
 {% macro buttonStyle(style, isOutline, darkOrLight, default, size) %}
-  {{ 'btn-' ~ (isOutline ? 'outline-') ~ _self.processStyle(style, darkOrLight, default|defined('dark'))|trim ~ (size ? ' btn-' ~ size) }}
+  {{ 'btn-' ~ (isOutline ? 'outline-') ~ _self.processStyle(style|defined(default), darkOrLight|defined(true))|trim ~ (size ? ' btn-' ~ size) }}
 {% endmacro %}
 
-{% macro processStyle(style, inversed, default) %}
+{% macro processStyle(style, inversed) %}
+  {% set output = null %}
   {% if inversed %}
-    {% if style in ['primary', 'success', 'danger', 'info', 'dark', 'faded'] %}
+    {% if style in ['primary', 'success', 'danger', 'info', 'dark', 'faded', 'blue', 'indigo', 'purple', 'pink', 'red', 'green', 'teal', 'cyan'] %}
       {% set output = 'light' %}
     {% else %}
-      {% set output = default|defined('dark') %}
+      {% set output = 'dark' %}
     {% endif %}
-  {% else %}
-    {% set output = output|defined(style) %}
   {% endif %}
-  {{ output|defined(default) }}
+  {{ output|defined(style) }}
 {% endmacro %}
 
 {% macro button(url, text, icon, style, outline, darkOrLight, default, size, classes) %}

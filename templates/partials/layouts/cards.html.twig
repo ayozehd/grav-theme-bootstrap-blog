@@ -35,13 +35,13 @@
       {% endif %}
       <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Item toolbar buttons">
         <div class="btn-group" role="group" aria-label="Links">
-          {{ bsTools.button(page.url, page.header.button_text|default('MODULAR.READ_MORE'|t), null, (page.header.style ? bsTools.processStyle(page.header.style, true) : null), true, false, 'primary') }}
+          {{ bsTools.button(page.url, page.header.button_text|default('MODULAR.READ_MORE'|t), null, page.header.style, true, (page.header.style ? true : false), 'primary') }}
           {% if page.header.link %}
-            {{ bsTools.button(page.header.link, null, 'link', (page.header.style ? bsTools.processStyle(page.header.style, true) : null), true, false, 'secondary') }}
+            {{ bsTools.button(page.header.link, null, null, page.header.style, true, false, 'secondary') }}
           {% endif %}
         </div>
         <div class="btn-group">
-        {{ bsTools.buttons(page.header.buttons, page.header.style, true, true, 'dark') }}
+        {{ bsTools.buttons(page.header.buttons, page.header.style, true, (page.header.style ? true : false), 'dark') }}
         </div>
       </div>
     </div>

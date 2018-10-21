@@ -1381,9 +1381,359 @@ pre {
   .card-columns {
     column-count: 3; } }
 
+.text-blue {
+  color: #007bff; }
+
+.border-blue {
+  border-color: #007bff; }
+
+.bg-blue {
+  background-color: #007bff; }
+
+.btn-blue {
+  background-color: #007bff;
+  color: #fff !important; }
+
+.btn-outline-blue {
+  border-color: #007bff; }
+
+.badge-blue {
+  background: #007bff;
+  color: #fff; }
+
+a.badge-blue:hover {
+  color: #e9ecef;
+  text-decoration: none; }
+
+.text-indigo {
+  color: #6610f2; }
+
+.border-indigo {
+  border-color: #6610f2; }
+
+.bg-indigo {
+  background-color: #6610f2; }
+
+.btn-indigo {
+  background-color: #6610f2;
+  color: #fff !important; }
+
+.btn-outline-indigo {
+  border-color: #6610f2; }
+
+.badge-indigo {
+  background: #6610f2;
+  color: #fff; }
+
+a.badge-indigo:hover {
+  color: #e9ecef;
+  text-decoration: none; }
+
+.text-purple {
+  color: #6f42c1; }
+
+.border-purple {
+  border-color: #6f42c1; }
+
+.bg-purple {
+  background-color: #6f42c1; }
+
+.btn-purple {
+  background-color: #6f42c1;
+  color: #fff !important; }
+
+.btn-outline-purple {
+  border-color: #6f42c1; }
+
+.badge-purple {
+  background: #6f42c1;
+  color: #fff; }
+
+a.badge-purple:hover {
+  color: #e9ecef;
+  text-decoration: none; }
+
+.text-pink {
+  color: #e83e8c; }
+
+.border-pink {
+  border-color: #e83e8c; }
+
+.bg-pink {
+  background-color: #e83e8c; }
+
+.btn-pink {
+  background-color: #e83e8c;
+  color: #fff !important; }
+
+.btn-outline-pink {
+  border-color: #e83e8c; }
+
+.badge-pink {
+  background: #e83e8c;
+  color: #fff; }
+
+a.badge-pink:hover {
+  color: #e9ecef;
+  text-decoration: none; }
+
+.text-red {
+  color: #dc3545; }
+
+.border-red {
+  border-color: #dc3545; }
+
+.bg-red {
+  background-color: #dc3545; }
+
+.btn-red {
+  background-color: #dc3545;
+  color: #fff !important; }
+
+.btn-outline-red {
+  border-color: #dc3545; }
+
+.badge-red {
+  background: #dc3545;
+  color: #fff; }
+
+a.badge-red:hover {
+  color: #e9ecef;
+  text-decoration: none; }
+
+.text-orange {
+  color: #fd7e14; }
+
+.border-orange {
+  border-color: #fd7e14; }
+
+.bg-orange {
+  background-color: #fd7e14; }
+
+.btn-orange {
+  background-color: #fd7e14;
+  color: #111 !important; }
+
+.btn-outline-orange {
+  border-color: #fd7e14; }
+
+.badge-orange {
+  background: #fd7e14;
+  color: #fff; }
+
+a.badge-orange:hover {
+  color: #e9ecef;
+  text-decoration: none; }
+
+.text-yellow {
+  color: #ffc107; }
+
+.border-yellow {
+  border-color: #ffc107; }
+
+.bg-yellow {
+  background-color: #ffc107; }
+
+.btn-yellow {
+  background-color: #ffc107;
+  color: #111 !important; }
+
+.btn-outline-yellow {
+  border-color: #ffc107; }
+
+.badge-yellow {
+  background: #ffc107;
+  color: #fff; }
+
+a.badge-yellow:hover {
+  color: #e9ecef;
+  text-decoration: none; }
+
+.text-green {
+  color: #28a745; }
+
+.border-green {
+  border-color: #28a745; }
+
+.bg-green {
+  background-color: #28a745; }
+
+.btn-green {
+  background-color: #28a745;
+  color: #fff !important; }
+
+.btn-outline-green {
+  border-color: #28a745; }
+
+.badge-green {
+  background: #28a745;
+  color: #fff; }
+
+a.badge-green:hover {
+  color: #e9ecef;
+  text-decoration: none; }
+
+.text-teal {
+  color: #20c997; }
+
+.border-teal {
+  border-color: #20c997; }
+
+.bg-teal {
+  background-color: #20c997; }
+
+.btn-teal {
+  background-color: #20c997;
+  color: #fff !important; }
+
+.btn-outline-teal {
+  border-color: #20c997; }
+
+.badge-teal {
+  background: #20c997;
+  color: #fff; }
+
+a.badge-teal:hover {
+  color: #e9ecef;
+  text-decoration: none; }
+
+.text-cyan {
+  color: #17a2b8; }
+
+.border-cyan {
+  border-color: #17a2b8; }
+
+.bg-cyan {
+  background-color: #17a2b8; }
+
+.btn-cyan {
+  background-color: #17a2b8;
+  color: #fff !important; }
+
+.btn-outline-cyan {
+  border-color: #17a2b8; }
+
+.badge-cyan {
+  background: #17a2b8;
+  color: #fff; }
+
+a.badge-cyan:hover {
+  color: #e9ecef;
+  text-decoration: none; }
+
+.text-white {
+  color: #fff; }
+
+.border-white {
+  border-color: #fff; }
+
+.bg-white {
+  background-color: #fff; }
+
+.btn-white {
+  background-color: #fff;
+  color: #111 !important; }
+
+.btn-outline-white {
+  border-color: #fff; }
+
+.badge-white {
+  background: #fff;
+  color: #fff; }
+
+a.badge-white:hover {
+  color: #e9ecef;
+  text-decoration: none; }
+
+.text-gray {
+  color: #6c757d; }
+
+.border-gray {
+  border-color: #6c757d; }
+
+.bg-gray {
+  background-color: #6c757d; }
+
+.btn-gray {
+  background-color: #6c757d;
+  color: #fff !important; }
+
+.btn-outline-gray {
+  border-color: #6c757d; }
+
+.badge-gray {
+  background: #6c757d;
+  color: #fff; }
+
+a.badge-gray:hover {
+  color: #e9ecef;
+  text-decoration: none; }
+
+.text-gray-dark {
+  color: #343a40; }
+
+.border-gray-dark {
+  border-color: #343a40; }
+
+.bg-gray-dark {
+  background-color: #343a40; }
+
+.btn-gray-dark {
+  background-color: #343a40;
+  color: #fff !important; }
+
+.btn-outline-gray-dark {
+  border-color: #343a40; }
+
+.badge-gray-dark {
+  background: #343a40;
+  color: #fff; }
+
+a.badge-gray-dark:hover {
+  color: #e9ecef;
+  text-decoration: none; }
+
+.bg-blue {
+  color: #fff; }
+
+.bg-indigo {
+  color: #fff; }
+
+.bg-purple {
+  color: #fff; }
+
+.bg-pink {
+  color: #fff; }
+
+.bg-red {
+  color: #fff; }
+
+.bg-orange {
+  color: #111; }
+
+.bg-yellow {
+  color: #111; }
+
+.bg-green {
+  color: #fff; }
+
+.bg-teal {
+  color: #fff; }
+
+.bg-cyan {
+  color: #fff; }
+
+.bg-white {
+  color: #111; }
+
+.bg-gray {
+  color: #fff; }
+
+.bg-gray-dark {
+  color: #fff; }
+
 #breadcrumbs {
-  padding-left: 0 !important;
-  height: auto !important; }
+  padding-left: 0 !important; }
   #breadcrumbs span {
     padding-left: 1rem !important; }
 
@@ -1395,8 +1745,6 @@ pre {
   .item-content .item-heading {
     padding-top: 1rem;
     padding-bottom: 0.25rem; }
-    .item-content .item-heading time {
-      cursor: default; }
   .item-content h2.item-title {
     margin-bottom: 0; }
   .item-content .comments {
@@ -1420,17 +1768,13 @@ pre {
     margin-bottom: 0; }
   .item-boxed .summary {
     margin-bottom: 0; }
-  .item-boxed .card-footer .tags {
+  .item-boxed .tags {
     font-size: 90%; }
-  .item-boxed .card-footer small {
-    cursor: default; }
 
 .item-card {
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1rem; }
   .item-card .card-body {
     padding-top: 0.5rem; }
-    .item-card .card-body time {
-      cursor: default; }
   .item-card .card-title {
     margin-bottom: 0; }
   .item-card .categories {

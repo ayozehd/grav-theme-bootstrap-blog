@@ -22,10 +22,10 @@
 					{% for child in collection %}
 						{% include 'partials/layouts/' ~ page.header.layout|defined('boxed') ~ '.html.twig' with {'parent': page, 'page': child } %}
 					{% endfor %}
-					{% if config.plugins.pagination.enabled and collection.params.pagination %}
-							{% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
-					{% endif %}
           </div>
+					{% if config.plugins.pagination.enabled and collection.params.pagination %}
+						{% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
+					{% endif %}
 				</div>
 				{% if sidebar %}
 				<div id="sidebar" class="col-12 col-md-4 {% if theme_config.sidebar.align == 'left' %}order-md-first{% endif %}">

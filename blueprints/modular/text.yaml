@@ -29,7 +29,7 @@ form:
                 warning: Warning
                 danger: Danger
               validate:
-                pattern: (null|dark|light|primary|secondary|info|success|warning|danger)
+                pattern: (null|dark|light|primary|secondary|info|success|warning|danger|blue|indigo|purple|pink|red|orange|yellow|green|teal|cyan)
             header.text_align:
               type: select
               label: ADMIN.TEXT_ALIGN

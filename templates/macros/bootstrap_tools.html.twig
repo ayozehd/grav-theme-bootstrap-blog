@@ -1,20 +1,19 @@
 {# Alias to backgroundStyle() #}
 {% macro style(style, noTextClass) %}
-  {{ _self.backgroundStyle(style, noTextClass)|trim }}
+{{ _self.backgroundStyle(style, noTextClass)|trim }}
 {% endmacro %}
 
 {% macro backgroundStyle(style, noTextClass) %}
-  {{ (style ? 'bg-' ~ style) ~ ( noTextClass ?: ' ' ~ _self.textStyle(style)|trim ) }}
+{{ (style ? 'bg-' ~ style) ~ ( noTextClass ?: ' ' ~ _self.textStyle(style)|trim ) }}
 {% endmacro %}
 
 {% macro textStyle(style, default) %}
-  {% set output = _self.processStyle(style, true, default)|trim %}
-  {{ 'text-' ~ output }}
+{{ 'text-' ~ _self.processStyle(style, true, default)|trim }}
 {% endmacro %}
 
 {% macro navbarStyle(style) %}
   {% set output = 'navbar-' %}
-  {% if style in ['dark', 'primary', 'danger', 'secondary', 'info', 'success', 'faded'] %}
+  {% if style in ['primary', 'success', 'danger', 'secondary', 'info', 'dark', 'faded', 'blue', 'indigo', 'purple', 'pink', 'red', 'green', 'teal', 'cyan'] %}
     {% set output = output ~ 'dark' %}
   {% else %}
     {% set output = output ~ 'light' %}
@@ -23,19 +22,19 @@
 {% endmacro %}
 
 {% macro buttonStyle(style, isOutline, darkOrLight, default, size) %}
-  {{ 'btn-' ~ (isOutline ? 'outline-') ~ _self.processStyle(style|defined(default), darkOrLight|defined(true))|trim ~ (size ? ' btn-' ~ size) }}
+  {{ 'btn-' ~ (isOutline ? 'outline-') ~ _self.processStyle(style, darkOrLight|defined(true), default)|trim ~ (size ? ' btn-' ~ size) }}
 {% endmacro %}
 
-{% macro processStyle(style, inversed) %}
+{% macro processStyle(style, inversed, default) %}
   {% set output = null %}
   {% if inversed %}
     {% if style in ['primary', 'success', 'danger', 'info', 'dark', 'faded', 'blue', 'indigo', 'purple', 'pink', 'red', 'green', 'teal', 'cyan'] %}
       {% set output = 'light' %}
     {% else %}
-      {% set output = 'dark' %}
+      {% set output = default|defined('dark') %}
     {% endif %}
   {% endif %}
-  {{ output|defined(style) }}
+  {{ output|defined(style)|defined(default) }}
 {% endmacro %}
 
 {% macro button(url, text, icon, style, outline, darkOrLight, default, size, classes) %}
@@ -49,6 +48,6 @@
 
 {% macro buttons(buttons, style, outline, darkOrLight, default, classes) %}
   {% for button in buttons %}
-    {{ _self.button(button.url, button.text, button.icon, style, outline, darkOrLight, default, button.size, classes ) }}
+    {{ _self.button(button.url, button.text, button.icon, style, outline, darkOrLight, default, button.size, classes)|trim }}
   {% endfor %}
 {% endmacro %}

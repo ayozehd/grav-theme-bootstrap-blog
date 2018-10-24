@@ -28,7 +28,7 @@ form:
                 warning: Warning
                 danger: Danger
               validate:
-                pattern: (null|dark|light|primary|secondary|info|success|warning|danger)
+                pattern: (null|dark|light|primary|secondary|info|success|warning|danger|blue|indigo|purple|pink|red|orange|yellow|green|teal|cyan)
             header.text_align:
               type: select
               size: medium
@@ -71,7 +71,7 @@ form:
                     warning: Warning
                     danger: Danger
                   validate:
-                    pattern: (dark|light|primary|secondary|info|success|warning|danger)
+                    pattern: (dark|light|primary|secondary|info|success|warning|danger|blue|indigo|purple|pink|red|orange|yellow|green|teal|cyan)
                 .color:
                   type: colorpicker
                   label: ADMIN.MODULAR.CHOOSE_ICON_COLOR

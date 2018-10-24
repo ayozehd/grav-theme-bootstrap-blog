@@ -123,7 +123,7 @@ form:
               info: Info
               danger: Danger
           validate:
-            pattern: (dark|light|primary|secondary|success|warning|info|danger)
+            pattern: (dark|light|primary|secondary|success|warning|info|danger|blue|indigo|purple|pink|red|orange|yellow|green|teal|cyan)
     item:
       type: section
       title: ADMIN.THEME.ITEMS
@@ -298,7 +298,7 @@ form:
             info: Info
             danger: Danger
           validate:
-            pattern: (dark|light|primary|info|secondary|success|warning|danger)
+            pattern: (dark|light|primary|info|secondary|success|warning|danger|blue|indigo|purple|pink|red|orange|yellow|green|teal|cyan)
         footer.text:
           type: textarea
           label: ADMIN.THEME.FOOTER_TEXT

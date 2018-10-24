@@ -1,5 +1,7 @@
 # Bootstrap Blog
 
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=94NYK2VQA253G)
+
 ![](screenshot.jpg)
 
 **Bootstrap Blog** is a theme for [Grav CMS](http://github.com/getgrav/grav) built in [Bootstrap v4.1](https://getbootstrap.com/docs/4.1/) framework and provides a powerful base to develope your own theme using SCSS. Also we use latest [FontAwesome 5](https://fontawesome.com/).

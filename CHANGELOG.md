@@ -1,3 +1,11 @@
+# v1.1.3
+## 24-10-2018
+
+1. [](#improved)
+  * Supported new styles in blueprints (no forms)
+2. [](#bugfix)
+  * Fixed style in cards layout
+
 # v1.1.2
 ## 21-10-2018
 

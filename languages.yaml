@@ -12,13 +12,14 @@ en:
     JUSTIFY: Justify
     WIDTH: Width
     HEIGHT: Height
+    IMAGE: Image
     THEME:
       CDN: CDN
-      CDN_HELP: Get needed CSS and JS files from Content Distribution Networks to decrease load times
+      CDN_HELP: Get needed CSS and JS files from Content Distribution Networks to reduce load times
       BACK_TO_TOP_BUTTON: Back to top button
       BACK_TO_TOP_BUTTON_HELP: Show a button to return the top page
       FAVICON: Favicon
-      FAVICON_HELP: Upload an image as page icon or favicon (stored under user/themes/bootstrap-blog/images)
+      FAVICON_HELP: Upload an image as page icon or favicon (stored in user/themes/bootstrap-blog/images)
       NAVBAR: Navbar
       DROPDOWN: Dropdown
       DROPDOWN_HELP: Displays a dropdown menu with visible descendant pages
@@ -27,20 +28,16 @@ en:
       DISPLAY_SITE_NAME: Display site name
       DISPLAY_SITE_NAME_HELP: Show your site name from Grav options
       BRAND_LOGO_IMAGE: Brand/Logo Image
-      BRAND_LOGO_IMAGE_HELP: Upload an image to navbar
+      BRAND_LOGO_IMAGE_HELP: Upload an image into navbar
       BRAND_ICON: Brand icon
       NAVBAR_STYLE: Navbar style
       ITEMS: Items
       SHOW_PREV_NEXT_BUTTONS: Show Previous/Next buttons
-      SHOW_PREV_NEXT_BUTTONS_HELP: At the end of the content, 2 buttons let us navigate between pages
-      CATEGORY: Category Taxonomy
-      CATEGORY_HELP: Select main taxonomy from site options
-      TAG: Tag Taxonomy
-      TAG_HELP: Select secondary taxonomy
+      SHOW_PREV_NEXT_BUTTONS_HELP: At the end of page's content, 2 buttons let you navigate between pages
       ENABLE_COMMENTS: Enable comments
       ENABLE_COMMENTS_HELP: Add a comments forum at the end of each page
       DISQUS_SHORTNAME: Disqus shortname
-      DISQUS_SHORTNAME_HELP: Identifier of your site forum in Disqus. This value is needed to get work comments
+      DISQUS_SHORTNAME_HELP: Identifier of your site forum in Disqus. This value is needed to comments get work
       DISQUS_SHORTNAME_DESCRIPTION: 'Manage your comments on <a href="https://disqus.com/admin/" target="_blank">Disqus</a>'
       SEARCH: Search
       SIDEBAR: Sidebar
@@ -83,6 +80,13 @@ en:
       SHOWCASE_IMAGE_ACTIONS_DESCRIPTION: <a href="https://learn.getgrav.org/content/media#actions" target="_blank">Grav Media Actions</a>
       SHOWCASE_IMAGE_ACTION: Action
       SHOWCASE_IMAGE_ARGUMENTS: Arguments (null or comma separated)
+      CAROUSEL: Carousel
+      CAROUSEL_SLIDES: Slides
+      CAROUSEL_SLIDES_HELP: Add slides from folder images, custom title and url to your "/page" or external
+      CAROUSEL_HIDE_CONTROLS: Hide controls
+      CAROUSEL_HIDE_CONTROLS_HELP: Hide prev/next buttons
+      CAROUSEL_SLIDE_INTERVAL: Slide interval
+      CAROUSEL_SLIDE_INTERVAL_HELP: Number miliseconds between autorotating slides. Set to 0 to avoid autoslide.
     ITEM:
       TAB: Item
       ITEM_STYLE: Item style
@@ -136,8 +140,10 @@ en:
     CATEGORY: Category
     SEE_OTHER_PAGES_OF: See other pages of %s
   MODULAR:
-    WATCH_OUT_MORE_IN: Watch out more in %s
+    SEE_MORE_IN: See more in %s
     READ_MORE: Read more
+    CAROUSEL_NEXT: Next
+    CAROUSEL_PREVIOUS: Previous
   SIMPLESEARCH:
     SEARCH_RESULTS: Search Results
   SIDEBAR:
@@ -176,6 +182,7 @@ es:
     JUSTIFY: Justificar
     WIDTH: Ancho
     HEIGHT: Altura
+    IMAGE: Imagen
     THEME:
       CDN: CDN
       CDN_HELP: Recupera los ficheros CSS y JS necesarios desde servidores CDN para reducir los tiempos de carga
@@ -245,6 +252,13 @@ es:
       SHOWCASE_IMAGE_ACTIONS_DESCRIPTION: <a href="https://learn.getgrav.org/content/media#actions" target="_blank">Grav Media Actions</a>
       SHOWCASE_IMAGE_ACTION: Filtro
       SHOWCASE_IMAGE_ARGUMENTS: Argumentos (null o separados por coma)
+      CAROUSEL: Carousel
+      CAROUSEL_SLIDES: Slides
+      CAROUSEL_SLIDES_HELP: Añade slides desde las imágenes de la carpeta, personaliza el título y la url a tu página o externa
+      CAROUSEL_HIDE_CONTROLS: Ocultar controles
+      CAROUSEL_HIDE_CONTROLS_HELP: Oculta los botones anterior/siguiente
+      CAROUSEL_SLIDE_INTERVAL: Intervalo de slide
+      CAROUSEL_SLIDE_INTERVAL_HELP: Número de milisegundos del auto cambio de slides. Escribe 0 para mantenerlos indefinidamente.
     ITEM:
       TAB: Elemento
       ITEM_STYLE: Estilo de elemento
@@ -296,8 +310,10 @@ es:
     CATEGORY: Categoría
     SEE_OTHER_PAGES_OF: Ver otras páginas de %s
   MODULAR:
-    WATCH_OUT_MORE_IN: Descubre más en %s
+    SEE_MORE_IN: Ver más en %s
     READ_MORE: Leer más
+    CAROUSEL_NEXT: Siguiente
+    CAROUSEL_PREVIOUS: Anterior
   SIMPLESEARCH:
     SEARCH_RESULTS: Resultados de búsqueda
   SIDEBAR:

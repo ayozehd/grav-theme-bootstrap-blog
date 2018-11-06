@@ -1,0 +1,51 @@
+'@extends':
+  type: default
+  context: blueprints://pages
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        bootstrap-blog:
+          type: tab
+          title: ADMIN.MODULAR.CAROUSEL
+          fields:
+            header.hide_controls:
+              type: toggle
+              label: ADMIN.MODULAR.CAROUSEL_HIDE_CONTROLS
+              highlight: 0
+              default: 0
+              help: ADMIN.MODULAR.CAROUSEL_HIDE_CONTROLS_HELP
+              options:
+                1: PLUGIN_ADMIN.YES
+                0: PLUGIN_ADMIN.NO
+              validate:
+                type: bool
+            header.slider_interval:
+              type: text
+              size: x-small
+              label: ADMIN.MODULAR.CAROUSEL_SLIDE_INTERVAL
+              help: ADMIN.MODULAR.CAROUSEL_SLIDE_INTERVAL_HELP
+              placeholder: 5000
+              validate:
+                type: number
+                min: 0
+            header.slides:
+              type: list
+              label: ADMIN.MODULAR.CAROUSEL_SLIDES
+              help: ADMIN.MODULAR.CAROUSEL_SLIDES_HELP
+              style: vertical
+              fields:
+                .text:
+                  type: text
+                  label: ADMIN.TEXT
+                .url:
+                  type: text
+                  label: ADMIN.URL
+                .image:
+                  type: filepicker
+                  label: ADMIN.IMAGE
+                  folder: '@self'
+                  preview_images: true
+

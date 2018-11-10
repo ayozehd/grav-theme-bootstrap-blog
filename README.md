@@ -178,9 +178,57 @@ features:
 
 This is the default modular template. It supports `style` parameter to change background and font color following [Bootstrap Theme Colors](https://getbootstrap.com/docs/4.1/getting-started/theming/#theme-colors). Also you are able to use `text_align`, and set image width by columns with `image_size` taking values from 1 to 12 (default 6). Image will be retrieved automatically from first media founded in folder, or you can pick one on `image_file`.
 
-### Blog Modular
+## Carousel Modular
 
-Blog Modular content should be setting up with [Page Collections](https://learn.getgrav.org/content/collections), or using `show_more` route parameter as to get children. Also it's possible to choose between 3 layouts to display items; boxed, cards or masonry.
+Create a simple [carousel](https://getbootstrap.com/docs/4.1/components/carousel/) in `page.header.slides` or setting up a [collection]((https://learn.getgrav.org/content/collections)) of your items from another page/folder. Remember slides overwrite collection, so we should remove first that parameter.
+
+```
+title: Carousel
+slide_interval: 5000
+indicators: true
+hide_controls: false
+slides:
+    -
+        title: Slide 1
+        text: Carousel slide 1
+        image: image1.jpg
+    -
+        title: Slide 2
+        url: /blog
+        image: image2.jpg
+    -
+        image: video.mp4
+```
+
+## Skills Modular
+
+Template useful to display your best skills! Setup an array of values with text and style optional. Also you can set a different suffix `page.header.suffix` than %. Add some css classes in bars with `progress_classes`.
+
+```
+title: Skills
+style: cyan
+progress_classes: progress-bar-striped
+skills:
+    -
+        text: PHP
+        value: 80
+    -
+        text: Javascript
+        style: orange
+        value: 70
+    -
+        text: Symfony
+        style: green
+        value: 72
+    -
+        text: MySQL & MongoDB & Redis
+        style: pink
+        value: 80
+```
+
+## Blog Modular
+
+Blog Modular content should be setting up with [Page Collections](https://learn.getgrav.org/content/collections), or using `show_more` route parameter as fallback to get children. Also is possible choose between 3 layouts to display items; boxed, cards or masonry.
 
 ```yaml
 title: Blog Modular
@@ -198,7 +246,7 @@ content:
 
 ## Blog
 
-As in Blog Modular you're able to choose between 3 layouts. In addition, showcase is included to customize Blog header following the same structure mentioned above.
+As in Blog Modular you're able to choose between 3 items layouts. In addition, showcase is included to customize Blog header following the same structure mentioned above.
 
 ```yaml
 title: Blog
@@ -242,8 +290,8 @@ Sidebar can be disabled in any page and it's possible to set on left or right si
 
 Feel free to extend `partials/sidebar.html.twig` to add your own widgets!
 
-### TODO
-* Skills/animated bars modular template
-* Carousel modular template
-* ~~Go to top button~~
-* ~~Merge portfolio and blog item layouts~~
+## Donate
+
+Help me to build better software!
+
+[![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=94NYK2VQA253G)

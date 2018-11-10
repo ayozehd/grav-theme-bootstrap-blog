@@ -1,3 +1,12 @@
+# v1.1.4
+## 10-11-2018
+
+1. [](#new)
+  * Carousel modular template
+  * Skills modular template
+2. [](#bugfix)
+  * JQuery slim no worked with CDN files
+
 # v1.1.3
 ## 24-10-2018
 

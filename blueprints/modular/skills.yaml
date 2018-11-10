@@ -1,0 +1,60 @@
+'@extends':
+  type: default
+  context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        bootstrap-blog:
+          type: tab
+          title: ADMIN.MODULAR.SKILLS
+          fields:
+            header.style:
+                type: select
+                size: medium
+                label: ADMIN.STYLE
+                help: ADMIN.STYLE_HELP
+                toggleable: true
+                options:
+                  dark: Dark
+                  light: Light
+                  primary: Primary
+                  secondary: Secondary
+                  info: Info
+                  success: Success
+                  warning: Warning
+                  danger: Danger
+                validate:
+                  pattern: (null|dark|light|primary|secondary|info|success|warning|danger|blue|indigo|purple|pink|red|orange|yellow|green|teal|cyan)
+            header.skills:
+              type: list
+              label: ADMIN.MODULAR.SKILLS_LIST
+              help: ADMIN.MODULAR.SKILLS_LIST_HELP
+              style: vertical
+              fields:
+                .text:
+                  type: text
+                  label: ADMIN.TEXT
+                .style:
+                  type: select
+                  size: medium
+                  label: ADMIN.STYLE
+                  help: ADMIN.STYLE_HELP
+                  toggleable: true
+                  options:
+                    dark: Dark
+                    light: Light
+                    primary: Primary
+                    secondary: Secondary
+                    info: Info
+                    success: Success
+                    warning: Warning
+                    danger: Danger
+                  validate:
+                    pattern: (null|dark|light|primary|secondary|info|success|warning|danger|blue|indigo|purple|pink|red|orange|yellow|green|teal|cyan)
+                .value:
+                  type: text
+                  label: ADMIN.VALUE

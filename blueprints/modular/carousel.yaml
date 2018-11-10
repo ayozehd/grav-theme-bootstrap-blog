@@ -1,6 +1,7 @@
 '@extends':
   type: default
   context: blueprints://pages
+
 form:
   fields:
     tabs:
@@ -48,4 +49,3 @@ form:
                   label: ADMIN.IMAGE
                   folder: '@self'
                   preview_images: true
-

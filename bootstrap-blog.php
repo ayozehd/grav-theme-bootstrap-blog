@@ -1,8 +1,9 @@
 <?php
+
 namespace Grav\Theme;
 
-use Grav\Common\Theme;
 use Grav\Common\Grav;
+use Grav\Common\Theme;
 
 class BootstrapBlog extends Theme
 {
@@ -12,6 +13,16 @@ class BootstrapBlog extends Theme
         return [
             'onThemeInitialized' => ['onThemeInitialized', 0]
         ];
+    }
+
+    /**
+     * Get Taxonomies on item selector
+     * @static
+     */
+    public static function getTaxonomies()
+    {
+        $config = Grav::instance()['config']->get('site.taxonomies') ?: [];
+        return array_combine($config, $config);
     }
 
     /**
@@ -40,7 +51,7 @@ class BootstrapBlog extends Theme
 
         $collection = [];
 
-        if($config['cdn_enabled']) {
+        if ($config['cdn_enabled']) {
             // CSS
             $collection[] = 'https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css';
             $collection[] = 'https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap-reboot.min.css';
@@ -67,15 +78,5 @@ class BootstrapBlog extends Theme
         $assets->registerCollection('bootstrap-blog', $collection);
         $assets->add('bootstrap-blog', 100);
 
-    }
-
-    /**
-     * Get Taxonomies on item selector
-     * @static
-     */
-    public static function getTaxonomies()
-    {
-        $config = Grav::instance()['config']->get('site.taxonomies') ?: [];
-        return array_combine($config, $config);
     }
 }

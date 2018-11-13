@@ -1,76 +1,76 @@
 '@extends':
-  type: default
-  context: blueprints://pages
+    type: default
+    context: blueprints://pages
 
 form:
-  fields:
-    tabs:
-      type: tabs
-      active: 1
-      fields:
-        bootstrap-blog:
-          type: tab
-          title: ADMIN.MODULAR.CALLOUT
-          fields:
-            header.style:
-              type: select
-              label: ADMIN.STYLE
-              help: ADMIN.STYLE_HELP
-              description: ADMIN.WE_USE_BOOTSTRAP_COLORS
-              size: medium
-              toggleable: true
-              options:
-                dark: Dark
-                light: Light
-                primary: Primary
-                secondary: Secondary
-                info: Info
-                success: Success
-                warning: Warning
-                danger: Danger
-              validate:
-                pattern: (null|dark|light|primary|secondary|info|success|warning|danger|blue|indigo|purple|pink|red|orange|yellow|green|teal|cyan)
-            header.text_align:
-              type: select
-              label: ADMIN.TEXT_ALIGN
-              classes: fancy
-              default: boxed
-              options:
-                left: ADMIN.LEFT
-                right: ADMIN.RIGHT
-                center: ADMIN.CENTER
-                justify: ADMIN.JUSTIFY
-              validate:
-                pattern: (left|right|center|justify)
-            header_image:
-              type: section
-              title: ADMIN.ITEM.HEADER_IMAGE
-              underline: true
-              fields:
-                header.image_file:
-                  type: pagemediaselect
-                  label: ADMIN.ITEM.CHOOSE_HEADER_IMAGE
-                  help: ADMIN.ITEM.CHOOSE_HEADER_IMAGE_HELP
-                  toggleable: true
-                  multiple: false
-                header.image_align:
-                  type: select
-                  label: ADMIN.ITEM.IMAGE_ALIGN
-                  help: ADMIN.ITEM.IMAGE_ALIGN_HELP
-                  size: medium
-                  default: left
-                  options:
-                    left: ADMIN.LEFT
-                    right: ADMIN.RIGHT
-                  validate:
-                    pattern: (left|right|center)
-                header.image_size:
-                  type: text
-                  size: x-small
-                  label: ADMIN.MODULAR.TEXT_IMAGE_SIZE
-                  help: ADMIN.MODULAR.TEXT_IMAGE_SIZE_HELP
-                  placeholder: 1-12
-                  validate:
-                    type: number
-                    min: 1
-                    max: 12
+    fields:
+        tabs:
+            type: tabs
+            active: 1
+            fields:
+                bootstrap-blog:
+                    type: tab
+                    title: ADMIN.MODULAR.CALLOUT
+                    fields:
+                        header.style:
+                            type: select
+                            label: ADMIN.STYLE
+                            help: ADMIN.STYLE_HELP
+                            description: ADMIN.WE_USE_BOOTSTRAP_COLORS
+                            size: medium
+                            toggleable: true
+                            options:
+                                dark: Dark
+                                light: Light
+                                primary: Primary
+                                secondary: Secondary
+                                info: Info
+                                success: Success
+                                warning: Warning
+                                danger: Danger
+                            validate:
+                                pattern: (null|dark|light|primary|secondary|info|success|warning|danger|blue|indigo|purple|pink|red|orange|yellow|green|teal|cyan)
+                        header.text_align:
+                            type: select
+                            label: ADMIN.TEXT_ALIGN
+                            classes: fancy
+                            default: boxed
+                            options:
+                                left: ADMIN.LEFT
+                                right: ADMIN.RIGHT
+                                center: ADMIN.CENTER
+                                justify: ADMIN.JUSTIFY
+                            validate:
+                                pattern: (left|right|center|justify)
+                        header_image:
+                            type: section
+                            title: ADMIN.ITEM.HEADER_IMAGE
+                            underline: true
+                            fields:
+                                header.image_file:
+                                    type: pagemediaselect
+                                    label: ADMIN.ITEM.CHOOSE_HEADER_IMAGE
+                                    help: ADMIN.ITEM.CHOOSE_HEADER_IMAGE_HELP
+                                    toggleable: true
+                                    multiple: false
+                                header.image_align:
+                                    type: select
+                                    label: ADMIN.ITEM.IMAGE_ALIGN
+                                    help: ADMIN.ITEM.IMAGE_ALIGN_HELP
+                                    size: medium
+                                    default: left
+                                    options:
+                                        left: ADMIN.LEFT
+                                        right: ADMIN.RIGHT
+                                    validate:
+                                        pattern: (left|right|center)
+                                header.image_size:
+                                    type: text
+                                    size: x-small
+                                    label: ADMIN.MODULAR.TEXT_IMAGE_SIZE
+                                    help: ADMIN.MODULAR.TEXT_IMAGE_SIZE_HELP
+                                    placeholder: 1-12
+                                    validate:
+                                        type: number
+                                        min: 1
+                                        max: 12

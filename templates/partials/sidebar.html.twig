@@ -2,56 +2,58 @@
 {% set new_base_url = blog.url == '/' ? '' : blog.url %}
 
 {% if config.plugins.simplesearch.enabled %}
-<div class="sidebar-content">
-    {% include 'partials/simplesearch_searchbox.html.twig' %}
-</div>
+    <div class="sidebar-content">
+        {% include 'partials/simplesearch_searchbox.html.twig' %}
+    </div>
 {% endif %}
 {% if config.plugins.relatedpages.enabled and related_pages|length > 0 %}
-<div class="sidebar-content">
-    <h4>{{ 'SIDEBAR.RELATED_PAGES.HEADLINE'|t }}</h4>
-    {% include 'partials/relatedpages.html.twig' %}
-</div>
+    <div class="sidebar-content">
+        <h4>{{ 'SIDEBAR.RELATED_PAGES.HEADLINE'|t }}</h4>
+        {% include 'partials/relatedpages.html.twig' %}
+    </div>
 {% endif %}
 {% if theme_config.sidebar.about.enabled %}
-<div class="sidebar-content">
-    {% set about_content = theme_config.sidebar.about %}
-    {% if theme_config.sidebar.about.page %}
-        {% set about_content = page.find( theme_config.sidebar.about.page ) %}
-    {% endif %}
-    <h4>{{ about_content.title }}</h4>
-    <p>{{ about_content.content }}</p>
-</div>
+    <div class="sidebar-content">
+        {% set about_content = theme_config.sidebar.about %}
+        {% if theme_config.sidebar.about.page %}
+            {% set about_content = page.find( theme_config.sidebar.about.page ) %}
+        {% endif %}
+        <h4>{{ about_content.title }}</h4>
+        <p>{{ about_content.content }}</p>
+    </div>
 {% endif %}
 {% if config.plugins.random.enabled %}
-<div class="sidebar-content">
-	<h4>{{ 'SIDEBAR.RANDOM.HEADLINE'|t }}</h4>
-	<a class="btn btn-outline-primary" href="{{ base_url_relative }}/random"><i class="fa fa-retweet"></i> {{ 'SIDEBAR.RANDOM.FEELING_LUCKY'|t }}</a>
-</div>
+    <div class="sidebar-content">
+        <h4>{{ 'SIDEBAR.RANDOM.HEADLINE'|t }}</h4>
+        <a class="btn btn-outline-primary" href="{{ base_url_relative }}/random"><i class="fa fa-retweet"></i> {{ 'SIDEBAR.RANDOM.FEELING_LUCKY'|t }}
+        </a>
+    </div>
 {% endif %}
 {% if config.plugins.taxonomylist.enabled %}
-<div class="sidebar-content">
-    <h4>{{ 'SIDEBAR.POPULAR_TAGS.HEADLINE'|t }}</h4>
-    {% include 'partials/taxonomylist.html.twig' with {'base_url':new_base_url, 'taxonomy':'tag'} %}
-</div>
+    <div class="sidebar-content">
+        <h4>{{ 'SIDEBAR.POPULAR_TAGS.HEADLINE'|t }}</h4>
+        {% include 'partials/taxonomylist.html.twig' with {'base_url':new_base_url, 'taxonomy':'tag'} %}
+    </div>
 {% endif %}
 {% if config.plugins.archives.enabled %}
-<div class="sidebar-content">
-    <h4>{{ 'SIDEBAR.ARCHIVES.HEADLINE'|t }}</h4>
-	{% include 'partials/archives.html.twig' with {'base_url':new_base_url} %}
-</div>
+    <div class="sidebar-content">
+        <h4>{{ 'SIDEBAR.ARCHIVES.HEADLINE'|t }}</h4>
+        {% include 'partials/archives.html.twig' with {'base_url':new_base_url} %}
+    </div>
 {% endif %}
 {% if theme_config.sidebar.twitter.enabled %}
-<div class="sidebar-content">
-{% do assets.addJs('https://platform.twitter.com/widgets.js', { loading:'async', group: 'bottom'}) %}
-<a class="twitter-timeline" data-height="{{ theme_config.sidebar.twitter.height|default(600) }}" data-theme="{{ theme_config.sidebar.twitter.theme|default('light') }}"
-    href="https://twitter.com/{{ theme_config.sidebar.twitter.user|default('twitter') }}">
-</a>
-</div>
+    <div class="sidebar-content">
+        {% do assets.addJs('https://platform.twitter.com/widgets.js', { loading:'async', group: 'bottom'}) %}
+        <a class="twitter-timeline" data-height="{{ theme_config.sidebar.twitter.height|default(600) }}"
+           data-theme="{{ theme_config.sidebar.twitter.theme|default('light') }}"
+           href="https://twitter.com/{{ theme_config.sidebar.twitter.user|default('twitter') }}">
+        </a>
+    </div>
 {% endif %}
 {% if config.plugins.feed.enabled %}
-<div class="sidebar-content syndicate">
-    <h4>{{ 'SIDEBAR.SYNDICATE.HEADLINE'|t }}</h4>
-    <a class="btn btn-outline-primary" href="{{ page.url(true) }}.atom"><i class="fa fa-rss-square"></i> Atom 1.0</a>
-    <a class="btn btn-outline-primary" href="{{ page.url(true) }}.rss"><i class="fa fa-rss-square"></i> RSS</a>
-</div>
+    <div class="sidebar-content syndicate">
+        <h4>{{ 'SIDEBAR.SYNDICATE.HEADLINE'|t }}</h4>
+        <a class="btn btn-outline-primary" href="{{ page.url(true) }}.atom"><i class="fa fa-rss-square"></i> Atom 1.0</a>
+        <a class="btn btn-outline-primary" href="{{ page.url(true) }}.rss"><i class="fa fa-rss-square"></i> RSS</a>
+    </div>
 {% endif %}

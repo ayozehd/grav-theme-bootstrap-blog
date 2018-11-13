@@ -1,57 +1,59 @@
 {% set isPageCollection = false %}
 {% if page.header.slides and page.header.slides is iterable %}
-  {% set slides = page.header.slides %}
+    {% set slides = page.header.slides %}
 {% elseif page.collection()|length > 0 %}
-  {% set slides = page.collection() %}
-  {% set isPageCollection = true %}
+    {% set slides = page.collection() %}
+    {% set isPageCollection = true %}
 {% else %}
-  {% set slides = [] %}
+    {% set slides = [] %}
 {% endif %}
 
 <div id="{{ page.id }}" class="carousel slide" data-ride="carousel">
-  {% if page.header.indicators is not defined or page.indicators != false %}
-  <ol class="carousel-indicators">
-  {% for slide in slides %}
-    <li data-target="#{{ page.id }}" data-slide-to="{{ loop.index0 }}" class="active"></li>
-  {% endfor %}
-  </ol>
-  {% endif %}
+    {% if page.header.indicators is not defined or page.indicators != false %}
+      <ol class="carousel-indicators">
+          {% for slide in slides %}
+            <li data-target="#{{ page.id }}" data-slide-to="{{ loop.index0 }}" class="active"></li>
+          {% endfor %}
+      </ol>
+    {% endif %}
+
   <div class="carousel-inner">
-    {% for slide in slides %}
-    <div class="carousel-item {% if loop.index0 == 0 %}active{% endif %}">
-      {% if not isPageCollection %}
-        {% if slide.url %}<a href="{{ slide.url }}">{% endif %}
-        {{ page.media[slide.image].html(slide.title, null, 'd-block w-100') }}
-        {% if slide.url %}</a>{% endif %}
-      {% else %}
-        <a href="{{ slide.url }}">
-        {{ slide.media.images|first.html(slide.title, null, 'd-block w-100') }}
-        </a>
-      {% endif %}
-      <div class="carousel-caption d-block d-md-block">
-        <h5>{{ slide.title }}</h5>
-        {% if isPageCollection %}
-          <p>{{ slide.summary }}</p>
-        {% else %}
-          <p>{{ slide.text }}</p>
-        {% endif %}
-      </div>
-    </div>
-    {% endfor %}
+      {% for slide in slides %}
+        <div class="carousel-item {% if loop.index0 == 0 %}active{% endif %}">
+            {% if not isPageCollection %}
+                {% if slide.url %}<a href="{{ slide.url }}">{% endif %}
+                {{ page.media[slide.image].html(slide.title, null, 'd-block w-100') }}
+                {% if slide.url %}</a>{% endif %}
+            {% else %}
+              <a href="{{ slide.url }}">
+                  {{ slide.media.images|first.html(slide.title, null, 'd-block w-100') }}
+              </a>
+            {% endif %}
+          <div class="carousel-caption d-block d-md-block">
+            <h5>{{ slide.title }}</h5>
+              {% if isPageCollection %}
+                <p>{{ slide.summary }}</p>
+              {% else %}
+                <p>{{ slide.text }}</p>
+              {% endif %}
+          </div>
+        </div>
+      {% endfor %}
   </div>
-  {% if not page.header.hide_controls %}
-  <a class="carousel-control-prev" href="#{{ page.id }}" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">{{ 'MODULAR.CAROUSEL_PREVIOUS'|t }}</span>
-  </a>
-  <a class="carousel-control-next" href="#{{ page.id }}" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">{{ 'MODULAR.CAROUSEL_NEXT'|t }}</span>
-  </a>
-  {% endif %}
+
+    {% if not page.header.hide_controls %}
+      <a class="carousel-control-prev" href="#{{ page.id }}" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">{{ 'MODULAR.CAROUSEL_PREVIOUS'|t }}</span>
+      </a>
+      <a class="carousel-control-next" href="#{{ page.id }}" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">{{ 'MODULAR.CAROUSEL_NEXT'|t }}</span>
+      </a>
+    {% endif %}
 </div>
 <script>
-$('#{{ page.id }}').carousel({
-  interval: {{ page.header.slide_interval|default(5000) }}
-})
+    $('#{{ page.id }}').carousel({
+        interval: {{ page.header.slide_interval|default(5000) }}
+    })
 </script>

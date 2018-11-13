@@ -2,30 +2,32 @@
 {% set header_image_file = page.header.image_file %}
 {% set default_text_align = 'left' %}
 <div class="modular-row jumbotron {{ bsTools.style(page.header.style) }}">
-  <div class="container">
-    <div class="row">
-      {% if header_image_file %}
-          {% set header_image_media = page.media.images[header_image_file] %}
-      {% else %}
-          {% set header_image_media = page.media.images|first %}
-      {% endif %}
-      {% if header_image_media %}
-        {% set default_text_align = 'center' %}
-        <div class="col-12 text-center col-md-{{ page.header.image_size|defined(6) }} {% if page.header.image_align == 'right' %}order-last{% endif %}">
-          {{ header_image_media.html }}
-        </div>
-      {% endif %}
-      <div class="col text-{{ page.header.text_align|defined(default_text_align) }}">
-        {{ content }}
-        {% for button in page.header.buttons %}
-          <a class="btn {{ bsTools.buttonStyle(button.style|defined(page.header.style), button.is_outline|defined(true), true, 'primary') }} btn-{{ button.size|defined('md') }}" href="{{ button.url }}">
-            {% if button.icon %}
-              <i class="fas fa-{{ button.icon}}"></i>
+    <div class="container">
+        <div class="row">
+            {% if header_image_file %}
+                {% set header_image_media = page.media.images[header_image_file] %}
+            {% else %}
+                {% set header_image_media = page.media.images|first %}
             {% endif %}
-            {{ button.text }}
-          </a>
-        {% endfor %}
-      </div>
+            {% if header_image_media %}
+                {% set default_text_align = 'center' %}
+                <div
+                    class="col-12 text-center col-md-{{ page.header.image_size|defined(6) }} {% if page.header.image_align == 'right' %}order-last{% endif %}">
+                    {{ header_image_media.html }}
+                </div>
+            {% endif %}
+            <div class="col text-{{ page.header.text_align|defined(default_text_align) }}">
+                {{ content }}
+                {% for button in page.header.buttons %}
+                    <a class="btn {{ bsTools.buttonStyle(button.style|defined(page.header.style), button.is_outline|defined(true), true, 'primary') }} btn-{{ button.size|defined('md') }}"
+                       href="{{ button.url }}">
+                        {% if button.icon %}
+                            <i class="fas fa-{{ button.icon }}"></i>
+                        {% endif %}
+                        {{ button.text }}
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
     </div>
-  </div>
 </div>

@@ -10,10 +10,10 @@
 {% block content %}
     {{ page.content }}
     <div class="modular">
-    {% for module in page.collection() %}
-        <section id="{{ _self.pageLinkName(module.menu) }}">
-            {{ module.content }}
-        </section>
-    {% endfor %}
+        {% for module in page.collection() %}
+            <section id="{{ _self.pageLinkName(module.menu) }}">
+                {{ module.content }}
+            </section>
+        {% endfor %}
     </div>
 {% endblock %}

@@ -2,57 +2,59 @@
 {% set header_image_height = page.header.image_height|defined(720) %}
 {% set header_image_file = page.header.image_file %}
 {% if header_image_file %}
-  {% set header_image_media = page.media.images[header_image_file] %}
+    {% set header_image_media = page.media.images[header_image_file] %}
 {% else %}
-  {% set header_image_media = page.media.images|first %}
+    {% set header_image_media = page.media.images|first %}
 {% endif %}
 
 <div class="col-12">
-  <div class="card item-boxed">
-      {% if header_image_media %}
-        <a href="{{ page.url }}">{{ header_image_media.cropResize(header_image_width, header_image_height).html }}</a>
-      {% endif %}
-    <div class="card-body">
-        <div class="card-title">
-          <h3 class="title"><a href="{{ page.url }}">{{ page.title }}</a></h3>
-          <div class="categories">
-          {% for category in page.taxonomy.category %}
-            <a class="badge badge-pill badge-{{ page.header.style|defined('secondary') }} text-uppercase font-weight-normal" href="{{ parent.url|rtrim('/') }}/category{{ config.system.param_sep }}{{ category }}">{{ category }}</a>
-          {% endfor %}
+    <div class="card item-boxed">
+        {% if header_image_media %}
+            <a href="{{ page.url }}">{{ header_image_media.cropResize(header_image_width, header_image_height).html }}</a>
+        {% endif %}
+        <div class="card-body">
+            <div class="card-title">
+                <h3 class="title"><a href="{{ page.url }}">{{ page.title }}</a></h3>
+                <div class="categories">
+                    {% for category in page.taxonomy.category %}
+                        <a class="badge badge-pill badge-{{ page.header.style|defined('secondary') }} text-uppercase font-weight-normal"
+                           href="{{ parent.url|rtrim('/') }}/category{{ config.system.param_sep }}{{ category }}">{{ category }}</a>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="card-text summary">
+                {{ page.summary }}
+            </div>
+            <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Item Links">
+                <div class="btn-group" role="group" aria-label="Links">
+                    {{ bsTools.button(page.url, page.header.button_text|default('ITEM.CONTINUE_READING'|t), null, page.header.style, true, false, 'primary') }}
+                    {% if page.header.link %}
+                        {{ bsTools.button(page.header.link, null, 'link', 'secondary', true, false) }}
+                    {% endif %}
+                </div>
+                <div class="btn-group" role="group" aria-label="Extra Links">
+                    {{ bsTools.buttons(page.header.buttons, page.header.style, true, true, 'dark') }}
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="card-text summary">
-        {{ page.summary }}
-      </div>
-      <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Item Links">
-        <div class="btn-group" role="group" aria-label="Links">
-          {{ bsTools.button(page.url, page.header.button_text|default('ITEM.CONTINUE_READING'|t), null, page.header.style, true, false, 'primary') }}
-          {% if page.header.link %}
-            {{ bsTools.button(page.header.link, null, 'link', 'secondary', true, false) }}
-          {% endif %}
-        </div>
-        <div class="btn-group" role="group" aria-label="Extra Links">
-          {{ bsTools.buttons(page.header.buttons, page.header.style, true, true, 'dark') }}
-        </div>
-      </div>
-    </div>
-    <div class="card-footer">
-      {% if page.taxonomy.tag %}
-        <div class="d-inline tags">
+        <div class="card-footer">
+            {% if page.taxonomy.tag %}
+                <div class="d-inline tags">
           <span data-toggle="tooltip" data-placement="top" title="{{ 'TAXONOMY.TAGS'|t }}" class="text-{{ page.header.style|defined('primary') }}">
             <i class="fas fa-tags"></i>
           </span>
-          {% for tag in page.taxonomy.tag %}
-            <a class="text-{{ page.header.style|defined('primary') }}" href="{{ parent.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}{{ not loop.last ? ',' }}</a>
-          {% endfor %}
-        </div>
-      {% endif %}
-        <div class="float-right">
-          <i class="far fa-clock text-{{ page.header.style|defined('primary') }}"></i>
-          <small data-toggle="tooltip" title="{{ page.date|date(config.system.pages.dateformat.long) }}" class="text-secondary">
-            {{ page.date|date(config.system.pages.dateformat.short) }}
-          </small>
+                    {% for tag in page.taxonomy.tag %}
+                        <a class="text-{{ page.header.style|defined('primary') }}"
+                           href="{{ parent.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}{{ not loop.last ? ',' }}</a>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            <div class="float-right">
+                <i class="far fa-clock text-{{ page.header.style|defined('primary') }}"></i>
+                <small data-toggle="tooltip" title="{{ page.date|date(config.system.pages.dateformat.long) }}" class="text-secondary">
+                    {{ page.date|date(config.system.pages.dateformat.short) }}
+                </small>
+            </div>
         </div>
     </div>
-  </div>
 </div>

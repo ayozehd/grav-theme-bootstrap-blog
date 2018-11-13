@@ -1,23 +1,24 @@
 {% import "macros/bootstrap_tools.html.twig" as bsTools %}
-<div class="modular-row {{ bsTools.style(page.header.style) }} {{ page.header.class}}">
+<div class="modular-row {{ bsTools.style(page.header.style) }} {{ page.header.class }}">
     <div class="container">
         <div class="text-{{ page.header.text_align|default('center') }}">
             {{ content }}
         </div>
         <div class="row justify-content-center">
-        {% for feature in page.header.features %}
-            <div class="col-12 col-md-3 feature">
-                {% if feature.icon %}
-                    <div class="feature-icon text-{{ feature.style|defined('primary') }}" {% if feature.color %}style="color:{{ feature.color }} !important;"{% endif %}>
-                        <i class="fas fa-3x fa-{{ feature.icon }}"></i>
+            {% for feature in page.header.features %}
+                <div class="col-12 col-md-3 feature">
+                    {% if feature.icon %}
+                        <div class="feature-icon text-{{ feature.style|defined('primary') }}"
+                             {% if feature.color %}style="color:{{ feature.color }} !important;"{% endif %}>
+                            <i class="fas fa-3x fa-{{ feature.icon }}"></i>
+                        </div>
+                    {% endif %}
+                    <div class="feature-content">
+                        <h4>{{ feature.title }}</h4>
+                        <p>{{ feature.text }}</p>
                     </div>
-                {% endif %}
-                <div class="feature-content">
-                <h4>{{ feature.title }}</h4>
-                <p>{{ feature.text }}</p>
                 </div>
-            </div>
-        {% endfor %}
+            {% endfor %}
         </div>
     </div>
 </div>

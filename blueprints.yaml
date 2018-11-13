@@ -97,7 +97,7 @@ form:
           toggleable: true
           filesize: 3
           accept:
-            - image/*
+          - image/*
         navbar.icon:
           type: text
           label: ADMIN.THEME.BRAND_ICON
@@ -114,14 +114,14 @@ form:
           description: ADMIN.STYLE_DESCRIPTION
           default: light
           options:
-              dark: Dark
-              light: Light
-              primary: Primary
-              secondary: Secondary
-              success: Success
-              warning: Warning
-              info: Info
-              danger: Danger
+            dark: Dark
+            light: Light
+            primary: Primary
+            secondary: Secondary
+            success: Success
+            warning: Warning
+            info: Info
+            danger: Danger
           validate:
             pattern: (dark|light|primary|secondary|success|warning|info|danger|blue|indigo|purple|pink|red|orange|yellow|green|teal|cyan)
     item:

@@ -1,53 +1,54 @@
 {# Alias to backgroundStyle() #}
 {% macro style(style, noTextClass) %}
-{{ _self.backgroundStyle(style, noTextClass)|trim }}
+    {{ _self.backgroundStyle(style, noTextClass)|trim }}
 {% endmacro %}
 
 {% macro backgroundStyle(style, noTextClass) %}
-{{ (style ? 'bg-' ~ style) ~ ( noTextClass ?: ' ' ~ _self.textStyle(style)|trim ) }}
+    {{ (style ? 'bg-' ~ style) ~ ( noTextClass ?: ' ' ~ _self.textStyle(style)|trim ) }}
 {% endmacro %}
 
 {% macro textStyle(style, default) %}
-{{ 'text-' ~ _self.processStyle(style, true, default)|trim }}
+    {{ 'text-' ~ _self.processStyle(style, true, default)|trim }}
 {% endmacro %}
 
 {% macro navbarStyle(style) %}
-  {% set output = 'navbar-' %}
-  {% if style in ['primary', 'success', 'danger', 'secondary', 'info', 'dark', 'faded', 'blue', 'indigo', 'purple', 'pink', 'red', 'green', 'teal', 'cyan'] %}
-    {% set output = output ~ 'dark' %}
-  {% else %}
-    {% set output = output ~ 'light' %}
-  {% endif %}
-  {{ output ~ ' ' ~ _self.backgroundStyle(style, false)|trim }}
+    {% set output = 'navbar-' %}
+    {% if style in ['primary', 'success', 'danger', 'secondary', 'info', 'dark', 'faded', 'blue', 'indigo', 'purple', 'pink', 'red', 'green', 'teal', 'cyan'] %}
+        {% set output = output ~ 'dark' %}
+    {% else %}
+        {% set output = output ~ 'light' %}
+    {% endif %}
+    {{ output ~ ' ' ~ _self.backgroundStyle(style, false)|trim }}
 {% endmacro %}
 
 {% macro buttonStyle(style, isOutline, darkOrLight, default, size) %}
-  {{ 'btn-' ~ (isOutline ? 'outline-') ~ _self.processStyle(style, darkOrLight|defined(true), default)|trim ~ (size ? ' btn-' ~ size) }}
+    {{ 'btn-' ~ (isOutline ? 'outline-') ~ _self.processStyle(style, darkOrLight|defined(true), default)|trim ~ (size ? ' btn-' ~ size) }}
 {% endmacro %}
 
 {% macro processStyle(style, inversed, default) %}
-  {% set output = null %}
-  {% if inversed %}
-    {% if style in ['primary', 'success', 'danger', 'info', 'dark', 'faded', 'blue', 'indigo', 'purple', 'pink', 'red', 'green', 'teal', 'cyan'] %}
-      {% set output = 'light' %}
-    {% else %}
-      {% set output = default|defined('dark') %}
+    {% set output = null %}
+    {% if inversed %}
+        {% if style in ['primary', 'success', 'danger', 'info', 'dark', 'faded', 'blue', 'indigo', 'purple', 'pink', 'red', 'green', 'teal', 'cyan'] %}
+            {% set output = 'light' %}
+        {% else %}
+            {% set output = default|defined('dark') %}
+        {% endif %}
     {% endif %}
-  {% endif %}
-  {{ output|defined(style)|defined(default) }}
+    {{ output|defined(style)|defined(default) }}
 {% endmacro %}
 
 {% macro button(url, text, icon, style, outline, darkOrLight, default, size, classes) %}
-<a href="{{ url starts with 'http' ? url : url(url) }}" alt="{{ text }}" class="btn {{ _self.buttonStyle(style, outline, darkOrLight, default, size)|trim }} {{ classes }}">
-  {% if icon %}
-    <i class="fas fa-{{ icon }}"></i>
-  {% endif %}
-  {{ text }}
-</a>
+  <a href="{{ url starts with 'http' ? url : url(url) }}" alt="{{ text }}"
+     class="btn {{ _self.buttonStyle(style, outline, darkOrLight, default, size)|trim }} {{ classes }}">
+      {% if icon %}
+        <i class="fas fa-{{ icon }}"></i>
+      {% endif %}
+      {{ text }}
+  </a>
 {% endmacro %}
 
 {% macro buttons(buttons, style, outline, darkOrLight, default, classes) %}
-  {% for button in buttons %}
-    {{ _self.button(button.url, button.text, button.icon, style, outline, darkOrLight, default, button.size, classes)|trim }}
-  {% endfor %}
+    {% for button in buttons %}
+        {{ _self.button(button.url, button.text, button.icon, style, outline, darkOrLight, default, button.size, classes)|trim }}
+    {% endfor %}
 {% endmacro %}

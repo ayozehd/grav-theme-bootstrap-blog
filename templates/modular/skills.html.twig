@@ -1,22 +1,24 @@
 {% import "macros/bootstrap_tools.html.twig" as bsTools %}
-<div id="{{ page.id }}" class="modular-row {{ bsTools.style(page.header.style) }} {{ page.header.class}}">
+<div id="{{ page.id }}" class="modular-row {{ bsTools.style(page.header.style) }} {{ page.header.class }}">
     <div class="container">
         <div class="text-{{ page.header.text_align|default('center') }}">
             {{ content }}
         </div>
         <div class="row justify-content-center">
-        {% for skill in page.header.skills %}
-          <div class="col-sm-12 py-3">
-              <span>{{ skill.text }}</span>
-              <div class="progress">
-                  <div class="progress-bar bg-{{ skill.style|default('primary') }} {{ page.header.progress_classes|default() }}" role="progressbar" style="width: {{ skill.value|default(0) }}%" aria-valuenow="{{ skill.value|default(0) }}" aria-valuemin="0" aria-valuemax="100">
-                      {% if not page.header.hide_label %}
-                          {{ skill.value }}{{ page.header.suffix|default('%') }}
-                      {% endif %}
-                  </div>
-              </div>
-          </div>
-        {% endfor %}
+            {% for skill in page.header.skills %}
+                <div class="col-sm-12 py-3">
+                    <span>{{ skill.text }}</span>
+                    <div class="progress">
+                        <div class="progress-bar bg-{{ skill.style|default('primary') }} {{ page.header.progress_classes|default() }}"
+                             role="progressbar" style="width: {{ skill.value|default(0) }}%" aria-valuenow="{{ skill.value|default(0) }}"
+                             aria-valuemin="0" aria-valuemax="100">
+                            {% if not page.header.hide_label %}
+                                {{ skill.value }}{{ page.header.suffix|default('%') }}
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
         </div>
     </div>
 </div>

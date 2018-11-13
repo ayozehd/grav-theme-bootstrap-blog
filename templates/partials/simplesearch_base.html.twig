@@ -1,39 +1,37 @@
 {% embed 'partials/base.html.twig' %}
 
-  {% block content %}
-    <div class="modular-row box-inset-shadow showcase-text bg-primary text-light">
-      <div class="container">
+    {% block content %}
+      <div class="modular-row box-inset-shadow showcase-text bg-primary text-light">
+        <div class="container">
+          <div class="row">
+            <div class="col text-left">
+              <h2>{{ 'SIMPLESEARCH.SEARCH_RESULTS'|t }}</h2>
+              <h4 class="font-weight-light">
+                  {% if query %}
+                      {% set count = search_results ? search_results.count : 0 %}
+                      {% if count == 1 %}
+                          {{ "PLUGIN_SIMPLESEARCH.SEARCH_RESULTS_SUMMARY_SINGULAR"|t(query|e)|raw }}
+                      {% else %}
+                          {{ "PLUGIN_SIMPLESEARCH.SEARCH_RESULTS_SUMMARY_PLURAL"|t(query|e, count)|raw }}
+                      {% endif %}
+                  {% endif %}
+              </h4>
+            </div>
+            <div class="col-12 col-md-4 mt-auto">
+                {% include 'partials/simplesearch_searchbox.html.twig' with { classes: 'searchbox-faded' } %}   {# TODO apply faded css ;) #}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container search-results">
         <div class="row">
-          <div class="col text-left">
-            <h2>
-              {{ 'SIMPLESEARCH.SEARCH_RESULTS'|t }}
-            </h2>
-            <h4 class="font-weight-light">
-            {% if query %}
-              {% set count = search_results ? search_results.count : 0 %}
-              {% if count == 1 %}
-                  {{ "PLUGIN_SIMPLESEARCH.SEARCH_RESULTS_SUMMARY_SINGULAR"|t(query|e)|raw }}
-              {% else %}
-                  {{ "PLUGIN_SIMPLESEARCH.SEARCH_RESULTS_SUMMARY_PLURAL"|t(query|e, count)|raw }}
-              {% endif %}
-            {% endif %}
-            <h4>
-          </div>
-          <div class="col-12 col-md-4 mt-auto">
-            {% include 'partials/simplesearch_searchbox.html.twig' with { classes: 'searchbox-faded' } %}   {# TODO apply faded css ;) #}
+          <div class="col-12 py-4">
+              {% for result in search_results %}
+                  {% include 'partials/layouts/' ~ theme_config.simplesearch.layout|defined('boxed') ~ '.html.twig' with { 'page':result } %}
+              {% endfor %}
           </div>
         </div>
       </div>
-    </div>
-    <div class="container search-results">
-      <div class="row">
-        <div class="col-12 py-4">
-        {% for result in search_results %}
-            {% include 'partials/layouts/' ~ theme_config.simplesearch.layout|defined('boxed') ~ '.html.twig' with { 'page':result } %}
-        {% endfor %}
-        </div>
-      </div>
-    </div>
-  {% endblock %}
+    {% endblock %}
 
 {% endembed %}

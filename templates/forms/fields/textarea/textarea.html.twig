@@ -24,6 +24,7 @@
                 {% if field.minlength is defined %}minlength="{{ field.minlength }}"{% endif %}
                 {% if field.maxlength is defined %}maxlength="{{ field.maxlength }}"{% endif %}
             {% endblock %}
-            >{{ value|trim|e('html') }}</textarea>
+        >
+            {{ value|trim|e('html') }}</textarea>
     </div>
 {% endblock %}

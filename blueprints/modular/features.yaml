@@ -1,79 +1,79 @@
 '@extends':
-  type: default
-  context: blueprints://pages
+    type: default
+    context: blueprints://pages
 
 form:
-  fields:
-    tabs:
-      type: tabs
-      active: 1
-      fields:
-        bootstrap-blog:
-          type: tab
-          title: ADMIN.MODULAR.FEATURES
-          fields:
-            header.style:
-              type: select
-              size: medium
-              label: ADMIN.STYLE
-              help: ADMIN.STYLE_HELP
-              toggleable: true
-              options:
-                dark: Dark
-                light: Light
-                primary: Primary
-                secondary: Secondary
-                info: Info
-                success: Success
-                warning: Warning
-                danger: Danger
-              validate:
-                pattern: (null|dark|light|primary|secondary|info|success|warning|danger|blue|indigo|purple|pink|red|orange|yellow|green|teal|cyan)
-            header.text_align:
-              type: select
-              size: medium
-              label: ADMIN.TEXT_ALIGN
-              default: center
-              options:
-                left: ADMIN.LEFT
-                right: ADMIN.RIGHT
-                center: ADMIN.CENTER
-                justify: ADMIN.JUSTIFY
-              validate:
-                pattern: (center|left|right|justify)
-            header.features:
-              type: list
-              style: vertical
-              label: ADMIN.MODULAR.FEATURES_SETUP
-              collapsed: true
-              fields:
-                .icon:
-                  type: text
-                  label: ADMIN.ICON
-                .title:
-                  type: text
-                  label: ADMIN.TITLE
-                .text:
-                  type: text
-                  label: ADMIN.TEXT
-                .style:
-                  type: select
-                  size: small
-                  label: ADMIN.MODULAR.ICON_STYLE
-                  default: primary
-                  options:
-                    primary: Primary
-                    dark: Dark
-                    light: Light
-                    secondary: Secondary
-                    info: Info
-                    success: Success
-                    warning: Warning
-                    danger: Danger
-                  validate:
-                    pattern: (dark|light|primary|secondary|info|success|warning|danger|blue|indigo|purple|pink|red|orange|yellow|green|teal|cyan)
-                .color:
-                  type: colorpicker
-                  label: ADMIN.MODULAR.CHOOSE_ICON_COLOR
-                  help: ADMIN.MODULAR.CHOOSE_ICON_COLOR_HELP
-                  toggleable: true
+    fields:
+        tabs:
+            type: tabs
+            active: 1
+            fields:
+                bootstrap-blog:
+                    type: tab
+                    title: ADMIN.MODULAR.FEATURES
+                    fields:
+                        header.style:
+                            type: select
+                            size: medium
+                            label: ADMIN.STYLE
+                            help: ADMIN.STYLE_HELP
+                            toggleable: true
+                            options:
+                                dark: Dark
+                                light: Light
+                                primary: Primary
+                                secondary: Secondary
+                                info: Info
+                                success: Success
+                                warning: Warning
+                                danger: Danger
+                            validate:
+                                pattern: (null|dark|light|primary|secondary|info|success|warning|danger|blue|indigo|purple|pink|red|orange|yellow|green|teal|cyan)
+                        header.text_align:
+                            type: select
+                            size: medium
+                            label: ADMIN.TEXT_ALIGN
+                            default: center
+                            options:
+                                left: ADMIN.LEFT
+                                right: ADMIN.RIGHT
+                                center: ADMIN.CENTER
+                                justify: ADMIN.JUSTIFY
+                            validate:
+                                pattern: (center|left|right|justify)
+                        header.features:
+                            type: list
+                            style: vertical
+                            label: ADMIN.MODULAR.FEATURES_SETUP
+                            collapsed: true
+                            fields:
+                                .icon:
+                                    type: text
+                                    label: ADMIN.ICON
+                                .title:
+                                    type: text
+                                    label: ADMIN.TITLE
+                                .text:
+                                    type: text
+                                    label: ADMIN.TEXT
+                                .style:
+                                    type: select
+                                    size: small
+                                    label: ADMIN.MODULAR.ICON_STYLE
+                                    default: primary
+                                    options:
+                                        primary: Primary
+                                        dark: Dark
+                                        light: Light
+                                        secondary: Secondary
+                                        info: Info
+                                        success: Success
+                                        warning: Warning
+                                        danger: Danger
+                                    validate:
+                                        pattern: (dark|light|primary|secondary|info|success|warning|danger|blue|indigo|purple|pink|red|orange|yellow|green|teal|cyan)
+                                .color:
+                                    type: colorpicker
+                                    label: ADMIN.MODULAR.CHOOSE_ICON_COLOR
+                                    help: ADMIN.MODULAR.CHOOSE_ICON_COLOR_HELP
+                                    toggleable: true

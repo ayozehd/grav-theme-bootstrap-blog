@@ -1,5 +1,5 @@
 name: Bootstrap Blog
-version: 1.1.4
+version: 1.1.5
 description: Template built in default Bootstrap 4 framework
 icon: bold
 author:
@@ -106,6 +106,17 @@ form:
           toggleable: true
           validate:
             type: text
+        navbar.override_page_style:
+          type: toggle
+          label: ADMIN.THEME.OVERRIDE_PAGE_STYLE
+          help: ADMIN.THEME.OVERRIDE_PAGE_STYLE_HELP
+          highlight: 1
+          default: 1
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
+          validate:
+            type: bool
         navbar.style:
           type: select
           size: medium
@@ -122,8 +133,14 @@ form:
             warning: Warning
             info: Info
             danger: Danger
-          validate:
-            pattern: (dark|light|primary|secondary|success|warning|info|danger|blue|indigo|purple|pink|red|orange|yellow|green|teal|cyan)
+            blue: Blue
+            orange: Orange
+            red: Red
+            indigo: Indigo
+            pink: Pink
+            purple: Purple
+            teal: Teal
+            cyan: Cyan
     item:
       type: section
       title: ADMIN.THEME.ITEMS
@@ -297,8 +314,14 @@ form:
             warning: Warning
             info: Info
             danger: Danger
-          validate:
-            pattern: (dark|light|primary|info|secondary|success|warning|danger|blue|indigo|purple|pink|red|orange|yellow|green|teal|cyan)
+            blue: Blue
+            orange: Orange
+            red: Red
+            indigo: Indigo
+            pink: Pink
+            purple: Purple
+            teal: Teal
+            cyan: Cyan
         footer.text:
           type: textarea
           label: ADMIN.THEME.FOOTER_TEXT

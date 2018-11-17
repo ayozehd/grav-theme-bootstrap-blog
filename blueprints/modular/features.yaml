@@ -18,6 +18,7 @@ form:
                             label: ADMIN.STYLE
                             help: ADMIN.STYLE_HELP
                             toggleable: true
+                            novalidate: true
                             options:
                                 dark: Dark
                                 light: Light
@@ -27,8 +28,6 @@ form:
                                 success: Success
                                 warning: Warning
                                 danger: Danger
-                            validate:
-                                pattern: (null|dark|light|primary|secondary|info|success|warning|danger|blue|indigo|purple|pink|red|orange|yellow|green|teal|cyan)
                         header.text_align:
                             type: select
                             size: medium
@@ -61,6 +60,7 @@ form:
                                     size: small
                                     label: ADMIN.MODULAR.ICON_STYLE
                                     default: primary
+                                    novalidate: true
                                     options:
                                         primary: Primary
                                         dark: Dark
@@ -70,8 +70,6 @@ form:
                                         success: Success
                                         warning: Warning
                                         danger: Danger
-                                    validate:
-                                        pattern: (dark|light|primary|secondary|info|success|warning|danger|blue|indigo|purple|pink|red|orange|yellow|green|teal|cyan)
                                 .color:
                                     type: colorpicker
                                     label: ADMIN.MODULAR.CHOOSE_ICON_COLOR

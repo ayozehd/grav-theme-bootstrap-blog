@@ -1,3 +1,13 @@
+# v1.1.5
+## 17-11-2018
+1. [](#improved)
+  * Navbar color change from item headers
+  * Added new colors to blueprints
+  * Icon in dropdown menus
+2. [](#bugfix)
+  * Fixed disqus bug when title has quotes
+  * Carousel controls id broken
+
 # v1.1.4
 ## 10-11-2018
 

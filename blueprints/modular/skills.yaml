@@ -27,8 +27,16 @@ form:
                                 success: Success
                                 warning: Warning
                                 danger: Danger
-                            validate:
-                                pattern: (null|dark|light|primary|secondary|info|success|warning|danger|blue|indigo|purple|pink|red|orange|yellow|green|teal|cyan)
+                                blue: Blue
+                                orange: Orange
+                                green: Green
+                                red: Red
+                                indigo: Indigo
+                                pink: Pink
+                                purple: Purple
+                                yellow: Yellow
+                                teal: Teal
+                                cyan: Cyan
                         header.skills:
                             type: list
                             label: ADMIN.MODULAR.SKILLS_LIST
@@ -44,6 +52,7 @@ form:
                                     label: ADMIN.STYLE
                                     help: ADMIN.STYLE_HELP
                                     toggleable: true
+                                    novalidate: true
                                     options:
                                         dark: Dark
                                         light: Light
@@ -53,8 +62,16 @@ form:
                                         success: Success
                                         warning: Warning
                                         danger: Danger
-                                    validate:
-                                        pattern: (null|dark|light|primary|secondary|info|success|warning|danger|blue|indigo|purple|pink|red|orange|yellow|green|teal|cyan)
+                                        blue: Blue
+                                        orange: Orange
+                                        green: Green
+                                        red: Red
+                                        indigo: Indigo
+                                        pink: Pink
+                                        purple: Purple
+                                        yellow: Yellow
+                                        teal: Teal
+                                        cyan: Cyan
                                 .value:
                                     type: text
                                     label: ADMIN.VALUE

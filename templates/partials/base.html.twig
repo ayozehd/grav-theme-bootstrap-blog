@@ -48,7 +48,7 @@
 </head>
 <body id="top" class="{{ page.header.body_classes }}">
 {% block header %}
-    <nav class="navbar navbar-expand-md {{ bsTools.navbarStyle(theme_config.navbar.style) }} {% if theme_config.navbar.sticky %}fixed-top{% endif %}"
+    <nav class="navbar navbar-expand-md {{ bsTools.navbarStyle(page.header.style, theme_config.navbar.style, theme_config.navbar.override_page_style)|trim }} {% if theme_config.navbar.sticky %}fixed-top{% endif %}"
          role="navigation"
          {% if theme_config.navbar.background_color %}style="background-color:{{ theme_config.navbar.background_color }}"{% endif %}>
         <a class="navbar-brand" href="{{ base_url == '' ? '/' : base_url }}">

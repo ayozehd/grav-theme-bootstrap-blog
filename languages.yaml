@@ -31,6 +31,8 @@ en:
             BRAND_LOGO_IMAGE: Brand/Logo Image
             BRAND_LOGO_IMAGE_HELP: Upload an image into navbar
             BRAND_ICON: Brand icon
+            OVERRIDE_PAGE_STYLE: Override Page Style
+            OVERRIDE_PAGE_STYLE_HELP: Change navbar color when a page style header is defined. If disabled, "Navbar style" will keep value from theme settings in whole site.
             NAVBAR_STYLE: Navbar style
             ITEMS: Items
             SHOW_PREV_NEXT_BUTTONS: Show Previous/Next buttons
@@ -205,6 +207,8 @@ es:
             BRAND_LOGO_IMAGE: Logo o imagen de cabecera
             BRAND_LOGO_IMAGE_HELP: Subir una imagen a la barra de navegación
             BRAND_ICON: Icono de cabecera
+            OVERRIDE_PAGE_STYLE: Sobrescribir el estilo de página
+            OVERRIDE_PAGE_STYLE_HELP: Cambia el color de la navegación cuando algún estilo está definido en la cabecera. Si se desactiva, la navegación mantendrá la configuración del tema.
             NAVBAR_STYLE: Estilo de barra de navegación
             ITEMS: Elementos
             SHOW_PREV_NEXT_BUTTONS: Mostrar botones anterior/siguiente

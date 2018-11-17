@@ -6,6 +6,7 @@ navbar:
     image:
     icon:
     style: light
+    override_page_style: true
     dropdown: true
     sticky: false
 sidebar:

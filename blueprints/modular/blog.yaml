@@ -28,8 +28,6 @@ form:
                                 success: Success
                                 warning: Warning
                                 danger: Danger
-                            validate:
-                                pattern: (dark|light|primary|secondary|info|success|warning|danger|blue|indigo|purple|pink|red|orange|yellow|green|teal|cyan)
                         header.layout:
                             type: select
                             label: ADMIN.MODULAR.ITEMS_LAYOUT

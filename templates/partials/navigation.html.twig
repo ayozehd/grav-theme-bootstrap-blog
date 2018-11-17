@@ -10,7 +10,10 @@
                 </a>
                 <div class="dropdown-menu" arial-labelledby="dropdown-{{ p.id }}"> {# Translation? #}
                     {% for c in p.children.visible %}
-                        <a class="dropdown-item" href="{{ c.url }}">{{ c.menu }}</a>
+                        <a class="dropdown-item" href="{{ c.url }}">
+                            {% if c.header.icon %}<i class="fas fa-{{ c.header.icon }}"></i>{% endif %}
+                            {{ c.menu }}
+                        </a>
                     {% endfor %}
                 </div>
             </li>

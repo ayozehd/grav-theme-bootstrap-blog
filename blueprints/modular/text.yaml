@@ -28,8 +28,16 @@ form:
                                 success: Success
                                 warning: Warning
                                 danger: Danger
-                            validate:
-                                pattern: (null|dark|light|primary|secondary|info|success|warning|danger|blue|indigo|purple|pink|red|orange|yellow|green|teal|cyan)
+                                blue: Blue
+                                orange: Orange
+                                green: Green
+                                red: Red
+                                indigo: Indigo
+                                pink: Pink
+                                purple: Purple
+                                yellow: Yellow
+                                teal: Teal
+                                cyan: Cyan
                         header.text_align:
                             type: select
                             label: ADMIN.TEXT_ALIGN

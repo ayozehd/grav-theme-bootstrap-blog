@@ -58,8 +58,14 @@ form:
                                 success: Success
                                 warning: Warning
                                 danger: Danger
-                            validate:
-                                pattern: (dark|light|primary|secondary|info|success|warning|danger|blue|indigo|purple|pink|red|orange|yellow|green|teal|cyan)
+                                blue: Blue
+                                orange: Orange
+                                red: Red
+                                indigo: Indigo
+                                pink: Pink
+                                purple: Purple
+                                teal: Teal
+                                cyan: Cyan
                         header.buttons:
                             name: buttons
                             type: list

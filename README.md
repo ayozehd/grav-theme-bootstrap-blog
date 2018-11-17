@@ -60,6 +60,7 @@ Templates supporting `style`:
 * `text`
 
 #### Styles supported
+**Theme colors**
 * primary
 * success
 * danger
@@ -67,7 +68,7 @@ Templates supporting `style`:
 * secondary
 * info
 
-Only in expert mode:
+**All Colors**
 * blue
 * indigo
 * purple
@@ -99,6 +100,7 @@ favicon:
 navbar:
   image:
   icon:
+  override_page_style: true
   style: default
   dropdown: true
   sticky: false
@@ -182,7 +184,7 @@ This is the default modular template. It supports `style` parameter to change ba
 
 Create a simple [carousel](https://getbootstrap.com/docs/4.1/components/carousel/) in `page.header.slides` or setting up a [collection]((https://learn.getgrav.org/content/collections)) of your items from another page/folder. Remember slides overwrite collection, so we should remove first that parameter.
 
-```
+```yaml
 title: Carousel
 slide_interval: 5000
 indicators: true
@@ -202,9 +204,9 @@ slides:
 
 ## Skills Modular
 
-Template useful to display your best skills! Setup an array of values with text and style optional. Also you can set a different suffix `page.header.suffix` than %. Add some css classes in bars with `progress_classes`.
+Template useful to display your best skills! Setup an array of values with text and optional style. Also you can set a different suffix `page.header.suffix` than %. Add some css classes in bars with `progress_classes`.
 
-```
+```yaml
 title: Skills
 style: cyan
 progress_classes: progress-bar-striped

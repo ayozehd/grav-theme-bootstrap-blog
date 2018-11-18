@@ -11,7 +11,12 @@
     {{ 'text-' ~ _self.processStyle(style, true, default)|trim }}
 {% endmacro %}
 
-{% macro navbarStyle(style) %}
+{% macro navbarStyle(style, default, override_page_style) %}
+    {% if not override_page_style %}
+        {% set style = default %}
+    {% else %}
+        {% set style = style|default(default) %}
+    {% endif %}
     {% set output = 'navbar-' %}
     {% if style in ['primary', 'success', 'danger', 'secondary', 'info', 'dark', 'faded', 'blue', 'indigo', 'purple', 'pink', 'red', 'green', 'teal', 'cyan'] %}
         {% set output = output ~ 'dark' %}

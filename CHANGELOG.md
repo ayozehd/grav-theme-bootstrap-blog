@@ -1,3 +1,8 @@
+# v1.1.6
+## 19-11-2018
+1. [](#bugfix)
+  * Fixed navbar macro
+
 # v1.1.5
 ## 17-11-2018
 1. [](#improved)

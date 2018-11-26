@@ -18,12 +18,12 @@
         {% set style = style|default(default) %}
     {% endif %}
     {% set output = 'navbar-' %}
-    {% if style in ['primary', 'success', 'danger', 'secondary', 'info', 'dark', 'faded', 'blue', 'indigo', 'purple', 'pink', 'red', 'green', 'teal', 'cyan'] %}
-        {% set output = output ~ 'dark' %}
-    {% else %}
+    {% if style not in ['primary', 'success', 'danger', 'secondary', 'info', 'dark', 'faded', 'blue', 'indigo', 'purple', 'pink', 'red', 'green', 'teal', 'cyan'] %}
         {% set output = output ~ 'light' %}
+    {% else %}
+        {% set output = output ~ 'dark' %}
     {% endif %}
-    {{ output ~ ' ' ~ _self.backgroundStyle(style, false)|trim }}
+    {{ output ~ ' ' ~ 'bg-' ~ style }}
 {% endmacro %}
 
 {% macro buttonStyle(style, isOutline, darkOrLight, default, size) %}

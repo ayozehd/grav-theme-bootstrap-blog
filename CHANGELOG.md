@@ -1,3 +1,8 @@
+# v1.1.7
+## 26-11-2018
+1. [](#bugfix)
+  * Fixed navbar style color
+
 # v1.1.6
 ## 19-11-2018
 1. [](#bugfix)

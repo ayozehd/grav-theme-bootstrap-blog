@@ -13,36 +13,10 @@
         <link rel="icon" type="{{ favicon.type }}" href="{{ url( favicon.path ) }}"/>
         <link rel="canonical" href="{{ page.url(true, true) }}"/>
 
-        {% block stylesheets %}
-            {% if theme_config.cdn_enabled %}
-                {% do assets.addCss('https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css', 102) %}
-                {% do assets.addCss('https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap-reboot.min.css', 100) %}
-                {% do assets.addCss('https://use.fontawesome.com/releases/v5.5.0/css/all.css', 10) %}
-                {% do assets.addCss('https://use.fontawesome.com/releases/v5.5.0/css/brands.css', 10) %}
-            {% else %}
-                {% do assets.addCss('theme://assets/css-compiled/bootstrap/bootstrap.css', 102) %}
-                {% do assets.addCss('theme://assets/css-compiled/bootstrap/bootstrap-reboot.css', 100) %}
-                {% do assets.addCss('theme://assets/css/fontawesome.css', 10) %}
-                {% do assets.addCss('theme://assets/css/solid.css', 10) %}
-                {% do assets.addCss('theme://assets/css/regular.css', 10) %}
-                {% do assets.addCss('theme://assets/css/brands.css', 10) %}
-            {% endif %}
-            {% do assets.addCss('theme://assets/css-compiled/bootstrap-blog.css', 99) %}
-        {% endblock %}
+        {% block stylesheets %}{% endblock %}
         {{ assets.css() }}
 
-        {% block javascripts %}
-            {% if theme_config.cdn_enabled %}
-                {% do assets.addJs('https://code.jquery.com/jquery-3.2.1.min.js', 100) %}
-                {% do assets.addJs('https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js', 98) %}
-                {% do assets.addJs('https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', 99) %}
-            {% else %}
-                {% do assets.addJs('jquery', 102) %}
-                {% do assets.addJs('theme://assets/js/popper.min.js', 101) %}
-                {% do assets.addJs('theme://assets/js/bootstrap.min.js', 100) %}
-            {% endif %}
-            {% do assets.addJs('theme://assets/js/bootstrap_blog.js', 99) %}
-        {% endblock %}
+        {% block javascripts %}{% endblock %}
         {{ assets.js() }}
     {% endblock head %}
 </head>
@@ -97,7 +71,7 @@
     </footer>
 {% endblock %}
 {% if theme_config.back_to_top_button %}
-    <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="{{ 'RETURN_TOP_PAGE'|t }}" data-toggle="tooltip"
+    <a id="back-to-top" href="#" class="btn btn-{{ page.header.style|defined('primary') }} btn-lg back-to-top" role="button" title="{{ 'RETURN_TOP_PAGE'|t }}" data-toggle="tooltip"
        data-placement="left"><span class="fas fa-chevron-up"></span></a>
 {% endif %}
 {% block bottom %}

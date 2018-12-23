@@ -53,30 +53,35 @@ class BootstrapBlog extends Theme
 
         if ($config['cdn_enabled']) {
             // CSS
-            $collection[] = 'https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css';
-            $collection[] = 'https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap-reboot.min.css';
-            $collection[] = 'https://use.fontawesome.com/releases/v5.3.1/css/all.css';
-            $collection[] = 'https://use.fontawesome.com/releases/v5.3.1/css/brands.css';
+            $collection[] = 'https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css';
+            $collection[] = 'https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap-reboot.min.css';
+            $collection[] = 'https://use.fontawesome.com/releases/v5.6.3/css/all.css';
+            $collection[] = 'https://use.fontawesome.com/releases/v5.6.3/css/brands.css';
             // JS
-            $collection[] = 'https://code.jquery.com/jquery-3.2.1.slim.min.js';
+            $collection[] = 'https://code.jquery.com/jquery-3.3.1.min.js';
             $collection[] = 'https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js';
             $collection[] = 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js';
+
         } else {
 
             $collection[] = 'theme://assets/css-compiled/bootstrap/bootstrap.css';
             $collection[] = 'theme://assets/css-compiled/bootstrap/bootstrap-reboot.css';
-            $collection[] = 'theme://assets/css/fontawesome.min.css';
-            $collection[] = 'theme://assets/css/solid.min.css';
-            $collection[] = 'theme://assets/css/regular.min.css';
-            $collection[] = 'theme://assets/css/brands.min.css';
+            $collection[] = 'theme://assets/css/fontawesome.css';
+            $collection[] = 'theme://assets/css/solid.css';
+            $collection[] = 'theme://assets/css/regular.css';
+            $collection[] = 'theme://assets/css/brands.css';
+            $collection[] = 'theme://assets/css/normalize.css';
+            $collection[] = 'theme://assets/js/jquery-3.3.1.min.js';
             $collection[] = 'theme://assets/js/popper.min.js';
             $collection[] = 'theme://assets/js/bootstrap.min.js';
 
         }
 
+        $collection[] = 'theme://assets/css-compiled/bootstrap-blog.css';
+        $collection[] = 'theme://assets/js/bootstrap_blog.js';
+        
         $assets = $this->grav['assets'];
         $assets->registerCollection('bootstrap-blog', $collection);
         $assets->add('bootstrap-blog', 100);
-
     }
 }

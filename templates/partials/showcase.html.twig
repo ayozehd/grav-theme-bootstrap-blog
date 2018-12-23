@@ -3,7 +3,7 @@
 {% set showcase_image_width  = page.header.image_width|defined(1200) %}
 {% set showcase_image_height = page.header.image_height|defined(800) %}
 {% set showcase_image_file = page.header.image_file %}
-{% set showcase_image_filters = page.header.image_filters %}
+{% set showcase_image_actions = page.header.image_actions %}
 
 {% if showcase_image_file %}
     {% set showcase_image = page.media.images[showcase_image_file] %}
@@ -12,8 +12,8 @@
 {% endif %}
 
 {% if showcase_image %}
-    {% if showcase_image_filters %}
-        {% for key, arg in showcase_image_filters %}
+    {% if showcase_image_actions %}
+        {% for key, arg in showcase_image_actions %}
             {% set showcase_image = attribute( showcase_image, key, arg|split(',')|default([]) ) %}
         {% endfor %}
     {% else %}

@@ -1,3 +1,12 @@
+# v1.1.8
+## 24-12-2018
+1. [](#bugfix)
+  * Fixed show_more translation (blog modular template)
+2. [](#improved)
+  * Assets css/js in collection named `bootstrap-blog`
+  * Showcase parameter `image_filters` renamed to `image_actions`
+  * Dropdown menu can be splitted using `split_menu: true`
+
 # v1.1.7
 ## 26-11-2018
 1. [](#bugfix)

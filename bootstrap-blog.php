@@ -59,8 +59,8 @@ class BootstrapBlog extends Theme
             $collection[] = 'https://use.fontawesome.com/releases/v5.6.3/css/brands.css';
             // JS
             $collection[] = 'https://code.jquery.com/jquery-3.3.1.min.js';
-            $collection[] = 'https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js';
-            $collection[] = 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js';
+            $collection[] = 'https://unpkg.com/popper.js@1.14.6/dist/umd/popper.min.js';
+            $collection[] = 'https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js';
 
         } else {
 

@@ -35,14 +35,15 @@
   }
 
   // buttons
-  .btn-#{$color} {
+  .btn.btn-#{$color} {
     background-color: $value;
     color: color-yiq($value) !important;
   }
 
   // buttons outline
-  .btn-outline-#{$color} {
+  .btn.btn-outline-#{$color} {
     border-color: $value;
+    color: $value;
   }
 
   // badge
@@ -57,8 +58,8 @@
 }
 
 // background text contrast
-@each $color, $value in $colors {
-  .bg-#{$color} {
-    color: color-yiq($value);
-  }
-}
+//@each $color, $value in $colors {
+//  .bg-#{$color} {
+//    color: color-yiq($value);
+//  }
+//}

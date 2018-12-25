@@ -1,5 +1,12 @@
+# v1.1.9
+## 24-12-2018
+
+1. [](#bugfix)
+  * Fixed js [Popper](https://popper.js.org/) dependency
+
 # v1.1.8
 ## 24-12-2018
+
 1. [](#bugfix)
   * Fixed show_more translation (blog modular template)
 2. [](#improved)
@@ -9,16 +16,19 @@
 
 # v1.1.7
 ## 26-11-2018
+
 1. [](#bugfix)
   * Fixed navbar style color
 
 # v1.1.6
 ## 19-11-2018
+
 1. [](#bugfix)
   * Fixed navbar macro
 
 # v1.1.5
 ## 17-11-2018
+
 1. [](#improved)
   * Navbar color change from item headers
   * Added new colors to blueprints

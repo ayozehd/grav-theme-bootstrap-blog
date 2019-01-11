@@ -8,7 +8,7 @@
 {% endif %}
 {% if config.plugins.relatedpages.enabled and related_pages|length > 0 %}
     <div class="sidebar-content">
-        <h4>{{ 'SIDEBAR.RELATED_PAGES.HEADLINE'|t }}</h4>
+        <h4>{{ 'BOOTSTRAP_BLOG.SIDEBAR.RELATED_PAGES.HEADLINE'|t }}</h4>
         {% include 'partials/relatedpages.html.twig' %}
     </div>
 {% endif %}
@@ -24,20 +24,20 @@
 {% endif %}
 {% if config.plugins.random.enabled %}
     <div class="sidebar-content">
-        <h4>{{ 'SIDEBAR.RANDOM.HEADLINE'|t }}</h4>
-        <a class="btn btn-outline-primary" href="{{ base_url_relative }}/random"><i class="fa fa-retweet"></i> {{ 'SIDEBAR.RANDOM.FEELING_LUCKY'|t }}
+        <h4>{{ 'BOOTSTRAP_BLOG.SIDEBAR.RANDOM.HEADLINE'|t }}</h4>
+        <a class="btn btn-outline-primary" href="{{ base_url_relative }}/random"><i class="fa fa-retweet"></i> {{ 'BOOTSTRAP_BLOG.SIDEBAR.RANDOM.FEELING_LUCKY'|t }}
         </a>
     </div>
 {% endif %}
 {% if config.plugins.taxonomylist.enabled %}
     <div class="sidebar-content">
-        <h4>{{ 'SIDEBAR.POPULAR_TAGS.HEADLINE'|t }}</h4>
+        <h4>{{ 'BOOTSTRAP_BLOG.SIDEBAR.POPULAR_TAGS.HEADLINE'|t }}</h4>
         {% include 'partials/taxonomylist.html.twig' with {'base_url':new_base_url, 'taxonomy':'tag'} %}
     </div>
 {% endif %}
 {% if config.plugins.archives.enabled %}
     <div class="sidebar-content">
-        <h4>{{ 'SIDEBAR.ARCHIVES.HEADLINE'|t }}</h4>
+        <h4>{{ 'BOOTSTRAP_BLOG.SIDEBAR.ARCHIVES.HEADLINE'|t }}</h4>
         {% include 'partials/archives.html.twig' with {'base_url':new_base_url} %}
     </div>
 {% endif %}
@@ -52,7 +52,7 @@
 {% endif %}
 {% if config.plugins.feed.enabled %}
     <div class="sidebar-content syndicate">
-        <h4>{{ 'SIDEBAR.SYNDICATE.HEADLINE'|t }}</h4>
+        <h4>{{ 'BOOTSTRAP_BLOG.SIDEBAR.SYNDICATE.HEADLINE'|t }}</h4>
         <a class="btn btn-outline-primary" href="{{ page.url(true) }}.atom"><i class="fa fa-rss-square"></i> Atom 1.0</a>
         <a class="btn btn-outline-primary" href="{{ page.url(true) }}.rss"><i class="fa fa-rss-square"></i> RSS</a>
     </div>

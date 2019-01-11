@@ -20,7 +20,7 @@
   </h2>
   <div class="item-categories">
       {% for category in page.taxonomy.category %}
-        <a data-toggle="tooltip" title="{{ 'TAXONOMY.SEE_OTHER_PAGES_OF'|t(category|capitalize) }}"
+        <a data-toggle="tooltip" title="{{ 'BOOTSTRAP_BLOG.TAXONOMY.SEE_OTHER_PAGES_OF'|t(category|capitalize) }}"
            class="badge badge-pill badge-{{ page.header.style|defined('secondary') }} text-uppercase font-weight-normal"
            href="{{ parent.url|rtrim('/') }}/category{{ config.system.param_sep }}{{ category }}">{{ category }}</a>
       {% endfor %}
@@ -37,7 +37,7 @@
 <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Item toolbar buttons">
     {% if page.taxonomy.tag %}
       <div class="item-tags d-inline-block">
-        <i class="fas fa-tags text-{{ page.header.style|defined('primary') }}"></i> {{ 'TAXONOMY.TAGS'|t }}:
+        <i class="fas fa-tags text-{{ page.header.style|defined('primary') }}"></i> {{ 'BOOTSTRAP_BLOG.TAXONOMY.TAGS'|t }}:
           {% for tag in page.taxonomy.tag %}
             <a class="btn btn-sm {{ bsTools.buttonStyle(page.header.style, true, false, 'dark') }}"
                href="{{ parent.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>
@@ -61,11 +61,11 @@
   <div class="d-flex flex-row py-3 mt-3">
       {% if not page.isLast %}
         <a class="btn {{ bsTools.buttonStyle(page.header.style, true, false, 'primary') }}" href="{{ page.prevSibling.url }}"><i
-              class="fas fa-chevron-left"></i> {{ 'ITEM.PREVIOUS'|t }}</a>
+              class="fas fa-chevron-left"></i> {{ 'BOOTSTRAP_BLOG.ITEM.PREVIOUS'|t }}</a>
       {% endif %}
       {% if not page.isFirst %}
         <a class="ml-auto btn {{ bsTools.buttonStyle(page.header.style, true, false, 'primary') }}"
-           href="{{ page.nextSibling.url }}">{{ 'ITEM.NEXT'|t }} <i class="fas fa-chevron-right"></i></a>
+           href="{{ page.nextSibling.url }}">{{ 'BOOTSTRAP_BLOG.ITEM.NEXT'|t }} <i class="fas fa-chevron-right"></i></a>
       {% endif %}
   </div>
 {% endif %}

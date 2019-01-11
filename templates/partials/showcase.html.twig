@@ -17,7 +17,7 @@
             {% set showcase_image = attribute( showcase_image, key, arg|split(',')|default([]) ) %}
         {% endfor %}
     {% else %}
-        {% set showcase_image = showcase_image.cropResize(showcase_image_width,showcase_image_height).grayscale().contrast(20).brightness(-125).colorize(-35,81,122) %}
+        {% set showcase_image = showcase_image.cropResize(showcase_image_width,showcase_image_height).contrast(20).brightness(-80).gaussianBlur(3) %}
     {% endif %}
 <div class="modular-row showcase text-{{ page.header.style|defined('light') }}" style="background-image: url({{ showcase_image.url }});">
     {% else %}

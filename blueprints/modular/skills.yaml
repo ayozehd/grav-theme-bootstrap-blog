@@ -10,13 +10,13 @@ form:
             fields:
                 bootstrap-blog:
                     type: tab
-                    title: ADMIN.MODULAR.SKILLS
+                    title: BOOTSTRAP_BLOG.ADMIN.MODULAR.SKILLS
                     fields:
                         header.style:
                             type: select
                             size: medium
-                            label: ADMIN.STYLE
-                            help: ADMIN.STYLE_HELP
+                            label: BOOTSTRAP_BLOG.ADMIN.STYLE
+                            help: BOOTSTRAP_BLOG.ADMIN.STYLE_HELP
                             toggleable: true
                             options:
                                 dark: Dark
@@ -39,18 +39,18 @@ form:
                                 cyan: Cyan
                         header.skills:
                             type: list
-                            label: ADMIN.MODULAR.SKILLS_LIST
-                            help: ADMIN.MODULAR.SKILLS_LIST_HELP
+                            label: BOOTSTRAP_BLOG.ADMIN.MODULAR.SKILLS_LIST
+                            help: BOOTSTRAP_BLOG.ADMIN.MODULAR.SKILLS_LIST_HELP
                             style: vertical
                             fields:
                                 .text:
                                     type: text
-                                    label: ADMIN.TEXT
+                                    label: BOOTSTRAP_BLOG.ADMIN.TEXT
                                 .style:
                                     type: select
                                     size: medium
-                                    label: ADMIN.STYLE
-                                    help: ADMIN.STYLE_HELP
+                                    label: BOOTSTRAP_BLOG.ADMIN.STYLE
+                                    help: BOOTSTRAP_BLOG.ADMIN.STYLE_HELP
                                     toggleable: true
                                     novalidate: true
                                     options:
@@ -74,4 +74,4 @@ form:
                                         cyan: Cyan
                                 .value:
                                     type: text
-                                    label: ADMIN.VALUE
+                                    label: BOOTSTRAP_BLOG.ADMIN.VALUE

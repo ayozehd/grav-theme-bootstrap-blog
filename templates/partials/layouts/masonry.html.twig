@@ -31,7 +31,7 @@
             {% endif %}
           <div class="btn-toolbar" role="toolbar" aria-label="Item toolbar buttons">
             <div class="btn-group">
-                {{ bsTools.button(page.url, page.header.button_text|default('MODULAR.READ_MORE'|t), null, (page.header.style ? bsTools.processStyle(page.header.style, true) : null), true, false, 'primary') }}
+                {{ bsTools.button(page.url, page.header.button_text|default('BOOTSTRAP_BLOG.MODULAR.READ_MORE'|t), null, (page.header.style ? bsTools.processStyle(page.header.style, true) : null), true, false, 'primary') }}
                 {% if page.header.link %}
                     {{ bsTools.button(page.header.link, null, 'link', (page.header.style ? bsTools.processStyle(page.header.style, true) : null), true, false, 'secondary') }}
                 {% endif %}

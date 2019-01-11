@@ -27,7 +27,7 @@
             </div>
             <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Item Links">
                 <div class="btn-group" role="group" aria-label="Links">
-                    {{ bsTools.button(page.url, page.header.button_text|default('ITEM.CONTINUE_READING'|t), null, page.header.style, true, false, 'primary') }}
+                    {{ bsTools.button(page.url, page.header.button_text|default('BOOTSTRAP_BLOG.ITEM.CONTINUE_READING'|t), null, page.header.style, true, false, 'primary') }}
                     {% if page.header.link %}
                         {{ bsTools.button(page.header.link, null, 'link', 'secondary', true, false) }}
                     {% endif %}

@@ -10,7 +10,7 @@ form:
             fields:
                 bootstrap-blog:
                     type: tab
-                    title: ADMIN.ITEM.TAB
+                    title: BOOTSTRAP_BLOG.ADMIN.ITEM.TAB
                     fields:
                         is_sidebar_enabled:
                             type: conditional
@@ -18,8 +18,8 @@ form:
                             fields:
                                 header.sidebar.enabled:
                                     type: toggle
-                                    label: ADMIN.THEME.SIDEBAR
-                                    help: ADMIN.ITEM.ITEM_SIDEBAR_HELP
+                                    label: BOOTSTRAP_BLOG.ADMIN.THEME.SIDEBAR
+                                    help: BOOTSTRAP_BLOG.ADMIN.ITEM.ITEM_SIDEBAR_HELP
                                     highlight: 1
                                     default: 1
                                     options:
@@ -33,8 +33,8 @@ form:
                             fields:
                                 header.comments.enabled:
                                     type: toggle
-                                    label: ADMIN.ITEM.COMMENTS
-                                    help: ADMIN.ITEM.ITEM_COMMENTS_HELP
+                                    label: BOOTSTRAP_BLOG.ADMIN.ITEM.COMMENTS
+                                    help: BOOTSTRAP_BLOG.ADMIN.ITEM.ITEM_COMMENTS_HELP
                                     highlight: 1
                                     default: 1
                                     options:
@@ -44,9 +44,9 @@ form:
                                         type: bool
                         header.style:
                             type: select
-                            label: ADMIN.ITEM.ITEM_STYLE
-                            help: ADMIN.ITEM.ITEM_STYLE_HELP
-                            description: ADMIN.WE_USE_BOOTSTRAP_COLORS
+                            label: BOOTSTRAP_BLOG.ADMIN.ITEM.ITEM_STYLE
+                            help: BOOTSTRAP_BLOG.ADMIN.ITEM.ITEM_STYLE_HELP
+                            description: BOOTSTRAP_BLOG.ADMIN.WE_USE_BOOTSTRAP_COLORS
                             size: medium
                             toggleable: true
                             options:
@@ -70,36 +70,36 @@ form:
                             name: buttons
                             type: list
                             style: vertical
-                            label: ADMIN.ITEM.BUTTONS
-                            help: ADMIN.ITEM.BUTTONS_HELP
+                            label: BOOTSTRAP_BLOG.ADMIN.ITEM.BUTTONS
+                            help: BOOTSTRAP_BLOG.ADMIN.ITEM.BUTTONS_HELP
                             collapsed: true
                             fields:
                                 .text:
                                     type: text
-                                    label: ADMIN.TEXT
+                                    label: BOOTSTRAP_BLOG.ADMIN.TEXT
                                 .url:
                                     type: text
-                                    label: ADMIN.URL
+                                    label: BOOTSTRAP_BLOG.ADMIN.URL
                                 .icon:
                                     type: text
-                                    label: ADMIN.ICON
-                                    help: ADMIN.ICON_HELP
+                                    label: BOOTSTRAP_BLOG.ADMIN.ICON
+                                    help: BOOTSTRAP_BLOG.ADMIN.ICON_HELP
                                     description: ADMIN.FONTAWESOME_5_ICONS
                                 .classes:
                                     type: text
-                                    label: ADMIN.ITEM.BUTTON_ADD_CSS
-                                    help: ADMIN.ITEM.BUTTON_ADD_CSS_HELP
+                                    label: BOOTSTRAP_BLOG.ADMIN.ITEM.BUTTON_ADD_CSS
+                                    help: BOOTSTRAP_BLOG.ADMIN.ITEM.BUTTON_ADD_CSS_HELP
                             validate:
                                 type: array
                         header_image:
                             type: section
-                            title: ADMIN.ITEM.HEADER_IMAGE
+                            title: BOOTSTRAP_BLOG.ADMIN.ITEM.HEADER_IMAGE
                             underline: true
                             fields:
                                 header.image_file:
                                     type: pagemediaselect
-                                    label: ADMIN.ITEM.CHOOSE_HEADER_IMAGE
-                                    help: ADMIN.ITEM.CHOOSE_HEADER_IMAGE_HELP
+                                    label: BOOTSTRAP_BLOG.ADMIN.ITEM.CHOOSE_HEADER_IMAGE
+                                    help: BOOTSTRAP_BLOG.ADMIN.ITEM.CHOOSE_HEADER_IMAGE_HELP
                                     toggleable: true
                                     multiple: false
                                 image_sizes:
@@ -110,7 +110,7 @@ form:
                                             fields:
                                                 header.image_width:
                                                     type: text
-                                                    label: ADMIN.WIDTH
+                                                    label: BOOTSTRAP_BLOG.ADMIN.WIDTH
                                                     placeholder: 1024
                                                     toggleable: true
                                                     validate:
@@ -121,7 +121,7 @@ form:
                                             fields:
                                                 header.image_height:
                                                     type: text
-                                                    label: ADMIN.HEIGHT
+                                                    label: BOOTSTRAP_BLOG.ADMIN.HEIGHT
                                                     placeholder: 600
                                                     toggleable: true
                                                     validate:

@@ -1,352 +1,354 @@
 en:
-    ADMIN:
-        THEME_OPTIONS: Theme options
-        ENABLE: Enable
-        TITLE: Title
-        TEXT: Text
-        URL: URL
-        TEXT_ALIGN: Text align
-        CENTER: Center
-        LEFT: Left
-        RIGHT: Right
-        JUSTIFY: Justify
-        WIDTH: Width
-        HEIGHT: Height
-        IMAGE: Image
-        VALUE: Value
-        THEME:
-            CDN: CDN
-            CDN_HELP: Get needed CSS and JS files from Content Distribution Networks to reduce load times
-            BACK_TO_TOP_BUTTON: Back to top button
-            BACK_TO_TOP_BUTTON_HELP: Show a button to return the top page
-            FAVICON: Favicon
-            FAVICON_HELP: Upload an image as page icon or favicon (stored in user/themes/bootstrap-blog/images)
-            NAVBAR: Navbar
-            DROPDOWN: Dropdown
-            DROPDOWN_HELP: Displays a dropdown menu with visible descendant pages
-            NAVBAR_STICKY: Sticky navbar
-            NAVBAR_STICKY_HELP: Menu is always visible on the screen
-            DISPLAY_SITE_NAME: Display site name
-            DISPLAY_SITE_NAME_HELP: Show your site name from Grav options
-            BRAND_LOGO_IMAGE: Brand/Logo Image
-            BRAND_LOGO_IMAGE_HELP: Upload an image into navbar
-            BRAND_ICON: Brand icon
-            OVERRIDE_PAGE_STYLE: Override Page Style
-            OVERRIDE_PAGE_STYLE_HELP: Change navbar color when a page style header is defined. If disabled, "Navbar style" will keep value from theme settings in whole site.
-            NAVBAR_STYLE: Navbar style
-            ITEMS: Items
-            SHOW_PREV_NEXT_BUTTONS: Show Previous/Next buttons
-            SHOW_PREV_NEXT_BUTTONS_HELP: At the end of page's content, 2 buttons let you navigate between pages
-            ENABLE_COMMENTS: Enable comments
-            ENABLE_COMMENTS_HELP: Add a comments forum at the end of each page
-            DISQUS_SHORTNAME: Disqus shortname
-            DISQUS_SHORTNAME_HELP: Identifier of your site forum in Disqus. This value is needed to comments get work
-            DISQUS_SHORTNAME_DESCRIPTION: 'Manage your comments on <a href="https://disqus.com/admin/" target="_blank">Disqus</a>'
-            SEARCH: Search
-            SIDEBAR: Sidebar
-            ENABLE_SIDEBAR: Enable sidebar
-            ENABLE_SIDEBAR_HELP: Show/Hide a sidebar in templates
-            SIDEBAR_ALIGN: Sidebar align
-            TWITTER_TIMELINE: Twitter timeline
-            TWITTER_USERNAME: Username
-            TWITTER_USERNAME_HELP: Type your Twitter username without '@'
-            TWITTER_THEME: Theme
-            ABOUT_ME: About me
-            ABOUT_PAGE_CONTENT: Page content
-            ABOUT_PAGE_CONTENT_HELP: Select a page from the list to show the content in widget. Also this option let you render content for different languages.
-            ABOUT_PAGE_CONTENT_DESCRIPTION: Overwrite the content to previous fields
-            FOOTER: Footer
-            FOOTER_STYLE: Footer style
-            FOOTER_TEXT: Footer text
-            FOOTER_TEXT_HELP: Write main footer text
-            FOOTER_LEGAL_TEXT: Legal text
-            FOOTER_LEGAL_TEXT_HELP: Secondary footer text where you can define your license or registered name
-            FOOTER_LEGAL_TEXT_PLACEHOLDER: 2018 © - Your site name
-        MODULAR:
-            SHOW_MORE_BUTTON: Show more button
-            SHOW_MORE_BUTTON_HELP: Will appear a button which links to the selected page
-            SHOW_MORE_FALLBACK: This page is used as fallback to get children when cannot find a collection
-            FEATURES: Features
-            FEATURES_SETUP: Setup features
-            ICON_STYLE: Icon style
-            CHOOSE_ICON_COLOR: Choose icon color
-            CHOOSE_ICON_COLOR_HELP: Overrides style parameter
-            ITEMS_LAYOUT: Items layout
-            ITEMS_LAYOUT_HELP: 'Choose between 3 designs to list items: "boxed", "masonry" or "cards"'
-            CALLOUT: Callout
-            TEXT_IMAGE_SIZE: Image size
-            TEXT_IMAGE_SIZE_HELP: 'Uses Bootstrap columns. Min value is 1, default 6 and maximum 12 (full width)'
-            SHOWCASE: Showcase
-            SHOWCASE_STYLE_HELP: Only works if there is no background image
-            SHOWCASE_IMAGE_ACTIONS: Image filters
-            SHOWCASE_IMAGE_ACTIONS_HELP: Use your own Grav Media Actions instead of default behaviour. Remember to use Twig way and separate arguments by comma.
-            SHOWCASE_IMAGE_ACTIONS_DESCRIPTION: <a href="https://learn.getgrav.org/content/media#actions" target="_blank">Grav Media Actions</a>
-            SHOWCASE_IMAGE_ACTION: Action
-            SHOWCASE_IMAGE_ARGUMENTS: Arguments (null or comma separated)
-            CAROUSEL: Carousel
-            CAROUSEL_SLIDES: Slides
-            CAROUSEL_SLIDES_HELP: Add slides from folder images, custom title and url to your "/page" or external
-            CAROUSEL_HIDE_CONTROLS: Hide controls
-            CAROUSEL_HIDE_CONTROLS_HELP: Hide prev/next buttons
-            CAROUSEL_SLIDE_INTERVAL: Slide interval
-            CAROUSEL_SLIDE_INTERVAL_HELP: Number miliseconds between autorotating slides. Set to 0 to avoid autoslide.
-            SKILLS: Skills
-            SKILLS_LIST: Skills List
-            SKILLS_LIST_HELP: Set a list of values to show progress bars
+    BOOTSTRAP_BLOG:
+        ADMIN:
+            THEME_OPTIONS: Theme options
+            ENABLE: Enable
+            TITLE: Title
+            TEXT: Text
+            URL: URL
+            TEXT_ALIGN: Text align
+            CENTER: Center
+            LEFT: Left
+            RIGHT: Right
+            JUSTIFY: Justify
+            WIDTH: Width
+            HEIGHT: Height
+            IMAGE: Image
+            VALUE: Value
+            THEME:
+                CDN: CDN
+                CDN_HELP: Get needed CSS and JS files from Content Distribution Networks to reduce load times
+                BACK_TO_TOP_BUTTON: Back to top button
+                BACK_TO_TOP_BUTTON_HELP: Show a button to return the top page
+                FAVICON: Favicon
+                FAVICON_HELP: Upload an image as page icon or favicon (stored in user/themes/bootstrap-blog/images)
+                NAVBAR: Navbar
+                DROPDOWN: Dropdown
+                DROPDOWN_HELP: Displays a dropdown menu with visible descendant pages
+                NAVBAR_STICKY: Sticky navbar
+                NAVBAR_STICKY_HELP: Menu is always visible on the screen
+                DISPLAY_SITE_NAME: Display site name
+                DISPLAY_SITE_NAME_HELP: Show your site name from Grav options
+                BRAND_LOGO_IMAGE: Brand/Logo Image
+                BRAND_LOGO_IMAGE_HELP: Upload an image into navbar
+                BRAND_ICON: Brand icon
+                OVERRIDE_PAGE_STYLE: Override Page Style
+                OVERRIDE_PAGE_STYLE_HELP: Change navbar color when a page style header is defined. If disabled, "Navbar style" will keep value from theme settings in whole site.
+                NAVBAR_STYLE: Navbar style
+                ITEMS: Items
+                SHOW_PREV_NEXT_BUTTONS: Show Previous/Next buttons
+                SHOW_PREV_NEXT_BUTTONS_HELP: At the end of page's content, 2 buttons let you navigate between pages
+                ENABLE_COMMENTS: Enable comments
+                ENABLE_COMMENTS_HELP: Add a comments forum at the end of each page
+                DISQUS_SHORTNAME: Disqus shortname
+                DISQUS_SHORTNAME_HELP: Identifier of your site forum in Disqus. This value is needed to comments get work
+                DISQUS_SHORTNAME_DESCRIPTION: 'Manage your comments on <a href="https://disqus.com/admin/" target="_blank">Disqus</a>'
+                SEARCH: Search
+                SIDEBAR: Sidebar
+                ENABLE_SIDEBAR: Enable sidebar
+                ENABLE_SIDEBAR_HELP: Show/Hide a sidebar in templates
+                SIDEBAR_ALIGN: Sidebar align
+                TWITTER_TIMELINE: Twitter timeline
+                TWITTER_USERNAME: Username
+                TWITTER_USERNAME_HELP: Type your Twitter username without '@'
+                TWITTER_THEME: Theme
+                ABOUT_ME: About me
+                ABOUT_PAGE_CONTENT: Page content
+                ABOUT_PAGE_CONTENT_HELP: Select a page from the list to show the content in widget. Also this option let you render content for different languages.
+                ABOUT_PAGE_CONTENT_DESCRIPTION: Overwrite the content to previous fields
+                FOOTER: Footer
+                FOOTER_STYLE: Footer style
+                FOOTER_TEXT: Footer text
+                FOOTER_TEXT_HELP: Write main footer text
+                FOOTER_LEGAL_TEXT: Legal text
+                FOOTER_LEGAL_TEXT_HELP: Secondary footer text where you can define your license or registered name
+                FOOTER_LEGAL_TEXT_PLACEHOLDER: 2018 © - Your site name
+            MODULAR:
+                SHOW_MORE_BUTTON: Show more button
+                SHOW_MORE_BUTTON_HELP: Will appear a button which links to the selected page
+                SHOW_MORE_FALLBACK: This page is used as fallback to get children when cannot find a collection
+                FEATURES: Features
+                FEATURES_SETUP: Setup features
+                ICON_STYLE: Icon style
+                CHOOSE_ICON_COLOR: Choose icon color
+                CHOOSE_ICON_COLOR_HELP: Overrides style parameter
+                ITEMS_LAYOUT: Items layout
+                ITEMS_LAYOUT_HELP: 'Choose between 3 designs to list items: "boxed", "masonry" or "cards"'
+                CALLOUT: Callout
+                TEXT_IMAGE_SIZE: Image size
+                TEXT_IMAGE_SIZE_HELP: 'Uses Bootstrap columns. Min value is 1, default 6 and maximum 12 (full width)'
+                SHOWCASE: Showcase
+                SHOWCASE_STYLE_HELP: Only works if there is no background image
+                SHOWCASE_IMAGE_ACTIONS: Image filters
+                SHOWCASE_IMAGE_ACTIONS_HELP: Use your own Grav Media Actions instead of default behaviour. Remember to use Twig way and separate arguments by comma.
+                SHOWCASE_IMAGE_ACTIONS_DESCRIPTION: <a href="https://learn.getgrav.org/content/media#actions" target="_blank">Grav Media Actions</a>
+                SHOWCASE_IMAGE_ACTION: Action
+                SHOWCASE_IMAGE_ARGUMENTS: Arguments (null or comma separated)
+                CAROUSEL: Carousel
+                CAROUSEL_SLIDES: Slides
+                CAROUSEL_SLIDES_HELP: Add slides from folder images, custom title and url to your "/page" or external
+                CAROUSEL_HIDE_CONTROLS: Hide controls
+                CAROUSEL_HIDE_CONTROLS_HELP: Hide prev/next buttons
+                CAROUSEL_SLIDE_INTERVAL: Slide interval
+                CAROUSEL_SLIDE_INTERVAL_HELP: Number miliseconds between autorotating slides. Set to 0 to avoid autoslide.
+                SKILLS: Skills
+                SKILLS_LIST: Skills List
+                SKILLS_LIST_HELP: Set a list of values to show progress bars
+            ITEM:
+                TAB: Item
+                ITEM_STYLE: Item style
+                ITEM_STYLE_HELP: Change some links colors and items view on listings
+                ITEM_SIDEBAR_HELP: Turn off to hide sidebar in this element
+                HEADER_IMAGE: Header image
+                CHOOSE_HEADER_IMAGE: Choose header image
+                CHOOSE_HEADER_IMAGE_HELP: First folder image is selected as header by default
+                IMAGE_ALIGN: Image align
+                IMAGE_ALIGN_HELP: Set image to left or right side. Warning! With image size 12 it will appear at the end of content when you select "right"
+                COMMENTS: Comments
+                ITEM_COMMENTS_HELP: Turn off to do not let publish comments in this item
+                BUTTONS: Buttons
+                BUTTONS_HELP: Add some buttons at the end. They are visible on listings too.
+                BUTTON_ADD_CSS: Add CSS classes
+                BUTTON_ADD_CSS_HELP: Type custom CSS classes clases to button. Remember to separate them by spaces (" ")
+            BLOG: Blog
+            ICON: Icon
+            ICON_HELP: We are using FontAwesome 5, remember to add "fab" or "far" to corresponding icon, "fas" is selected by default
+            FONTAWESOME_5_ICONS: '<a href="https://fontawesome.com/icons" target="_blank">Fontawesome 5 Icons</a>'
+            TAKE_A_LOOK_FONTAWESOME_ICONS: '<em>Take a look to <a href="https://fontawesome.com/icons target="_blank"">Fontawesome Icons</a></em>'
+            ADMIT_HTML_CONTENT: Admit HTML content
+            STYLE: Style
+            STYLE_HELP: Change background and text color from Bootstrap Patterns
+            STYLE_DESCRIPTION: '<em>Choose a color scheme from <a href="https://getbootstrap.com/docs/4.0/components/navbar/#color-schemes" target="_blank">Bootstrap</a></em>'
+            WE_USE_BOOTSTRAP_COLORS: 'We use <a href="https://getbootstrap.com/docs/4.0/utilities/colors/" target="_blank">Bootstrap</a> scheme colors'
+            TAKE_A_LOOK_TO_BOOTSTRAP_STYLES: '<em>Take a look to <a href="https://getbootstrap.com/docs/4.0/utilities/colors/#background-color" target="_blank">Bootstrap colors</a></em>'
+            BOOTSTRAP_STYLES:
+                LIGHT: Light
+                DARK: Dark
+                PRIMARY: Primary
+                SECONDARY: Secondary
+                INFO: Info
+                SUCCESS: Success
+                WARNING: Aviso
+                DANGER: Danger
+                NONE: None
+        DATE:
+            MONTHS: [January,February,March,April,May,June,July,August,September,October,November,Dicember]
+            DAYS: [Monday,Tuesday,Wenesday,Thursday,Friday,Saturday,Sunday]
+            OF: of
+            ON: 'on'
+            AT: at
         ITEM:
-            TAB: Item
-            ITEM_STYLE: Item style
-            ITEM_STYLE_HELP: Change some links colors and items view on listings
-            ITEM_SIDEBAR_HELP: Turn off to hide sidebar in this element
-            HEADER_IMAGE: Header image
-            CHOOSE_HEADER_IMAGE: Choose header image
-            CHOOSE_HEADER_IMAGE_HELP: First folder image is selected as header by default
-            IMAGE_ALIGN: Image align
-            IMAGE_ALIGN_HELP: Set image to left or right side. Warning! With image size 12 it will appear at the end of content when you select "right"
-            COMMENTS: Comments
-            ITEM_COMMENTS_HELP: Turn off to do not let publish comments in this item
-            BUTTONS: Buttons
-            BUTTONS_HELP: Add some buttons at the end. They are visible on listings too.
-            BUTTON_ADD_CSS: Add CSS classes
-            BUTTON_ADD_CSS_HELP: Type custom CSS classes clases to button. Remember to separate them by spaces (" ")
-        BLOG: Blog
-        ICON: Icon
-        ICON_HELP: We are using FontAwesome 5, remember to add "fab" or "far" to corresponding icon, "fas" is selected by default
-        FONTAWESOME_5_ICONS: '<a href="https://fontawesome.com/icons" target="_blank">Fontawesome 5 Icons</a>'
-        TAKE_A_LOOK_FONTAWESOME_ICONS: '<em>Take a look to <a href="https://fontawesome.com/icons target="_blank"">Fontawesome Icons</a></em>'
-        ADMIT_HTML_CONTENT: Admit HTML content
-        STYLE: Style
-        STYLE_HELP: Change background and text color from Bootstrap Patterns
-        STYLE_DESCRIPTION: '<em>Choose a color scheme from <a href="https://getbootstrap.com/docs/4.0/components/navbar/#color-schemes" target="_blank">Bootstrap</a></em>'
-        WE_USE_BOOTSTRAP_COLORS: 'We use <a href="https://getbootstrap.com/docs/4.0/utilities/colors/" target="_blank">Bootstrap</a> scheme colors'
-        TAKE_A_LOOK_TO_BOOTSTRAP_STYLES: '<em>Take a look to <a href="https://getbootstrap.com/docs/4.0/utilities/colors/#background-color" target="_blank">Bootstrap colors</a></em>'
-        BOOTSTRAP_STYLES:
-            LIGHT: Light
-            DARK: Dark
-            PRIMARY: Primary
-            SECONDARY: Secondary
-            INFO: Info
-            SUCCESS: Success
-            WARNING: Aviso
-            DANGER: Danger
-            NONE: None
-    DATE:
-        MONTHS: [January,February,March,April,May,June,July,August,September,October,November,Dicember]
-        DAYS: [Monday,Tuesday,Wenesday,Thursday,Friday,Saturday,Sunday]
-        OF: of
-        ON: 'on'
-        AT: at
-    ITEM:
-        CONTINUE_READING: Continue reading
-        NEXT: Next
-        PREVIOUS: Previous
-    TAXONOMY:
-        TAGS: Tags
-        CATEGORIES: Categories
-        CATEGORY: Category
-        SEE_OTHER_PAGES_OF: See other pages of %s
-    MODULAR:
-        SEE_MORE_IN: See more in %s
-        READ_MORE: Read more
-        CAROUSEL_NEXT: Next
-        CAROUSEL_PREVIOUS: Previous
-    SIMPLESEARCH:
-        SEARCH_RESULTS: Search Results
-    SIDEBAR:
-        SUBSCRIBE:
-            HEADLINE: Subscribe
-            EMAIL_PLACEHOLDER: Email address
-            BUTTON: Subscribe me
-        SIMPLE_SEARCH:
-            HEADLINE: Search
-        RELATED_PAGES:
-            HEADLINE: Related pages
-        RANDOM:
-            HEADLINE: Random post
-            FEELING_LUCKY: I'm Feeling Lucky!
-        POPULAR_TAGS:
-            HEADLINE: Popular Tags
-        ARCHIVES:
-            HEADLINE: Archives
-        SYNDICATE:
-            HEADLINE: Feed
-    FORM_DATA:
-        SUMMARY: "Here is the summary of what you wrote to us:"
-    ERROR: Error
-    RETURN_TOP_PAGE: Return to the top page
+            CONTINUE_READING: Continue reading
+            NEXT: Next
+            PREVIOUS: Previous
+        TAXONOMY:
+            TAGS: Tags
+            CATEGORIES: Categories
+            CATEGORY: Category
+            SEE_OTHER_PAGES_OF: See other pages of %s
+        MODULAR:
+            SEE_MORE_IN: See more in %s
+            READ_MORE: Read more
+            CAROUSEL_NEXT: Next
+            CAROUSEL_PREVIOUS: Previous
+        SIMPLESEARCH:
+            SEARCH_RESULTS: Search Results
+        SIDEBAR:
+            SUBSCRIBE:
+                HEADLINE: Subscribe
+                EMAIL_PLACEHOLDER: Email address
+                BUTTON: Subscribe me
+            SIMPLE_SEARCH:
+                HEADLINE: Search
+            RELATED_PAGES:
+                HEADLINE: Related pages
+            RANDOM:
+                HEADLINE: Random post
+                FEELING_LUCKY: I'm Feeling Lucky!
+            POPULAR_TAGS:
+                HEADLINE: Popular Tags
+            ARCHIVES:
+                HEADLINE: Archives
+            SYNDICATE:
+                HEADLINE: Feed
+        FORM_DATA:
+            SUMMARY: "Here is the summary of what you wrote to us:"
+        ERROR: Error
+        RETURN_TOP_PAGE: Return to the top page
 
 es:
-    ADMIN:
-        ENABLE: Activar
-        TITLE: Título
-        TEXT: Texto
-        URL: URL
-        TEXT_ALIGN: Alinear texto
-        CENTER: Centro
-        LEFT: Izquierda
-        RIGHT: Derecha
-        JUSTIFY: Justificar
-        WIDTH: Ancho
-        HEIGHT: Altura
-        IMAGE: Imagen
-        VALUE: Valor
-        THEME:
-            CDN: CDN
-            CDN_HELP: Recupera los ficheros CSS y JS necesarios desde servidores CDN para reducir los tiempos de carga
-            BACK_TO_TOP_BUTTON: Botón volver a arriba
-            BACK_TO_TOP_BUTTON_HELP: Muestra un botón para volver a la parte superior de la página
-            FAVICON: Favicon
-            FAVICON_HELP: Sube una imagen como icono de página o favicon (almacenada en user/themes/bootstrap-blog/images)
-            NAVBAR: Barra de navegación
-            DROPDOWN: Menú desplegable
-            DROPDOWN_HELP: Muestra un menú desplegable con las páginas descendentes visibles
-            NAVBAR_STICKY: Barra de navegación fija
-            NAVBAR_STICKY_HELP: El menú permanecerá siempre visible en la pantalla
-            DISPLAY_SITE_NAME: Mostrar nombre del sitio
-            DISPLAY_SITE_NAME_HELP: Muestra el nombre del sitio desde las opciones de Grav
-            BRAND_LOGO_IMAGE: Logo o imagen de cabecera
-            BRAND_LOGO_IMAGE_HELP: Subir una imagen a la barra de navegación
-            BRAND_ICON: Icono de cabecera
-            OVERRIDE_PAGE_STYLE: Sobrescribir el estilo de página
-            OVERRIDE_PAGE_STYLE_HELP: Cambia el color de la navegación cuando algún estilo está definido en la cabecera. Si se desactiva, la navegación mantendrá la configuración del tema.
-            NAVBAR_STYLE: Estilo de barra de navegación
-            ITEMS: Elementos
-            SHOW_PREV_NEXT_BUTTONS: Mostrar botones anterior/siguiente
-            SHOW_PREV_NEXT_BUTTONS_HELP: Al final del contenido, 2 botones nos permitirán navegar entre las páginas
-            ENABLE_COMMENTS: Activar comentarios
-            ENABLE_COMMENTS_HELP: Incluye un foro de comentarios al final de cada página
-            DISQUS_SHORTNAME: 'Disqus <em>shortname</em>'
-            DISQUS_SHORTNAME_HELP: Identificador de tu sitio en Disqus. Este valor es necesario para que los comentarios funcionen
-            DISQUS_SHORTNAME_DESCRIPTION: 'Gestiona tus comentarios desde <a href="https://disqus.com/admin/" target="_blank">Disqus</a>'
-            SEARCH: Search
-            SIDEBAR: Barra lateral
-            ENABLE_SIDEBAR: Activar barra lateral
-            ENABLE_SIDEBAR_HELP: Muestra/Oculta la barra lateral en la plantilla
-            SIDEBAR_ALIGN: Alineación de la barra lateral
-            SIDEBAR_LEFT: Izquierda
-            SIDEBAR_RIGHT: Derecha
-            TWITTER_TIMELINE: Twitter timeline
-            TWITTER_USERNAME: Nombre de usuario
-            TWITTER_USERNAME_HELP: Escribe tu cuenta de twitter sin el @
-            TWITTER_THEME: Plantilla
-            ABOUT_ME: Sobre mí
-            ABOUT_PAGE_CONTENT: Página de contenido
-            ABOUT_PAGE_CONTENT_HELP: Selecciona una página del listado para mostrar su contenido en el widget. Además te permitirá renderizar el contenido para distintos idiomas.
-            ABOUT_PAGE_CONTENT_DESCRIPTION: Sobrescribe el contenido a los campos anteriores
-            FOOTER: Pié de página
-            FOOTER_STYLE: Estilo
-            FOOTER_TEXT: Texto de pié de página
-            FOOTER_TEXT_HELP: Escribe el texto principal del pié de página
-            FOOTER_LEGAL_TEXT: Texto legal
-            FOOTER_LEGAL_TEXT_HELP: Texto secundario donde puedes definir tu licencia o nombre registrado
-            FOOTER_LEGAL_TEXT_PLACEHOLDER: 2018 © - Nombre de tu sitio
-        MODULAR:
-            SHOW_MORE_BUTTON: Botón "Ver más"
-            SHOW_MORE_BUTTON_HELP: Aparecerá un botón que redirecciona a la página seleccionada
-            SHOW_MORE_FALLBACK: Esta página se utiliza como alternativa para obtener hijos cuando no se pueda encontrar una colección
-            FEATURES: Destacados
-            FEATURES_SETUP: Configura los destacados
-            ICON_STYLE: Estilo de icono
-            CHOOSE_ICON_COLOR: Escoge el color del icono
-            CHOOSE_ICON_COLOR_HELP: Sobrescribirá el parámetro de estilo
-            ITEMS_LAYOUT: Escoge un diseño
-            ITEMS_LAYOUT_HELP: 'Escoge entre estos 3 diseños para listar los elementos del portafolio: "boxed", "masonry" y "cards"'
-            CALLOUT: Callout
-            TEXT_IMAGE_SIZE: Tamaño de imagen
-            TEXT_IMAGE_SIZE_HELP: 'Utiliza las columnas de Bootstrap. El valor mínimo es 1, por defecto es 6 y el máximo 12 (ancho completo)'
-            SHOWCASE: Showcase
-            SHOWCASE_STYLE_HELP: Sólo funciona si no hay una imagen de fondo
-            SHOWCASE_IMAGE_ACTIONS: Filtros de imágen
-            SHOWCASE_IMAGE_ACTIONS_HELP: Utiliza tus propios filtros de imágenes Grav en lugar de los usados por defecto en el tema. Recuerda seguir el formato Twig separando los argumentos por coma.
-            SHOWCASE_IMAGE_ACTIONS_DESCRIPTION: <a href="https://learn.getgrav.org/content/media#actions" target="_blank">Grav Media Actions</a>
-            SHOWCASE_IMAGE_ACTION: Filtro
-            SHOWCASE_IMAGE_ARGUMENTS: Argumentos (null o separados por coma)
-            CAROUSEL: Carousel
-            CAROUSEL_SLIDES: Slides
-            CAROUSEL_SLIDES_HELP: Añade slides desde las imágenes de la carpeta, personaliza el título y la url a tu página o externa
-            CAROUSEL_HIDE_CONTROLS: Ocultar controles
-            CAROUSEL_HIDE_CONTROLS_HELP: Oculta los botones anterior/siguiente
-            CAROUSEL_SLIDE_INTERVAL: Intervalo de slide
-            CAROUSEL_SLIDE_INTERVAL_HELP: Número de milisegundos del auto cambio de slides. Escribe 0 para mantenerlos indefinidamente.
-            SKILLS: Skills
-            SKILLS_LIST: Lista de skills
-            SKILLS_LIST_HELP: Crea una lista de valores para mostrar barras de progreso
+    BOOTSTRAP_BLOG:
+        ADMIN:
+            ENABLE: Activar
+            TITLE: Título
+            TEXT: Texto
+            URL: URL
+            TEXT_ALIGN: Alinear texto
+            CENTER: Centro
+            LEFT: Izquierda
+            RIGHT: Derecha
+            JUSTIFY: Justificar
+            WIDTH: Ancho
+            HEIGHT: Altura
+            IMAGE: Imagen
+            VALUE: Valor
+            THEME:
+                CDN: CDN
+                CDN_HELP: Recupera los ficheros CSS y JS necesarios desde servidores CDN para reducir los tiempos de carga
+                BACK_TO_TOP_BUTTON: Botón volver a arriba
+                BACK_TO_TOP_BUTTON_HELP: Muestra un botón para volver a la parte superior de la página
+                FAVICON: Favicon
+                FAVICON_HELP: Sube una imagen como icono de página o favicon (almacenada en user/themes/bootstrap-blog/images)
+                NAVBAR: Barra de navegación
+                DROPDOWN: Menú desplegable
+                DROPDOWN_HELP: Muestra un menú desplegable con las páginas descendentes visibles
+                NAVBAR_STICKY: Barra de navegación fija
+                NAVBAR_STICKY_HELP: El menú permanecerá siempre visible en la pantalla
+                DISPLAY_SITE_NAME: Mostrar nombre del sitio
+                DISPLAY_SITE_NAME_HELP: Muestra el nombre del sitio desde las opciones de Grav
+                BRAND_LOGO_IMAGE: Logo o imagen de cabecera
+                BRAND_LOGO_IMAGE_HELP: Subir una imagen a la barra de navegación
+                BRAND_ICON: Icono de cabecera
+                OVERRIDE_PAGE_STYLE: Sobrescribir el estilo de página
+                OVERRIDE_PAGE_STYLE_HELP: Cambia el color de la navegación cuando algún estilo está definido en la cabecera. Si se desactiva, la navegación mantendrá la configuración del tema.
+                NAVBAR_STYLE: Estilo de barra de navegación
+                ITEMS: Elementos
+                SHOW_PREV_NEXT_BUTTONS: Mostrar botones anterior/siguiente
+                SHOW_PREV_NEXT_BUTTONS_HELP: Al final del contenido, 2 botones nos permitirán navegar entre las páginas
+                ENABLE_COMMENTS: Activar comentarios
+                ENABLE_COMMENTS_HELP: Incluye un foro de comentarios al final de cada página
+                DISQUS_SHORTNAME: 'Disqus <em>shortname</em>'
+                DISQUS_SHORTNAME_HELP: Identificador de tu sitio en Disqus. Este valor es necesario para que los comentarios funcionen
+                DISQUS_SHORTNAME_DESCRIPTION: 'Gestiona tus comentarios desde <a href="https://disqus.com/admin/" target="_blank">Disqus</a>'
+                SEARCH: Search
+                SIDEBAR: Barra lateral
+                ENABLE_SIDEBAR: Activar barra lateral
+                ENABLE_SIDEBAR_HELP: Muestra/Oculta la barra lateral en la plantilla
+                SIDEBAR_ALIGN: Alineación de la barra lateral
+                SIDEBAR_LEFT: Izquierda
+                SIDEBAR_RIGHT: Derecha
+                TWITTER_TIMELINE: Twitter timeline
+                TWITTER_USERNAME: Nombre de usuario
+                TWITTER_USERNAME_HELP: Escribe tu cuenta de twitter sin el @
+                TWITTER_THEME: Plantilla
+                ABOUT_ME: Sobre mí
+                ABOUT_PAGE_CONTENT: Página de contenido
+                ABOUT_PAGE_CONTENT_HELP: Selecciona una página del listado para mostrar su contenido en el widget. Además te permitirá renderizar el contenido para distintos idiomas.
+                ABOUT_PAGE_CONTENT_DESCRIPTION: Sobrescribe el contenido a los campos anteriores
+                FOOTER: Pié de página
+                FOOTER_STYLE: Estilo
+                FOOTER_TEXT: Texto de pié de página
+                FOOTER_TEXT_HELP: Escribe el texto principal del pié de página
+                FOOTER_LEGAL_TEXT: Texto legal
+                FOOTER_LEGAL_TEXT_HELP: Texto secundario donde puedes definir tu licencia o nombre registrado
+                FOOTER_LEGAL_TEXT_PLACEHOLDER: 2018 © - Nombre de tu sitio
+            MODULAR:
+                SHOW_MORE_BUTTON: Botón "Ver más"
+                SHOW_MORE_BUTTON_HELP: Aparecerá un botón que redirecciona a la página seleccionada
+                SHOW_MORE_FALLBACK: Esta página se utiliza como alternativa para obtener hijos cuando no se pueda encontrar una colección
+                FEATURES: Destacados
+                FEATURES_SETUP: Configura los destacados
+                ICON_STYLE: Estilo de icono
+                CHOOSE_ICON_COLOR: Escoge el color del icono
+                CHOOSE_ICON_COLOR_HELP: Sobrescribirá el parámetro de estilo
+                ITEMS_LAYOUT: Escoge un diseño
+                ITEMS_LAYOUT_HELP: 'Escoge entre estos 3 diseños para listar los elementos del portafolio: "boxed", "masonry" y "cards"'
+                CALLOUT: Callout
+                TEXT_IMAGE_SIZE: Tamaño de imagen
+                TEXT_IMAGE_SIZE_HELP: 'Utiliza las columnas de Bootstrap. El valor mínimo es 1, por defecto es 6 y el máximo 12 (ancho completo)'
+                SHOWCASE: Showcase
+                SHOWCASE_STYLE_HELP: Sólo funciona si no hay una imagen de fondo
+                SHOWCASE_IMAGE_ACTIONS: Filtros de imágen
+                SHOWCASE_IMAGE_ACTIONS_HELP: Utiliza tus propios filtros de imágenes Grav en lugar de los usados por defecto en el tema. Recuerda seguir el formato Twig separando los argumentos por coma.
+                SHOWCASE_IMAGE_ACTIONS_DESCRIPTION: <a href="https://learn.getgrav.org/content/media#actions" target="_blank">Grav Media Actions</a>
+                SHOWCASE_IMAGE_ACTION: Filtro
+                SHOWCASE_IMAGE_ARGUMENTS: Argumentos (null o separados por coma)
+                CAROUSEL: Carousel
+                CAROUSEL_SLIDES: Slides
+                CAROUSEL_SLIDES_HELP: Añade slides desde las imágenes de la carpeta, personaliza el título y la url a tu página o externa
+                CAROUSEL_HIDE_CONTROLS: Ocultar controles
+                CAROUSEL_HIDE_CONTROLS_HELP: Oculta los botones anterior/siguiente
+                CAROUSEL_SLIDE_INTERVAL: Intervalo de slide
+                CAROUSEL_SLIDE_INTERVAL_HELP: Número de milisegundos del auto cambio de slides. Escribe 0 para mantenerlos indefinidamente.
+                SKILLS: Skills
+                SKILLS_LIST: Lista de skills
+                SKILLS_LIST_HELP: Crea una lista de valores para mostrar barras de progreso
+            ITEM:
+                TAB: Elemento
+                ITEM_STYLE: Estilo de elemento
+                ITEM_STYLE_HELP: Cambia los colores de los enlaces y la vista en los listados
+                ITEM_SIDEBAR_HELP: Deshabilita esta opción para ocultar la barra lateral en este elemento
+                COMMENTS: Comentarios
+                HEADER_IMAGE: Imagen de cabecera
+                CHOOSE_HEADER_IMAGE: Elije la imagen destacada
+                CHOOSE_HEADER_IMAGE_HELP: La primera imagen de la carpeta siempre es seleccionada por defecto
+                IMAGE_ALIGN: Alineación de imagen
+                IMAGE_ALIGN_HELP: Escoge mostrar la imagen a la izquierda o derecha del contenido. ¡Aviso! Con el tamaño 12 la imagen se muestra al final (derecha)
+                ITEM_COMMENTS_HELP: Si lo deshabilitas no permite publicar comentarios en este elemento
+                BUTTONS: Botones
+                BUTTONS_HELP: Añade algunos enlaces al final del elemento. Estos serán visibles también en los listados.
+                BUTTON_ADD_CSS: Añade clases css
+                BUTTON_ADD_CSS_HELP: Incluye clases CSS personalizadas. Recuerda separarlas por espacios (" ")
+            BLOG: Blog
+            ICON: Icono
+            ICON_HELP: Utilizamos FontAwesome 5, recuerda añadir "fab" o "far" al icono correspondiente, "fas" está seleccionado por defecto
+            FONTAWESOME_5_ICONS: '<a href="https://fontawesome.com/icons" target="_blank">Iconos Fontawesome 5</a>'
+            TAKE_A_LOOK_FONTAWESOME_ICONS: '<em>Echa un vistazo a <a href="https://fontawesome.com/icons" target="_blank">Fontawesome Icons</a></em>'
+            ADMIT_HTML_CONTENT: Admite contenido HTML
+            STYLE: Estilo
+            STYLE_HELP: Cambia el color del texto y fondo desde los patrones de estilos Bootstrap
+            STYLE_DESCRIPTION: '<em>Escoge entre los distintos patrones de colores de <a href="https://getbootstrap.com/docs/4.0/components/navbar/#color-schemes" target="_blank">Bootstrap</a></em>'
+            WE_USE_BOOTSTRAP_COLORS: 'Utilizamos el patrón de colores de <a href="https://getbootstrap.com/docs/4.0/utilities/colors/">Bootstrap</a>'
+            TAKE_A_LOOK_TO_BOOTSTRAP_STYLES: '<em>Echa un vistazo a los colores de <a href="https://getbootstrap.com/docs/4.0/utilities/colors/#background-color" target="_blank">Bootstrap</a></em>'
+            BOOTSTRAP_STYLES:
+                LIGHT: Claro
+                DARK: Oscuro
+                PRIMARY: Primario
+                SECONDARY: Secundario
+                INFO: Info
+                SUCCESS: Éxito
+                WARNING: Aviso
+                DANGER: Peligro
+                NONE: Ninguno
+        DATE:
+            MONTHS: [Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre]
+            DAYS: [Lunes,Martes,Miércoles,Jueves,Viernes,Sábado,Domingo]
         ITEM:
-            TAB: Elemento
-            ITEM_STYLE: Estilo de elemento
-            ITEM_STYLE_HELP: Cambia los colores de los enlaces y la vista en los listados
-            ITEM_SIDEBAR_HELP: Deshabilita esta opción para ocultar la barra lateral en este elemento
-            COMMENTS: Comentarios
-            HEADER_IMAGE: Imagen de cabecera
-            CHOOSE_HEADER_IMAGE: Elije la imagen destacada
-            CHOOSE_HEADER_IMAGE_HELP: La primera imagen de la carpeta siempre es seleccionada por defecto
-            IMAGE_ALIGN: Alineación de imagen
-            IMAGE_ALIGN_HELP: Escoge mostrar la imagen a la izquierda o derecha del contenido. ¡Aviso! Con el tamaño 12 la imagen se muestra al final (derecha)
-            ITEM_COMMENTS_HELP: Si lo deshabilitas no permite publicar comentarios en este elemento
-            BUTTONS: Botones
-            BUTTONS_HELP: Añade algunos enlaces al final del elemento. Estos serán visibles también en los listados.
-            BUTTON_ADD_CSS: Añade clases css
-            BUTTON_ADD_CSS_HELP: Incluye clases CSS personalizadas. Recuerda separarlas por espacios (" ")
-        BLOG: Blog
-        ICON: Icono
-        ICON_HELP: Utilizamos FontAwesome 5, recuerda añadir "fab" o "far" al icono correspondiente, "fas" está seleccionado por defecto
-        FONTAWESOME_5_ICONS: '<a href="https://fontawesome.com/icons" target="_blank">Iconos Fontawesome 5</a>'
-        TAKE_A_LOOK_FONTAWESOME_ICONS: '<em>Echa un vistazo a <a href="https://fontawesome.com/icons" target="_blank">Fontawesome Icons</a></em>'
-        ADMIT_HTML_CONTENT: Admite contenido HTML
-        STYLE: Estilo
-        STYLE_HELP: Cambia el color del texto y fondo desde los patrones de estilos Bootstrap
-        STYLE_DESCRIPTION: '<em>Escoge entre los distintos patrones de colores de <a href="https://getbootstrap.com/docs/4.0/components/navbar/#color-schemes" target="_blank">Bootstrap</a></em>'
-        WE_USE_BOOTSTRAP_COLORS: 'Utilizamos el patrón de colores de <a href="https://getbootstrap.com/docs/4.0/utilities/colors/">Bootstrap</a>'
-        TAKE_A_LOOK_TO_BOOTSTRAP_STYLES: '<em>Echa un vistazo a los colores de <a href="https://getbootstrap.com/docs/4.0/utilities/colors/#background-color" target="_blank">Bootstrap</a></em>'
-        BOOTSTRAP_STYLES:
-            LIGHT: Claro
-            DARK: Oscuro
-            PRIMARY: Primario
-            SECONDARY: Secundario
-            INFO: Info
-            SUCCESS: Éxito
-            WARNING: Aviso
-            DANGER: Peligro
-            NONE: Ninguno
-    DATE:
-        MONTHS: [Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre]
-        DAYS: [Lunes,Martes,Miércoles,Jueves,Viernes,Sábado,Domingo]
-    ITEM:
-        CONTINUE_READING: Continuar leyendo
-        NEXT: Siguiente
-        PREVIOUS: Anterior
-    TAXONOMY:
-        TAG: Etiqueta
-        TAGS: Etiquetas
-        CATEGORIES: Categorías
-        CATEGORY: Categoría
-        SEE_OTHER_PAGES_OF: Ver otras páginas de %s
-    MODULAR:
-        SEE_MORE_IN: Ver más en %s
-        READ_MORE: Leer más
-        CAROUSEL_NEXT: Siguiente
-        CAROUSEL_PREVIOUS: Anterior
-    SIMPLESEARCH:
-        SEARCH_RESULTS: Resultados de búsqueda
-    SIDEBAR:
-        SUBSCRIBE:
-            HEADLINE: Suscríbete
-            EMAIL_PLACEHOLDER: Email
-            BUTTON: Suscribirse
-        SIMPLE_SEARCH:
-            HEADLINE: Buscar
-        RELATED_PAGES:
-            HEADLINE: Entradas relacionadas
-        RANDOM:
-            HEADLINE: Publicación aleatoria
-            FEELING_LUCKY: Voy a tener suerte!
-        POPULAR_TAGS:
-            HEADLINE: Etiquetas populares
-        ARCHIVES:
-            HEADLINE: Archivos
-        SYNDICATE:
-            HEADLINE: Feed
-    FORM_DATA:
-        SUMMARY: "Este es un resumen de lo escrito:"
-    ERROR: Error
-    RETURN_TOP_PAGE: Volver a arriba
+            CONTINUE_READING: Continuar leyendo
+            NEXT: Siguiente
+            PREVIOUS: Anterior
+        TAXONOMY:
+            TAG: Etiqueta
+            TAGS: Etiquetas
+            CATEGORIES: Categorías
+            CATEGORY: Categoría
+            SEE_OTHER_PAGES_OF: Ver otras páginas de %s
+        MODULAR:
+            SEE_MORE_IN: Ver más en %s
+            READ_MORE: Leer más
+            CAROUSEL_NEXT: Siguiente
+            CAROUSEL_PREVIOUS: Anterior
+        SIMPLESEARCH:
+            SEARCH_RESULTS: Resultados de búsqueda
+        SIDEBAR:
+            SUBSCRIBE:
+                HEADLINE: Suscríbete
+                EMAIL_PLACEHOLDER: Email
+                BUTTON: Suscribirse
+            SIMPLE_SEARCH:
+                HEADLINE: Buscar
+            RELATED_PAGES:
+                HEADLINE: Entradas relacionadas
+            RANDOM:
+                HEADLINE: Publicación aleatoria
+                FEELING_LUCKY: Voy a tener suerte!
+            POPULAR_TAGS:
+                HEADLINE: Etiquetas populares
+            ARCHIVES:
+                HEADLINE: Archivos
+            SYNDICATE:
+                HEADLINE: Feed
+        FORM_DATA:
+            SUMMARY: "Este es un resumen de lo escrito:"
+        ERROR: Error
+        RETURN_TOP_PAGE: Volver a arriba

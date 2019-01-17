@@ -70,6 +70,12 @@
   </div>
 {% endif %}
 
+{% if config.plugins.relatedpages.enabled and related_pages|length > 0 %}
+    <div class="item-bottom-relatedpages row">
+        {% include 'partials/item_relatedpages.html.twig' %}
+    </div>
+{% endif %}
+
 {% set comments = array_merge(theme_config.comments, page.header.comments|default({})) %}
 {% if comments.enabled %}
   <div class="comments">

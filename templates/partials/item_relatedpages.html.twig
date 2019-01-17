@@ -1,0 +1,25 @@
+{% for related_path, score in related_pages %}
+    {% set related = grav['pages'].get(related_path) %}
+    {% if related %}
+    {% set related_image_file = related.header.image_file %}
+    {% if related_image_file %}
+        {% set related_image_media = related.media.images[header_image_file] %}
+    {% else %}
+        {% set related_image_media = related.media.images|first %}
+    {% endif %}
+    <div class="col-12 col-sm-6 col-lg-4">
+        <div class="card mb-2">
+            {% if related_image_file %}
+            <img class="card-img-top" src="{{ related_image_media.href }}" alt="{{ related.title }}"/>
+            {% endif %}
+            <div class="card-body">
+                <h5 class="card-title">{{ related.title }}</h5>
+                <p class="card-text">{{ related.summary(40) }}</p>
+                <a class="btn btn-outline-primary" href="{{ related.url }}" title="{{ related.title }}">
+                    {{ 'BOOTSTRAP_BLOG.MODULAR.READ_MORE'|t }}
+                </a>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+{% endfor %}

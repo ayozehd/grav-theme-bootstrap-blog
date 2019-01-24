@@ -1,3 +1,14 @@
+# v1.1.10
+## 24-1-2018
+
+1. [](#new)
+  * Related pages at bottom items
+2. [](#bugfix)
+  * Some styles buttons didn't have background animation
+3. [](#improved)
+  * Css improvements
+  * Updated masonry and cards responsive layouts
+
 # v1.1.9
 ## 24-12-2018
 

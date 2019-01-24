@@ -1,5 +1,5 @@
 name: Bootstrap Blog
-version: 1.1.9
+version: 1.1.10
 description: Template built in default Bootstrap 4 framework
 icon: bold
 author:
@@ -157,6 +157,21 @@ form:
             0: PLUGIN_ADMIN.DISABLED
           validate:
             type: bool
+        simplesearch:
+          type: conditional
+          condition: "config.plugins.relatedpages.enabled"
+          fields:
+            item.related_pages:
+              type: toggle
+              label: BOOTSTRAP_BLOG.ADMIN.THEME.RELATED_PAGES_BOTTOM
+              help: BOOTSTRAP_BLOG.ADMIN.THEME.RELATED_PAGES_BOTTOM_HELP
+              highlight: 1
+              default: 1
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool
         comments.enabled:
           type: toggle
           label: BOOTSTRAP_BLOG.ADMIN.THEME.ENABLE_COMMENTS

@@ -70,7 +70,7 @@
   </div>
 {% endif %}
 
-{% if config.plugins.relatedpages.enabled and related_pages|length > 0 %}
+{% if config.plugins.relatedpages.enabled and theme_config.item.related_pages and related_pages|length > 0 %}
     <div class="item-bottom-relatedpages row">
         {% include 'partials/item_relatedpages.html.twig' %}
     </div>

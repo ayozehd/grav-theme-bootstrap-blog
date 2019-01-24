@@ -10,7 +10,7 @@
 {% set category_param = config.theme.item.category %}
 {% set tag_param = config.theme.item.tag %}
 
-<div class="item-card col-12 col-md-4">
+<div class="item-card col-12 col-sm-6 col-md-4">
   <div class="card card-raised {{ bsTools.style( page.header.style|defined('light') ) }}">
       {% if header_image_media %}
         <a href="{{ page.url }}">{{ header_image_media.cropResize(header_image_width,header_image_height).html('', '', 'card-img-top') }}</a>

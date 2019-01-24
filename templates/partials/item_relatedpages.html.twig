@@ -7,14 +7,14 @@
     {% else %}
         {% set related_image_media = related.media.images|first %}
     {% endif %}
-    <div class="col-12 col-sm-6 col-lg-4">
-        <div class="card mb-2">
+    <div class="col-12 col-md-6 col-lg-4">
+        <div class="card my-3">
             {% if related_image_file %}
-            <img class="card-img-top" src="{{ related_image_media.href }}" alt="{{ related.title }}"/>
+                {{ related_image_media.html(related.title, related.title, 'card-img-top') }}
             {% endif %}
             <div class="card-body">
                 <h5 class="card-title">{{ related.title }}</h5>
-                <p class="card-text">{{ related.summary(40) }}</p>
+                <p class="card-text">{{ related.summary|truncate(40) }}</p>
                 <a class="btn btn-outline-primary" href="{{ related.url }}" title="{{ related.title }}">
                     {{ 'BOOTSTRAP_BLOG.MODULAR.READ_MORE'|t }}
                 </a>

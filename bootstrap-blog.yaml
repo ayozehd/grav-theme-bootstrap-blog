@@ -24,6 +24,7 @@ sidebar:
         page:
 item:
     show_prev_next: true
+    related_pages: true
     category: category
     tag: tag
 comments:

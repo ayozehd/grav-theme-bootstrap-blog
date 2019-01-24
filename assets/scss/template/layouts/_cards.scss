@@ -1,28 +1,32 @@
 .item-card {
-  margin-bottom: $spacer * 1.5;
+	margin-bottom: $spacer * 1.5;
 
-  .card-body {
-    padding-top: $spacer * .5;
-    
-    time {
-        cursor: default;
-    }
-  }
+	.card-body {
+		padding-top: $spacer * .5;
 
-  .card-title {
-    margin-bottom: 0;
-  }
+		time {
+			cursor: default;
+		}
 
-  .categories {
-    margin-bottom: $spacer * .25;
-  }
+		.btn-toolbar .btn {
+			margin-top: .5rem;
+		}
+	}
 
-  .summary p {
-    margin-bottom: $spacer * .75;
-  }
+	.card-title {
+		margin-bottom: $spacer * .25;
+	}
 
-  .tags {
-    font-size: 90%;
-    margin-bottom: $spacer * .75;
-  }
+	.categories {
+		margin-bottom: $spacer * .25;
+	}
+
+	.summary p {
+		margin-bottom: $spacer * .75;
+	}
+
+	.tags {
+		font-size: 90%;
+		margin-bottom: $spacer * .5;
+	}
 }

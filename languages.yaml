@@ -38,6 +38,8 @@ en:
                 ITEMS: Items
                 SHOW_PREV_NEXT_BUTTONS: Show Previous/Next buttons
                 SHOW_PREV_NEXT_BUTTONS_HELP: At the end of page's content, 2 buttons let you navigate between pages
+                RELATED_PAGES_BOTTOM: Related Pages
+                RELATED_PAGES_BOTTOM: Enable Related Pages plugin at bottom of items
                 ENABLE_COMMENTS: Enable comments
                 ENABLE_COMMENTS_HELP: Add a comments forum at the end of each page
                 DISQUS_SHORTNAME: Disqus shortname

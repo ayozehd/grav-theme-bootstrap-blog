@@ -14,7 +14,12 @@
         {% endif %}
         <div class="card-body">
             <div class="card-title">
-                <h3 class="title"><a href="{{ page.url }}">{{ page.title }}</a></h3>
+                <h3 class="title">
+                    <a href="{{ page.url }}">{{ page.title }}</a>
+                    {% if config.plugins.readingtime.enabled %}
+                        <span class="readingtime text-secondary"><i class="fas fa-book-reader"></i> {{ page.content|readingtime }}</span>
+                    {% endif %}
+                </h3>
                 <div class="categories">
                     {% for category in page.taxonomy.category %}
                         <a class="badge badge-pill badge-{{ page.header.style|defined('secondary') }} text-uppercase font-weight-normal"
@@ -40,7 +45,7 @@
         <div class="card-footer">
             {% if page.taxonomy.tag %}
                 <div class="d-inline tags">
-          <span data-toggle="tooltip" data-placement="top" title="{{ 'TAXONOMY.TAGS'|t }}" class="text-{{ page.header.style|defined('primary') }}">
+          <span data-toggle="tooltip" data-placement="top" title="{{ 'BOOTSTRAP_BLOG.TAXONOMY.TAGS'|t }}" class="text-{{ page.header.style|defined('primary') }}">
             <i class="fas fa-tags"></i>
           </span>
                     {% for tag in page.taxonomy.tag %}

@@ -12,8 +12,15 @@
     margin-bottom: $spacer * .2;
     .title {
       margin-bottom: 0;
+
       a {
         color: $dark;
+      }
+
+      .readingtime {
+        font-size: 14px;
+        font-weight: 400;
+        padding-left: $spacer * .5;
       }
     }
   }

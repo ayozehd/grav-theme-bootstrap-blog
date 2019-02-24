@@ -1810,6 +1810,10 @@ a.badge-gray-dark:hover {
       margin-bottom: 0; }
       .item-boxed .card-title .title a {
         color: #343a40; }
+      .item-boxed .card-title .title .readingtime {
+        font-size: 14px;
+        font-weight: 400;
+        padding-left: 0.5rem; }
   .item-boxed .categories {
     margin-bottom: 0; }
   .item-boxed .summary {

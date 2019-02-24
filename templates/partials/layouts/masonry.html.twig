@@ -36,9 +36,11 @@
                     {{ bsTools.button(page.header.link, null, 'link', (page.header.style ? bsTools.processStyle(page.header.style, true) : null), true, false, 'secondary') }}
                 {% endif %}
             </div>
-            <div class="btn-group">
-                {{ bsTools.buttons(page.header.buttons, page.header.style, true, true, 'dark') }}
-            </div>
+            {% if page.header.buttons %}
+              <div class="btn-group">
+                  {{ bsTools.buttons(page.header.buttons, page.header.style, true, true, 'dark') }}
+              </div>
+            {% endif %}
           </div>
         </div>
       </div>

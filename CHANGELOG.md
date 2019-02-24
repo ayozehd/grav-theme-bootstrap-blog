@@ -1,5 +1,13 @@
+# v1.1.11
+## 24-2-2019
+
+1. [](#new)
+  * Added support for [readingtime](https://github.com/getgrav/grav-plugin-readingtime) plugin
+2. [](#improved)
+  * Breadcrumb style now from Bootstrap
+
 # v1.1.10
-## 24-1-2018
+## 24-1-2019
 
 1. [](#new)
   * Related pages at bottom items

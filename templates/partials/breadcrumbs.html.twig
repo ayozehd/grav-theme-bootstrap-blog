@@ -1,0 +1,35 @@
+{% set crumbs = breadcrumbs.get() %}
+{% set breadcrumbs_config = config.plugins.breadcrumbs %}
+{% set divider = breadcrumbs_config.icon_divider_classes %}
+
+{% if crumbs|length > 1 or breadcrumbs_config.show_all %}
+<nav aria-label="breadcrumb" itemscope itemtype="http://data-vocabulary.org/Breadcrumb">
+    <ol class="breadcrumb">
+    {% for crumb in crumbs %}
+        {% if not loop.last %}
+            <li class="breadcrumb-item">
+            {% if loop.first %}
+                {% if breadcrumbs_config.icon_home %}
+                <i class="text-secondary {{ breadcrumbs_config.icon_home }}"></i>
+                {% endif %}
+            {% endif %}
+            {% if crumb.routable %}
+                <a href="{{ crumb.url }}" itemprop="url"><span itemprop="title">{{ crumb.menu }}</span></a>
+            {% else  %}
+                <span itemprop="title">{{ crumb.menu }}</span>
+            {% endif %}
+            </li>
+            {# <i class="{{ divider }}"></i> #}
+        {% else %}
+            <li class="breadcrumb-item active">
+            {% if breadcrumbs_config.link_trailing %}
+                <a href="{{ crumb.url }}" itemprop="url" aria-current="page"><span itemprop="title">{{ crumb.menu }}</span></a>
+            {% else %}
+                <span itemprop="title">{{ crumb.menu }}</span>
+            {% endif %}
+            </li>
+        {% endif %}
+    {% endfor %}
+    </ol>
+</nav>
+{% endif %}

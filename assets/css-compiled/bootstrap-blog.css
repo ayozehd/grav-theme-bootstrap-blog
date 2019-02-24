@@ -1775,11 +1775,8 @@ a.badge-gray-dark:hover {
   color: #e9ecef;
   text-decoration: none; }
 
-#breadcrumbs {
-  padding-left: 0 !important;
-  height: auto !important; }
-  #breadcrumbs span {
-    padding-left: 1rem !important; }
+.breadcrumb {
+  margin-top: 1rem; }
 
 .items {
   margin-top: 1rem; }

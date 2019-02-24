@@ -9,15 +9,10 @@
             {% set item_columns = 'col-md-8' %}
         {% endif %}
 
-        {% if config.plugins.breadcrumbs.enabled %}
-            <div class="container">
-                <div class="row">
-                    {% include 'partials/breadcrumbs.html.twig' %}
-                </div>
-            </div>
-        {% endif %}
-
         <div class="container">
+            {% if config.plugins.breadcrumbs.enabled %}
+                {% include 'partials/breadcrumbs.html.twig' %}
+            {% endif %}
             <div class="row">
                 <div id="item" class="item-content col-12 {{ item_columns }}">
                     {% include 'partials/partial_item.html.twig' with {'parent':page.parent, 'truncate':false} %}

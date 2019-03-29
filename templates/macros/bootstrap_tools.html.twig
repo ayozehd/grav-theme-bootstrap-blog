@@ -43,13 +43,13 @@
 {% endmacro %}
 
 {% macro button(url, text, icon, style, outline, darkOrLight, default, size, classes) %}
-  <a href="{{ url starts with 'http' ? url : url(url) }}" alt="{{ text }}"
-     class="btn {{ _self.buttonStyle(style, outline, darkOrLight, default, size)|trim }} {{ classes }}">
-      {% if icon %}
-        <i class="fas fa-{{ icon }}"></i>
-      {% endif %}
-      {{ text }}
-  </a>
+    <a href="{{ url }}" alt="{{ text }}"
+        class="btn {{ _self.buttonStyle(style, outline, darkOrLight, default, size)|trim }} {{ classes }}">
+        {% if icon %}
+            <i class="fas fa-{{ icon }}"></i>
+        {% endif %}
+        {{ text }}
+    </a>
 {% endmacro %}
 
 {% macro buttons(buttons, style, outline, darkOrLight, default, classes) %}

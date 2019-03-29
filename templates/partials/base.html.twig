@@ -14,10 +14,13 @@
         <link rel="canonical" href="{{ page.url(true, true) }}"/>
 
         {% block stylesheets %}{% endblock %}
-        {{ assets.css() }}
 
         {% block javascripts %}{% endblock %}
-        {{ assets.js() }}
+
+        {% block assets deferred %}
+            {{ assets.css()|raw }}
+            {{ assets.js()|raw }}
+        {% endblock %}
     {% endblock head %}
 </head>
 <body id="top" class="{{ page.header.body_classes }}">
@@ -75,7 +78,7 @@
        data-placement="left"><span class="fas fa-chevron-up"></span></a>
 {% endif %}
 {% block bottom %}
-    {{ assets.js('bottom') }}
+    {{ assets.js('bottom')|raw }}
 {% endblock %}
 </body>
 </html>

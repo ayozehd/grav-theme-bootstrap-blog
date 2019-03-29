@@ -1,3 +1,11 @@
+# v1.1.12
+## 30-3-2019
+
+1. [](#new)
+  * Implement assets rendering using **Deferred Block** Twig extension
+2. [](#bugfix)
+  * Fixed a bug in macro button when site is under a subdomain
+
 # v1.1.11
 ## 24-2-2019
 

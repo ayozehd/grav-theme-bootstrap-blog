@@ -1,3 +1,9 @@
+# v1.2
+## 02-4-2019
+
+1. [](#improved)
+  * Smaller taxonomies button
+
 # v1.1.12
 ## 30-3-2019
 

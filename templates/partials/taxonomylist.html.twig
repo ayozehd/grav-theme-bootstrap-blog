@@ -4,7 +4,7 @@
         <div class="d-inline-block">
             {% for tax,value in taxlist[taxonomy] %}
                 {% set active = uri.param(taxonomy) == tax? 'active' : '' %}
-                    <a class="btn btn-outline-primary mb-1 {{ active }}"
+                    <a class="btn btn-outline-primary btn-sm mb-1 {{ active }}"
                        href="{{ base_url }}/{{ taxonomy }}{{ config.system.param_sep }}{{ tax }}">{{ tax }}</a>
             {% endfor %}
         </div>

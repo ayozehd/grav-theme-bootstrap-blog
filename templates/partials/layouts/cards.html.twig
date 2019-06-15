@@ -10,8 +10,8 @@
 {% set category_param = config.theme.item.category %}
 {% set tag_param = config.theme.item.tag %}
 
-<div class="item-card col-12 col-sm-6 col-md-4">
-  <div class="card card-raised {{ bsTools.style( page.header.style|defined('light') ) }}">
+<div class="item-card col-12 col-sm-6 col-lg-4">
+  <div class="card {{ bsTools.style( page.header.style|defined('light') ) }}">
       {% if header_image_media %}
         <a href="{{ page.url }}">{{ header_image_media.cropResize(header_image_width,header_image_height).html('', '', 'card-img-top') }}</a>
       {% endif %}
@@ -23,11 +23,6 @@
             <small><i class="far fa-clock"></i>&nbsp;{{ page.date|date(config.system.pages.dateformat.short) }}</small>
           </time>
         </div>
-        {% if config.plugins.readingtime.enabled %}
-          <div class="col text-right">
-            <small class="{{ bsTools.textStyle(page.header.style, 'secondary') }}"><i class="fas fa-book-reader"></i> {{ page.content|readingtime }}</small>
-          </div>
-        {% endif %}
       </div>
       <h2 class="card-title"><a class="{{ bsTools.textStyle(page.header.style, 'dark') }}" href="{{ page.url }}">{{ page.title }}</a></h2>
       <div class="categories">

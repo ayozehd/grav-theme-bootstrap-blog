@@ -25,7 +25,9 @@
 {% if config.plugins.random.enabled %}
     <div class="sidebar-content">
         <h4>{{ 'BOOTSTRAP_BLOG.SIDEBAR.RANDOM.HEADLINE'|t }}</h4>
-        <a class="btn btn-outline-primary" href="{{ base_url_relative }}/random"><i class="fa fa-retweet"></i> {{ 'BOOTSTRAP_BLOG.SIDEBAR.RANDOM.FEELING_LUCKY'|t }}
+        <a class="btn btn-outline-primary" href="{{ base_url_relative }}/random">
+            <i class="fas fa-retweet"></i> 
+            {{ 'BOOTSTRAP_BLOG.SIDEBAR.RANDOM.FEELING_LUCKY'|t }}
         </a>
     </div>
 {% endif %}

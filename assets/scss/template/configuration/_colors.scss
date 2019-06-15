@@ -1,0 +1,42 @@
+@import "functions";
+
+@each $color, $value in $colors {
+    // text
+    .text-#{$color} {
+        color: $value;
+    }
+    // border
+    .border-#{$color} {
+        border-color: $value;
+    }
+    // background
+    .bg-#{$color} {
+        background-color: $value;
+    }
+
+    // buttons
+    .btn.btn-#{$color} {
+        background-color: $value;
+        color: color-wib($value) !important;
+    }
+
+    // buttons outline
+    .btn.btn-outline-#{$color} {
+        border-color: $value;
+        color: $value;
+        &:hover {
+            color: color-wib($value, #fff);
+            background-color: $value;
+        }
+    }
+
+    // badge
+    .badge-#{$color} {
+        background: $value;
+        color: color-wib($value, #fff);
+    }
+    a.badge-#{$color}:hover {
+        color: color-wib($value, $gray-200);
+        text-decoration: none;
+    }
+}

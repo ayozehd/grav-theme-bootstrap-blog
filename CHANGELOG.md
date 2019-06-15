@@ -1,8 +1,17 @@
-# v1.2
-## 02-4-2019
 
-1. [](#improved)
-  * Smaller taxonomies button
+
+# v1.2
+## 15-6-2019
+
+1. [](#new)
+  * Added `container_fluid` and `item.featured_image` theme options
+2. [](#improved)
+  * Updated [Bootstrap 4.3.1](https://blog.getbootstrap.com/2019/02/11/bootstrap-4-3-0/)
+  * SCSS improvements
+  * Better responsive layouts
+3. [](#bugfix)
+  * Login status template desalignment
+
 
 # v1.1.12
 ## 30-3-2019

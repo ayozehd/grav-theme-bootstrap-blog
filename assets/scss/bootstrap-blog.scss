@@ -1,5 +1,3 @@
-@import "configuration/bootstrap/colors";
-
 // DEPENDENCIES
 @import "bootstrap/functions";
 @import "bootstrap/variables";
@@ -12,17 +10,15 @@
 @import "bootstrap/grid";
 
 // Bootstrap-Blog Configuration
-@import "configuration/bootstrap/base";
+@import "template/configuration/all";
 
 // Template Components
-@import "template/variables";
+@import "template/base";
 @import "template/breadcrumbs";
 @import "template/blog";
 @import "template/item";
-@import "template/layouts/boxed";
-@import "template/layouts/cards";
-@import "template/layouts/masonry";
+@import "template/layouts/all";
 @import "template/sidebar";
 @import "template/footer";
 @import "template/navigation";
-@import "template/modular/base";
+@import "template/modular/all";

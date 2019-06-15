@@ -1,17 +1,18 @@
-.navbar-nav {
-    .nav-item.dropdown-split-menu {
-        .nav-link.dropdown-toggle-split {
-            padding-left: 0;
-        }
-    }
-}
-
-@include media-breakpoint-down(sm) {
+.navbar {
+    box-shadow: 0 4px 2px -2px #8080803d;
     .navbar-nav {
-        .nav-item {
-            .nav-link.dropdown-toggle-split:after {
-                margin-left: 5px !important;
+        .nav-item.dropdown-split-menu {
+            .nav-link.dropdown-toggle-split {
+                padding-left: 0;
             }
+            &:after {
+                @include media-breakpoint-down(sm) {
+                    margin-left: 5px;
+                }
+            }
+        }
+        .dropdown #languageSelector .dropdown-menu {
+            position: absolute;
         }
     }
 }

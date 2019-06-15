@@ -1,6 +1,7 @@
 enabled: true
 cdn_enabled: false
 back_to_top_button: true
+fluid_container: false
 favicon:
 navbar:
     image:
@@ -23,6 +24,7 @@ sidebar:
         content: Some text about you...
         page:
 item:
+    featured_image: true
     show_prev_next: true
     related_pages: true
     category: category

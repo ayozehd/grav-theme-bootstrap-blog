@@ -19,7 +19,7 @@
     {% else %}
         {% set showcase_image = showcase_image.cropResize(showcase_image_width,showcase_image_height).contrast(20).brightness(-80).gaussianBlur(1.5) %}
     {% endif %}
-<div class="modular-row showcase text-{{ page.header.style|defined('light') }}" style="background-image: url({{ showcase_image.url }});">
+<section class="modular-row showcase text-{{ page.header.style|defined('light') }}" style="background-image: url({{ showcase_image.url }});">
     {% else %}
     <div class="modular-row box-inset-shadow showcase-text {{ bsTools.style(page.header.style|defined('primary')) }}">
         {% endif %}
@@ -34,3 +34,4 @@
             </div>
         </div>
     </div>
+</section>

@@ -2,10 +2,10 @@
   padding-bottom: $spacer;
 
   .item-heading {
-    padding-top: $spacer;
-    padding-bottom: $spacer * .25;
+    padding: $spacer*.5 0;
 
-    time {
+    time,
+    .readingtime {
         cursor: default;
     }
   }

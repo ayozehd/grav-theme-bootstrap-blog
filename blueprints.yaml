@@ -39,6 +39,15 @@ form:
         0: PLUGIN_ADMIN.DISABLED
       validate:
         type: bool
+    fluid_container:
+      type: toggle
+      label: BOOTSTRAP_BLOG.ADMIN.THEME.FLUID_CONTAINER
+      help: BOOTSTRAP_BLOG.ADMIN.THEME.FLUID_CONTAINER_HELP
+      highlight: 1
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
     favicon:
       type: file
       label: BOOTSTRAP_BLOG.ADMIN.THEME.FAVICON
@@ -148,6 +157,15 @@ form:
       title: BOOTSTRAP_BLOG.ADMIN.THEME.ITEMS
       underline: true
       fields:
+        item.featured_image:
+          type: toggle
+          label: BOOTSTRAP_BLOG.ADMIN.THEME.FEATURED_IMAGE
+          help: BOOTSTRAP_BLOG.ADMIN.THEME.FEATURED_IMAGE_HELP
+          highlight: 1
+          default: 1
+          options:
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
         item.show_prev_next:
           type: toggle
           label: BOOTSTRAP_BLOG.ADMIN.THEME.SHOW_PREV_NEXT_BUTTONS

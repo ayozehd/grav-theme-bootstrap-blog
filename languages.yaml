@@ -20,6 +20,8 @@ en:
                 CDN_HELP: Get needed CSS and JS files from Content Distribution Networks to reduce load times
                 BACK_TO_TOP_BUTTON: Back to top button
                 BACK_TO_TOP_BUTTON_HELP: Show a button to return the top page
+                FLUID_CONTAINER: Fluid container
+                FLUID_CONTAINER_HELP: Full width container edge-to-edge, spanning the entire width of the viewport
                 FAVICON: Favicon
                 FAVICON_HELP: Upload an image as page icon or favicon (stored in user/themes/bootstrap-blog/images)
                 NAVBAR: Navbar
@@ -36,6 +38,8 @@ en:
                 OVERRIDE_PAGE_STYLE_HELP: Change navbar color when a page style header is defined. If disabled, "Navbar style" will keep value from theme settings in whole site.
                 NAVBAR_STYLE: Navbar style
                 ITEMS: Items
+                FEATURED_IMAGE: Featured image
+                FEATURED_IMAGE_HELP: Automatically display first folder image on item pages. Disable it if you want full-control of your markdown content.
                 SHOW_PREV_NEXT_BUTTONS: Show Previous/Next buttons
                 SHOW_PREV_NEXT_BUTTONS_HELP: At the end of page's content, 2 buttons let you navigate between pages
                 RELATED_PAGES_BOTTOM: Related Pages
@@ -64,7 +68,7 @@ en:
                 FOOTER_TEXT_HELP: Write main footer text
                 FOOTER_LEGAL_TEXT: Legal text
                 FOOTER_LEGAL_TEXT_HELP: Secondary footer text where you can define your license or registered name
-                FOOTER_LEGAL_TEXT_PLACEHOLDER: 2018 © - Your site name
+                FOOTER_LEGAL_TEXT_PLACEHOLDER: 2019 © - Your site name
             MODULAR:
                 SHOW_MORE_BUTTON: Show more button
                 SHOW_MORE_BUTTON_HELP: Will appear a button which links to the selected page
@@ -199,6 +203,8 @@ es:
                 CDN_HELP: Recupera los ficheros CSS y JS necesarios desde servidores CDN para reducir los tiempos de carga
                 BACK_TO_TOP_BUTTON: Botón volver a arriba
                 BACK_TO_TOP_BUTTON_HELP: Muestra un botón para volver a la parte superior de la página
+                FLUID_CONTAINER: Contenedor extenso
+                FLUID_CONTAINER_HELP: Aumenta el ancho de los elementos ocupando todo el espacio de pantalla
                 FAVICON: Favicon
                 FAVICON_HELP: Sube una imagen como icono de página o favicon (almacenada en user/themes/bootstrap-blog/images)
                 NAVBAR: Barra de navegación
@@ -214,7 +220,9 @@ es:
                 OVERRIDE_PAGE_STYLE: Sobrescribir el estilo de página
                 OVERRIDE_PAGE_STYLE_HELP: Cambia el color de la navegación cuando algún estilo está definido en la cabecera. Si se desactiva, la navegación mantendrá la configuración del tema.
                 NAVBAR_STYLE: Estilo de barra de navegación
-                ITEMS: Elementos
+                ITEMS: Páginas
+                FEATURED_IMAGE: Imagen destacada
+                FEATURED_IMAGE_HELP: Muestra automáticamente la primera imagen de la página. Desactívalo para un mayor control de tu contenido markdown.
                 SHOW_PREV_NEXT_BUTTONS: Mostrar botones anterior/siguiente
                 SHOW_PREV_NEXT_BUTTONS_HELP: Al final del contenido, 2 botones nos permitirán navegar entre las páginas
                 ENABLE_COMMENTS: Activar comentarios
@@ -243,7 +251,7 @@ es:
                 FOOTER_TEXT_HELP: Escribe el texto principal del pié de página
                 FOOTER_LEGAL_TEXT: Texto legal
                 FOOTER_LEGAL_TEXT_HELP: Texto secundario donde puedes definir tu licencia o nombre registrado
-                FOOTER_LEGAL_TEXT_PLACEHOLDER: 2018 © - Nombre de tu sitio
+                FOOTER_LEGAL_TEXT_PLACEHOLDER: 2019 © - Nombre del sitio
             MODULAR:
                 SHOW_MORE_BUTTON: Botón "Ver más"
                 SHOW_MORE_BUTTON_HELP: Aparecerá un botón que redirecciona a la página seleccionada
@@ -343,7 +351,7 @@ es:
                 HEADLINE: Entradas relacionadas
             RANDOM:
                 HEADLINE: Publicación aleatoria
-                FEELING_LUCKY: Voy a tener suerte!
+                FEELING_LUCKY: ¡Voy a tener suerte!
             POPULAR_TAGS:
                 HEADLINE: Etiquetas populares
             ARCHIVES:

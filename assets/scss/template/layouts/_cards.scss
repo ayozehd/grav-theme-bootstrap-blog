@@ -1,32 +1,62 @@
 .item-card {
 	margin-bottom: $spacer * 1.5;
+	
+	.card {
+		box-shadow: 0 12px 24px -6px rgba(0,0,0,.56),
+					0 4px 18px 0 	rgba(0,0,0,.10),
+					0 8px 12px -5px rgba(0,0,0,.2);
+	
+		.card-body {
+			padding-top: $spacer * .5;
 
-	.card-body {
-		padding-top: $spacer * .5;
+			time {
+				cursor: default;
+			}
 
-		time {
-			cursor: default;
+			.btn-toolbar .btn {
+				margin-top: .5rem;
+			}
+
+			.card-title {
+				margin-bottom: 0;
+			}
+
+			.categories {
+				margin-bottom: $spacer * .25;
+			}
+	
+			.summary p {
+				margin-bottom: $spacer * .75;
+			}
+	
+			.tags {
+				font-size: 90%;
+				margin-bottom: $spacer * .5;
+			}
 		}
-
-		.btn-toolbar .btn {
-			margin-top: .5rem;
-		}
 	}
+}
 
-	.card-title {
-		margin-bottom: $spacer * .25;
-	}
+@include media-breakpoint-up(lg) {
+	.items.row > .item-card.col,
+	.items.row > .item-card[class*="col-"] {
+        padding-right: $grid-gutter-width / 2;
+        padding-left: $grid-gutter-width / 2;
+    }
+}
 
-	.categories {
-		margin-bottom: $spacer * .25;
-	}
+@include media-breakpoint-down(sm) {
+	.items.row > .item-card.col,
+	.items.row > .item-card[class*="col-"] {
+        padding-right: $grid-gutter-width / 3;
+        padding-left: $grid-gutter-width / 3;
+    }
+}
 
-	.summary p {
-		margin-bottom: $spacer * .75;
-	}
-
-	.tags {
-		font-size: 90%;
-		margin-bottom: $spacer * .5;
-	}
+@include media-breakpoint-up(md) {
+	.items.row > .item-card.col,
+	.items.row > .item-card[class*="col-"] {
+        padding-right: $grid-gutter-width / 2;
+        padding-left: $grid-gutter-width / 2;
+    }
 }

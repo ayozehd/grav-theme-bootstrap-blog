@@ -23,7 +23,7 @@
         {% endblock %}
     {% endblock head %}
 </head>
-<body id="top" class="{{ page.header.body_classes }}">
+<body id="top" class="{{ page.header.body_classes }}{% if theme_config.navbar.sticky %} sticky{% endif %}">
 {% block header %}
     <nav class="navbar navbar-expand-md {{ bsTools.navbarStyle(page.header.style, theme_config.navbar.style, theme_config.navbar.override_page_style)|trim }} {% if theme_config.navbar.sticky %}fixed-top{% endif %}"
          role="navigation"
@@ -56,8 +56,6 @@
 {% endblock %}
 
 {% block body %}
-    {{ theme_config.favicon.name }}
-    {% block showcase %}{% endblock %}
     {% block content %}{% endblock %}
 {% endblock %}
 

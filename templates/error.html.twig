@@ -1,7 +1,7 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-    <div class="container">
+    <div class="container{% if theme_config.fluid_container %}-fluid{% endif %}">
         <div class="row" style="height: 80vh">
             <div class="col my-auto text-center">
                 <i class="fas fa-exclamation-triangle fa-3x text-danger py-3"></i>

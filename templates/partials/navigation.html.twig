@@ -50,29 +50,29 @@
     {% endfor %}
 {% endmacro %}
 
-<ul class="navbar-nav ml-auto">
+<div class="navbar-nav ml-auto">
     {% if theme_config.navbar.dropdown == true %}
         {{ _self.loop(pages) }}
     {% else %}
         {% for page in pages.children.visible %}
             {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
-            <li class="nav-item {{ current_page }}">
+            <div class="nav-item {{ current_page }}">
                 <a class="nav-link" href="{{ page.url }}">
                     {% if page.header.icon %}<i class="fas fa-{{ page.header.icon }}"></i>{% endif %}
                     {{ page.menu }}
                 </a>
-            </li>
+            </div>
         {% endfor %}
     {% endif %}
     {% for mitem in site.menu %}
-        <li class="nav-item">
+        <div class="nav-item">
             <a class="nav-link" href="{{ mitem.url }}">
                 {% if mitem.icon %}<i class="fas fa-{{ mitem.icon }}"></i>{% endif %}
                 {{ mitem.text }}
             </a>
-        </li>
+        </div>
     {% endfor %}
     {% if config.plugins.login.enabled and grav.user.username %}
-        <li class="nav-item"><i class="fas fa-lock"></i> {% include 'partials/login-status.html.twig' %}</li>
+        {% include 'partials/login-status.html.twig' %}
     {% endif %}
-</ul>
+</div>

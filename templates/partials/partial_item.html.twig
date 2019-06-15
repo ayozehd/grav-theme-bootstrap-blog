@@ -16,7 +16,7 @@
 			</time>
 		</div>
 		{% if config.plugins.readingtime.enabled %}
-			<div class="col text-right">
+			<div class="col text-right readingtime">
 				<small data-toggle="tooltip" title="{{ 'Reading time' }}" class="text-secondary"><i class="fas fa-book-reader"></i> {{ page.content|readingtime }}</small>
 			</div>
 		{% endif %}
@@ -35,7 +35,7 @@
 		{% endfor %}
 	</div>
 </div>
-{% if header_image_media %}
+{% if header_image_media and theme_config.item.featured_image %}
 	<div class="featured-image text-{{ page.header.header_image_align|defined('center') }}">
 		{{ header_image_media.cropResize(header_image_width, header_image_height).html }}
 	</div>

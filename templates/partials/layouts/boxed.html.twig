@@ -45,12 +45,12 @@
         <div class="card-footer">
             {% if page.taxonomy.tag %}
                 <div class="d-inline tags">
-          <span data-toggle="tooltip" data-placement="top" title="{{ 'BOOTSTRAP_BLOG.TAXONOMY.TAGS'|t }}" class="text-{{ page.header.style|defined('primary') }}">
-            <i class="fas fa-tags"></i>
-          </span>
+                    <span data-toggle="tooltip" data-placement="top" title="{{ 'BOOTSTRAP_BLOG.TAXONOMY.TAGS'|t }}" class="text-{{ page.header.style|defined('primary') }}">
+                        <i class="fas fa-tags"></i>
+                    </span>
                     {% for tag in page.taxonomy.tag %}
                         <a class="text-{{ page.header.style|defined('primary') }}"
-                           href="{{ parent.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}{{ not loop.last ? ',' }}</a>
+                            href="{{ parent.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}{{ not loop.last ? ',' }}</a>
                     {% endfor %}
                 </div>
             {% endif %}

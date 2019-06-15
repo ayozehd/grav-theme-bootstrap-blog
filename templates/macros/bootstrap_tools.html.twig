@@ -8,7 +8,9 @@
 {% endmacro %}
 
 {% macro textStyle(style, default) %}
+{% spaceless %}
     {{ 'text-' ~ _self.processStyle(style, true, default)|trim }}
+{% endspaceless %}
 {% endmacro %}
 
 {% macro navbarStyle(style, default, override_page_style) %}
@@ -27,10 +29,13 @@
 {% endmacro %}
 
 {% macro buttonStyle(style, isOutline, darkOrLight, default, size) %}
+{% spaceless %}
     {{ 'btn-' ~ (isOutline ? 'outline-') ~ _self.processStyle(style, darkOrLight|defined(true), default)|trim ~ (size ? ' btn-' ~ size) }}
+{% endspaceless %}
 {% endmacro %}
 
 {% macro processStyle(style, inversed, default) %}
+{% spaceless %}
     {% set output = null %}
     {% if inversed %}
         {% if style in ['primary', 'success', 'danger', 'info', 'dark', 'faded', 'blue', 'indigo', 'purple', 'pink', 'red', 'green', 'teal', 'cyan'] %}
@@ -40,6 +45,7 @@
         {% endif %}
     {% endif %}
     {{ output|defined(style)|defined(default) }}
+{% endspaceless %}
 {% endmacro %}
 
 {% macro button(url, text, icon, style, outline, darkOrLight, default, size, classes) %}

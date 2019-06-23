@@ -23,6 +23,10 @@
 
 			.categories {
 				margin-bottom: $spacer * .25;
+
+				.badge {
+					padding: $spacer * .25 $spacer * .5;
+				}
 			}
 	
 			.summary p {
@@ -30,8 +34,59 @@
 			}
 	
 			.tags {
+				color: theme-color('secondary');
 				font-size: 90%;
 				margin-bottom: $spacer * .5;
+			}
+		}
+	}
+
+	@each $color, $value in $theme-colors {
+		.card.bg-#{$color} {
+			.card-body {
+				color: color-yiq($value);
+
+				.card-title a,
+				.tags,
+				.tags a {
+					color: color-yiq($value);
+				}
+
+				.categories .badge {
+					@if(theme-style-inverse($color) == 'dark') {
+						background-color: theme-color-level($color, 2);
+					} @else {
+						background-color: theme-color-level($color, 4);
+					}
+
+					&:hover {
+						@if(theme-style-inverse($color) == 'dark') {
+							background-color: theme-color-level($color, 1);
+						} @else {
+							background-color: theme-color-level($color, 2);
+						}
+					}
+				}
+
+				.btn-toolbar {
+					.main .btn {
+						@if($color == 'light') {
+							@extend .btn-outline-primary;
+						} @else {
+							$buttonInversed: theme-style-inverse($color);
+							@extend .btn-outline-#{$buttonInversed};
+						}
+					}
+
+					.links .btn {
+						@if($color == 'light') {
+							@extend .btn-outline-dark;
+						} @else {
+							$linkInversed: theme-style-inverse($color);
+							@extend .btn-outline-#{$linkInversed};
+						}
+					}
+				}
 			}
 		}
 	}

@@ -1,4 +1,14 @@
+# v1.3
+## 24-6-2019
 
+1. [](#new)
+  * Added pagination template. Disable `built_in_css` plugin option to render it properly.
+  * Fluid container option
+2. [](#improved)
+  * Moved Twig macros to SASS functions to ease theme extending and understanding.
+  * Added new colors (expert mode)
+3. [](#bugfix)
+  * Language typo error
 
 # v1.2
 ## 15-6-2019

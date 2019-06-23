@@ -1,35 +1,37 @@
-{% import "macros/bootstrap_tools.html.twig" as bsTools %}
-
 {% if page.collection()|length > 0 %}
     {% set collection = page.collection() %}
 {% elseif page.header.show_more is defined %}
-    {# Fallback collection from show_more page #}
+    {# Fallback collection from show_more param #}
     {% set collection = page.collection({ items: {'@page.children': page.header.show_more }, order: {'by': 'date', 'dir': 'desc'}, visible: true }) %}
 {% else %}
     {% set collection = null %} {# Satinizing #}
 {% endif %}
 
-<div class="modular-row blog-modular {{ bsTools.style(page.header.style) }} {{ page.header.classes }}">
-  <div class="container text-{{ page.header.text_align|defined('center') }}">
+<div class="modular-row blog-modular{% if page.header.style %} bg-{{ page.header.style }}{% endif %} {{ page.header.classes }}">
+  <div class="container{% if theme_config.fluid_container %}-fluid{% endif %}">
+    <div class="content text-{{ page.header.text_align|defined('center') }}">
+      {{ dump(theme_config.fluid_container) }}
       {{ content }}
-  </div>
-  <div class="container-fluid">
+    </div>
     <div class="row items">
         {% for child in collection %}
             {% include 'partials/layouts/' ~ page.header.layout|defined('boxed') ~ '.html.twig' with {'parent': page, 'page': child } %}
         {% endfor %}
     </div>
+    {% if config.plugins.pagination.enabled and collection.params.pagination %}
+        {% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
+    {% endif %}
 
-      {% if page.header.show_more %}
-          {% set show_more_page = page.find(page.header.show_more) %}
-        <div class="row show-more">
-          <div class="col-12 text-center">
-            <a href="{{ show_more_page.url(true) }}"
-               class="btn btn-lg {{ bsTools.buttonStyle(page.header.style|defined('light'), true, true) }}">
-                {{ 'BOOTSTRAP_BLOG.MODULAR.SEE_MORE_IN'|t(show_more_page.title) }}
-            </a>
-          </div>
+    {% if page.header.show_more %}
+      {% set show_more_page = page.find(page.header.show_more) %}
+      <div class="row show-more">
+        <div class="col-12 text-center">
+          <a href="{{ show_more_page.url }}"
+              class="btn btn-lg btn-outline-primary">
+              {{ 'BOOTSTRAP_BLOG.MODULAR.SEE_MORE_IN'|t(show_more_page.title) }}
+          </a>
         </div>
-      {% endif %}
+      </div>
+    {% endif %}
   </div>
 </div>

@@ -8,6 +8,10 @@
         rgba(0,0,0,.2)
         ;
 
+        a:hover {
+            text-decoration: none;
+        }
+
         .masonry-overlay {
             position: absolute;
             top: 0;
@@ -51,6 +55,18 @@
             .btn-group:last-child {
                 margin-left: $spacer * .2;
             }
+        }
+    }
+}
+
+@each $color, $value in $theme-colors {
+
+    .item-masonry .card .bg-#{$color} {
+
+        .card-title,
+        p,
+        a {
+            color: color-yiq($value);
         }
     }
 }

@@ -1,5 +1,7 @@
 .navbar {
-    box-shadow: 0 4px 2px -2px #8080803d;
+    &.fixed-top {
+        box-shadow: 0 4px 2px -2px #8080803d;
+    }
     .navbar-nav {
         .nav-item.dropdown-split-menu {
             .nav-link.dropdown-toggle-split {
@@ -13,6 +15,46 @@
         }
         .dropdown #languageSelector .dropdown-menu {
             position: absolute;
+        }
+    }
+}
+
+@each $color, $value in $theme-colors {
+    // Navbar
+    .navbar.bg-#{$color} {
+
+        > a,
+        .nav-brand {
+            color: color-yiq($value);
+        }
+
+        .navbar-nav {
+            .nav-link {
+                color: scale-color(color-yiq($value), $alpha: -30%);
+            }
+
+            .active > .nav-link,
+            .nav-link:hover,
+            .nav-link:active,
+            .nav-link:focus
+            {
+                color: color-yiq($value);
+            }
+        }
+
+        .navbar-toggler {
+            border-color: scale-color(color-yiq($value), $alpha: -80%);
+            outline: 0;
+
+            .navbar-toggler-icon {
+                //background-image: $navbar-light-toggler-icon-bg;
+            
+                @if (theme-style-inverse($color) != 'light') {
+                    background-image: $navbar-light-toggler-icon-bg;
+                } @else {
+                    background-image: $navbar-dark-toggler-icon-bg;
+                }
+            }
         }
     }
 }

@@ -1,4 +1,8 @@
-@function color-wib($color, $custom: null, $inversed: false) {
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+@function color-yiq-d($color, $custom: null, $inversed: false) {
     $r: red($color);
     $g: green($color);
     $b: blue($color);
@@ -9,13 +13,34 @@
         @if ($custom) {
             @return $custom;
         } @else {
-            @return #111;
+            @return #212529;
         }
     } @else {
-        @if ($custom) {
-            @return $custom;
+        @return #fff;
+    }
+}
+
+@function theme-color-inverted($theme, $default: null, $level: 0) {
+    $color: theme-color-level($theme, $level);
+    @return color-yiq-d($color, $default);
+}
+
+@function theme-style-inverse($theme, $default: null) {
+    $color: theme-color($theme);
+
+    $r: red($color);
+    $g: green($color);
+    $b: blue($color);
+
+    $yiq: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
+
+    @if ($yiq >= 150) {
+        @if ($default) {
+            @return $default;
         } @else {
-            @return #fff;
+            @return 'dark';
         }
+    } @else {
+        @return 'light';
     }
 }

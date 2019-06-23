@@ -1,5 +1,4 @@
 {% set theme_config = attribute(config.themes, config.system.pages.theme) %}
-{% import "macros/bootstrap_tools.html.twig" as bsTools %}
 <!DOCTYPE html>
 <html lang="{{ grav.language.getActive ?: theme_config.default_lang }}">
 <head>
@@ -25,7 +24,12 @@
 </head>
 <body id="top" class="{{ page.header.body_classes }}{% if theme_config.navbar.sticky %} sticky{% endif %}">
 {% block header %}
-    <nav class="navbar navbar-expand-md {{ bsTools.navbarStyle(page.header.style, theme_config.navbar.style, theme_config.navbar.override_page_style)|trim }} {% if theme_config.navbar.sticky %}fixed-top{% endif %}"
+    {% set navbarStyle = theme_config.navbar.style %}
+    {% if theme_config.navbar.override_page_style and page.header.style %}
+        {% set navbarStyle = page.header.style %}
+    {% endif %}
+
+    <nav class="navbar navbar-expand-md {{ 'bg-' ~ navbarStyle}}{% if theme_config.navbar.sticky %} fixed-top{% endif %}"
          role="navigation"
          {% if theme_config.navbar.background_color %}style="background-color:{{ theme_config.navbar.background_color }}"{% endif %}>
         <a class="navbar-brand" href="{{ base_url == '' ? '/' : base_url }}">
@@ -60,8 +64,8 @@
 {% endblock %}
 
 {% block footer %}
-    <footer class="footer {{ bsTools.style(theme_config.footer.style) }}">
-        <div class="container">
+    <footer class="footer{% if theme_config.footer.style %}{{ ' bg-' ~ theme_config.footer.style }}{% endif %}">
+        <div class="container{% if theme_config.fluid_container %}-fluid{% endif %}">
             <div class="d-flex flex-row justify-content-center">
                 {% if theme_config.footer.legal %}
                     <div class="footer-legal mr-auto">{{ theme_config.footer.legal|raw }}</div>

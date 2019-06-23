@@ -53,7 +53,7 @@
     {% endif %}
 </div>
 <script>
-    $('#{{ page.id }}').carousel({
+    $('#{{ carouselId }}').carousel({
         interval: {{ page.header.slide_interval|default(5000) }}
     })
 </script>

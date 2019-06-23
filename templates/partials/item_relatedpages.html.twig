@@ -8,14 +8,14 @@
         {% set related_image_media = related.media.images|first %}
     {% endif %}
     <div class="col-12 col-md-6 col-lg-4">
-        <div class="card my-3">
+        <div class="card {% if related.header.style %}{{ ' bg-' ~ related.header.style }}{% endif %}">
             {% if related_image_file %}
                 {{ related_image_media.html(related.title, related.title, 'card-img-top') }}
             {% endif %}
             <div class="card-body">
                 <h5 class="card-title">{{ related.title }}</h5>
-                <p class="card-text">{{ related.summary|truncate(40) }}</p>
-                <a class="btn btn-outline-primary" href="{{ related.url }}" title="{{ related.title }}">
+                <div class="card-text">{{ related.summary|truncate(45, true) }}</div>
+                <a class="btn btn-outline-primary stretched-link" href="{{ related.url }}" title="{{ related.title }}">
                     {{ 'BOOTSTRAP_BLOG.MODULAR.READ_MORE'|t }}
                 </a>
             </div>

@@ -1,10 +1,10 @@
-<div class="modular-row py-5 {{ bsTools.style(page.header.style) }} {{ page.header.classes }}">
+<div class="modular-row py-5 {{ 'bg-' ~ page.header.style }} {{ page.header.classes }}">
   <div class="container">
     <div class="row">
-      <div class="col-12 text-{{ page.header.text_align|defined('center') }}">
+      <div class="content {{ 'col-' ~ page.header.cols|defined('12') }} {{ 'text-' ~ page.header.text_align|defined('center') }}">
           {{ content }}
       </div>
-      <div class="col-12">
+      <div class="col form">
           {% include "forms/form.html.twig" %}
       </div>
     </div>

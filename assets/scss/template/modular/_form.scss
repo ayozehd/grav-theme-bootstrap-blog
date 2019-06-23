@@ -1,0 +1,15 @@
+
+@each $color, $value in $theme-colors {
+    .modular-row.bg-#{$color} .form {
+
+        .form-label label {
+            color: color-yiq($value);
+        }
+
+        .btn.btn-outline-primary {
+            $formButtonStyle: theme-style-inverse($color);
+            @extend .btn-outline-#{$formButtonStyle};
+        }
+
+    }
+}

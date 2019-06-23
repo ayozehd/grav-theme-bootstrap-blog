@@ -1,10 +1,15 @@
 .footer {
-  padding-top: $spacer;
-  padding-bottom: $spacer;
+    padding-top: $spacer;
+    padding-bottom: $spacer;
+}
 
-  .footer-legal {
-    color: $gray-500;
-  }
+@each $color, $value in $theme-colors {
+    .footer.bg-#{$color} {
+            color: color-yiq($value);
+        .footer-legal {
+            color: scale-color(color-yiq($value), $alpha: -20%);
+        }
+    }
 }
 
 .btn.back-to-top {

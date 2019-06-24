@@ -13787,6 +13787,12 @@ a.text-dark {
   -webkit-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5); }
 
+.box-shadow, .box-shadow-outside {
+  box-shadow: 0 12px 24px -6px rgba(0, 0, 0, 0.56), 0 4px 18px 0 rgba(0, 0, 0, 0.1), 0 8px 12px -5px rgba(0, 0, 0, 0.2); }
+
+.box-shadow-inset {
+  box-shadow: 0 0 24px -6px rgba(0, 0, 0, 0.56) inset, 0 0 18px 0 rgba(0, 0, 0, 0.1) inset, 0 0 12px -5px rgba(0, 0, 0, 0.2) inset; }
+
 .navbar.fixed-top {
   box-shadow: 0 4px 2px -2px #8080803d; }
 .navbar .navbar-nav .nav-item.dropdown-split-menu .nav-link.dropdown-toggle-split {
@@ -15051,94 +15057,94 @@ a.text-dark {
     .modular-row.jumbotron.bg-dark .content a:hover {
       color: #e9ecef; }
 
-.modular-row.bg-magenta .form .form-label {
+.modular-row.bg-magenta .form .form-label label {
   color: #fff; }
 
-.modular-row.bg-wood .form .form-label {
+.modular-row.bg-wood .form .form-label label {
   color: #212529; }
 
-.modular-row.bg-gold .form .form-label {
+.modular-row.bg-gold .form .form-label label {
   color: #212529; }
 
-.modular-row.bg-chocolate .form .form-label {
+.modular-row.bg-chocolate .form .form-label label {
   color: #fff; }
 
-.modular-row.bg-sapphire .form .form-label {
+.modular-row.bg-sapphire .form .form-label label {
   color: #212529; }
 
-.modular-row.bg-sea .form .form-label {
+.modular-row.bg-sea .form .form-label label {
   color: #fff; }
 
-.modular-row.bg-seaweed .form .form-label {
+.modular-row.bg-seaweed .form .form-label label {
   color: #fff; }
 
-.modular-row.bg-pastel .form .form-label {
+.modular-row.bg-pastel .form .form-label label {
   color: #212529; }
 
-.modular-row.bg-silver .form .form-label {
+.modular-row.bg-silver .form .form-label label {
   color: #212529; }
 
-.modular-row.bg-blue .form .form-label {
+.modular-row.bg-blue .form .form-label label {
   color: #fff; }
 
-.modular-row.bg-indigo .form .form-label {
+.modular-row.bg-indigo .form .form-label label {
   color: #fff; }
 
-.modular-row.bg-purple .form .form-label {
+.modular-row.bg-purple .form .form-label label {
   color: #fff; }
 
-.modular-row.bg-pink .form .form-label {
+.modular-row.bg-pink .form .form-label label {
   color: #fff; }
 
-.modular-row.bg-red .form .form-label {
+.modular-row.bg-red .form .form-label label {
   color: #fff; }
 
-.modular-row.bg-orange .form .form-label {
+.modular-row.bg-orange .form .form-label label {
   color: #212529; }
 
-.modular-row.bg-yellow .form .form-label {
+.modular-row.bg-yellow .form .form-label label {
   color: #212529; }
 
-.modular-row.bg-green .form .form-label {
+.modular-row.bg-green .form .form-label label {
   color: #fff; }
 
-.modular-row.bg-teal .form .form-label {
+.modular-row.bg-teal .form .form-label label {
   color: #fff; }
 
-.modular-row.bg-cyan .form .form-label {
+.modular-row.bg-cyan .form .form-label label {
   color: #fff; }
 
-.modular-row.bg-white .form .form-label {
+.modular-row.bg-white .form .form-label label {
   color: #212529; }
 
-.modular-row.bg-gray .form .form-label {
+.modular-row.bg-gray .form .form-label label {
   color: #fff; }
 
-.modular-row.bg-gray-dark .form .form-label {
+.modular-row.bg-gray-dark .form .form-label label {
   color: #fff; }
 
-.modular-row.bg-primary .form .form-label {
+.modular-row.bg-primary .form .form-label label {
   color: #fff; }
 
-.modular-row.bg-secondary .form .form-label {
+.modular-row.bg-secondary .form .form-label label {
   color: #fff; }
 
-.modular-row.bg-success .form .form-label {
+.modular-row.bg-success .form .form-label label {
   color: #fff; }
 
-.modular-row.bg-info .form .form-label {
+.modular-row.bg-info .form .form-label label {
   color: #fff; }
 
-.modular-row.bg-warning .form .form-label {
+.modular-row.bg-warning .form .form-label label {
   color: #212529; }
 
-.modular-row.bg-danger .form .form-label {
+.modular-row.bg-danger .form .form-label label {
   color: #fff; }
 
-.modular-row.bg-light .form .form-label {
+.modular-row.bg-light .form .form-label label {
   color: #212529; }
 
-.modular-row.bg-dark .form .form-label {
+.modular-row.bg-dark .form .form-label label {
   color: #fff; }
 
 .modular .modular-row {

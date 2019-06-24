@@ -43,7 +43,7 @@ en:
                 SHOW_PREV_NEXT_BUTTONS: Show Previous/Next buttons
                 SHOW_PREV_NEXT_BUTTONS_HELP: At the end of page's content, 2 buttons let you navigate between pages
                 RELATED_PAGES_BOTTOM: Related Pages
-                RELATED_PAGES_BOTTOM: Enable Related Pages plugin at bottom of items
+                RELATED_PAGES_BOTTOM_HELP: Enable Related Pages plugin at bottom of items
                 ENABLE_COMMENTS: Enable comments
                 ENABLE_COMMENTS_HELP: Add a comments forum at the end of each page
                 DISQUS_SHORTNAME: Disqus shortname
@@ -147,6 +147,7 @@ en:
             CONTINUE_READING: Continue reading
             NEXT: Next
             PREVIOUS: Previous
+            READING_TIME: Reading time
         TAXONOMY:
             TAGS: Tags
             CATEGORIES: Categories
@@ -225,6 +226,8 @@ es:
                 FEATURED_IMAGE_HELP: Muestra automáticamente la primera imagen de la página. Desactívalo para un mayor control de tu contenido markdown.
                 SHOW_PREV_NEXT_BUTTONS: Mostrar botones anterior/siguiente
                 SHOW_PREV_NEXT_BUTTONS_HELP: Al final del contenido, 2 botones nos permitirán navegar entre las páginas
+                RELATED_PAGES_BOTTOM: Páginas relacionadas
+                RELATED_PAGES_BOTTOM_HELP: Activa el plugin Páginas Relacionadas al final de las páginas
                 ENABLE_COMMENTS: Activar comentarios
                 ENABLE_COMMENTS_HELP: Incluye un foro de comentarios al final de cada página
                 DISQUS_SHORTNAME: 'Disqus <em>shortname</em>'
@@ -311,14 +314,14 @@ es:
             WE_USE_BOOTSTRAP_COLORS: 'Utilizamos el patrón de colores de <a href="https://getbootstrap.com/docs/4.0/utilities/colors/">Bootstrap</a>'
             TAKE_A_LOOK_TO_BOOTSTRAP_STYLES: '<em>Echa un vistazo a los colores de <a href="https://getbootstrap.com/docs/4.0/utilities/colors/#background-color" target="_blank">Bootstrap</a></em>'
             BOOTSTRAP_STYLES:
-                LIGHT: Claro
-                DARK: Oscuro
-                PRIMARY: Primario
-                SECONDARY: Secundario
+                LIGHT: Light
+                DARK: Dark
+                PRIMARY: Primary
+                SECONDARY: Secondary
                 INFO: Info
-                SUCCESS: Éxito
-                WARNING: Aviso
-                DANGER: Peligro
+                SUCCESS: Success
+                WARNING: Warning
+                DANGER: Danger
                 NONE: Ninguno
         DATE:
             MONTHS: [Enero,Febrero,Marzo,Abril,Mayo,Junio,Julio,Agosto,Septiembre,Octubre,Noviembre,Diciembre]
@@ -327,6 +330,7 @@ es:
             CONTINUE_READING: Continuar leyendo
             NEXT: Siguiente
             PREVIOUS: Anterior
+            READING_TIME: Tiempo de lectura
         TAXONOMY:
             TAG: Etiqueta
             TAGS: Etiquetas

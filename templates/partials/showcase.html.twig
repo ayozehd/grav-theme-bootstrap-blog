@@ -1,7 +1,3 @@
-{% import "macros/bootstrap_tools.html.twig" as bsTools %}
-
-{% set showcase_image_width  = page.header.image_width|defined(1200) %}
-{% set showcase_image_height = page.header.image_height|defined(800) %}
 {% set showcase_image_file = page.header.image_file %}
 {% set showcase_image_actions = page.header.image_actions %}
 
@@ -17,19 +13,26 @@
             {% set showcase_image = attribute( showcase_image, key, arg|split(',')|default([]) ) %}
         {% endfor %}
     {% else %}
-        {% set showcase_image = showcase_image.cropResize(showcase_image_width,showcase_image_height).contrast(20).brightness(-80).gaussianBlur(1.5) %}
+        {% set showcase_image = showcase_image.contrast(20).brightness(-80).gaussianBlur(2) %}
     {% endif %}
-<section class="modular-row showcase text-{{ page.header.style|defined('light') }}" style="background-image: url({{ showcase_image.url }});">
+<section class="modular-row showcase {{ 'bg-' ~ page.header.style|defined('dark') }}" style="background-image: url({{ showcase_image.url }});">
     {% else %}
-    <div class="modular-row box-inset-shadow showcase-text {{ bsTools.style(page.header.style|defined('primary')) }}">
+    <div class="modular-row box-inset-shadow showcase-text {{ 'bg-' ~ page.header.style|defined('primary') }}">
         {% endif %}
         <div class="container">
             <div class="row">
-                <div class="col text-{{ page.header.align|defined('center')}}">
-                    {{ content }}
+                <div class="col">
+                    <div class="content text-{{ page.header.text_align|defined('center') }}">
+                        {{ content }}
+                    </div>
+                    <div class="buttons text-{{ page.header.buttons_align|defined('center') }}">
                     {% for button in page.header.buttons %}
-                        <a class="btn btn-{% if button.no_outline != true %}outline-{% endif %}{{ button.style|defined('light') }} btn-{{ button.size|defined('lg') }}" href="{{ button.url }}">{{ button.text }}</a>
+                        <a href="{{ button.url }}"
+                         class="btn btn-{% if button.no_outline != true %}outline-{% endif %}{{ button.style|defined('light') }} btn-{{ button.size|defined('lg') }}">
+                            {{ button.text }}
+                        </a>
                     {% endfor %}
+                    </div>
                 </div>
             </div>
         </div>

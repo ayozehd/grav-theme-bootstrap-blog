@@ -2,8 +2,7 @@
     {% for p in page.children.visible %}
         {% set current_page = (p.active or p.activeChild) ? 'active' : '' %}
         {% if p.children.visible.count > 0 %}
-            {% set dropdown_separator = p.header.split_menu %}
-            {% if dropdown_separator %}
+            {% if p.header.split_menu %}
                 <li class="nav-item dropdown dropdown-split-menu {{ current_page }}">
                     <div class="btn-group">
                         <a class="nav-link" href="{{ p.url }}">
@@ -12,7 +11,7 @@
                         </a>
                         <a href="#" id="dropdown-{{ p.id }}" class="nav-link dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false"></a>
-                        <div class="dropdown-menu" arial-labelledby="dropdown-{{ p.id }}">
+                        <div class="dropdown-menu{% if p.header.menu_right %} dropdown-menu-right{% endif %}" arial-labelledby="dropdown-{{ p.id }}">
                             {% for c in p.children.visible %}
                                 <a class="dropdown-item" href="{{ c.url }}">
                                     {% if c.header.icon %}<i class="fas fa-{{ c.header.icon }}"></i>{% endif %}
@@ -29,7 +28,7 @@
                         {% if p.header.icon %}<i class="fas fa-{{ p.header.icon }}"></i>{% endif %}
                         {{ p.menu }}
                     </a>
-                    <div class="dropdown-menu" arial-labelledby="dropdown-{{ p.id }}">
+                    <div class="dropdown-menu{% if p.header.menu_right %} dropdown-menu-right{% endif %}" arial-labelledby="dropdown-{{ p.id }}">
                         {% for c in p.children.visible %}
                             <a class="dropdown-item" href="{{ c.url }}">
                                 {% if c.header.icon %}<i class="fas fa-{{ c.header.icon }}"></i>{% endif %}

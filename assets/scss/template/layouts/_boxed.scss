@@ -1,45 +1,55 @@
 .item-boxed {
-  margin-bottom: $spacer;
+    margin-bottom: $spacer;
 
-  img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    @extend .img-fluid;
-  }
-
-  .card-title {
-    margin-bottom: $spacer * .2;
-    .title {
-      margin-bottom: 0;
-
-      a {
-        color: $dark;
-      }
-
-      .readingtime {
-        font-size: 14px;
-        font-weight: 400;
-        padding-left: $spacer * .5;
-      }
-    }
-  }
-
-  .categories {
-    margin-bottom: 0;
-  }
-
-  .summary {
-    margin-bottom: 0;
-  }
-  .card-footer {
-    .tags {
-      font-size: 90%;
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        @extend .img-fluid;
     }
 
-    small {
-        cursor: default;
+    .card-title {
+        margin-bottom: $spacer * .2;
+        .title {
+            margin-bottom: 0;
+
+            a {
+                color: $dark;
+            }
+
+            .readingtime {
+                display: inline-block;
+                font-size: 14px;
+                font-weight: 400;
+                padding-left: $spacer * .5;
+            }
+        }
     }
-  }
+
+    .categories {
+        margin-bottom: 0;
+
+        @each $color, $value in $theme-colors {
+            .badge.badge-#{$color} {
+
+                &:hover {
+                    background-color: theme-color-level($color, 2);
+                }
+            }
+        }
+    }
+
+    .summary {
+        margin-bottom: 0;
+    }
+    .card-footer {
+        .tags {
+        font-size: 90%;
+        }
+
+        small {
+            cursor: default;
+        }
+    }
 
 }

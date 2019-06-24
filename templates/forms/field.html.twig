@@ -22,10 +22,10 @@
                         {% block label %}
                             {% if field.help %}
                                 {% if field.markdown %}
-                                    <span class="tooltip" data-asTooltip-position="w"
+                                    <span data-toggle="tooltip" class="tooltip" data-asTooltip-position="w"
                                           title="{{ field.help|t|markdown(false)|e }}">{{ field.label|markdown(false)|default(field.name|capitalize)|t }}</span>
                                 {% else %}
-                                    <span class="tooltip" data-asTooltip-position="w"
+                                    <span data-toggle="tooltip" class="tooltip" data-asTooltip-position="w"
                                           title="{{ field.help|t|e }}">{{ field.label|default(field.name|capitalize)|t }}</span>
                                 {% endif %}
                             {% else %}

@@ -1,34 +1,66 @@
 .item-content {
-  padding-bottom: $spacer;
+    padding-bottom: $spacer;
 
-  .item-heading {
-    padding: $spacer*.5 0;
+    .item-heading {
+        padding: $spacer*.5 0;
 
-    time,
-    .readingtime {
-        cursor: default;
+        time,
+        .readingtime {
+            cursor: default;
+        }
+
+        .item-categories {
+
+            @each $color, $value in $theme-colors {
+                .badge.badge-#{$color} {
+                    background-color: scale-color(theme-color($color), $alpha: -15%);
+                    
+                    &:hover {
+                        background-color: theme-color-level($color, 2);
+                    }
+                }
+            }
+        }
     }
-  }
 
-  h2.item-title {
-    margin-bottom: 0;
-  }
+    h2.item-title {
+        margin-bottom: 0;
+    }
 
-  .comments {
-    margin-top: $spacer * .5;
-  }
+    .comments {
+        margin-top: $spacer;
+    }
 
-  img {
-    @extend .img-fluid;
-    margin-bottom: $spacer *.5;
-  }
+    img {
+        @extend .img-fluid;
+        margin-bottom: $spacer *.5;
+    }
 
-  table {
-    @extend .table;
-  }
+    table {
+        @extend .table;
+    }
 
-  blockquote {
-    @extend .blockquote;
-  }
+    blockquote {
+        @extend .blockquote;
+    }
+
+    .item-bottom-relatedpages {
+        margin-top: $spacer * 1.5;
+
+        @each $color, $value in $theme-colors {
+            .card.bg-#{$color} {
+                .card-title,
+                .card-text {
+                    color: color-yiq($value);
+                }
+
+                @if($color != 'light') {
+                    .btn.stretched-link {
+                        @extend .btn-outline-#{theme-style-inverse($color)};
+                    }
+                }
+            }
+        }
+    }
 
 }

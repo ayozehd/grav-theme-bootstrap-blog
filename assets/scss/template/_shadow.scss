@@ -1,0 +1,11 @@
+.box-shadow, .box-shadow-outside {
+    box-shadow: 0 12px 24px -6px rgba(0,0,0,.56),
+                0 4px 18px 0 	rgba(0,0,0,.10),
+                0 8px 12px -5px rgba(0,0,0,.2);
+}
+
+.box-shadow-inset {
+    box-shadow: 0 0 24px -6px rgba(0,0,0,.56) inset,
+                0 0 18px 0 	rgba(0,0,0,.10) inset,
+                0 0 12px -5px rgba(0,0,0,.2) inset;
+}

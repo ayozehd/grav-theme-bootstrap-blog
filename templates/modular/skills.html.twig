@@ -1,7 +1,6 @@
-{% import "macros/bootstrap_tools.html.twig" as bsTools %}
-<div id="{{ page.id }}" class="modular-row {{ bsTools.style(page.header.style) }} {{ page.header.class }}">
+<div id="{{ page.id }}" class="modular-row bg-{{ page.header.style|defined('light') }} {{ page.header.class }}">
     <div class="container">
-        <div class="text-{{ page.header.text_align|default('center') }}">
+        <div class="content text-{{ page.header.text_align|default('center') }}">
             {{ content }}
         </div>
         <div class="row justify-content-center">

@@ -1,15 +1,36 @@
 @import "showcase";
 @import "features";
-@import "callout";
+@import "text";
+@import "form";
 
-.modular-row {
-  margin-bottom: 0;
-  margin-top: 0;
+.modular {
+    .modular-row {
+        margin-bottom: 0;
+        margin-top: 0;
 
-  padding-top: $spacer * 3;
-  padding-bottom: $spacer * 3;
+        padding-top: $spacer * 3;
+        padding-bottom: $spacer * 3;
 
-  .show-more {
-    margin-top: $spacer;
-  }
+        .show-more {
+            margin-top: $spacer;
+        }
+    }
+
+    @each $color, $value in $theme-colors {
+        .modular-row.bg-#{$color} {
+            .content {
+                color: color-yiq($value);
+            }
+
+            .show-more .btn-outline-primary {
+                color: color-yiq($value);
+                border-color: color-yiq($value);
+
+                &:hover {
+                    color: invert(color-yiq($value));
+                    background-color: color-yiq($value);
+                }
+            }
+        }
+    }
 }

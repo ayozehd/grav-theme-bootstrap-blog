@@ -1,0 +1,38 @@
+.modular >
+.modular-row.jumbotron {
+    padding: $spacer*2, $spacer;
+    border-radius: 0;
+
+    img {
+        @extend .img-fluid;
+    }
+
+    @include media-breakpoint-up(md) {
+        padding: $spacer * 5;
+    }
+}
+
+@each $color, $value in $theme-colors {
+    .modular-row.jumbotron.bg-#{$color} {
+        .content {
+            @if($color != 'light') {
+                color: color-yiq($value);
+
+                a {
+                    font-weight: 600;
+                    color: color-yiq($value);
+                    &:hover {
+                        color: $gray-200;
+                    }
+
+                    @if(theme-style-inverse($color) != 'light') {
+                        color: theme-color-level($color, 6);
+                        &:hover {
+                            color: theme-color-level($color, 4);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

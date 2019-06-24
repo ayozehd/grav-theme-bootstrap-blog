@@ -1,3 +1,63 @@
+$theme-colors: map-merge($colors, $theme-colors);
+
 .sticky {
     padding-top: 56px;
+}
+
+@each $color, $value in $theme-colors {
+    // text
+    .text-#{$color} {
+        color: $value;
+    }
+    // border
+    .border-#{$color} {
+        border-color: $value;
+    }
+    // background
+    .bg-#{$color} {
+        background-color: $value;
+    }
+
+    // buttons
+    .btn.btn-#{$color} {
+        background-color: $value;
+        color: color-yiq($value);
+    }
+
+    // buttons outline
+    .btn.btn-outline-#{$color} {
+        border-color: $value;
+        color: theme-color-level($color, 1);
+
+        &:hover {
+            color: color-yiq($value);
+            background-color: $value;
+        }
+    }
+
+    // back to top
+    #back-to-top.btn-#{$color} {
+        color: color-yiq($value);
+    }
+
+    // badge
+    .badge-#{$color} {
+        background: $value;
+        color: color-yiq($value);
+    }
+    a.badge-#{$color}:hover {
+        color: color-yiq($value);
+        background-color: theme-color-level($color, 1);
+        text-decoration: none;
+    }
+
+    // Links
+    .text-#{$color} a,
+    a.text-#{$color} {
+        color: $value;
+
+        &:hover {
+            color: theme-color-level($color, 3);
+        }
+    }
 }

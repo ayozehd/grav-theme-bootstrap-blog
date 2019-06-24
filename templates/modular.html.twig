@@ -3,17 +3,11 @@
 {% set show_onpage_menu = header.onpage_menu == true or header.onpage_menu is null %}
 {% macro pageLinkName(text) %}{{ text|lower|replace({' ':'_'}) }}{% endmacro %}
 
-{% block javascripts %}
-    {{ parent() }}
-{% endblock %}
-
 {% block content %}
     {{ page.content }}
-    <div class="modular">
-        {% for module in page.collection() %}
-            <section id="{{ _self.pageLinkName(module.menu) }}">
-                {{ module.content }}
-            </section>
-        {% endfor %}
-    </div>
+    {% for module in page.collection() %}
+        <section class="modular" id="{{ _self.pageLinkName(module.menu) }}">
+            {{ module.content }}
+        </section>
+    {% endfor %}
 {% endblock %}

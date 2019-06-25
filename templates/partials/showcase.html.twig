@@ -16,24 +16,28 @@
         {% set showcase_image = showcase_image.contrast(20).brightness(-80).gaussianBlur(2) %}
     {% endif %}
 <section class="modular-row showcase {{ 'bg-' ~ page.header.style|defined('dark') }}" style="background-image: url({{ showcase_image.url }});">
-    {% else %}
-    <div class="modular-row box-inset-shadow showcase-text {{ 'bg-' ~ page.header.style|defined('primary') }}">
-        {% endif %}
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <div class="content text-{{ page.header.text_align|defined('center') }}">
-                        {{ content }}
-                    </div>
-                    <div class="buttons text-{{ page.header.buttons_align|defined('center') }}">
+{% else %}
+<section class="modular-row box-inset-shadow showcase-text {{ 'bg-' ~ page.header.style|defined('primary') }}">
+{% endif %}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="content text-{{ page.header.text_align|defined('center') }}">
+                    {{ content }}
+                </div>
+                {% if page.header.buttons %}
+                <div class="buttons text-{{ page.header.buttons_align|defined('center') }}">
                     {% for button in page.header.buttons %}
-                        <a href="{{ button.url }}"
-                         class="btn btn-{% if button.no_outline != true %}outline-{% endif %}{{ button.style|defined('light') }} btn-{{ button.size|defined('lg') }}">
+                        <a href="{{ button.url }}" 
+                            class="btn btn-{{ button.size|defined('lg') }} btn-{{ (button.is_outline is same as(false) ? '' : 'outline-') ~ button.style|defined(page.header.style|defined('light')) }}">
+                            {% if button.icon %}
+                                <i class="fas fa-{{ button.icon }}"></i>
+                            {% endif %}
                             {{ button.text }}
                         </a>
                     {% endfor %}
-                    </div>
                 </div>
+                {% endif %}
             </div>
         </div>
     </div>

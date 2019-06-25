@@ -1,41 +1,39 @@
-{% embed 'partials/base.html.twig' %}
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
 
     {% set collection = page.collection() %}
 
-    {% block content %}
+    {% if theme_config.sidebar.enabled is not sameas(false) and page.header.sidebar.enabled is not sameas(false) %}
+        {% set sidebar = true %}
+    {% else %}
+        {% set sidebar = false %}
+    {% endif %}
 
-        {% if theme_config.sidebar.enabled is not sameas(false) and page.header.sidebar.enabled is not sameas(false) %}
-            {% set sidebar = true %}
-        {% else %}
-            {% set sidebar = false %}
+    {% include 'partials/showcase.html.twig' with { 'content':page.content } %}
+
+    <div class="container{% if theme_config.fluid_container %}-fluid{% endif %}">
+        {% if config.plugins.breadcrumbs.enabled %}
+            {% include 'partials/breadcrumbs.html.twig' %}
         {% endif %}
-
-        {% include 'partials/showcase.html.twig' with { 'content':page.content } %}
-
-        <div class="container{% if theme_config.fluid_container %}-fluid{% endif %}">
-            {% if config.plugins.breadcrumbs.enabled %}
-                {% include 'partials/breadcrumbs.html.twig' %}
-            {% endif %}
-            <div class="row">
-                <div class="col">
-                    <div class="row items">
-                        {% for child in collection %}
-                            {% include 'partials/layouts/' ~ page.header.layout|defined('boxed') ~ '.html.twig' with {'parent': page, 'page': child } %}
-                        {% endfor %}
-                    </div>
-                    {% if config.plugins.pagination.enabled and collection.params.pagination %}
-                        {% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
-                    {% endif %}
+        <div class="row">
+            <div class="col">
+                <div class="row items">
+                    {% for child in collection %}
+                        {% include 'partials/layouts/' ~ page.header.layout|defined('boxed') ~ '.html.twig' with {'parent': page, 'page': child } %}
+                    {% endfor %}
                 </div>
-                {% if sidebar %}
-                    <div id="sidebar" class="col-12 col-md-4 {% if theme_config.sidebar.align == 'left' %}order-md-first{% endif %}">
-                        <div class="sidebar-content {% if theme_config.sidebar.border %}border-{{ theme_config.sidebar.border }}{% endif %}">
-                            {% include 'partials/sidebar.html.twig' with { 'blog':page } %}
-                        </div>
-                    </div>
+                {% if config.plugins.pagination.enabled and collection.params.pagination %}
+                    {% include 'partials/pagination.html.twig' with {'base_url':page.url, 'pagination':collection.params.pagination} %}
                 {% endif %}
             </div>
+            {% if sidebar %}
+                <div id="sidebar" class="col-12 col-md-4 {% if theme_config.sidebar.align == 'left' %}order-md-first{% endif %}">
+                    <div class="sidebar-content {% if theme_config.sidebar.border %}border-{{ theme_config.sidebar.border }}{% endif %}">
+                        {% include 'partials/sidebar.html.twig' with { 'blog':page } %}
+                    </div>
+                </div>
+            {% endif %}
         </div>
-    {% endblock %}
-
-{% endembed %}
+    </div>
+{% endblock %}

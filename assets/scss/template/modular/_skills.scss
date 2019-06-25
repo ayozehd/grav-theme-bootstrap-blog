@@ -1,0 +1,10 @@
+@each $color, $value in $theme-colors {
+    .modular-row.bg-#{$color} {
+        .skills {
+            span {
+                color: color-yiq($value);
+            }
+        }
+
+    }
+}

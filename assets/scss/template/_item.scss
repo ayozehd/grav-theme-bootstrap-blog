@@ -1,51 +1,64 @@
-.item-content {
-    padding-bottom: $spacer;
-
-    .item-heading {
-        padding: $spacer*.5 0;
-
-        time,
-        .readingtime {
-            cursor: default;
-        }
-
-        .item-categories {
-
-            @each $color, $value in $theme-colors {
-                .badge.badge-#{$color} {
-                    background-color: scale-color(theme-color($color), $alpha: -15%);
-                    
-                    &:hover {
-                        background-color: theme-color-level($color, 2);
+.item {
+    .item-content {
+        padding-bottom: $spacer;
+    
+        .item-heading {
+            padding: $spacer*.5 0;
+    
+            time,
+            .readingtime {
+                cursor: default;
+            }
+    
+            .item-categories {
+    
+                @each $color, $value in $theme-colors {
+                    .badge.badge-#{$color} {
+                        background-color: scale-color(theme-color($color), $alpha: -15%);
+                        
+                        &:hover {
+                            background-color: theme-color-level($color, 2);
+                        }
                     }
                 }
             }
         }
+
+        h2.item-title {
+            margin-bottom: 0;
+        }
+    
+        img {
+            @extend .img-fluid;
+            margin-bottom: $spacer *.5;
+        }
+    
+        table {
+            @extend .table;
+        }
+    
+        blockquote {
+            @extend .blockquote;
+        }
     }
 
-    h2.item-title {
-        margin-bottom: 0;
-    }
-
-    .comments {
-        margin-top: $spacer;
-    }
-
-    img {
+    .featured-image img {
         @extend .img-fluid;
-        margin-bottom: $spacer *.5;
     }
 
-    table {
-        @extend .table;
-    }
+    .relatedpages {
+        margin-top: $spacer;
 
-    blockquote {
-        @extend .blockquote;
-    }
+        @include media-breakpoint-up(md) {
+            .col-12.col-md-6.col-lg-4 {
+                padding-right: $grid-gutter-width * .2 !important;
+                padding-left: $grid-gutter-width * .2 !important;
+            }
+        }
 
-    .item-bottom-relatedpages {
-        margin-top: $spacer * 1.5;
+        .card {
+            margin-bottom: $spacer * .5;
+        }
 
         @each $color, $value in $theme-colors {
             .card.bg-#{$color} {
@@ -63,4 +76,7 @@
         }
     }
 
+    .comments {
+        margin-top: $spacer;
+    }
 }

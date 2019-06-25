@@ -2,25 +2,25 @@
 <!DOCTYPE html>
 <html lang="{{ grav.language.getActive ?: theme_config.default_lang }}">
 <head>
-    {% block head %}
-        <meta charset="utf-8"/>
-        <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        {% include 'partials/metadata.html.twig' %}
-        {% set favicon = theme_config.favicon ? theme_config.favicon|first : { type:'image/png', path: url('theme://images/logo.png') } %}
-        <link rel="icon" type="{{ favicon.type }}" href="{{ url( favicon.path ) }}"/>
-        <link rel="canonical" href="{{ page.url(true, true) }}"/>
+{% block head %}
+    <meta charset="utf-8"/>
+    <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% include 'partials/metadata.html.twig' %}
+    {% set favicon = theme_config.favicon ? theme_config.favicon|first : { type:'image/png', path: url('theme://images/logo.png') } %}
+    <link rel="icon" type="{{ favicon.type }}" href="{{ url( favicon.path ) }}"/>
+    <link rel="canonical" href="{{ page.url(true, true) }}"/>
 
-        {% block stylesheets %}{% endblock %}
+    {% block stylesheets %}{% endblock %}
 
-        {% block javascripts %}{% endblock %}
+    {% block javascripts %}{% endblock %}
 
-        {% block assets deferred %}
-            {{ assets.css()|raw }}
-            {{ assets.js()|raw }}
-        {% endblock %}
-    {% endblock head %}
+    {% block assets deferred %}
+        {{ assets.css()|raw }}
+        {{ assets.js()|raw }}
+    {% endblock %}
+{% endblock head %}
 </head>
 <body id="top" class="{{ page.header.body_classes }}{% if theme_config.navbar.sticky %} sticky{% endif %}">
 {% block header %}
@@ -29,9 +29,8 @@
         {% set navbarStyle = page.header.style %}
     {% endif %}
 
-    <nav class="navbar navbar-expand-md {{ 'bg-' ~ navbarStyle}}{% if theme_config.navbar.sticky %} fixed-top{% endif %}"
-         role="navigation"
-         {% if theme_config.navbar.background_color %}style="background-color:{{ theme_config.navbar.background_color }}"{% endif %}>
+    <nav class="navbar navbar-expand-md {{ 'bg-' ~ navbarStyle}}{% if theme_config.navbar.sticky %} fixed-top{% endif %}" role="navigation"
+        {% if theme_config.navbar.background_color %}style="background-color:{{ theme_config.navbar.background_color }}"{% endif %}>
         <a class="navbar-brand" href="{{ base_url == '' ? '/' : base_url }}">
             {% if theme_config.navbar.image %}
                 {% set navbar_image = theme_config.navbar.image|first %}
@@ -59,12 +58,12 @@
     </nav>
 {% endblock %}
 
-{% block body %}
+<div class="wrapper">
     {% block content %}{% endblock %}
-{% endblock %}
+</div>
 
 {% block footer %}
-    <footer class="footer{% if theme_config.footer.style %}{{ ' bg-' ~ theme_config.footer.style }}{% endif %}">
+    <footer class="footer{% if theme_config.footer.style %} bg-{{ theme_config.footer.style }}{% endif %}">
         <div class="container{% if theme_config.fluid_container %}-fluid{% endif %}">
             <div class="d-flex flex-row justify-content-center">
                 {% if theme_config.footer.legal %}
@@ -75,10 +74,12 @@
         </div>
     </footer>
 {% endblock %}
+
 {% if theme_config.back_to_top_button %}
     <a id="back-to-top" href="#" class="btn btn-{{ page.header.style|defined('primary') }} btn-lg back-to-top" role="button" title="{{ 'BOOTSTRAP_BLOG.RETURN_TOP_PAGE'|t }}" data-toggle="tooltip"
        data-placement="left"><span class="fas fa-chevron-up"></span></a>
 {% endif %}
+
 {% block bottom %}
     {{ assets.js('bottom')|raw }}
 {% endblock %}

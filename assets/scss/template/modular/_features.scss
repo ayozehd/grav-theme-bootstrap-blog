@@ -1,8 +1,28 @@
-.feature {
-    text-align: center;
-    padding-bottom: $spacer;
+.modular-row {
+    .feature {
+        text-align: center;
+        padding-bottom: $spacer;
 
-    .feature-icon {
-        padding: $spacer;
+        .feature-icon {
+            padding: $spacer;
+        }
+    }
+}
+
+
+@each $color, $value in $theme-colors {
+    .modular-row.bg-#{$color} {
+        .feature {
+            text-align: center;
+            padding-bottom: $spacer;
+
+            .feature-icon {
+                padding: $spacer;
+            }
+
+            .feature-content {
+                color: color-yiq($value);
+            }
+        }
     }
 }

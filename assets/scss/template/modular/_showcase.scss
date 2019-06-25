@@ -39,8 +39,6 @@
         .content {
             color: color-yiq($value);
             @if($color != 'light') {
-                color: color-yiq($value);
-
                 a {
                     font-weight: 600;
                     color: color-yiq($value);
@@ -77,6 +75,4 @@
         }
 
     }
-
-    
 }

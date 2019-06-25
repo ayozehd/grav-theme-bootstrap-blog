@@ -44,7 +44,8 @@
 <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Item toolbar buttons">
     {% if page.taxonomy.tag %}
       <div class="item-tags d-inline-block">
-        <i class="fas fa-tags text-{{ page.header.style|defined('primary') }}"></i> {{ 'BOOTSTRAP_BLOG.TAXONOMY.TAGS'|t }}:
+        <i class="fas fa-tags text-{{ page.header.style|defined('primary') }}"></i> 
+		{{ 'BOOTSTRAP_BLOG.TAXONOMY.TAGS'|t }}:
           {% for tag in page.taxonomy.tag %}
             <a class="btn btn-sm {{ 'btn-outline-' ~ page.header.style|defined('dark') }}"
                href="{{ parent.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a>
@@ -67,8 +68,8 @@
 {% if theme_config.item.show_prev_next %}
 	<div class="d-flex flex-row py-3 mt-3">
 		{% if not page.isLast %}
-			<a class="btn {{ 'btn-outline-' ~ page.header.style|defined('primary') }}" href="{{ page.prevSibling.url }}"><i
-				class="fas fa-chevron-left"></i> {{ 'BOOTSTRAP_BLOG.ITEM.PREVIOUS'|t }}</a>
+			<a class="btn {{ 'btn-outline-' ~ page.header.style|defined('primary') }}" href="{{ page.prevSibling.url }}">
+			<i class="fas fa-chevron-left"></i> {{ 'BOOTSTRAP_BLOG.ITEM.PREVIOUS'|t }}</a>
 		{% endif %}
 		{% if not page.isFirst %}
 			<a class="ml-auto btn {{ 'btn-outline-' ~ page.header.style|defined('primary') }}"
@@ -78,14 +79,14 @@
 {% endif %}
 
 {% if config.plugins.relatedpages.enabled and theme_config.item.related_pages and related_pages|length > 0 %}
-    <div class="item-bottom-relatedpages row">
-        {% include 'partials/item_relatedpages.html.twig' %}
+    <div class="relatedpages row">
+        {% include 'partials/item_relatedpages.html.twig' with related_pages %}
     </div>
 {% endif %}
 
 {% set comments = array_merge(theme_config.comments, page.header.comments|default({})) %}
 {% if comments.enabled %}
-	<div class="comments">
-		{% include 'partials/comments.html.twig' with {'page':page, 'config': comments} %}
-	</div>
+<div class="comments">
+	{% include 'partials/comments.html.twig' with {'page':page, 'config': comments} %}
+</div>
 {% endif %}

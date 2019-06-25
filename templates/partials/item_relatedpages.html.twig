@@ -1,25 +1,27 @@
 {% for related_path, score in related_pages %}
     {% set related = grav['pages'].get(related_path) %}
     {% if related %}
-    {% set related_image_file = related.header.image_file %}
-    {% if related_image_file %}
-        {% set related_image_media = related.media.images[header_image_file] %}
-    {% else %}
-        {% set related_image_media = related.media.images|first %}
-    {% endif %}
-    <div class="col-12 col-md-6 col-lg-4">
-        <div class="card {% if related.header.style %}{{ ' bg-' ~ related.header.style }}{% endif %}">
-            {% if related_image_file %}
-                {{ related_image_media.html(related.title, related.title, 'card-img-top') }}
-            {% endif %}
-            <div class="card-body">
-                <h5 class="card-title">{{ related.title }}</h5>
-                <div class="card-text">{{ related.summary|truncate(45, true) }}</div>
-                <a class="btn btn-outline-primary stretched-link" href="{{ related.url }}" title="{{ related.title }}">
-                    {{ 'BOOTSTRAP_BLOG.MODULAR.READ_MORE'|t }}
-                </a>
+        {% set related_image_file = related.header.image_file %}
+        {% if related_image_file %}
+            {% set related_image_media = related.media.images[header_image_file] %}
+        {% else %}
+            {% set related_image_media = related.media.images|first %}
+        {% endif %}
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card{% if related.header.style %}{{ ' bg-' ~ related.header.style }}{% endif %}">
+                {% if related_image_file %}
+                <div class="card-img-top">
+                    {{ related_image_media.html }}
+                </div>
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ related.title }}</h5>
+                    <div class="card-text">{{ related.summary|striptags|truncate(45, true) }}</div>
+                    <a class="btn btn-outline-primary stretched-link" href="{{ related.url }}" title="{{ related.title }}">
+                        {{ 'BOOTSTRAP_BLOG.MODULAR.READ_MORE'|t }}
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
     {% endif %}
 {% endfor %}

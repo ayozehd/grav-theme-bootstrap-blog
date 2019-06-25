@@ -9,7 +9,7 @@
   <div class="card text-{{ page.header.page_text_align|default('center') }}">
       {{ header_image_media.html(page.title, '', 'card-img card-raised') }}
     <div
-        class="rounded {{ 'bg-'~ page.header.style|defined('light') }}{% if header_image_media %} card-img-overlay masonry-overlay{% else %}masonry-no-overlay{% endif %}">
+        class="rounded {{ 'bg-'~ page.header.style|defined('light') }}{% if header_image_media %} card-img-overlay masonry-overlay{% else %} masonry-no-overlay{% endif %}">
       <div class="h-100 d-flex flex-wrap justify-content-center align-items-center">
         <div class="my-auto">
           <a href="{{ page.url }}" class="stretched-link">

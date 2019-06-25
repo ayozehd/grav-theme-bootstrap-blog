@@ -1,3 +1,12 @@
+# v1.3.1
+## 25-6-2019
+
+1. [](#improved)
+  * Footer now is always aligned to the bottom of viewport
+2. [](#bugfix)
+  * Related pages summary broke HTML markup on truncating
+  * Masonry only-text items classnames spacing
+
 # v1.3
 ## 24-6-2019
 

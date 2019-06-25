@@ -1,7 +1,12 @@
 $theme-colors: map-merge($colors, $theme-colors);
+$navbar-boostrap-blog-height: 56px;
+
+body > .wrapper {
+    min-height: calc(100vh - #{$navbar-boostrap-blog-height} *2);
+}
 
 .sticky {
-    padding-top: 56px;
+    padding-top: $navbar-boostrap-blog-height;
 }
 
 @each $color, $value in $theme-colors {

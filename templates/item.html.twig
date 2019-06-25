@@ -13,15 +13,15 @@
             {% include 'partials/breadcrumbs.html.twig' %}
         {% endif %}
         <div class="row">
-            <div id="item" class="item-content col-12 {{ item_columns }}">
+            <div id="item" class="item col-12 {{ item_columns }}">
                 {% include 'partials/partial_item.html.twig' with {'parent':page.parent, 'truncate':false} %}
             </div>
             {% if sidebar %}
-                <div id="sidebar" class="col-12 col-md-4 {% if theme_config.sidebar.align == 'left' %}order-md-first{% endif %}">
-                    <div class="sidebar-content {% if theme_config.sidebar.border %}border-{{ theme_config.sidebar.border }}{% endif %}">
-                        {% include 'partials/sidebar.html.twig' with { 'blog':page.parent } %}
-                    </div>
+            <div id="sidebar" class="col-12 col-md-4{% if theme_config.sidebar.align == 'left' %} order-md-first{% endif %}">
+                <div class="sidebar-content {% if theme_config.sidebar.border %}border-{{ theme_config.sidebar.border }}{% endif %}">
+                    {% include 'partials/sidebar.html.twig' with { 'blog':page.parent } %}
                 </div>
+            </div>
             {% endif %}
         </div>
     </div>

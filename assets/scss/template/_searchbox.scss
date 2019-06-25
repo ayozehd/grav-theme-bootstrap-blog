@@ -1,0 +1,16 @@
+.input-searchbox-addon {
+    &:before {
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        font-weight: 900;
+        -webkit-font-smoothing: antialiased;
+        font-family: "Font Awesome\ 5 Free";
+        content: "\f002";
+        color: $gray-600;
+        position: absolute;
+        right: 25px;
+        top: 5px;
+    }
+}

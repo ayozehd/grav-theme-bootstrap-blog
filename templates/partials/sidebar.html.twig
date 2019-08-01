@@ -43,6 +43,12 @@
         {% include 'partials/archives.html.twig' with {'base_url':new_base_url} %}
     </div>
 {% endif %}
+{% if config.plugins.lastfm.enabled %}
+    <div class="sidebar-content">
+        <h4>{{ 'BOOTSTRAP_BLOG.SIDEBAR.LASTFM.HEADLINE'|t }}</h4>
+        {% include 'partials/lastfm.html.twig' %}
+    </div>
+{% endif %}
 {% if theme_config.sidebar.twitter.enabled %}
     <div class="sidebar-content">
         {% do assets.addJs('https://platform.twitter.com/widgets.js', { loading:'async', group: 'bottom'}) %}

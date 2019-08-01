@@ -1,3 +1,15 @@
+# v1.3.2
+## 01-08-2019
+
+1. [](#new)
+  * Added `item.text_align` theme option
+  * Added support for lastfm and sharer plugins
+2. [](#improved)
+  * Renamed skills template to bars
+3. [](#bugfix)
+  * Fixed a SASS compile error
+  * Fixed charset lang error in latest Grav version
+
 # v1.3.1
 ## 25-6-2019
 

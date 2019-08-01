@@ -40,6 +40,7 @@ en:
                 ITEMS: Items
                 FEATURED_IMAGE: Featured image
                 FEATURED_IMAGE_HELP: Automatically display first folder image on item pages. Disable it if you want full-control of your markdown content.
+                ITEMS_TEXT_ALIGN_HELP: Align item's text
                 SHOW_PREV_NEXT_BUTTONS: Show Previous/Next buttons
                 SHOW_PREV_NEXT_BUTTONS_HELP: At the end of page's content, 2 buttons let you navigate between pages
                 RELATED_PAGES_BOTTOM: Related Pages
@@ -97,9 +98,9 @@ en:
                 CAROUSEL_HIDE_CONTROLS_HELP: Hide prev/next buttons
                 CAROUSEL_SLIDE_INTERVAL: Slide interval
                 CAROUSEL_SLIDE_INTERVAL_HELP: Number miliseconds between autorotating slides. Set to 0 to avoid autoslide.
-                SKILLS: Skills
-                SKILLS_LIST: Skills List
-                SKILLS_LIST_HELP: Set a list of values to show progress bars
+                BARS: Bars
+                BARS_LIST: Bars List
+                BARS_LIST_HELP: Set a list of values to show progress bars
             ITEM:
                 TAB: Item
                 ITEM_STYLE: Item style
@@ -176,6 +177,8 @@ en:
                 HEADLINE: Popular Tags
             ARCHIVES:
                 HEADLINE: Archives
+            LASTFM:
+                HEADLINE: Listening now...
             SYNDICATE:
                 HEADLINE: Feed
         FORM_DATA:
@@ -224,6 +227,7 @@ es:
                 ITEMS: Páginas
                 FEATURED_IMAGE: Imagen destacada
                 FEATURED_IMAGE_HELP: Muestra automáticamente la primera imagen de la página. Desactívalo para un mayor control de tu contenido markdown.
+                ITEMS_TEXT_ALIGN_HELP: Alineación del texto en las páginas
                 SHOW_PREV_NEXT_BUTTONS: Mostrar botones anterior/siguiente
                 SHOW_PREV_NEXT_BUTTONS_HELP: Al final del contenido, 2 botones nos permitirán navegar entre las páginas
                 RELATED_PAGES_BOTTOM: Páginas relacionadas
@@ -283,9 +287,9 @@ es:
                 CAROUSEL_HIDE_CONTROLS_HELP: Oculta los botones anterior/siguiente
                 CAROUSEL_SLIDE_INTERVAL: Intervalo de slide
                 CAROUSEL_SLIDE_INTERVAL_HELP: Número de milisegundos del auto cambio de slides. Escribe 0 para mantenerlos indefinidamente.
-                SKILLS: Skills
-                SKILLS_LIST: Lista de skills
-                SKILLS_LIST_HELP: Crea una lista de valores para mostrar barras de progreso
+                BARS: Barras
+                BARS_LIST: Lista de barras
+                BARS_LIST_HELP: Crea una lista de valores para mostrar barras de progreso
             ITEM:
                 TAB: Elemento
                 ITEM_STYLE: Estilo de elemento
@@ -360,6 +364,8 @@ es:
                 HEADLINE: Etiquetas populares
             ARCHIVES:
                 HEADLINE: Archivos
+            LASTFM:
+                HEADLINE: Escuchando ahora...
             SYNDICATE:
                 HEADLINE: Feed
         FORM_DATA:

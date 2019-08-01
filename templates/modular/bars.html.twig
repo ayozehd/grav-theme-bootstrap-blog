@@ -3,16 +3,16 @@
         <div class="content text-{{ page.header.text_align|default('center') }}">
             {{ content }}
         </div>
-        <div class="row justify-content-center skills">
-            {% for skill in page.header.skills %}
+        <div class="row justify-content-center bars">
+            {% for bar in page.header.bars %}
                 <div class="col-12 py-3">
-                    <span class="text">{{ skill.text }}</span>
+                    <span class="text">{{ bar.text }}</span>
                     <div class="progress">
-                        <div class="progress-bar bg-{{ skill.style|default('primary') }} {{ skill.classes|default(page.header.progress_classes) }}"
-                             role="progressbar" style="width: {{ skill.value|default(0) }}%" aria-valuenow="{{ skill.value|default(0) }}"
+                        <div class="progress-bar bg-{{ bar.style|default('primary') }} {{ bar.classes|default(page.header.bars_classes) }}"
+                             role="progressbar" style="width: {{ bar.value|default(0) }}%" aria-valuenow="{{ bar.value|default(0) }}"
                              aria-valuemin="0" aria-valuemax="100">
                             {% if not page.header.hide_label %}
-                                {{ skill.value }}{{ page.header.suffix|default('%') }}
+                                {{ bar.value }}{{ page.header.suffix|default('%') }}
                             {% endif %}
                         </div>
                     </div>

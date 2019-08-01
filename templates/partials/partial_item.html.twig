@@ -38,7 +38,7 @@
 		{{ header_image_media.html }}
 	</div>
 {% endif %}
-<div class="item-content text-justify">
+<div class="item-content text-{{ theme_config.item.text_align }}">
     {{ page.content }}
 </div>
 <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Item toolbar buttons">
@@ -64,6 +64,10 @@
 		{% endfor %}
 	</div>
 </div>
+
+{% if config.plugins.sharer.enabled %}
+	{{ sharer() }}
+{% endif %}
 
 {% if theme_config.item.show_prev_next %}
 	<div class="d-flex flex-row py-3 mt-3">

@@ -1,7 +1,1 @@
-{
-"version": 3,
-"mappings": "AAyEI,4BAAyB;ECzE7B,aAAc;IAEN,YAAY,EAAE,CAAC;AD4GnB,mDAA+C;EC9GnD,aAAc;IAKN,YAAY,EAAE,CAAC;ADyGnB,mDAA+C;EC9GnD,aAAc;IAQN,YAAY,EAAE,CAAC;ADsGnB,oDAA+C;EC9GnD,aAAc;IAWN,YAAY,EAAE,CAAC;ADiDnB,0BAAyB;EC5D7B,aAAc;IAcN,YAAY,EAAE,CAAC",
-"sources": ["../../../scss/bootstrap/mixins/_breakpoints.scss","../../../scss/template/configuration/_columns.scss"],
-"names": [],
-"file": "all.css"
-}
+{"version":3,"sourceRoot":"","sources":["../../../scss/bootstrap/mixins/_breakpoints.scss","../../../scss/template/configuration/_columns.scss"],"names":[],"mappings":"AAyEI;ECzEJ;IAEQ;;;AD4GJ;EC9GJ;IAKQ;;;ADyGJ;EC9GJ;IAQQ;;;ADsGJ;EC9GJ;IAWQ;;;ADiDJ;EC5DJ;IAcQ","file":"all.css"}

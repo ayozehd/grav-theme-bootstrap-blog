@@ -1,15 +1,16 @@
 name: Bootstrap Blog
-version: 1.3.1
+version: 1.3.2
 description: Template built in default Bootstrap 4 framework
 icon: bold
 author:
-  name: Ayoze Hernandez Diaz
+  name: Ayoze Hernández Díaz
   email: ayoze.dev@gmail.com
   url: https://ayozehd.com
 homepage: https://github.com/ayozehd/grav-theme-bootstrap-blog
 demo: https://bootstrap-blog.ayozehd.com
-keywords: theme, bootstrap, blog, styles, simple, flat, fluid, modular, multilanguage, carousel, layouts
+keywords: theme, bootstrap, blog, styles, simple, fluid, carousel, layouts
 bugs: https://github.com/ayozehd/grav-theme-bootstrap-blog/issues
+doc: https://bootstrap-blog.ayozehd.com/doc
 readme: https://github.com/ayozehd/grav-theme-bootstrap-blog/develop/README.md
 license: MIT
 dependencies:
@@ -168,6 +169,17 @@ form:
           options:
             1: PLUGIN_ADMIN.ENABLED
             0: PLUGIN_ADMIN.DISABLED
+          validate:
+            type: bool
+        item.text_align:
+          type: select
+          label: BOOTSTRAP_BLOG.ADMIN.TEXT_ALIGN
+          help: BOOTSTRAP_BLOG.ADMIN.THEME.ITEMS_TEXT_ALIGN_HELP
+          size: medium
+          default: justify
+          options:
+            justify: BOOTSTRAP_BLOG.ADMIN.JUSTIFY
+            left: BOOTSTRAP_BLOG.ADMIN.LEFT
         item.show_prev_next:
           type: toggle
           label: BOOTSTRAP_BLOG.ADMIN.THEME.SHOW_PREV_NEXT_BUTTONS
@@ -233,7 +245,6 @@ form:
                 cards: Cards
               validate:
                 pattern: (boxed|masonry|cards)
-
     sidebar:
       type: section
       title: BOOTSTRAP_BLOG.ADMIN.THEME.SIDEBAR

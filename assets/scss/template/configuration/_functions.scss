@@ -1,7 +1,3 @@
-@import "bootstrap/functions";
-@import "bootstrap/variables";
-@import "bootstrap/mixins";
-
 @function color-yiq-d($color, $custom: null, $inversed: false) {
     $r: red($color);
     $g: green($color);

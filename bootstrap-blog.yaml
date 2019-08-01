@@ -25,6 +25,7 @@ sidebar:
         page:
 item:
     featured_image: true
+    text_align: justify
     show_prev_next: true
     related_pages: true
     category: category

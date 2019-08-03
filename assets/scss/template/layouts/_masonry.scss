@@ -19,18 +19,23 @@
             width: 100%;
             opacity: 0;
             transition: .5s ease-in-out;
-        }:hover {
-            opacity: 1;
+
+            &:hover {
+                opacity: 1;
+                * {
+                    text-decoration: none !important;
+                }
+            }
         }
-    
-        .card-title {
-            margin-bottom: $spacer * .5;
-        }
-    
+
         .masonry-no-overlay {
             position: relative;
             display: block;
             padding: 1.25rem;
+        }
+    
+        .card-title {
+            margin-bottom: $spacer * .5;
         }
     
         .categories {

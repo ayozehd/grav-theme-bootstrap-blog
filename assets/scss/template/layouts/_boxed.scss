@@ -32,8 +32,11 @@
         @each $color, $value in $theme-colors {
             .badge.badge-#{$color} {
 
+                background-color: scale-color(theme-color($color), $alpha: -15%);
+
                 &:hover {
-                    background-color: theme-color-level($color, 2);
+                    $boxed-badge-bg-hover-level: if(is-theme-color-light($value), 1, 2);
+                    background-color: theme-color-level($color, $boxed-badge-bg-hover-level);
                 }
             }
         }
@@ -42,9 +45,42 @@
     .summary {
         margin-bottom: 0;
     }
+
+    .btn-toolbar .btn-group {
+        @each $color, $value in $theme-colors {
+            .btn.btn-outline-#{$color} {
+                $boxed-button-border-color-level: if(is-theme-color-light($value), 3, 1);
+                border-color: theme-color-level($color, $boxed-button-border-color-level);
+
+                @if is-theme-color-light($value) {
+                    color: theme-color('dark');
+                }
+            }
+        }
+    }
+
     .card-footer {
-        .tags {
-        font-size: 90%;
+        @each $color, $value in $theme-colors {
+            $boxed-footer-icon-color-level: if(is-theme-color-light($value), 2, 1);
+
+            .tags {
+                font-size: 90%;
+
+                i.fa-tags.text-#{$color} {
+                    $boxed-tags-icon-alpha-level: if(is-theme-color-light($value), 0%, -30%);
+                    color: scale-color(theme-color-level($color, $boxed-footer-icon-color-level), $alpha: $boxed-tags-icon-alpha-level) !important;
+                }
+
+                a.text-#{$color} {
+                    @if is-theme-color-light($value) {
+                        color: theme-color('dark');
+                    }
+                }
+            }
+
+            i.fa-clock.text-#{$color} {
+                color: theme-color-level($color, $boxed-footer-icon-color-level);
+            }
         }
 
         small {

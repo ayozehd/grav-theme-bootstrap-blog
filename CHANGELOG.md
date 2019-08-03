@@ -1,3 +1,12 @@
+# v1.3.3
+## 03-08-2019
+
+1. [](#improved)
+  * Theme css minified and compressed
+  * Light colors are more accessible
+2. [](#bugfix)
+  * Blueprints fix
+
 # v1.3.2
 ## 01-08-2019
 

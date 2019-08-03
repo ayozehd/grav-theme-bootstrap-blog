@@ -2,7 +2,7 @@ $theme-colors: map-merge($colors, $theme-colors);
 $navbar-boostrap-blog-height: 56px;
 
 body > .wrapper {
-    min-height: calc(100vh - #{$navbar-boostrap-blog-height} *2);
+    min-height: calc(100vh - #{$navbar-boostrap-blog-height} * 2.29);
 }
 
 .sticky {

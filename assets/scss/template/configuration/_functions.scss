@@ -1,4 +1,4 @@
-@function color-yiq-d($color, $custom: null, $inversed: false) {
+@function is-theme-color-light($color) {
     $r: red($color);
     $g: green($color);
     $b: blue($color);
@@ -6,7 +6,18 @@
     $yiq: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
 
     @if ($yiq >= 150) {
-        @if ($custom) {
+        @return true;
+    } @else {
+        @return false;
+    }
+}
+
+@function color-yiq-d($color, $custom: null, $inversed: false) {
+
+    $yiq: is-theme-color-light($color);
+
+    @if $yiq {
+        @if $custom {
             @return $custom;
         } @else {
             @return #212529;
@@ -22,15 +33,12 @@
 }
 
 @function theme-style-inverse($theme, $default: null) {
+    
     $color: theme-color($theme);
 
-    $r: red($color);
-    $g: green($color);
-    $b: blue($color);
+    $yiq: is-theme-color-light($color);
 
-    $yiq: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
-
-    @if ($yiq >= 150) {
+    @if $yiq {
         @if ($default) {
             @return $default;
         } @else {

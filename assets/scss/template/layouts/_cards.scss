@@ -53,18 +53,13 @@
 				}
 
 				.categories .badge {
-					@if(theme-style-inverse($color) == 'dark') {
-						background-color: theme-color-level($color, 2);
-					} @else {
-						background-color: theme-color-level($color, 4);
-					}
+
+					$card-badge-bg-level: if(is-theme-color-light($value), 2, 4);
+					background-color: theme-color-level($color, $card-badge-bg-level);
 
 					&:hover {
-						@if(theme-style-inverse($color) == 'dark') {
-							background-color: theme-color-level($color, 1);
-						} @else {
-							background-color: theme-color-level($color, 2);
-						}
+						$card-badge-bg-hover-level: if(is-theme-color-light($value), 1, 2);
+						background-color: theme-color-level($color, $card-badge-bg-hover-level);
 					}
 				}
 

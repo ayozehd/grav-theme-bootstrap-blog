@@ -1,5 +1,5 @@
 name: Bootstrap Blog
-version: 1.3.2
+version: 1.3.3
 description: Template built in default Bootstrap 4 framework
 icon: bold
 author:
@@ -10,13 +10,14 @@ homepage: https://github.com/ayozehd/grav-theme-bootstrap-blog
 demo: https://bootstrap-blog.ayozehd.com
 keywords: theme, bootstrap, blog, styles, simple, fluid, carousel, layouts
 bugs: https://github.com/ayozehd/grav-theme-bootstrap-blog/issues
-doc: https://bootstrap-blog.ayozehd.com/doc
+docs: https://bootstrap-blog.ayozehd.com/doc
 readme: https://github.com/ayozehd/grav-theme-bootstrap-blog/develop/README.md
 license: MIT
 dependencies:
-    - { name: grav, version: '>=1.6' }
+    - { name: grav, version: '>=1.6.0' }
 
 form:
+  validation: loose
   fields:
     cdn_enabled:
       type: toggle

@@ -4,16 +4,16 @@
 
 ![](screenshot.jpg)
 
-**Bootstrap Blog** is a theme for [Grav CMS](http://github.com/getgrav/grav) built in [Bootstrap v4.1](https://getbootstrap.com/docs/4.1/) framework and provides a powerful base to develope your own theme using SCSS. Also we use latest [FontAwesome 5](https://fontawesome.com/).
+**Bootstrap Blog** is a theme for [Grav CMS](http://github.com/getgrav/grav) built in [Bootstrap v4.3](https://getbootstrap.com/docs/) framework and provides a powerful base to develope your own theme using SCSS. Also included latest [FontAwesome 5](https://fontawesome.com/).
 
 ## Features
 
 * Lightweight and minimal for optimal performance
 * Bootstrap 4.3
 * SCSS based CSS source files to ease theme customization
-* 3 Blog Layouts
+* 3 Blog collection Layouts
 * Twitter Timeline Sidebar Widget
-* Fill of color your site with Bootstrap styles
+* Fill of color your site with more than 25 defined styled colors
 * Fontawesome 5
 * Disquss comments
 
@@ -21,7 +21,7 @@
 
 * Default template `default.md`
 * Error template `error.md`
-* Blog template `blog.md`
+* Blog collection template `blog.md`
 * Blog item template `item.md`
 * Modular templates: `modular.md`
   * Features Modular template `features.md`
@@ -29,7 +29,7 @@
   * Blog Modular template `blog.md`
   * Text Modular template `text.md`
   * Carousel Modular template `carousel.md`
-  * Bars Modular templat `bars.md`
+  * Bars Modular template `bars.md`
 
 # Installation
 
@@ -57,7 +57,7 @@ You can copy the `user/themes/bootstrap-blog/bootstrap-blog.yaml` file to `user/
 
 ## Documentation
 
-Take a look to [theme documentation](https://bootstrap-blog.ayozehd.com/doc).
+Demo and theme documentation availables [here](https://bootstrap-blog.ayozehd.com).
 
 ## Credits
 

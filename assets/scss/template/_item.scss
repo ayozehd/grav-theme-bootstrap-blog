@@ -1,28 +1,29 @@
 .item {
-    .item-content {
-        padding-bottom: $spacer;
-    
-        .item-heading {
-            padding: $spacer*.5 0;
-    
-            time,
-            .readingtime {
-                cursor: default;
-            }
-    
-            .item-categories {
-    
-                @each $color, $value in $theme-colors {
-                    .badge.badge-#{$color} {
-                        background-color: scale-color(theme-color($color), $alpha: -15%);
-                        
-                        &:hover {
-                            background-color: theme-color-level($color, 2);
-                        }
+    .item-heading {
+        padding: $spacer*.5 0;
+
+        time,
+        .readingtime {
+            cursor: default;
+        }
+
+        .item-categories {
+            margin-top: -5px;
+            
+            @each $color, $value in $theme-colors {
+                .badge.badge-#{$color} {
+                    background-color: scale-color(theme-color($color), $alpha: -15%);
+                    
+                    &:hover {
+                        $item-badge-color-level: if(is-theme-color-light($value), 2, 4);
+                        background-color: theme-color-level($color, $item-badge-color-level);
                     }
                 }
             }
         }
+    }
+    .item-content {
+        padding-bottom: $spacer;
 
         h2.item-title {
             margin-bottom: 0;
@@ -40,10 +41,23 @@
         blockquote {
             @extend .blockquote;
         }
+
+        .featured-image img {
+            @extend .img-fluid;
+        }
     }
 
-    .featured-image img {
-        @extend .img-fluid;
+    .item-tags {
+        @each $color, $value in $theme-colors {
+            .btn.btn-outline-#{$color} {
+                $item-tag-button-border-color-level: if(is-theme-color-light($value), 2, 1);
+                border-color: theme-color-level($color, $item-tag-button-border-color-level);
+
+                @if is-theme-color-light($value) {
+                    color: #111;
+                }
+            }
+        }
     }
 
     .relatedpages {
@@ -56,7 +70,7 @@
             }
         }
 
-        .card {
+        .card, .card .card-text {
             margin-bottom: $spacer * .5;
         }
 

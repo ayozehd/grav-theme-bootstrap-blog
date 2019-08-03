@@ -1,2 +1,2 @@
 #!/usr/bin/env sh
-sass --watch assets/scss:assets/css-compiled
+sass --watch assets/scss:assets/css-compiled --style compressed

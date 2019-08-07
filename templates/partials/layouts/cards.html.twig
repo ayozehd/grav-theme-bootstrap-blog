@@ -11,7 +11,8 @@
 <div class="item-card col-12 col-sm-6 col-lg-4">
   <div class="card {{ 'bg-' ~ page.header.style|defined('light') }}">
       {% if header_image_media %}
-        <a href="{{ page.url }}">{{ header_image_media.html(page.title, '', 'card-img-top') }}</a>
+        <a href="{{ page.url }}">
+          {{ header_image_media.html(page.title, page.title, 'card-img-top') }}</a>
       {% endif %}
     <div class="card-body">
       <div class="row">
@@ -28,7 +29,9 @@
               href="{{ page.parent.url|rtrim('/') }}/category{{ config.system.param_sep }}{{ category }}">{{ category }}</a>
         {% endfor %}
       </div>
-      <div class="summary">{{ page.summary }}</div>
+      <div class="summary">
+        {{ page.summary }}
+      </div>
       {% if page.taxonomy[tag_param] %}
         <p class="tags"><i class="fas fa-sm fa-tags"></i>
             {% for tag in page.taxonomy[tag_param] %}

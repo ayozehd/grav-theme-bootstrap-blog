@@ -1,3 +1,13 @@
+# v1.3.4
+## 07-08-2019
+
+1. [](#improved)
+  * Markdown notices integration
+  * Cards images `alt-text`
+  * Assets event now `onAssetsInitialized`
+2. [](#bugfix)
+  * Featured image css missing
+
 # v1.3.3
 ## 03-08-2019
 

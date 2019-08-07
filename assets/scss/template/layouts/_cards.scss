@@ -5,7 +5,7 @@
 		box-shadow: 0 12px 24px -6px rgba(0,0,0,.56),
 					0 4px 18px 0 	rgba(0,0,0,.10),
 					0 8px 12px -5px rgba(0,0,0,.2);
-	
+
 		.card-body {
 			padding-top: $spacer * .5;
 
@@ -18,7 +18,7 @@
 			}
 
 			.card-title {
-				margin-bottom: 0;
+				margin-bottom: $spacer * .2;
 			}
 
 			.categories {

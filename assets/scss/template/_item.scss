@@ -22,6 +22,12 @@
             }
         }
     }
+
+    .featured-image img {
+        @extend .img-fluid;
+        margin-bottom: $spacer * .5;
+    }
+
     .item-content {
         padding-bottom: $spacer;
 
@@ -40,10 +46,6 @@
     
         blockquote {
             @extend .blockquote;
-        }
-
-        .featured-image img {
-            @extend .img-fluid;
         }
     }
 

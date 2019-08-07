@@ -36,16 +36,16 @@ class BootstrapBlog extends Theme
 
         if ($this->config->get('themes.bootstrap-blog.enabled')) {
             $this->enable([
-                'onTwigSiteVariables' => ['onTwigSiteVariables', 0]
+                'onAssetsInitialized' => ['onAssetsInitialized', 0]
             ]);
         }
 
     }
 
     /**
-     * if enabled on this page, load the JS + CSS and set the selectors.
+     * Creates collection Bootstrap Blog for CSS and JS files
      */
-    public function onTwigSiteVariables()
+    public function onAssetsInitialized()
     {
         $config = $this->config->get('themes.bootstrap-blog');
 
@@ -74,7 +74,6 @@ class BootstrapBlog extends Theme
             $collection[] = 'theme://assets/js/jquery-3.3.1.min.js';
             $collection[] = 'theme://assets/js/popper.min.js';
             $collection[] = 'theme://assets/js/bootstrap.min.js';
-
         }
 
         $collection[] = 'theme://assets/css-compiled/bootstrap-blog.css';

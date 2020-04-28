@@ -135,12 +135,12 @@ en:
                 SECONDARY: Secondary
                 INFO: Info
                 SUCCESS: Success
-                WARNING: Aviso
+                WARNING: Warning
                 DANGER: Danger
                 NONE: None
         DATE:
-            MONTHS: [January,February,March,April,May,June,July,August,September,October,November,Dicember]
-            DAYS: [Monday,Tuesday,Wenesday,Thursday,Friday,Saturday,Sunday]
+            MONTHS: [January,February,March,April,May,June,July,August,September,October,November,December]
+            DAYS: [Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday]
             OF: of
             ON: 'on'
             AT: at

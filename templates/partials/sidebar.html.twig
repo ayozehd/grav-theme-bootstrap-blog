@@ -61,7 +61,7 @@
 {% if config.plugins.feed.enabled %}
     <div class="sidebar-content syndicate">
         <h4>{{ 'BOOTSTRAP_BLOG.SIDEBAR.SYNDICATE.HEADLINE'|t }}</h4>
-        <a class="btn btn-outline-primary" href="{{ page.url(true) }}.atom"><i class="fa fa-rss-square"></i> Atom 1.0</a>
-        <a class="btn btn-outline-primary" href="{{ page.url(true) }}.rss"><i class="fa fa-rss-square"></i> RSS</a>
+        <a class="btn btn-outline-primary" href="{{ feed_url }}.atom"><i class="fa fa-rss-square"></i> Atom 1.0</a>
+        <a class="btn btn-outline-primary" href="{{ feed_url }}.rss"><i class="fa fa-rss-square"></i> RSS</a>
     </div>
 {% endif %}

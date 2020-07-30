@@ -9,13 +9,13 @@
 ## Features
 
 * Lightweight and minimal for optimal performance
-* Bootstrap 4.3
-* SCSS based CSS source files to ease theme customization
+* Bootstrap 4.x
+* SCSS based CSS source files
 * 3 Blog collection Layouts
 * Twitter Timeline Sidebar Widget
 * Fill of color your site with more than 25 defined styled colors
 * Fontawesome 5
-* Disquss comments
+* Disqus comments
 
 ### Page Templates
 
@@ -57,7 +57,7 @@ You can copy the `user/themes/bootstrap-blog/bootstrap-blog.yaml` file to `user/
 
 ## Documentation
 
-Demo and theme documentation availables [here](https://bootstrap-blog.ayozehd.com).
+Demo and theme documentation available [here](https://bootstrap-blog.ayozehd.com).
 
 ## Credits
 

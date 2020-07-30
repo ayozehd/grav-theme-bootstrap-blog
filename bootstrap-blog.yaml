@@ -8,6 +8,7 @@ navbar:
     icon:
     style: light
     override_page_style: true
+    display_site_name: true
     dropdown: true
     sticky: false
 sidebar:

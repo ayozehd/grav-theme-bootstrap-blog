@@ -16,8 +16,8 @@ en:
             IMAGE: Image
             VALUE: Value
             THEME:
-                CDN: CDN
-                CDN_HELP: Get needed CSS and JS files from Content Distribution Networks to reduce load times
+                CDN: Production mode
+                CDN_HELP: Get minified assets from Content Distribution Networks to reduce load times
                 BACK_TO_TOP_BUTTON: Back to top button
                 BACK_TO_TOP_BUTTON_HELP: Show a button to return the top page
                 FLUID_CONTAINER: Fluid container
@@ -203,8 +203,8 @@ es:
             IMAGE: Imagen
             VALUE: Valor
             THEME:
-                CDN: CDN
-                CDN_HELP: Recupera los ficheros CSS y JS necesarios desde servidores CDN para reducir los tiempos de carga
+                CDN: Modo producción
+                CDN_HELP: Ficheros minificados y desde servidores CDN para reducir los tiempos de carga
                 BACK_TO_TOP_BUTTON: Botón volver a arriba
                 BACK_TO_TOP_BUTTON_HELP: Muestra un botón para volver a la parte superior de la página
                 FLUID_CONTAINER: Contenedor extenso

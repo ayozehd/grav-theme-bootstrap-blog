@@ -21,8 +21,7 @@ class BootstrapBlog extends Theme
      */
     public static function getTaxonomies()
     {
-        $config = Grav::instance()['config']->get('site.taxonomies') ?: [];
-        return array_combine($config, $config);
+        return Grav::instance()['config']->get('site.taxonomies') ?: [];
     }
 
     /**

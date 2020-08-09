@@ -1,5 +1,5 @@
 name: Bootstrap Blog
-version: 1.3.5
+version: 1.3.6
 description: Template built in default Bootstrap 4 framework
 icon: bold
 author:
@@ -342,7 +342,6 @@ form:
                       description: BOOTSTRAP_BLOG.ADMIN.THEME.ABOUT_PAGE_CONTENT_DESCRIPTION
                       toggleable: true
                       show_modular: false
-
     footer:
       type: section
       title: BOOTSTRAP_BLOG.ADMIN.THEME.FOOTER

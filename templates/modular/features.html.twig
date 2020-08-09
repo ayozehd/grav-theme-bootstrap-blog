@@ -7,10 +7,18 @@
             {% for feature in page.header.features %}
                 <div class="col-12 col-md-3 feature">
                     {% if feature.icon %}
-                        <div class="feature-icon text-{{ feature.style|defined('primary') }}"
-                             {% if feature.color %}style="color:{{ feature.color }} !important;"{% endif %}>
-                            <i class="fas fa-3x fa-{{ feature.icon }}"></i>
-                        </div>
+                        {% set feature_color = '' %}
+                        {% if feature.color %}
+                            {% set feature_color = 'style="color: ' ~ feature.color ~ '"' %}
+                        {% endif %}
+                        {% set feature_icon = '<i class="' ~ feature.icon_group|defined('fas') ~ ' fa-3x fa-' ~ feature.icon ~ '" ' ~ feature_color ~'></i>' %}
+                            <div class="feature-icon text-{{ feature.style|defined('primary') }}"}>
+                                {% if feature.url %}
+                                    <a href="{{ feature.url }}" class="stretched-link">{{ feature_icon }}</a>
+                                {% else %}
+                                    {{ feature_icon }}
+                                {% endif %}
+                            </div>
                     {% endif %}
                     <div class="feature-content">
                         <h4>{{ feature.title }}</h4>

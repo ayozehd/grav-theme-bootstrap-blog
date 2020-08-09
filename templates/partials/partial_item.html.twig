@@ -88,7 +88,7 @@
     </div>
 {% endif %}
 
-{% set comments = array_merge(theme_config.comments, page.header.comments|default({})) %}
+{% set comments = array_merge(theme_config.comments|default({}), page.header.comments|default({})) %}
 {% if comments.enabled %}
 <div class="comments">
 	{% include 'partials/comments.html.twig' with {'page':page, 'config': comments} %}

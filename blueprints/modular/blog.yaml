@@ -10,13 +10,13 @@ form:
             fields:
                 bootstrap-blog:
                     type: tab
-                    title: BOOTSTRAP_BLOG.ADMIN.BLOG
+                    title: THEME_BOOTSTRAP_BLOG.ADMIN.BLOG
                     fields:
                         header.style:
                             type: select
-                            label: BOOTSTRAP_BLOG.ADMIN.STYLE
-                            help: BOOTSTRAP_BLOG.ADMIN.STYLE_HELP
-                            description: BOOTSTRAP_BLOG.ADMIN.WE_USE_BOOTSTRAP_COLORS
+                            label: THEME_BOOTSTRAP_BLOG.ADMIN.STYLE
+                            help: THEME_BOOTSTRAP_BLOG.ADMIN.STYLE_HELP
+                            description: THEME_BOOTSTRAP_BLOG.ADMIN.WE_USE_BOOTSTRAP_COLORS
                             size: medium
                             toggleable: true
                             options:
@@ -30,8 +30,8 @@ form:
                                 danger: Danger
                         header.layout:
                             type: select
-                            label: BOOTSTRAP_BLOG.ADMIN.MODULAR.ITEMS_LAYOUT
-                            help: BOOTSTRAP_BLOG.ADMIN.MODULAR.ITEMS_LAYOUT_HELP
+                            label: THEME_BOOTSTRAP_BLOG.ADMIN.MODULAR.ITEMS_LAYOUT
+                            help: THEME_BOOTSTRAP_BLOG.ADMIN.MODULAR.ITEMS_LAYOUT_HELP
                             size: medium
                             default: boxed
                             options:
@@ -42,8 +42,8 @@ form:
                                 pattern: (boxed|masonry|cards)
                         header.show_more:
                             type: pages
-                            label: BOOTSTRAP_BLOG.ADMIN.MODULAR.SHOW_MORE_BUTTON
-                            help: BOOTSTRAP_BLOG.ADMIN.MODULAR.SHOW_MORE_BUTTON_HELP
-                            description: BOOTSTRAP_BLOG.ADMIN.MODULAR.SHOW_MORE_FALLBACK
+                            label: THEME_BOOTSTRAP_BLOG.ADMIN.MODULAR.SHOW_MORE_BUTTON
+                            help: THEME_BOOTSTRAP_BLOG.ADMIN.MODULAR.SHOW_MORE_BUTTON_HELP
+                            description: THEME_BOOTSTRAP_BLOG.ADMIN.MODULAR.SHOW_MORE_FALLBACK
                             toggleable: true
                             show_modular: false

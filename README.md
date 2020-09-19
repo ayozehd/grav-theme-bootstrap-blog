@@ -1,10 +1,12 @@
 # Bootstrap Blog
 
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=94NYK2VQA253G)
+[![Demo](https://img.shields.io/badge/Demo-Bootstrap_Blog-blue.svg?style=flat-square)](https://bootstrap-blog.ayozehd.com/)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://github.com/ayozehd/grav-skeleton-bootstrap-blog/blob/master/LICENSE)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=94NYK2VQA253G)
 
 ![](screenshot.jpg)
 
-**Bootstrap Blog** is a theme for [Grav CMS](http://github.com/getgrav/grav) built in [Bootstrap v4.3](https://getbootstrap.com/docs/) framework and provides a powerful base to develope your own theme using SCSS. Also included latest [FontAwesome 5](https://fontawesome.com/).
+**Bootstrap Blog** is a theme for [Grav CMS](http://github.com/getgrav/grav) built in CSS framework [Bootstrap v4.x](https://getbootstrap.com/docs/) and provide a powerful base to develope your own theme using SCSS. Also includes latest [FontAwesome 5](https://fontawesome.com/) iconset.
 
 ## Features
 

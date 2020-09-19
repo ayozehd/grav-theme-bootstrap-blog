@@ -51,12 +51,10 @@ class BootstrapBlog extends Theme
         $collection = [];
 
         if ($config['cdn_enabled']) {
-            // CSS
-            $collection[] = 'https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css';
-            $collection[] = 'https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap-reboot.min.css';
-            $collection[] = 'https://use.fontawesome.com/releases/v5.8.2/css/all.css';
-            $collection[] = 'https://use.fontawesome.com/releases/v5.8.2/css/brands.css';
-            // JS
+            $collection[] = 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css';
+            $collection[] = 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap-reboot.min.css';
+            $collection[] = 'https://use.fontawesome.com/releases/v5.14.0/css/all.css';
+            $collection[] = 'https://use.fontawesome.com/releases/v5.14.0/css/brands.css';
             $collection[] = 'https://code.jquery.com/jquery-3.3.1.min.js';
             $collection[] = 'https://unpkg.com/popper.js@1.15.0/dist/umd/popper.min.js';
             $collection[] = 'https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js';

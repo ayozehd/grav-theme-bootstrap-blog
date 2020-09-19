@@ -10,7 +10,7 @@ form:
             fields:
                 bootstrap-blog:
                     type: tab
-                    title: BOOTSTRAP_BLOG.ADMIN.ITEM.TAB
+                    title: THEME_BOOTSTRAP_BLOG.ADMIN.ITEM.TAB
                     fields:
                         is_sidebar_enabled:
                             type: conditional
@@ -18,8 +18,8 @@ form:
                             fields:
                                 header.sidebar.enabled:
                                     type: toggle
-                                    label: BOOTSTRAP_BLOG.ADMIN.THEME.SIDEBAR
-                                    help: BOOTSTRAP_BLOG.ADMIN.ITEM.ITEM_SIDEBAR_HELP
+                                    label: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.SIDEBAR
+                                    help: THEME_BOOTSTRAP_BLOG.ADMIN.ITEM.ITEM_SIDEBAR_HELP
                                     highlight: 1
                                     default: 1
                                     options:
@@ -33,8 +33,8 @@ form:
                             fields:
                                 header.comments.enabled:
                                     type: toggle
-                                    label: BOOTSTRAP_BLOG.ADMIN.ITEM.COMMENTS
-                                    help: BOOTSTRAP_BLOG.ADMIN.ITEM.ITEM_COMMENTS_HELP
+                                    label: THEME_BOOTSTRAP_BLOG.ADMIN.ITEM.COMMENTS
+                                    help: THEME_BOOTSTRAP_BLOG.ADMIN.ITEM.ITEM_COMMENTS_HELP
                                     highlight: 1
                                     default: 1
                                     options:
@@ -44,9 +44,9 @@ form:
                                         type: bool
                         header.style:
                             type: select
-                            label: BOOTSTRAP_BLOG.ADMIN.ITEM.ITEM_STYLE
-                            help: BOOTSTRAP_BLOG.ADMIN.ITEM.ITEM_STYLE_HELP
-                            description: BOOTSTRAP_BLOG.ADMIN.WE_USE_BOOTSTRAP_COLORS
+                            label: THEME_BOOTSTRAP_BLOG.ADMIN.ITEM.ITEM_STYLE
+                            help: THEME_BOOTSTRAP_BLOG.ADMIN.ITEM.ITEM_STYLE_HELP
+                            description: THEME_BOOTSTRAP_BLOG.ADMIN.WE_USE_BOOTSTRAP_COLORS
                             size: medium
                             toggleable: true
                             options:
@@ -70,36 +70,36 @@ form:
                             name: buttons
                             type: list
                             style: vertical
-                            label: BOOTSTRAP_BLOG.ADMIN.ITEM.BUTTONS
-                            help: BOOTSTRAP_BLOG.ADMIN.ITEM.BUTTONS_HELP
+                            label: THEME_BOOTSTRAP_BLOG.ADMIN.ITEM.BUTTONS
+                            help: THEME_BOOTSTRAP_BLOG.ADMIN.ITEM.BUTTONS_HELP
                             collapsed: true
                             fields:
                                 .text:
                                     type: text
-                                    label: BOOTSTRAP_BLOG.ADMIN.TEXT
+                                    label: THEME_BOOTSTRAP_BLOG.ADMIN.TEXT
                                 .url:
                                     type: text
-                                    label: BOOTSTRAP_BLOG.ADMIN.URL
+                                    label: THEME_BOOTSTRAP_BLOG.ADMIN.URL
                                 .icon:
                                     type: text
-                                    label: BOOTSTRAP_BLOG.ADMIN.ICON
-                                    help: BOOTSTRAP_BLOG.ADMIN.ICON_HELP
+                                    label: THEME_BOOTSTRAP_BLOG.ADMIN.ICON
+                                    help: THEME_BOOTSTRAP_BLOG.ADMIN.ICON_HELP
                                     description: ADMIN.FONTAWESOME_5_ICONS
                                 .classes:
                                     type: text
-                                    label: BOOTSTRAP_BLOG.ADMIN.ITEM.BUTTON_ADD_CSS
-                                    help: BOOTSTRAP_BLOG.ADMIN.ITEM.BUTTON_ADD_CSS_HELP
+                                    label: THEME_BOOTSTRAP_BLOG.ADMIN.ITEM.BUTTON_ADD_CSS
+                                    help: THEME_BOOTSTRAP_BLOG.ADMIN.ITEM.BUTTON_ADD_CSS_HELP
                             validate:
                                 type: array
                         header_image:
                             type: section
-                            title: BOOTSTRAP_BLOG.ADMIN.ITEM.HEADER_IMAGE
+                            title: THEME_BOOTSTRAP_BLOG.ADMIN.ITEM.HEADER_IMAGE
                             underline: true
                             fields:
                                 header.image_file:
                                     type: pagemediaselect
-                                    label: BOOTSTRAP_BLOG.ADMIN.ITEM.CHOOSE_HEADER_IMAGE
-                                    help: BOOTSTRAP_BLOG.ADMIN.ITEM.CHOOSE_HEADER_IMAGE_HELP
+                                    label: THEME_BOOTSTRAP_BLOG.ADMIN.ITEM.CHOOSE_HEADER_IMAGE
+                                    help: THEME_BOOTSTRAP_BLOG.ADMIN.ITEM.CHOOSE_HEADER_IMAGE_HELP
                                     toggleable: true
                                     multiple: false
                                 image_sizes:
@@ -110,7 +110,7 @@ form:
                                             fields:
                                                 header.image_width:
                                                     type: text
-                                                    label: BOOTSTRAP_BLOG.ADMIN.WIDTH
+                                                    label: THEME_BOOTSTRAP_BLOG.ADMIN.WIDTH
                                                     placeholder: 1024
                                                     toggleable: true
                                                     validate:
@@ -121,7 +121,7 @@ form:
                                             fields:
                                                 header.image_height:
                                                     type: text
-                                                    label: BOOTSTRAP_BLOG.ADMIN.HEIGHT
+                                                    label: THEME_BOOTSTRAP_BLOG.ADMIN.HEIGHT
                                                     placeholder: 600
                                                     toggleable: true
                                                     validate:

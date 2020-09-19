@@ -10,12 +10,12 @@ form:
             fields:
                 bootstrap-blog:
                     type: tab
-                    title: BOOTSTRAP_BLOG.ADMIN.MODULAR.SHOWCASE
+                    title: THEME_BOOTSTRAP_BLOG.ADMIN.MODULAR.SHOWCASE
                     fields:
                         header.style:
                             type: select
-                            label: BOOTSTRAP_BLOG.ADMIN.STYLE
-                            description: BOOTSTRAP_BLOG.ADMIN.MODULAR.SHOWCASE_STYLE_HELP
+                            label: THEME_BOOTSTRAP_BLOG.ADMIN.STYLE
+                            description: THEME_BOOTSTRAP_BLOG.ADMIN.MODULAR.SHOWCASE_STYLE_HELP
                             size: medium
                             toggleable: true
                             options:
@@ -29,8 +29,8 @@ form:
                                 danger: Danger
                         header.image_file:
                             type: pagemediaselect
-                            label: BOOTSTRAP_BLOG.ADMIN.ITEM.CHOOSE_HEADER_IMAGE
-                            help: BOOTSTRAP_BLOG.ADMIN.ITEM.CHOOSE_HEADER_IMAGE_HELP
+                            label: THEME_BOOTSTRAP_BLOG.ADMIN.ITEM.CHOOSE_HEADER_IMAGE
+                            help: THEME_BOOTSTRAP_BLOG.ADMIN.ITEM.CHOOSE_HEADER_IMAGE_HELP
                             toggleable: true
                             multiple: false
                         image_sizes:
@@ -41,7 +41,7 @@ form:
                                     fields:
                                         header.image_width:
                                             type: text
-                                            label: BOOTSTRAP_BLOG.ADMIN.WIDTH
+                                            label: THEME_BOOTSTRAP_BLOG.ADMIN.WIDTH
                                             placeholder: 1200
                                             toggleable: true
                                             validate:
@@ -52,7 +52,7 @@ form:
                                     fields:
                                         header.image_height:
                                             type: text
-                                            label: BOOTSTRAP_BLOG.ADMIN.HEIGHT
+                                            label: THEME_BOOTSTRAP_BLOG.ADMIN.HEIGHT
                                             placeholder: 800
                                             toggleable: true
                                             validate:
@@ -60,33 +60,33 @@ form:
                                                 min: 0
                         header.image_actions:
                             type: array
-                            label: BOOTSTRAP_BLOG.ADMIN.MODULAR.SHOWCASE_IMAGE_ACTIONS
-                            help: BOOTSTRAP_BLOG.ADMIN.MODULAR.SHOWCASE_IMAGE_ACTIONS_HELP
-                            description: BOOTSTRAP_BLOG.ADMIN.MODULAR.SHOWCASE_IMAGE_ACTIONS_DESCRIPTION
-                            placeholder_key: BOOTSTRAP_BLOG.ADMIN.MODULAR.SHOWCASE_IMAGE_ACTION
-                            placeholder_value: BOOTSTRAP_BLOG.ADMIN.MODULAR.SHOWCASE_IMAGE_ARGUMENTS
+                            label: THEME_BOOTSTRAP_BLOG.ADMIN.MODULAR.SHOWCASE_IMAGE_ACTIONS
+                            help: THEME_BOOTSTRAP_BLOG.ADMIN.MODULAR.SHOWCASE_IMAGE_ACTIONS_HELP
+                            description: THEME_BOOTSTRAP_BLOG.ADMIN.MODULAR.SHOWCASE_IMAGE_ACTIONS_DESCRIPTION
+                            placeholder_key: THEME_BOOTSTRAP_BLOG.ADMIN.MODULAR.SHOWCASE_IMAGE_ACTION
+                            placeholder_value: THEME_BOOTSTRAP_BLOG.ADMIN.MODULAR.SHOWCASE_IMAGE_ARGUMENTS
                             toggleable: true
                         header.buttons:
                             name: buttons
                             type: list
                             style: vertical
-                            label: BOOTSTRAP_BLOG.ADMIN.ITEM.BUTTONS
+                            label: THEME_BOOTSTRAP_BLOG.ADMIN.ITEM.BUTTONS
                             collapsed: true
                             fields:
                                 .text:
                                     type: text
-                                    label: BOOTSTRAP_BLOG.ADMIN.TEXT
+                                    label: THEME_BOOTSTRAP_BLOG.ADMIN.TEXT
                                 .url:
                                     type: text
-                                    label: BOOTSTRAP_BLOG.ADMIN.URL
+                                    label: THEME_BOOTSTRAP_BLOG.ADMIN.URL
                                 .icon:
                                     type: text
-                                    label: BOOTSTRAP_BLOG.ADMIN.ICON
-                                    help: BOOTSTRAP_BLOG.ADMIN.ICON_HELP
-                                    description: BOOTSTRAP_BLOG.ADMIN.FONTAWESOME_5_ICONS
+                                    label: THEME_BOOTSTRAP_BLOG.ADMIN.ICON
+                                    help: THEME_BOOTSTRAP_BLOG.ADMIN.ICON_HELP
+                                    description: THEME_BOOTSTRAP_BLOG.ADMIN.FONTAWESOME_5_ICONS
                                 .classes:
                                     type: text
-                                    label: BOOTSTRAP_BLOG.ADMIN.ITEM.BUTTON_ADD_CSS
-                                    help: BOOTSTRAP_BLOG.ADMIN.ITEM.BUTTON_ADD_CSS_HELP
+                                    label: THEME_BOOTSTRAP_BLOG.ADMIN.ITEM.BUTTON_ADD_CSS
+                                    help: THEME_BOOTSTRAP_BLOG.ADMIN.ITEM.BUTTON_ADD_CSS_HELP
                             validate:
                                 type: array

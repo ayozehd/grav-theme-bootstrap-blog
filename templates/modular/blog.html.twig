@@ -8,9 +8,9 @@
 {% endif %}
 
 <div class="modular-row blog-modular{% if page.header.style %} bg-{{ page.header.style }}{% endif %} {{ page.header.classes }}">
-  <div class="container{% if theme_config.fluid_container %}-fluid{% endif %}">
+  <div class="container{% if config.theme.fluid_container %}-fluid{% endif %}">
     <div class="content text-{{ page.header.text_align|defined('center') }}">
-      {{ dump(theme_config.fluid_container) }}
+      {{ dump(config.theme.fluid_container) }}
       {{ content }}
     </div>
     <div class="row items">
@@ -28,7 +28,7 @@
         <div class="col-12 text-center">
           <a href="{{ show_more_page.url }}"
               class="btn btn-lg btn-outline-primary">
-              {{ 'BOOTSTRAP_BLOG.MODULAR.SEE_MORE_IN'|t(show_more_page.title) }}
+              {{ 'THEME_BOOTSTRAP_BLOG.MODULAR.SEE_MORE_IN'|t(show_more_page.title) }}
           </a>
         </div>
       </div>

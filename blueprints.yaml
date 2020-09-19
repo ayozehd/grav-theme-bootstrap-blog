@@ -1,5 +1,5 @@
 name: Bootstrap Blog
-version: 1.3.6
+version: 1.4.0
 description: Template built in default Bootstrap 4 framework
 icon: bold
 author:
@@ -21,8 +21,8 @@ form:
   fields:
     cdn_enabled:
       type: toggle
-      label: BOOTSTRAP_BLOG.ADMIN.THEME.CDN
-      help: BOOTSTRAP_BLOG.ADMIN.THEME.CDN_HELP
+      label: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.CDN
+      help: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.CDN_HELP
       highlight: 1
       default: 0
       options:
@@ -32,8 +32,8 @@ form:
         type: bool
     back_to_top_button:
       type: toggle
-      label: BOOTSTRAP_BLOG.ADMIN.THEME.BACK_TO_TOP_BUTTON
-      help: BOOTSTRAP_BLOG.ADMIN.THEME.BACK_TO_TOP_BUTTON_HELP
+      label: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.BACK_TO_TOP_BUTTON
+      help: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.BACK_TO_TOP_BUTTON_HELP
       highlight: 1
       default: 1
       options:
@@ -43,8 +43,8 @@ form:
         type: bool
     fluid_container:
       type: toggle
-      label: BOOTSTRAP_BLOG.ADMIN.THEME.FLUID_CONTAINER
-      help: BOOTSTRAP_BLOG.ADMIN.THEME.FLUID_CONTAINER_HELP
+      label: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.FLUID_CONTAINER
+      help: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.FLUID_CONTAINER_HELP
       highlight: 1
       default: 0
       options:
@@ -54,9 +54,9 @@ form:
         type: bool
     favicon:
       type: file
-      label: BOOTSTRAP_BLOG.ADMIN.THEME.FAVICON
-      help: BOOTSTRAP_BLOG.ADMIN.THEME.FAVICON_HELP
-      destination: 'theme@:/images'
+      label: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.FAVICON
+      help: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.FAVICON_HELP
+      destination: 'pages@:/images'
       multiple: false
       avoid_overwriting: false
       random_name: false
@@ -65,13 +65,13 @@ form:
       accept: ['image/png', '.ico']
     navbar:
       type: section
-      title: BOOTSTRAP_BLOG.ADMIN.THEME.NAVBAR
+      title: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.NAVBAR
       underline: true
       fields:
         navbar.dropdown:
           type: toggle
-          label: BOOTSTRAP_BLOG.ADMIN.THEME.DROPDOWN
-          help: BOOTSTRAP_BLOG.ADMIN.THEME.DROPDOWN_HELP
+          label: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.DROPDOWN
+          help: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.DROPDOWN_HELP
           highlight: 1
           default: 1
           options:
@@ -81,8 +81,8 @@ form:
             type: bool
         navbar.sticky:
           type: toggle
-          label: BOOTSTRAP_BLOG.ADMIN.THEME.NAVBAR_STICKY
-          help: BOOTSTRAP_BLOG.ADMIN.THEME.NAVBAR_STICKY_HELP
+          label: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.NAVBAR_STICKY
+          help: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.NAVBAR_STICKY_HELP
           highlight: 1
           default: 0
           options:
@@ -92,8 +92,8 @@ form:
             type: bool
         navbar.display_site_name:
           type: toggle
-          label: BOOTSTRAP_BLOG.ADMIN.THEME.DISPLAY_SITE_NAME
-          help: BOOTSTRAP_BLOG.ADMIN.THEME.DISPLAY_SITE_NAME_HELP
+          label: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.DISPLAY_SITE_NAME
+          help: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.DISPLAY_SITE_NAME_HELP
           highlight: 1
           default: 1
           options:
@@ -103,8 +103,8 @@ form:
             type: bool
         navbar.image:
           type: file
-          label: BOOTSTRAP_BLOG.ADMIN.THEME.BRAND_LOGO_IMAGE
-          help: BOOTSTRAP_BLOG.ADMIN.THEME.BRAND_LOGO_IMAGE_HELP
+          label: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.BRAND_LOGO_IMAGE
+          help: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.BRAND_LOGO_IMAGE_HELP
           destination: 'theme@:/images'
           multiple: false
           avoid_overwriting: false
@@ -115,16 +115,16 @@ form:
           - image/*
         navbar.icon:
           type: text
-          label: BOOTSTRAP_BLOG.ADMIN.THEME.BRAND_ICON
-          help: BOOTSTRAP_BLOG.ADMIN.ICON_HELP
-          description: BOOTSTRAP_BLOG.ADMIN.FONTAWESOME_5_ICONS
+          label: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.BRAND_ICON
+          help: THEME_BOOTSTRAP_BLOG.ADMIN.ICON_HELP
+          description: THEME_BOOTSTRAP_BLOG.ADMIN.FONTAWESOME_5_ICONS
           toggleable: true
           validate:
             type: text
         navbar.override_page_style:
           type: toggle
-          label: BOOTSTRAP_BLOG.ADMIN.THEME.OVERRIDE_PAGE_STYLE
-          help: BOOTSTRAP_BLOG.ADMIN.THEME.OVERRIDE_PAGE_STYLE_HELP
+          label: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.OVERRIDE_PAGE_STYLE
+          help: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.OVERRIDE_PAGE_STYLE_HELP
           highlight: 1
           default: 1
           options:
@@ -135,9 +135,9 @@ form:
         navbar.style:
           type: select
           size: medium
-          label: BOOTSTRAP_BLOG.ADMIN.THEME.NAVBAR_STYLE
-          help: BOOTSTRAP_BLOG.ADMIN.STYLE_HELP
-          description: BOOTSTRAP_BLOG.ADMIN.STYLE_DESCRIPTION
+          label: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.NAVBAR_STYLE
+          help: THEME_BOOTSTRAP_BLOG.ADMIN.STYLE_HELP
+          description: THEME_BOOTSTRAP_BLOG.ADMIN.STYLE_DESCRIPTION
           default: light
           options:
             dark: Dark
@@ -158,13 +158,13 @@ form:
             cyan: Cyan
     item:
       type: section
-      title: BOOTSTRAP_BLOG.ADMIN.THEME.ITEMS
+      title: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.ITEMS
       underline: true
       fields:
         item.featured_image:
           type: toggle
-          label: BOOTSTRAP_BLOG.ADMIN.THEME.FEATURED_IMAGE
-          help: BOOTSTRAP_BLOG.ADMIN.THEME.FEATURED_IMAGE_HELP
+          label: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.FEATURED_IMAGE
+          help: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.FEATURED_IMAGE_HELP
           highlight: 1
           default: 1
           options:
@@ -174,17 +174,17 @@ form:
             type: bool
         item.text_align:
           type: select
-          label: BOOTSTRAP_BLOG.ADMIN.TEXT_ALIGN
-          help: BOOTSTRAP_BLOG.ADMIN.THEME.ITEMS_TEXT_ALIGN_HELP
+          label: THEME_BOOTSTRAP_BLOG.ADMIN.TEXT_ALIGN
+          help: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.ITEMS_TEXT_ALIGN_HELP
           size: medium
           default: justify
           options:
-            justify: BOOTSTRAP_BLOG.ADMIN.JUSTIFY
-            left: BOOTSTRAP_BLOG.ADMIN.LEFT
+            justify: THEME_BOOTSTRAP_BLOG.ADMIN.JUSTIFY
+            left: THEME_BOOTSTRAP_BLOG.ADMIN.LEFT
         item.show_prev_next:
           type: toggle
-          label: BOOTSTRAP_BLOG.ADMIN.THEME.SHOW_PREV_NEXT_BUTTONS
-          help: BOOTSTRAP_BLOG.ADMIN.THEME.SHOW_PREV_NEXT_BUTTONS_HELP
+          label: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.SHOW_PREV_NEXT_BUTTONS
+          help: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.SHOW_PREV_NEXT_BUTTONS_HELP
           highlight: 1
           default: 1
           options:
@@ -198,8 +198,8 @@ form:
           fields:
             item.related_pages:
               type: toggle
-              label: BOOTSTRAP_BLOG.ADMIN.THEME.RELATED_PAGES_BOTTOM
-              help: BOOTSTRAP_BLOG.ADMIN.THEME.RELATED_PAGES_BOTTOM_HELP
+              label: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.RELATED_PAGES_BOTTOM
+              help: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.RELATED_PAGES_BOTTOM_HELP
               highlight: 1
               default: 1
               options:
@@ -209,8 +209,8 @@ form:
                 type: bool
         comments.enabled:
           type: toggle
-          label: BOOTSTRAP_BLOG.ADMIN.THEME.ENABLE_COMMENTS
-          help: BOOTSTRAP_BLOG.ADMIN.THEME.ENABLE_COMMENTS_HELP
+          label: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.ENABLE_COMMENTS
+          help: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.ENABLE_COMMENTS_HELP
           highlight: 1
           default: 1
           options:
@@ -221,9 +221,9 @@ form:
         comments.disqus_shortname:
           type: text
           size: medium
-          label: BOOTSTRAP_BLOG.ADMIN.THEME.DISQUS_SHORTNAME
-          help: BOOTSTRAP_BLOG.ADMIN.THEME.DISQUS_SHORTNAME_HELP
-          description: BOOTSTRAP_BLOG.ADMIN.THEME.DISQUS_SHORTNAME_DESCRIPTION
+          label: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.DISQUS_SHORTNAME
+          help: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.DISQUS_SHORTNAME_HELP
+          description: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.DISQUS_SHORTNAME_DESCRIPTION
 
     simplesearch:
       type: conditional
@@ -236,8 +236,8 @@ form:
           fields:
             simplesearch_layout:
               type: select
-              label: BOOTSTRAP_BLOG.ADMIN.MODULAR.ITEMS_LAYOUT
-              help: BOOTSTRAP_BLOG.ADMIN.MODULAR.ITEMS_LAYOUT_HELP
+              label: THEME_BOOTSTRAP_BLOG.ADMIN.MODULAR.ITEMS_LAYOUT
+              help: THEME_BOOTSTRAP_BLOG.ADMIN.MODULAR.ITEMS_LAYOUT_HELP
               size: medium
               default: boxed
               options:
@@ -248,13 +248,13 @@ form:
                 pattern: (boxed|masonry|cards)
     sidebar:
       type: section
-      title: BOOTSTRAP_BLOG.ADMIN.THEME.SIDEBAR
+      title: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.SIDEBAR
       underline: true
       fields:
         sidebar.enabled:
           type: toggle
-          label: BOOTSTRAP_BLOG.ADMIN.THEME.ENABLE_SIDEBAR
-          help: BOOTSTRAP_BLOG.ADMIN.THEME.ENABLE_SIDEBAR_HELP
+          label: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.ENABLE_SIDEBAR
+          help: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.ENABLE_SIDEBAR_HELP
           highlight: 1
           default: 1
           options:
@@ -264,11 +264,11 @@ form:
             type: bool
         sidebar.align:
           type: select
-          label: BOOTSTRAP_BLOG.ADMIN.THEME.SIDEBAR_ALIGN
+          label: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.SIDEBAR_ALIGN
           size: medium
           options:
-            left: BOOTSTRAP_BLOG.ADMIN.LEFT
-            right: BOOTSTRAP_BLOG.ADMIN.RIGHT
+            left: THEME_BOOTSTRAP_BLOG.ADMIN.LEFT
+            right: THEME_BOOTSTRAP_BLOG.ADMIN.RIGHT
           validate:
             pattern: (left|right)
         sidebar_widgets:
@@ -279,7 +279,7 @@ form:
               fields:
                 twitter:
                   type: fieldset
-                  title: BOOTSTRAP_BLOG.ADMIN.THEME.TWITTER_TIMELINE
+                  title: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.TWITTER_TIMELINE
                   icon: twitter
                   collapsible: true
                   collapsed: false
@@ -295,16 +295,16 @@ form:
                         type: bool
                     sidebar.twitter.user:
                       type: text
-                      label: BOOTSTRAP_BLOG.ADMIN.THEME.TWITTER_USERNAME
-                      help: BOOTSTRAP_BLOG.ADMIN.THEME.TWITTER_USERNAME_HELP
+                      label: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.TWITTER_USERNAME
+                      help: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.TWITTER_USERNAME_HELP
                     sidebar.twitter.theme:
                       type: select
-                      label: BOOTSTRAP_BLOG.ADMIN.THEME.TWITTER_THEME
+                      label: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.TWITTER_THEME
                       size: medium
                       default: light
                       options:
-                        light: BOOTSTRAP_BLOG.ADMIN.BOOTSTRAP_STYLES.LIGHT
-                        dark: BOOTSTRAP_BLOG.ADMIN.BOOTSTRAP_STYLES.DARK
+                        light: THEME_BOOTSTRAP_BLOG.ADMIN.BOOTSTRAP_STYLES.LIGHT
+                        dark: THEME_BOOTSTRAP_BLOG.ADMIN.BOOTSTRAP_STYLES.DARK
                       validate:
                         pattern: (light|dark)
             sidebar_column2:
@@ -312,7 +312,7 @@ form:
               fields:
                 about:
                   type: fieldset
-                  title: BOOTSTRAP_BLOG.ADMIN.THEME.ABOUT_ME
+                  title: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.ABOUT_ME
                   icon: user-circle
                   collapsible: true
                   collapsed: false
@@ -328,29 +328,29 @@ form:
                         type: bool
                     sidebar.about.title:
                       type: text
-                      label: BOOTSTRAP_BLOG.ADMIN.TITLE
+                      label: THEME_BOOTSTRAP_BLOG.ADMIN.TITLE
                     sidebar.about.content:
                       type: textarea
-                      label: BOOTSTRAP_BLOG.ADMIN.TEXT
-                      help: BOOTSTRAP_BLOG.ADMIN.ADMIT_HTML_CONTENT
+                      label: THEME_BOOTSTRAP_BLOG.ADMIN.TEXT
+                      help: THEME_BOOTSTRAP_BLOG.ADMIN.ADMIT_HTML_CONTENT
                       validate:
                         type: text
                     sidebar.about.page:
                       type: pages
-                      label: BOOTSTRAP_BLOG.ADMIN.THEME.ABOUT_PAGE_CONTENT
-                      help: BOOTSTRAP_BLOG.ADMIN.THEME.ABOUT_PAGE_CONTENT_HELP
-                      description: BOOTSTRAP_BLOG.ADMIN.THEME.ABOUT_PAGE_CONTENT_DESCRIPTION
+                      label: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.ABOUT_PAGE_CONTENT
+                      help: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.ABOUT_PAGE_CONTENT_HELP
+                      description: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.ABOUT_PAGE_CONTENT_DESCRIPTION
                       toggleable: true
                       show_modular: false
     footer:
       type: section
-      title: BOOTSTRAP_BLOG.ADMIN.THEME.FOOTER
+      title: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.FOOTER
       underline: true
       fields:
         footer.style:
           type: select
-          label: BOOTSTRAP_BLOG.ADMIN.THEME.FOOTER_STYLE
-          help: BOOTSTRAP_BLOG.ADMIN.STYLE_HELP
+          label: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.FOOTER_STYLE
+          help: THEME_BOOTSTRAP_BLOG.ADMIN.STYLE_HELP
           size: medium
           default: dark
           options:
@@ -372,11 +372,11 @@ form:
             cyan: Cyan
         footer.text:
           type: textarea
-          label: BOOTSTRAP_BLOG.ADMIN.THEME.FOOTER_TEXT
-          help: BOOTSTRAP_BLOG.ADMIN.THEME.FOOTER_TEXT_HELP
-          description: BOOTSTRAP_BLOG.ADMIN.ADMIT_HTML_CONTENT
+          label: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.FOOTER_TEXT
+          help: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.FOOTER_TEXT_HELP
+          description: THEME_BOOTSTRAP_BLOG.ADMIN.ADMIT_HTML_CONTENT
         footer.legal:
           type: text
-          label: BOOTSTRAP_BLOG.ADMIN.THEME.FOOTER_LEGAL_TEXT
-          help: BOOTSTRAP_BLOG.ADMIN.THEME.FOOTER_LEGAL_TEXT_HELP
-          placeholder: BOOTSTRAP_BLOG.ADMIN.THEME.FOOTER_LEGAL_TEXT_PLACEHOLDER
+          label: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.FOOTER_LEGAL_TEXT
+          help: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.FOOTER_LEGAL_TEXT_HELP
+          placeholder: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.FOOTER_LEGAL_TEXT_PLACEHOLDER

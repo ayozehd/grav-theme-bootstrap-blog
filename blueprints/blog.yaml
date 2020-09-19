@@ -10,7 +10,7 @@ form:
             fields:
                 bootstrap-blog:
                     type: tab
-                    title: BOOTSTRAP_BLOG.ADMIN.BLOG
+                    title: THEME_BOOTSTRAP_BLOG.ADMIN.BLOG
                     fields:
                         is_sidebar_enabled:
                             type: conditional
@@ -18,8 +18,8 @@ form:
                             fields:
                                 header.sidebar.enabled:
                                     type: toggle
-                                    label: BOOTSTRAP_BLOG.ADMIN.THEME.SIDEBAR
-                                    help: BOOTSTRAP_BLOG.ADMIN.ITEM.ITEM_SIDEBAR_HELP
+                                    label: THEME_BOOTSTRAP_BLOG.ADMIN.THEME.SIDEBAR
+                                    help: THEME_BOOTSTRAP_BLOG.ADMIN.ITEM.ITEM_SIDEBAR_HELP
                                     highlight: 1
                                     default: 1
                                     options:
@@ -29,8 +29,8 @@ form:
                                         type: bool
                         header.layout:
                             type: select
-                            label: BOOTSTRAP_BLOG.ADMIN.MODULAR.ITEMS_LAYOUT
-                            help: BOOTSTRAP_BLOG.ADMIN.MODULAR.ITEMS_LAYOUT_HELP
+                            label: THEME_BOOTSTRAP_BLOG.ADMIN.MODULAR.ITEMS_LAYOUT
+                            help: THEME_BOOTSTRAP_BLOG.ADMIN.MODULAR.ITEMS_LAYOUT_HELP
                             size: medium
                             default: boxed
                             options:

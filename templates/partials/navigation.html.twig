@@ -1,5 +1,5 @@
 <div class="navbar-nav ml-auto">
-    {% if theme_config.navbar.dropdown == true %}
+    {% if config.theme.navbar.dropdown == true %}
         {% for p in pages.children.visible %}
         {% set current_page = (p.active or p.activeChild) ? 'active' : '' %}
         {% if p.children.visible.count > 0 %}

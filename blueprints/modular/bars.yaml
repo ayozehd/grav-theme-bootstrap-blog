@@ -10,13 +10,13 @@ form:
             fields:
                 bootstrap-blog:
                     type: tab
-                    title: BOOTSTRAP_BLOG.ADMIN.MODULAR.BARS
+                    title: THEME_BOOTSTRAP_BLOG.ADMIN.MODULAR.BARS
                     fields:
                         header.style:
                             type: select
                             size: medium
-                            label: BOOTSTRAP_BLOG.ADMIN.STYLE
-                            help: BOOTSTRAP_BLOG.ADMIN.STYLE_HELP
+                            label: THEME_BOOTSTRAP_BLOG.ADMIN.STYLE
+                            help: THEME_BOOTSTRAP_BLOG.ADMIN.STYLE_HELP
                             toggleable: true
                             options:
                                 dark: Dark
@@ -39,18 +39,18 @@ form:
                                 cyan: Cyan
                         header.bars:
                             type: list
-                            label: BOOTSTRAP_BLOG.ADMIN.MODULAR.BARS_LIST
-                            help: BOOTSTRAP_BLOG.ADMIN.MODULAR.BARS_LIST_HELP
+                            label: THEME_BOOTSTRAP_BLOG.ADMIN.MODULAR.BARS_LIST
+                            help: THEME_BOOTSTRAP_BLOG.ADMIN.MODULAR.BARS_LIST_HELP
                             style: vertical
                             fields:
                                 .text:
                                     type: text
-                                    label: BOOTSTRAP_BLOG.ADMIN.TEXT
+                                    label: THEME_BOOTSTRAP_BLOG.ADMIN.TEXT
                                 .style:
                                     type: select
                                     size: medium
-                                    label: BOOTSTRAP_BLOG.ADMIN.STYLE
-                                    help: BOOTSTRAP_BLOG.ADMIN.STYLE_HELP
+                                    label: THEME_BOOTSTRAP_BLOG.ADMIN.STYLE
+                                    help: THEME_BOOTSTRAP_BLOG.ADMIN.STYLE_HELP
                                     toggleable: true
                                     novalidate: true
                                     options:
@@ -74,5 +74,5 @@ form:
                                         cyan: Cyan
                                 .value:
                                     type: text
-                                    label: BOOTSTRAP_BLOG.ADMIN.VALUE
+                                    label: THEME_BOOTSTRAP_BLOG.ADMIN.VALUE
                                     placeholder: '1-100'

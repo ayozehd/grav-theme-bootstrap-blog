@@ -1,7 +1,7 @@
 {% set header_image_file = page.header.image_file %}
 {% set default_text_align = 'left' %}
 <div class="modular-row jumbotron{% if page.header.style %}{{ ' bg-' ~ page.header.style }}{% endif %} {{ page.header.classes }}">
-    <div class="container{% if theme_config.fluid_container %}-fluid{% endif %}">
+    <div class="container{% if config.theme.fluid_container %}-fluid{% endif %}">
         <div class="row">
             {% if header_image_file %}
                 {% set header_image_media = page.media.images[header_image_file] %}

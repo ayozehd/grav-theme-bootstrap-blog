@@ -1,5 +1,5 @@
 en:
-    BOOTSTRAP_BLOG:
+    THEME_BOOTSTRAP_BLOG:
         ADMIN:
             THEME_OPTIONS: Theme options
             ENABLE: Enable
@@ -187,7 +187,7 @@ en:
         RETURN_TOP_PAGE: Return to the top page
 
 es:
-    BOOTSTRAP_BLOG:
+    THEME_BOOTSTRAP_BLOG:
         ADMIN:
             ENABLE: Activar
             TITLE: Título

@@ -1,3 +1,27 @@
+# v1.4.0
+## 20-09-2020
+
+1. [](#improved)
+  * Updated libraries Bootstrap 4.5.2 and Fontawesome 5.14.0
+2. [](#bugfix)
+  * Moved languages key to `THEME_BOOTSTRAP_BLOG` to solve errors on child themes
+
+# v1.3.6
+## 08-08-2020
+
+1. [](#improved)
+  * Improved icons on modular features
+2. [](#bugfix)
+  * Fix for missing default `comments` param
+
+
+# v1.3.5
+## 07-08-2019
+
+1. [](#bugfix)
+  * Spelling fix [86ccba8](https://github.com/ayozehd/grav-theme-bootstrap-blog/commit/6a2bd86d1e845da3ace76a9f6cdf2c22fe916bbd)
+  * Minor fixes
+
 # v1.3.4
 ## 07-08-2019
 

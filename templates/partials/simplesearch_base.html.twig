@@ -5,11 +5,11 @@
             <div class="container">
             <div class="row">
                 <div class="col text-left">
-                    <h2>{{ 'BOOTSTRAP_BLOG.SIMPLESEARCH.SEARCH_RESULTS'|t }}</h2>
+                    <h2>{{ 'THEME_BOOTSTRAP_BLOG.SIMPLESEARCH.SEARCH_RESULTS'|t }}</h2>
                     <h4 class="font-weight-light">
                         {% if query %}
                             {% set count = search_results ? search_results.count : 0 %}
-                            {% if count == 1 %}
+                            {% if count is same as( 1 ) %}
                                 {{ "PLUGIN_SIMPLESEARCH.SEARCH_RESULTS_SUMMARY_SINGULAR"|t(query|e)|raw }}
                             {% else %}
                                 {{ "PLUGIN_SIMPLESEARCH.SEARCH_RESULTS_SUMMARY_PLURAL"|t(query|e, count)|raw }}
@@ -18,7 +18,7 @@
                     </h4>
                 </div>
                 <div class="col-12 col-md-4 mt-auto">
-                    {% include 'partials/simplesearch_searchbox.html.twig' with { outter_classes: 'input-searchbox-addon' } %}
+                    {% include 'partials/simplesearch_searchbox.html.twig' %}
                 </div>
             </div>
             </div>
@@ -27,7 +27,7 @@
             <div class="row">
             <div class="col-12 py-4">
                 {% for result in search_results %}
-                    {% include 'partials/layouts/' ~ theme_config.simplesearch_layout|defined('boxed') ~ '.html.twig' with { 'page':result } %}
+                    {% include 'partials/layouts/' ~ config.theme.simplesearch_layout|defined('boxed') ~ '.html.twig' with { 'page':result } %}
                 {% endfor %}
             </div>
             </div>

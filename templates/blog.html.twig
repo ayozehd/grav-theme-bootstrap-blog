@@ -4,7 +4,7 @@
 
     {% set collection = page.collection() %}
 
-    {% if theme_config.sidebar.enabled is not sameas(false) and page.header.sidebar.enabled is not sameas(false) %}
+    {% if config.theme.sidebar.enabled is not sameas(false) and page.header.sidebar.enabled is not sameas(false) %}
         {% set sidebar = true %}
     {% else %}
         {% set sidebar = false %}
@@ -12,7 +12,7 @@
 
     {% include 'partials/showcase.html.twig' with { 'content':page.content } %}
 
-    <div class="container{% if theme_config.fluid_container %}-fluid{% endif %}">
+    <div class="container{% if config.theme.fluid_container %}-fluid{% endif %}">
         {% if config.plugins.breadcrumbs.enabled %}
             {% include 'partials/breadcrumbs.html.twig' %}
         {% endif %}
@@ -28,8 +28,8 @@
                 {% endif %}
             </div>
             {% if sidebar %}
-                <div id="sidebar" class="col-12 col-md-4 {% if theme_config.sidebar.align == 'left' %}order-md-first{% endif %}">
-                    <div class="sidebar-content {% if theme_config.sidebar.border %}border-{{ theme_config.sidebar.border }}{% endif %}">
+                <div id="sidebar" class="col-12 col-md-4 {% if config.theme.sidebar.align == 'left' %}order-md-first{% endif %}">
+                    <div class="sidebar-content {% if config.theme.sidebar.border %}border-{{ config.theme.sidebar.border }}{% endif %}">
                         {% include 'partials/sidebar.html.twig' with { 'blog':page } %}
                     </div>
                 </div>

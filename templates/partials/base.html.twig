@@ -1,4 +1,3 @@
-{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
 <!DOCTYPE html>
 <html lang="{{ html_lang }}">
 <head>
@@ -8,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% include 'partials/metadata.html.twig' %}
-    {% set favicon = theme_config.favicon ? theme_config.favicon|first : { type:'image/png', path: url('theme://images/logo.png') } %}
+    {% set favicon = config.theme.favicon ? config.theme.favicon|first : { type:'image/png', path: url('theme://images/logo.png') } %}
     <link rel="icon" type="{{ favicon.type }}" href="{{ url( favicon.path ) }}"/>
     <link rel="canonical" href="{{ page.url(true, true) }}"/>
 
@@ -22,24 +21,24 @@
     {% endblock %}
 {% endblock head %}
 </head>
-<body id="top" class="{{ page.header.body_classes }}{% if theme_config.navbar.sticky %} sticky{% endif %}">
+<body id="top" class="{{ page.header.body_classes }}{% if config.theme.navbar.sticky %} sticky{% endif %}">
 {% block header %}
-    {% set navbarStyle = theme_config.navbar.style %}
-    {% if theme_config.navbar.override_page_style and page.header.style %}
+    {% set navbarStyle = config.theme.navbar.style %}
+    {% if config.theme.navbar.override_page_style and page.header.style %}
         {% set navbarStyle = page.header.style %}
     {% endif %}
 
-    <nav class="navbar navbar-expand-md {{ 'bg-' ~ navbarStyle}}{% if theme_config.navbar.sticky %} fixed-top{% endif %}" role="navigation"
-        {% if theme_config.navbar.background_color %}style="background-color:{{ theme_config.navbar.background_color }}"{% endif %}>
+    <nav class="navbar navbar-expand-md {{ 'bg-' ~ navbarStyle}}{% if config.theme.navbar.sticky %} fixed-top{% endif %}" role="navigation"
+        {% if config.theme.navbar.background_color %}style="background-color:{{ config.theme.navbar.background_color }}"{% endif %}>
         <a class="navbar-brand" href="{{ base_url == '' ? '/' : base_url }}">
-            {% if theme_config.navbar.image %}
-                {% set navbar_image = theme_config.navbar.image|first %}
+            {% if config.theme.navbar.image %}
+                {% set navbar_image = config.theme.navbar.image|first %}
                 <img class="d-inline-block align-center" src="{{ url(navbar_image.path) }}" alt=""/>
             {% endif %}
-            {% if theme_config.navbar.icon %}
-                <i class="fas fa-{{ theme_config.navbar.icon }}"></i>
+            {% if config.theme.navbar.icon %}
+                <i class="{{ config.theme.navbar.icon_group|defined('fas') }} fa-{{ config.theme.navbar.icon }}"></i>
             {% endif %}
-            {% if theme_config.navbar.display_site_name %}
+            {% if config.theme.navbar.display_site_name %}
                 {{ config.site.title }}
             {% endif %}
         </a>
@@ -63,20 +62,20 @@
 </div>
 
 {% block footer %}
-    <footer class="footer{% if theme_config.footer.style %} bg-{{ theme_config.footer.style }}{% endif %}">
-        <div class="container{% if theme_config.fluid_container %}-fluid{% endif %}">
+    <footer class="footer{% if config.theme.footer.style %} bg-{{ config.theme.footer.style }}{% endif %}">
+        <div class="container{% if config.theme.fluid_container %}-fluid{% endif %}">
             <div class="d-flex flex-row justify-content-center">
-                {% if theme_config.footer.legal %}
-                    <div class="footer-legal mr-auto">{{ theme_config.footer.legal|raw }}</div>
+                {% if config.theme.footer.legal %}
+                    <div class="footer-legal mr-auto">{{ config.theme.footer.legal|raw }}</div>
                 {% endif %}
-                <div class="footer-text">{{ theme_config.footer.text|raw }}</div>
+                <div class="footer-text">{{ config.theme.footer.text|raw }}</div>
             </div>
         </div>
     </footer>
 {% endblock %}
 
-{% if theme_config.back_to_top_button %}
-    <a id="back-to-top" href="#" class="btn btn-{{ page.header.style|defined('primary') }} btn-lg back-to-top" role="button" title="{{ 'BOOTSTRAP_BLOG.RETURN_TOP_PAGE'|t }}" data-toggle="tooltip"
+{% if config.theme.back_to_top_button %}
+    <a id="back-to-top" href="#" class="btn btn-{{ page.header.style|defined('primary') }} btn-lg back-to-top" role="button" title="{{ 'THEME_BOOTSTRAP_BLOG.RETURN_TOP_PAGE'|t }}" data-toggle="tooltip"
        data-placement="left"><span class="fas fa-chevron-up"></span></a>
 {% endif %}
 

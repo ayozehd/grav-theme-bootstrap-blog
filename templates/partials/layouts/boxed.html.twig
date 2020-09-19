@@ -31,7 +31,7 @@
             <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Item Links">
                 <div class="btn-group main" role="group" aria-label="Links">
                     <a href="{{ page.url}}" class="btn btn-outline-{{ page.header.style|defined('primary') }}">
-                    {{ 'BOOTSTRAP_BLOG.ITEM.CONTINUE_READING'|t }}
+                    {{ 'THEME_BOOTSTRAP_BLOG.ITEM.CONTINUE_READING'|t }}
                     </a>
                     {% if page.header.link %}
                     <a href="{{ page.header.link}}" class="btn btn-outline-secondary">
@@ -56,7 +56,7 @@
             {% if page.taxonomy.tag %}
                 <div class="d-inline tags">
                     <i class="fas fa-tags text-{{ page.header.style|defined('primary') }}"></i>
-                    <span data-toggle="tooltip" data-placement="top" title="{{ 'BOOTSTRAP_BLOG.TAXONOMY.TAGS'|t }}" class="">
+                    <span data-toggle="tooltip" data-placement="top" title="{{ 'THEME_BOOTSTRAP_BLOG.TAXONOMY.TAGS'|t }}" class="">
                         {% for tag in page.taxonomy.tag %}
                             <a class="text-{{ page.header.style|defined('primary') }}"
                                 href="{{ parent.url|rtrim('/') }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}{{ not loop.last ? ',' }}</a>

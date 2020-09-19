@@ -32,6 +32,7 @@
   * Text Modular template `text.md`
   * Carousel Modular template `carousel.md`
   * Bars Modular template `bars.md`
+  * Typewriter Modular template `typewriter.md`
 
 # Installation
 

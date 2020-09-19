@@ -1,9 +1,11 @@
 # v1.4.0
 ## 20-09-2020
 
-1. [](#improved)
+1. [](#new)
+  * New `typewriter` modular template
+2. [](#improved)
   * Updated libraries Bootstrap 4.5.2 and Fontawesome 5.14.0
-2. [](#bugfix)
+3. [](#bugfix)
   * Moved languages key to `THEME_BOOTSTRAP_BLOG` to solve errors on child themes
 
 # v1.3.6

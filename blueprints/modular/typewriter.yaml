@@ -1,0 +1,77 @@
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+    fields:
+        tabs:
+            type: tabs
+            active: 1
+            fields:
+                bootstrap-blog:
+                    type: tab
+                    title: THEME_BOOTSTRAP_BLOG.ADMIN.MODULAR.TYPEWRITER
+                    fields:
+                        header.style:
+                            type: select
+                            label: THEME_BOOTSTRAP_BLOG.ADMIN.STYLE
+                            size: medium
+                            toggleable: true
+                            options:
+                                dark: Dark
+                                light: Light
+                                primary: Primary
+                                secondary: Secondary
+                                info: Info
+                                success: Success
+                                warning: Warning
+                                danger: Danger
+                        header.steps:
+                            name: steps
+                            type: list
+                            style: vertical
+                            label: THEME_BOOTSTRAP_BLOG.ADMIN.MODULAR.TYPEWRITER_STEPS
+                            help: THEME_BOOTSTRAP_BLOG.ADMIN.MODULAR.TYPEWRITER_STEPS_HELP
+                            collapsed: false
+                            fields:
+                                .text:
+                                    type: text
+                                    label: THEME_BOOTSTRAP_BLOG.ADMIN.TEXT
+                                    required: true
+                                .deleteChars:
+                                    type: number
+                                    label: THEME_BOOTSTRAP_BLOG.ADMIN.MODULAR.TYPEWRITER_DELETECHARS
+                                    help: THEME_BOOTSTRAP_BLOG.ADMIN.MODULAR.TYPEWRITER_DELETECHARS_HELP
+                                    required: false
+                                    default: 0
+                                    min: 0
+                                .pause:
+                                    type: number
+                                    required: false
+                                    placeholder: 2500
+                                    label: THEME_BOOTSTRAP_BLOG.ADMIN.MODULAR.TYPEWRITER_PAUSE
+                                    help: THEME_BOOTSTRAP_BLOG.ADMIN.MODULAR.TYPEWRITER_PAUSE_HELP
+                        header.buttons:
+                            name: buttons
+                            type: list
+                            style: vertical
+                            label: THEME_BOOTSTRAP_BLOG.ADMIN.ITEM.BUTTONS
+                            collapsed: true
+                            fields:
+                                .text:
+                                    type: text
+                                    label: THEME_BOOTSTRAP_BLOG.ADMIN.TEXT
+                                .url:
+                                    type: text
+                                    label: THEME_BOOTSTRAP_BLOG.ADMIN.URL
+                                .icon:
+                                    type: text
+                                    label: THEME_BOOTSTRAP_BLOG.ADMIN.ICON
+                                    help: THEME_BOOTSTRAP_BLOG.ADMIN.ICON_HELP
+                                    description: THEME_BOOTSTRAP_BLOG.ADMIN.FONTAWESOME_5_ICONS
+                                .classes:
+                                    type: text
+                                    label: THEME_BOOTSTRAP_BLOG.ADMIN.ITEM.BUTTON_ADD_CSS
+                                    help: THEME_BOOTSTRAP_BLOG.ADMIN.ITEM.BUTTON_ADD_CSS_HELP
+                            validate:
+                                type: array

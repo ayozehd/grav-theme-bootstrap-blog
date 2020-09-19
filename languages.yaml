@@ -101,6 +101,14 @@ en:
                 BARS: Bars
                 BARS_LIST: Bars List
                 BARS_LIST_HELP: Set a list of values to show progress bars
+                TYPEWRITER: Typewriter
+                TYPEWRITER_STEPS: Typewriter Steps
+                TYPEWRITER_STEPS_HELP: List of texts and options to animate
+                TYPEWRITER_PAUSE: Pause
+                TYPEWRITER_PAUSE_HELP: Time to wait until animation start deleting chars.
+                TYPEWRITER_DELETECHARS: Delete chars
+                TYPEWRITER_DELETECHARS_HELP: Number of characters to remove. If 0 will delete all in the animation.
+                
             ITEM:
                 TAB: Item
                 ITEM_STYLE: Item style

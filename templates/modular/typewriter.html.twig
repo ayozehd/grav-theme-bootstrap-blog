@@ -1,0 +1,43 @@
+{% do assets.addJs('theme://assets/js/typewriter.js') %}
+
+<div class="modular-row jumbotron {{ 'bg-' ~ page.header.style }} {{ page.header.classes }}">
+    <div class="container text-{{ page.header.text_align|defined('center') }}">
+        {% set typewriterId = page.id %}
+        {% set typewriterTag = page.header.outter_tag|default('h1') %}
+        <{{ typewriterTag }} id="{{ typewriterId }}" class="typewriter {{ page.header.type_classses }}"></{{ typewriterTag }}>
+        {{ content }}
+        {% if page.header.buttons %}
+            <div class="buttons text-{{ page.header.buttons_align|defined('center') }}">
+                {% for button in page.header.buttons %}
+                    <a href="{{ button.url }}" 
+                        class="btn btn-{{ button.size|defined('lg') }} btn-{{ (button.is_outline is same as(false) ? '' : 'outline-') ~ button.style|defined(page.header.style|defined('light')) }}">
+                        {% if button.icon %}
+                            <i class="fas fa-{{ button.icon }}"></i>
+                        {% endif %}
+                        {{ button.text }}
+                    </a>
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+</div>
+
+<script>
+var el = document.getElementById('{{ typewriterId }}');
+var typewriter = new Typewriter(el, {
+    loop: true
+});
+{% spaceless %}
+typewriter
+    {% for step in page.header.steps %}
+        .typeString('{{ step.text|raw }}')
+        .pauseFor({{ step.pause|defined(2500) }})
+        {% if step.deleteChars is defined %}
+            .deleteChars({{ step.deleteChars }})
+        {% else %}
+            .deleteAll()
+        {% endif %}
+    {% endfor %}
+    .start();
+{% endspaceless %}
+</script>

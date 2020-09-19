@@ -32,7 +32,7 @@ typewriter
     {% for step in page.header.steps %}
         .typeString('{{ step.text|raw }}')
         .pauseFor({{ step.pause|defined(2500) }})
-        {% if step.deleteChars is defined %}
+        {% if step.deleteChars is not same as( 0 ) %}
             .deleteChars({{ step.deleteChars }})
         {% else %}
             .deleteAll()
